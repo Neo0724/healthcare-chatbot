@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from typing import List
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -14,11 +15,13 @@ from db.get_disease_information import get_diseases_information
 from llm.custom_llm import CustomLLM
 from utils.context_cleaner import clean_context_chunk
 
+load_dotenv()
+
 TEST_SET_FILE = "./synthetic_data/test_set_8.csv"
 
 # custom_llm = CustomLLM(
 #     model=ChatOpenAI(
-#         base_url="http://localhost:1234/v1",
+#         base_url=os.getenv("LLM_URL"),
 #         model="meta-llama-3.1-8b-instruct",
 #         api_key="lm-studio",
 #         temperature=0.2,
@@ -35,8 +38,8 @@ TEST_SET_FILE = "./synthetic_data/test_set_8.csv"
 
 custom_llm = CustomLLM(
     model=ChatOpenAI(
-        base_url="http://localhost:1234/v1",
-        model="qwen3-14b",
+        base_url=os.getenv("LLM_URL"),
+        model=os.getenv("LLM_MODEL"),
         api_key="lm-studio",
         temperature=0.2,
         frequency_penalty=1.0,
@@ -64,8 +67,8 @@ def generate_response(user_query: str, retrieved_records: List[Record]) -> str:
     )
 
     llm = ChatOpenAI(
-        base_url="http://localhost:1234/v1",
-        model="qwen3-14b",
+        base_url=os.getenv("LLM_URL"),
+        model=os.getenv("LLM_MODEL"),
         api_key="lm-studio",
         temperature=0.2,
         frequency_penalty=1.0,

@@ -1,0 +1,1033 @@
+{
+    "metric": "Symptom-Disease Hit@10",
+    "testCases": {
+        "results": [
+            {
+                "input": "I've been having trouble breathing lately, especially when I'm lying down. It feels like I can't get enough air, and my chest hurts sometimes. I don't have a fever or cough, but I do wheeze a bit when I breathe.",
+                "disease_name": "Acute left ventricular failure (disorder)",
+                "found": [
+                    "Pulmonary embolism (disorder)",
+                    "Bronchitis: [unspecified (& chest infection)] or [recurrent wheezy] (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Bronchiolitis (disorder)",
+                    "Lung abscess (disorder)",
+                    "Childhood bronchiectasis (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Acute stress disorder (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I get out of breath when I walk up stairs or do anything physically active. I also wake up at night feeling like I can't catch my breath, so I have to sit up. My legs sometimes swell, especially by the end of the day. I don't have a cough or feel feverish.",
+                "disease_name": "Congestive heart failure (disorder)",
+                "found": [
+                    "Congestive heart failure (disorder)",
+                    "Anemia (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My child has been losing weight despite eating normally. They turn blue when running or crying, and sometimes seem very pale with cold hands even after we give them extra oxygen from the tank. I don't think they have a fever, and there's no rash or swelling that I can see.",
+                "disease_name": "Congenital heart disease (disorder)",
+                "found": [
+                    "Anemia of pregnancy (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Anemia (disorder)",
+                    "Congenital heart disease (disorder)",
+                    "(Anaemia: [iron deficiency] or [microcytic]) or (Kelly-Paterson syndrome) or (Plummer-Vinson syndrome) (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Severe protein-calorie malnutrition (Gomez: less than 60 percent of standard weight) (disorder)",
+                    "Anemia of chronic disease (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My child has been complaining about their joints hurting for quite some time now. They also have fevers that come and go, but there's no rash or any other skin issues. I'm not sure what's going on, but I wanted to check if this could be something serious.",
+                "disease_name": "Active rheumatic fever (disorder)",
+                "found": [
+                    "Infective arthritis (disorder)",
+                    "Rheumatism (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "Nephrotic syndrome (disorder)",
+                    "Urinary tract infectious disease (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Primary gout (disorder)",
+                    "Pyelonephritis (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Rheumatic fever (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling out of breath when I walk up stairs or do anything physical. My heart sometimes feels like it's racing, and my legs have been swelling a bit. I don't have a cough or any chest pain.",
+                "disease_name": "Rheumatic heart disease (disorder)",
+                "found": [
+                    "Congestive heart failure (disorder)",
+                    "Anemia (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really hot lately, sometimes I get dizzy, and it's hard for me to catch my breath when I do anything even mildly active. I don't have a cough or any rash, and I haven't noticed any pain in my joints.",
+                "disease_name": "Bacterial endocarditis (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Acute respiratory infection (disorder)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I get out of breath when I walk up stairs or do anything physical. Sometimes I feel dizzy and have headaches, especially after exertion. I don't have a cough or chest pain.",
+                "disease_name": "Hypertensive disorder, systemic arterial (disorder)",
+                "found": [
+                    "Congestive heart failure (disorder)",
+                    "Anemia (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Hypermetropia (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Acute left ventricular failure (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been having headaches that come and go, my heart sometimes races, I get dizzy easily, and I tire quickly. My blood pressure has been high for a while now.",
+                "disease_name": "(Hypertensive disease) or (hypertension) (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Hypermetropia (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Hypertensive emergency (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do acute encephalopathy, convulsions, visual disturbances, retinal hemorrhages relate to severe hypertension with end-organ damage?",
+                "disease_name": "Hypertensive emergency (disorder)",
+                "found": [
+                    "Hypertensive emergency (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Neovascular glaucoma (disorder)",
+                    "Cerebrovascular accident (disorder)",
+                    "Meningitis (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Dementia (disorder)",
+                    "Cerebral abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having really bad chest pain when I exert myself, like when I'm running or climbing stairs. It feels like a crushing pressure in my chest that spreads to my left arm, jaw, and neck. I also get sweaty, sometimes even feel nauseous and vomit, and I have trouble catching my breath. My heart seems to be racing too.",
+                "disease_name": "Ischemic heart disease (disorder)",
+                "found": [
+                    "Ischemic heart disease (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Stable angina (disorder)",
+                    "Lung abscess (disorder)",
+                    "Anemia (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute left ventricular failure (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having chest pain when I exert myself, especially when I'm doing something physical. It feels like it's in the middle of my chest and sometimes radiates to my left arm. The pain seems to come and go, getting worse and then better again over a few minutes. I also feel really restless and anxious most of the time, and my hands and feet tend to be pale and cold. I don't have a cough or any trouble breathing, though.",
+                "disease_name": "Stable angina (disorder)",
+                "found": [
+                    "Stable angina (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Anemia (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "(Rickettsioses [& named variants]) or (trypanosomiasis) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having really bad chest pain that doesn't go away. It feels like it's getting worse over time and sometimes spreads to my arm, neck, or jaw. I also feel very anxious and shaky, and my hands are cold. I don't have a fever or any trouble breathing.",
+                "disease_name": "Acute coronary syndrome (disorder)",
+                "found": [
+                    "Acute coronary syndrome (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Stable angina (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Anemia (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having cramps in my legs, especially when I walk. My feet feel really cold all the time, and I notice that my toes take longer than usual to turn red after I press on them. I don't have a fever or any pain in my chest.",
+                "disease_name": "Peripheral vascular disease (disorder)",
+                "found": [
+                    "Peripheral vascular disease (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Allergic transfusion reaction (disorder)",
+                    "Diabetes mellitus (disorder)",
+                    "Erysipelas (disorder)",
+                    "Dysmenorrhea (finding)",
+                    "Hyperthyroidism (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having these sudden episodes where I just lose awareness for a few seconds. Then my body starts shaking uncontrollably, but it doesn't warn me beforehand. Afterward, I'm confused but don't feel any pain or have a fever.",
+                "disease_name": "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                "found": [
+                    "Korsakoff's psychosis (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Dementia (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Alcohol intoxication (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Meningitis (disorder)",
+                    "Hypoglycemia of childhood (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been having these episodes where I suddenly stiffen up and then start shaking uncontrollably. Afterward, I feel really confused and tired. Sometimes I also have brief moments where I just blank out for a few seconds, and there are times when my body goes limp without warning. I don't have any memory of these events happening, though.",
+                "disease_name": "Childhood seizure (finding)",
+                "found": [
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Anemia (disorder)",
+                    "Dementia (disorder)",
+                    "Hypertensive emergency (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I had sudden paralysis on one side of my body, my face drooped, I was confused, and had convulsions. I don't have a headache or fever.",
+                "disease_name": "Cerebrovascular accident (disorder)",
+                "found": [
+                    "Meningitis (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Hypoglycemia of childhood (disorder)",
+                    "Cerebrovascular accident (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Dementia (disorder)",
+                    "Alcohol intoxication (disorder)",
+                    "Tetanus (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having really bad headaches at the back of my head for several days. I also feel confused and sometimes can't stay awake, but I don't have any nausea or vomiting.",
+                "disease_name": "Subarachnoid intracranial hemorrhage (disorder)",
+                "found": [
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Dementia (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Post-traumatic stress disorder (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having headaches on one side of my head sometimes, and before it starts, I see wavy lines and have trouble seeing clearly. I also get really nauseous and even throw up during these episodes. They don't happen all the time, but when they do, it's pretty intense. I don't usually have a fever or feel dizzy afterwards.",
+                "disease_name": "Migraine (disorder)",
+                "found": [
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Meningitis (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Migraine (disorder)",
+                    "Astigmatism (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Cluster headache (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What might cause recurring brief one-sided headaches clustered weekly or monthly?",
+                "disease_name": "Cluster headache (disorder)",
+                "found": [
+                    "Cluster headache (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Migraine (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Trigeminal neuralgia (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Bacterial sinusitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having sudden, sharp pains on one side of my face and jaw. It happens when I touch that area, and it's really brief but very intense. I don't have any other facial numbness or tingling, and I haven't noticed any swelling.",
+                "disease_name": "Trigeminal neuralgia (disorder)",
+                "found": [
+                    "Trigeminal neuralgia (disorder)",
+                    "Trigeminal neuralgia (disorder)",
+                    "Disorder of salivary gland (disorder)",
+                    "Alveolitis of jaw (disorder)",
+                    "Traumatic dislocation of temporomandibular joint (disorder)",
+                    "Periapical abscess without sinus tract (disorder)",
+                    "Dental caries (disorder)",
+                    "Cellulitis (disorder)",
+                    "Dental trauma (disorder)",
+                    "Chronic sialadenitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having these tight band-like headaches on both sides of my head that get worse in the afternoon. They don't seem to go away with regular painkillers.",
+                "disease_name": "Psychogenic headache (disorder)",
+                "found": [
+                    "Psychogenic headache (disorder)",
+                    "Meningitis (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Migraine (disorder)",
+                    "Dental caries (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Primary angle-closure glaucoma (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having really bad headaches that came on suddenly. I also have a fever and my neck feels stiff. I'm getting light-headed when I try to look at bright lights, and sometimes I throw up without any warning. My legs are weak but not numb, and there's no rash or cough.",
+                "disease_name": "Meningitis (disorder)",
+                "found": [
+                    "Meningitis (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Herpes in pregnancy (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "Maternal malaria during pregnancy - baby delivered (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "(Rickettsioses [& named variants]) or (trypanosomiasis) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been running a fever for a few days now. My behavior has changed too\u2014I'm confused sometimes and not thinking clearly. I also keep having seizures, but there's no rash or sores anywhere on my skin.",
+                "disease_name": "Herpes encephalitis (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Dementia (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "Childhood seizure (finding)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been running a fever for days and had some seizures. My arm on one side is weak, and I'm confused most of the time.",
+                "disease_name": "Cerebral abscess (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Dementia (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Bacterial endocarditis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do recent surgical interventions relate to the occurrence of brief loss of consciousness episodes accompanied by left arm weakness and symptoms indicative of increased intracranial pressure such as headaches exacerbated upon bending?",
+                "disease_name": "Cysticercosis of central nervous system (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Meningitis (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Cysticercosis of central nervous system (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Herpes encephalitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having trouble with my legs and arms feeling weak all of a sudden. It's hard for me to breathe sometimes, but I don't have any fever or chest pain.",
+                "disease_name": "Acute flaccid paralysis (finding)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Anemia (disorder)",
+                    "Tetanus neonatorum (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Congestive heart failure (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been noticing some strange movements in my arms and legs lately. Sometimes I'll suddenly start shaking or moving uncontrollably, but it doesn't hurt or cause any numbness. These episodes seem to come and go without warning.",
+                "disease_name": "Ankylosing vertebral hyperostosis (disorder)",
+                "found": [
+                    "Chorea (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "Tetanus (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Complicated malaria (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Alcohol intoxication (disorder)",
+                    "Hypoglycemia of childhood (disorder)",
+                    "Schizophrenia (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What neurological disorder exhibits involuntary, erratic, and unpredictable motor activity resembling chorea?",
+                "disease_name": "Chorea (disorder)",
+                "found": [
+                    "Chorea (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Dementia (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "(Mania) or (hypomania) or (agitated depression) (disorder)",
+                    "Alcohol intoxication (disorder)",
+                    "Cerebrovascular accident (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "Schizophrenia (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having trouble walking properly. My legs feel weak, especially when I try to move them. There's also some numbness in my lower body that started suddenly. I haven't noticed any pain or tingling in my arms.",
+                "disease_name": "Myelopathy due to acute infarction of spinal cord (disorder)",
+                "found": [
+                    "Peripheral vascular disease (disorder)",
+                    "Spinal cord compression (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Acute transverse myelitis (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having some pain starting in my lower back that seems to be moving down my legs. It's getting harder to walk, and I'm noticing numbness in my feet. I don't have any fever or cough.",
+                "disease_name": "Spinal cord compression (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Primary gout (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Dysmenorrhea (finding)",
+                    "Acute osteomyelitis (disorder)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Herpes simplex (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having sudden back pain that's really intense. My legs feel weak, like I can't move them properly. There's a specific area on my torso where I can't feel anything, and I've had trouble controlling my bladder. I don't have any fever or chills, and I haven't noticed any numbness in my arms.",
+                "disease_name": "Acute transverse myelitis (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Acute transverse myelitis (disorder)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Premature labor (finding)",
+                    "Dysmenorrhea (finding)",
+                    "Pyelonephritis (disorder)",
+                    "Renal colic (finding)",
+                    "Acute coronary syndrome (disorder)",
+                    "Urinary tract infectious disease (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I have swelling behind my ear that's been getting worse. I've had a fever for a few days now and it hurts when I touch around my ear area. There's also some discharge coming from my ear, but I don't have any pain in my throat or runny nose.",
+                "disease_name": "Mastoiditis (disorder)",
+                "found": [
+                    "Mastoiditis (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Otitis externa (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Mumps parotitis (disorder)",
+                    "Periapical abscess without sinus tract (disorder)",
+                    "Rheumatism (disorder)",
+                    "Herpes in pregnancy (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling pain around my ear, especially when I touch it. My ear has been itching non-stop for days, and sometimes I have trouble hearing clearly, like things are muffled. I don't have a fever or any discharge from the ear.",
+                "disease_name": "Otitis externa (disorder)",
+                "found": [
+                    "Otitis externa (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Chronic otitis media (disorder)",
+                    "Herpes simplex (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Urticaria (disorder)",
+                    "Syphilis (disorder)",
+                    "Eczema (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I have had a fever for a few days now. My ear has been really painful, especially when I touch it or try to clean it. There's some yellowish discharge coming out of my ear, and the inside of my ear looks red and maybe even torn. I don't have a runny nose or any pain in my throat.",
+                "disease_name": "Acute otitis media (disorder)",
+                "found": [
+                    "Acute otitis media (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Otitis externa (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Chronic otitis media (disorder)",
+                    "Lower abdominal pain (finding)",
+                    "Acute osteomyelitis (disorder)",
+                    "Mumps parotitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've had this ear issue for a while now. There's been some discharge that doesn't seem to go away, and I'm having trouble hearing out of that ear. I don't have any pain in my ears, and I haven't noticed any ringing or dizziness.",
+                "disease_name": "Chronic otitis media (disorder)",
+                "found": [
+                    "Otitis externa (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Chronic otitis media (disorder)",
+                    "Preterm premature rupture of membranes (disorder)",
+                    "Presbyopia (disorder)",
+                    "Mumps parotitis (disorder)",
+                    "Lower abdominal pain (finding)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Bacterial sinusitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I get dizzy when I move my head quickly, sometimes it makes me vomit. My eyes seem to jump around when this happens, and I have trouble keeping my balance. I don't have a fever or pain in my neck.",
+                "disease_name": "[D]Acute vertigo (situation)",
+                "found": [
+                    "Korsakoff's psychosis (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Acute kidney injury (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been having nosebleeds that last longer than usual. I don't have any headaches or ear pain.",
+                "disease_name": "Epistaxis (disorder)",
+                "found": [
+                    "Epistaxis (disorder)",
+                    "Dental trauma (disorder)",
+                    "Gingivitis (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Traumatic hyphema (disorder)",
+                    "Abnormal uterine bleeding (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Primary angle-closure glaucoma (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I have some swelling and pain near my nose, and there's also some mucus coming out of my nostrils. I don't have any fever or headache.",
+                "disease_name": "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                "found": [
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "Sinusitis (disorder)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Cellulitis (disorder)",
+                    "Epistaxis (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Herpes in pregnancy (disorder)",
+                    "Periapical abscess without sinus tract (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've had thick green mucus coming out of my nose for weeks now. My face hurts around my cheeks and eyes, especially when I touch them. I took some antibiotics but didn't get better. I have a fever sometimes, but no cough or sore throat.",
+                "disease_name": "Bacterial sinusitis (disorder)",
+                "found": [
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Herpes in pregnancy (disorder)",
+                    "Sinusitis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Cellulitis (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "Mucopurulent conjunctivitis (disorder)",
+                    "Periapical abscess without sinus tract (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Retropharyngeal abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having trouble breathing through my nose for weeks. I sneeze a lot, especially when I'm outside, and my eyes are always itchy. My mouth feels dry at night because I can't breathe properly, so I end up snoring more than usual. I don't have any chest pain or fever.",
+                "disease_name": "Allergic rhinitis (disorder)",
+                "found": [
+                    "Allergic rhinitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Vernal conjunctivitis (disorder)",
+                    "Sinusitis (disorder)",
+                    "Cellulitis (disorder)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Mucopurulent conjunctivitis (disorder)",
+                    "Urticaria (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Herpes in pregnancy (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I get really sore throats several times a year, usually with bad pain when swallowing. My tonsils are swollen and sometimes have white stuff on them. I don't have any fever or cough, and I haven't noticed any rash.",
+                "disease_name": "Tonsillitis (disorder)",
+                "found": [
+                    "Tonsillitis (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Cellulitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Laryngopharyngeal reflux (disorder)",
+                    "Mastoiditis (disorder)",
+                    "(Oral aphthae) or (mouth ulcer) (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I had a sudden episode where I couldn't breathe properly and felt like something was blocking my throat. It happened out of nowhere, and I started coughing really hard. My voice sounded different afterward, almost raspy. I haven't been able to swallow normally since then, but I don't have a fever or any pain in my chest.",
+                "disease_name": "Difficulty with mask ventilation and tracheal intubation (finding)",
+                "found": [
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Laryngopharyngeal reflux (disorder)",
+                    "Bronchiectasis (disorder)",
+                    "Tetanus (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Cellulitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been clearing my throat a lot lately, and I have this dry cough that won't go away. My throat feels sore, but it's not like an infection. Sometimes I get the feeling there's something stuck in my throat, even though I can't see anything. I don't have a fever or any trouble swallowing food.",
+                "disease_name": "Laryngopharyngeal reflux (disorder)",
+                "found": [
+                    "Laryngopharyngeal reflux (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Cellulitis (disorder)",
+                    "Tetanus (disorder)",
+                    "Sinusitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really tired lately, even after getting enough sleep. I get out of breath when I walk up stairs or do anything physically active, and sometimes my heart feels like it's racing for no reason. I don't have a cough or any chest pain, and I haven't noticed any changes in my skin color.",
+                "disease_name": "Anemia (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Acute stress disorder (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really tired lately, and I get out of breath even when walking slowly. My skin looks paler than usual, and sometimes I feel dizzy, like the room is spinning. I don't have a fever or any pain in my chest.",
+                "disease_name": "(Anaemia: [iron deficiency] or [microcytic]) or (Kelly-Paterson syndrome) or (Plummer-Vinson syndrome) (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Strabismus (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Nutritional marasmus (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really hot lately, and I get this annoying itch all over my body. I also just don't feel right in general, like I'm always tired. But I haven't had any pain in my joints or stomach.",
+                "disease_name": "Platelet transfusion (procedure)",
+                "found": [
+                    "Hyperthyroidism (disorder)",
+                    "Syphilis (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Herpes simplex (disorder)",
+                    "Meningitis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Urticaria (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Maternal malaria during pregnancy - baby delivered (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I'm feeling really unwell after getting blood. My chest hurts badly, I have a high fever, my heart is racing, my hands are cold and clammy, and it's hard for me to catch my breath. I don't have any nausea or diarrhea.",
+                "disease_name": "Allergic transfusion reaction (disorder)",
+                "found": [
+                    "Acute stress disorder (disorder)",
+                    "Lung abscess (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Bacterial endocarditis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "(Rickettsioses [& named variants]) or (trypanosomiasis) (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been having this itchy skin rash all over my body, but I don't have any fever or pain. It's been driving me crazy because it keeps scratching, but there's no other discomfort.",
+                "disease_name": "Mild inflammation (morphologic abnormality)",
+                "found": [
+                    "Urticaria (disorder)",
+                    "Leprosy (disorder)",
+                    "Herpes simplex (disorder)",
+                    "Superficial white onychomycosis (disorder)",
+                    "Eczema (disorder)",
+                    "Subacute irritant contact dermatitis (disorder)",
+                    "Syphilis (disorder)",
+                    "Infestation by Sarcoptes scabiei (disorder)",
+                    "Otitis externa (disorder)",
+                    "Acute eczema (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really hot and shaking sometimes. My heart feels like it's racing, especially when I'm just standing around. I also get this annoying itch all over my body that comes and goes. When I try to do simple things like walk up a flight of stairs, I get out of breath pretty quickly. I don't have a cough or any pain in my chest.",
+                "disease_name": "No reaction (qualifier value)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Infective arthritis (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Bacterial endocarditis (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really hot for days, my blood pressure is low and I get dizzy when standing up. My urine has looked darker than usual lately, and I have nosebleeds that are hard to stop. Also, there's a pain in my chest that makes it hard to breathe sometimes.",
+                "disease_name": "Acute stress disorder (disorder)",
+                "found": [
+                    "Acute stress disorder (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Lung abscess (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Meningitis (disorder)",
+                    "Pyelonephritis (disorder)",
+                    "Urinary tract infectious disease (disorder)",
+                    "Bacterial endocarditis (disorder)",
+                    "Congestive heart failure (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having really bad pain in my bones and joints that comes out of nowhere. I also get short of breath sometimes, even when I'm just sitting down. My skin has this pale yellow tint to it, but I don't have a cough or feel sick to my stomach. I haven't noticed any rash either.",
+                "disease_name": "Sickling disorder due to hemoglobin S (disorder)",
+                "found": [
+                    "Infective arthritis (disorder)",
+                    "Rheumatism (disorder)",
+                    "Primary gout (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "(Acute/subacute necrosis of liver) or (acute liver failure) (disorder)",
+                    "Amebic liver abscess (disorder)",
+                    "Peritonitis (disorder)",
+                    "Amebiasis (disorder)",
+                    "Rheumatoid arthritis (disorder)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been noticing some strange things going on with my body lately. I get these little red spots that don't go away, especially on my arms and legs. My skin looks paler than usual, even though I'm not sick or anything. And I catch colds way more often than before - like every few weeks it seems. But here's the thing: I don't have any fever, and I haven't noticed any swelling in my joints.",
+                "disease_name": "Aplastic anemia (disorder)",
+                "found": [
+                    "Erysipelas (disorder)",
+                    "Infestation by Sarcoptes scabiei (disorder)",
+                    "Fixed drug eruption (disorder)",
+                    "Aplastic anemia (disorder)",
+                    "Urticaria (disorder)",
+                    "Toxic epidermal necrolysis, subcorneal type (disorder)",
+                    "Nephrotic syndrome (disorder)",
+                    "Erythema multiforme (disorder)",
+                    "Herpes simplex (disorder)",
+                    "Superficial white onychomycosis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really tired lately, like I can't get enough sleep no matter how much I rest. My skin looks paler than usual, almost translucent, and I notice my heart races sometimes when I do simple things like walking up the stairs. But I don't have a fever or any pain in my joints.",
+                "disease_name": "Anemia of chronic disease (disorder)",
+                "found": [
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Anemia of chronic disease (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Hypermetropia (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Strabismus (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Congestive heart failure (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really tired lately, and my skin has this yellowish tint. I don't have a fever or any pain in my belly.",
+                "disease_name": "Hemolytic anemia (disorder)",
+                "found": [
+                    "Hyperthyroidism (disorder)",
+                    "Strabismus (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "(Acute/subacute necrosis of liver) or (acute liver failure) (disorder)",
+                    "Cretinism (disorder)",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Vitamin deficiency: [thiamine/niacin] or [beriberi] or [pellagra] or [thiamine] (disorder)",
+                    "Amebiasis (disorder)",
+                    "Diabetes mellitus type 1 (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really tired lately, even after getting enough sleep. My nails have gotten very thin and spoon-shaped, which worries me. I also get this occasional foggy feeling in my head that makes it hard to concentrate. I don't have a cough or any fever, and I haven't noticed any rash on my skin.",
+                "disease_name": "Iron deficiency anemia (disorder)",
+                "found": [
+                    "Iron deficiency anemia (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Vitamin deficiency: [thiamine/niacin] or [beriberi] or [pellagra] or [thiamine] (disorder)",
+                    "Depressive disorder (disorder)",
+                    "Anemia (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Strabismus (disorder)",
+                    "Dementia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really tired lately, like I can't get enough sleep. My hands sometimes shake when I try to do things, and my legs feel numb in places. I haven't noticed any cough or fever.",
+                "disease_name": "Megaloblastic anemia (disorder)",
+                "found": [
+                    "Hyperthyroidism (disorder)",
+                    "Strabismus (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "(Mania) or (hypomania) or (agitated depression) (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Korsakoff's psychosis (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been peeing more often than usual, especially at night. I'm always thirsty, even after drinking water. My legs sometimes feel numb, and when I stand up quickly, I get dizzy. I haven't noticed any cough or fever.",
+                "disease_name": "Diabetes mellitus (disorder)",
+                "found": [
+                    "Diabetes mellitus (disorder)",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                    "Diabetes mellitus type 1 (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Chronic renal impairment (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "Acute kidney injury (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been peeing more often than usual and really thirsty all the time. I also get dizzy sometimes, but I don't have a fever or cough.",
+                "disease_name": "Diabetes mellitus type 1 (disorder)",
+                "found": [
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                    "Diabetes mellitus type 1 (disorder)",
+                    "Diabetes mellitus (disorder)",
+                    "Acute kidney injury (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "Chronic renal impairment (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Renal colic (finding)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been throwing up quite a bit lately, and I go to the bathroom more often than usual. I'm feeling really dehydrated but don't have any pain or fever.",
+                "disease_name": "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                "found": [
+                    "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                    "Renal colic (finding)",
+                    "Cholera (disorder)",
+                    "Acute kidney injury (disorder)",
+                    "Urinary tract infectious disease (disorder)",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Diabetes mellitus type 1 (disorder)",
+                    "Pyelonephritis (disorder)",
+                    "Acute nephrotic syndrome (disorder)",
+                    "Nephrotic syndrome (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling really shaky and my heart has been racing lately. I get confused sometimes, like I can't think straight, and I even passed out once. I'm always hungry, even though I eat regularly.",
+                "disease_name": "Hypoglycemia (disorder)",
+                "found": [
+                    "Hypoglycemia (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Anemia (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Ectopic pregnancy (disorder)",
+                    "Stable angina (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)"
+                ],
+                "matched": 1
+            }
+        ],
+        "final_results": {
+            "total_test_cases": 60,
+            "total_matched": 44,
+            "total_unmatched": 16,
+            "matched_percentage": 0.7333333333333333
+        }
+    }
+}

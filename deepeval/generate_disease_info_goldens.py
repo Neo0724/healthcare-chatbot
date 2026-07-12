@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from deepeval.synthesizer import Synthesizer
 from langchain_openai import ChatOpenAI
 from langchain_text_splitters import MarkdownHeaderTextSplitter
@@ -7,10 +9,11 @@ from deepeval.synthesizer.config import EvolutionConfig, Evolution
 from styling_configs.config_3 import disease_styling_config
 from utils.context_cleaner import clean_context_chunk
 
+load_dotenv()
 
 # custom_eval_llm = CustomLLM(
 #     model=ChatOpenAI(
-#         base_url="http://localhost:1234/v1",
+#         base_url=os.getenv("LLM_URL"),
 #         model="meta-llama-3.1-8b-instruct",
 #         api_key="lm-studio",
 #         temperature=0.7,
@@ -26,8 +29,8 @@ MD_FILE_NAME = "./malawi-stg-cleaned-short.md"
 
 custom_llm = CustomLLM(
     model=ChatOpenAI(
-        base_url="http://localhost:1234/v1",
-        model="qwen3-14b",
+        base_url=os.getenv("LLM_URL"),
+        model=os.getenv("LLM_MODEL"),
         api_key="lm-studio",
         temperature=0.2,
         frequency_penalty=1.0,

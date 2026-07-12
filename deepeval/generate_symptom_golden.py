@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from deepeval.synthesizer import Synthesizer
 from langchain_openai import ChatOpenAI
 from llm.custom_llm import CustomLLM
@@ -5,9 +7,11 @@ from deepeval.synthesizer.config import EvolutionConfig, Evolution
 from db.get_symptoms_information import get_symptoms_information
 from styling_configs.symptom_config import symptom_styling_config
 
+load_dotenv()
+
 # custom_eval_llm = CustomLLM(
 #     model=ChatOpenAI(
-#         base_url="http://localhost:1234/v1",
+#         base_url=os.getenv("LLM_URL"),
 #         model="meta-llama-3.1-8b-instruct",
 #         api_key="lm-studio",
 #         temperature=0.7,
@@ -20,8 +24,8 @@ from styling_configs.symptom_config import symptom_styling_config
 
 custom_llm = CustomLLM(
     model=ChatOpenAI(
-        base_url="http://localhost:1234/v1",
-        model="qwen3-14b",
+        base_url=os.getenv("LLM_URL"),
+        model=os.getenv("LLM_MODEL"),
         api_key="lm-studio",
         temperature=0.2,
         frequency_penalty=1.0,
@@ -36,6 +40,7 @@ custom_llm = CustomLLM(
     ),
     model_name="qwen3-14b",
 )
+
 
 def generate_symptom_golden():
     records = get_symptoms_information()
@@ -66,16 +71,17 @@ def generate_symptom_golden():
         evolution_config=evolution_config,
     )
 
-    goldens = synthesizer.generate_goldens_from_contexts(
+    synthesizer.generate_goldens_from_contexts(
         contexts=contexts,
-        max_goldens_per_context=3,
+        max_goldens_per_context=1,
         include_expected_output=False,
         source_files=diseases,
     )
 
     synthesizer.save_as(
-        file_type="csv", directory="./synthetic_data", file_name="symptom_test_set"
+        file_type="csv", directory="./synthetic_data", file_name="symptom_test_set_v5"
     )
+
 
 if __name__ == "__main__":
     generate_symptom_golden()

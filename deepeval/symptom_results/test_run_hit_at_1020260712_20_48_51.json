@@ -1,0 +1,1033 @@
+{
+    "metric": "Symptom-Disease Hit@10",
+    "testCases": {
+        "results": [
+            {
+                "input": "How does pulmonary edema manifest through dyspnea, cough with frothy pink sputum, tachypnoea, signs of increased respiratory effort and diffuse rales or crackles?",
+                "disease_name": "Acute left ventricular failure (disorder)",
+                "found": [
+                    "Lung abscess (disorder)",
+                    "Bronchiectasis (disorder)",
+                    "Acute exacerbation of chronic obstructive pulmonary disease (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Childhood bronchiectasis (disorder)",
+                    "Bronchitis: [unspecified (& chest infection)] or [recurrent wheezy] (disorder)",
+                    "Bronchiolitis (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Acute bronchitis (disorder)",
+                    "Pulmonary embolism (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What condition presents with shortness of breath and a dry cough as symptoms?",
+                "disease_name": "Congestive heart failure (disorder)",
+                "found": [
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Pulmonary embolism (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Lung abscess (disorder)",
+                    "Bronchiolitis (disorder)",
+                    "Laryngopharyngeal reflux (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Bronchiectasis (disorder)",
+                    "Bronchitis: [unspecified (& chest infection)] or [recurrent wheezy] (disorder)",
+                    "Acute stress disorder (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "My baby has been sweating a lot, especially when feeding, and turns blue sometimes. I don't think they have a runny nose or cough.",
+                "disease_name": "Congenital heart disease (disorder)",
+                "found": [
+                    "Hyperthyroidism (disorder)",
+                    "Congenital heart disease (disorder)",
+                    "Anemia (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "(Anaemia: [iron deficiency] or [microcytic]) or (Kelly-Paterson syndrome) or (Plummer-Vinson syndrome) (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Acute stress disorder (disorder)",
+                    "Acute coronary syndrome (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do the presence of a sore throat and irregular heartbeats align with the Jones criteria for acute rheumatic fever when considering major criteria like carditis, polyarthritis/polyarthralgia, subcutaneous nodules, erythema marginatum, Sydenham's chorea alongside minor criteria such as fever >38\u00b0C, elevated ESR/CRP levels and prolonged PR interval?",
+                "disease_name": "Active rheumatic fever (disorder)",
+                "found": [
+                    "Active rheumatic fever (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Bacterial endocarditis (disorder)",
+                    "Lung abscess (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Acute otitis media (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How might fluid accumulation due to heart failure contribute to a heavy chest sensation without causing respiratory distress or lower limb discomfort?",
+                "disease_name": "Rheumatic heart disease (disorder)",
+                "found": [
+                    "Stable angina (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Lung abscess (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Laryngopharyngeal reflux (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "How does having a fever over 38\u00b0C with no palpable lumps, along with episodes of rapid heartbeat, align with the diagnostic criteria for infective endocarditis involving blood culture positivity and valvular vegetation?",
+                "disease_name": "Bacterial endocarditis (disorder)",
+                "found": [
+                    "Acute stress disorder (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Bacterial endocarditis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Lung abscess (disorder)",
+                    "(Rickettsioses [& named variants]) or (trypanosomiasis) (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Antepartum hemorrhage (disorder)",
+                    "Lower abdominal pain (finding)",
+                    "Typhoid &/or paratyphoid fevers (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could be causing my headaches and episodes of rapid heart rate without dizziness or leg soreness during walking?",
+                "disease_name": "Hypertensive disorder, systemic arterial (disorder)",
+                "found": [
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Meningitis (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Migraine (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What might cause persistent fatigue and occasional headaches without chest pain or dyspnea considering elevated blood pressure \u2265140/90 mmHg?",
+                "disease_name": "(Hypertensive disease) or (hypertension) (disorder)",
+                "found": [
+                    "Hypermetropia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "Strabismus (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Meningitis (disorder)",
+                    "Myopia (disorder)",
+                    "Presbyopia (disorder)",
+                    "Migraine (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What specific neurological symptoms like visual disturbances and retinal hemorrhages associated with hypertensive encephalopathy could indicate a severe increase in blood pressure leading to conditions such as PRES, stroke, or subarachnoid hemorrhage?",
+                "disease_name": "Hypertensive emergency (disorder)",
+                "found": [
+                    "Hypertensive emergency (disorder)",
+                    "Neovascular glaucoma (disorder)",
+                    "Traumatic hyphema (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Retrobulbar hemorrhage (disorder)",
+                    "Proliferative retinopathy due to diabetes mellitus (disorder)",
+                    "Astigmatism (disorder)",
+                    "Severe nonproliferative retinopathy due to diabetes mellitus (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Cataract (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does central crashing chest heaviness, especially during exertion with radiation to left arm/jaw and nausea, correlate with potential cardiac issues in a patient without shortness of breath or palpitations?",
+                "disease_name": "Ischemic heart disease (disorder)",
+                "found": [
+                    "Acute coronary syndrome (disorder)",
+                    "Stable angina (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Anemia (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Cellulitis (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What cardiac condition presents as central chest discomfort radiating to the left arm at rest, lasting 2-5 minutes with crescendo-decrescendo pattern?",
+                "disease_name": "Stable angina (disorder)",
+                "found": [
+                    "Acute coronary syndrome (disorder)",
+                    "Stable angina (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Lung abscess (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Amebic liver abscess (disorder)",
+                    "Ectopic pregnancy (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My chest feels really tight and it's been like that for over half an hour now. I tried resting and taking some medicine but it didn't help at all. I don't have any stomach pain or a headache, though.",
+                "disease_name": "Acute coronary syndrome (disorder)",
+                "found": [
+                    "Stable angina (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Acute stress disorder (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Lung abscess (disorder)",
+                    "Bronchiolitis (disorder)",
+                    "Bronchitis: [unspecified (& chest infection)] or [recurrent wheezy] (disorder)",
+                    "Tetanus (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could be causing these muscle cramps in my legs and feet? I feel really cold in those areas sometimes, but I don't have any sores or hair loss.",
+                "disease_name": "Peripheral vascular disease (disorder)",
+                "found": [
+                    "Peripheral vascular disease (disorder)",
+                    "Dysmenorrhea (finding)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Stable angina (disorder)",
+                    "Tetanus (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Acute flaccid paralysis (finding)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do focal seizures cause non-painful spontaneous limb and trunk movements along with altered sensations without fever?",
+                "disease_name": "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                "found": [
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Spinal cord compression (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Acute transverse myelitis (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Premature labor (finding)",
+                    "Peripheral vascular disease (disorder)",
+                    "Ankylosing vertebral hyperostosis (disorder)",
+                    "Hypoglycemia (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does sudden unconsciousness followed by rhythmic limb movements, then headache, confusion, and fatigue align with the characteristics of a tonic-clonic seizure?",
+                "disease_name": "Childhood seizure (finding)",
+                "found": [
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Complicated malaria (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Hypoglycemia (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What neurological conditions could lead to trouble speaking clearly and weakness on my right side?",
+                "disease_name": "Cerebrovascular accident (disorder)",
+                "found": [
+                    "Peritonsillar abscess (disorder)",
+                    "Tetanus (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Spinal cord compression (disorder)",
+                    "Schizophrenia (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Presbyopia (disorder)",
+                    "Meningitis (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Hypermetropia (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What could cause a sudden, severe headache at the back of my head with nausea, vomiting, and stiff neck? I don't feel dizzy or have any runny nose.",
+                "disease_name": "Subarachnoid intracranial hemorrhage (disorder)",
+                "found": [
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Migraine (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Psychogenic headache (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do episodic headaches that are often one-sided and associated with nausea and vomiting differ from other types of headache disorders, particularly in terms of their occurrence without numbness or tingling?",
+                "disease_name": "Migraine (disorder)",
+                "found": [
+                    "Migraine (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Meningitis (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Maternal malaria during pregnancy - baby delivered (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Psychogenic headache (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do headaches characterized by abrupt onset, one-sided pain lasting up to two hours in clusters over weeks/months differ from typical cluster headaches without associated ocular redness or nasal discharge?",
+                "disease_name": "Cluster headache (disorder)",
+                "found": [
+                    "Cluster headache (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Migraine (disorder)",
+                    "Meningitis (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Hypermetropia (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do unilateral sharp facial pains with a distinct trigger point relate to potential intracranial issues affecting the trigeminal nerve?",
+                "disease_name": "Trigeminal neuralgia (disorder)",
+                "found": [
+                    "Trigeminal neuralgia (disorder)",
+                    "Orbital cellulitis (disorder)",
+                    "Trigeminal neuralgia (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Periodontal abscess (disorder)",
+                    "Herpes zoster (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Cluster headache (disorder)",
+                    "Traumatic dislocation of temporomandibular joint (disorder)",
+                    "Periapical abscess without sinus tract (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do headaches characterized by a tight band sensation over the entire head, typically worsening in the afternoon, differ from other headache types that may present with atypical pain or inadequate therapeutic response?",
+                "disease_name": "Psychogenic headache (disorder)",
+                "found": [
+                    "Psychogenic headache (disorder)",
+                    "Migraine (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Meningitis (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Cluster headache (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Cerebral abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could be causing my headache, stiff neck, and feeling hot? I don't get nauseous or feel dizzy.",
+                "disease_name": "Meningitis (disorder)",
+                "found": [
+                    "Meningitis (disorder)",
+                    "Psychogenic headache (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Lower abdominal pain (finding)",
+                    "Migraine (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could cause fever, altered behavior, seizures without skin issues, and when is neuroimaging or lumbar puncture necessary?",
+                "disease_name": "Herpes encephalitis (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "Meningitis (disorder)",
+                    "Complicated malaria (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Childhood seizure (finding)",
+                    "Schizophrenia (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Dementia (disorder)",
+                    "Hypoglycemia of childhood (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do persistent fevers, seizures, and focal neurological signs relate to raised intracranial pressure or syndrome of inappropriate ADH secretion?",
+                "disease_name": "Cerebral abscess (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Meningitis (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Cysticercosis of central nervous system (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Migraine (disorder)",
+                    "Bacterial endocarditis (disorder)",
+                    "Herpes in pregnancy (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How do seizures without pain or headaches, along with focal neurological deficits and movement abnormalities, relate to conditions like hydrocephalus or developmental regression?",
+                "disease_name": "Cysticercosis of central nervous system (disorder)",
+                "found": [
+                    "Cerebral abscess (disorder)",
+                    "Cysticercosis of central nervous system (disorder)",
+                    "Herpes encephalitis (disorder)",
+                    "Meningitis (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Childhood seizure (finding)",
+                    "Cerebrovascular accident (disorder)",
+                    "Hypoglycemia of childhood (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Migraine (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been feeling weak in my legs and arms, like I can't move them properly, and I get tingling sensations. But I don't have any trouble breathing or stomach issues.",
+                "disease_name": "Acute flaccid paralysis (finding)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Meningitis (disorder)",
+                    "Acute transverse myelitis (disorder)",
+                    "Cerebral abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My body keeps shaking uncontrollably even after taking my medication, but I don't feel sick to my stomach.",
+                "disease_name": "Ankylosing vertebral hyperostosis (disorder)",
+                "found": [
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "(Mania) or (hypomania) or (agitated depression) (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Chorea (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Hypermetropia (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What could be causing these random movements in my arms and legs? I've been getting them a lot lately, but there's no pain or numbness.",
+                "disease_name": "Chorea (disorder)",
+                "found": [
+                    "Chorea (disorder)",
+                    "Tetanus (disorder)",
+                    "Acute gastroenteritis (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Constipation (finding)",
+                    "Spinal cord compression (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Psychogenic headache (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've been having sudden weakness in my legs and a loss of feeling there, but I don't have any pain or fever.",
+                "disease_name": "Myelopathy due to acute infarction of spinal cord (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Compartment syndrome (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Dysmenorrhea (finding)",
+                    "Constipation (finding)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does lower back pain with radicular, stabbing sensations and leg weakness, along with numbness in the feet but no abdominal or head symptoms, align with spinal cord compression features like motor/sensory deficits and autonomic dysfunction?",
+                "disease_name": "Spinal cord compression (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Acute transverse myelitis (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Dysmenorrhea (finding)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "Premature labor (finding)",
+                    "Periapical abscess without sinus tract (disorder)",
+                    "Periodontal abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My back has been hurting a lot lately, and I've noticed my legs feel weak. Also, I can't feel things properly on my trunk, and I sometimes wet the bed. But I don't have any chest pain or trouble breathing.",
+                "disease_name": "Acute transverse myelitis (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Acute transverse myelitis (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Myelopathy due to acute infarction of spinal cord (disorder)",
+                    "Premature labor (finding)",
+                    "Dysmenorrhea (finding)",
+                    "Pyelonephritis (disorder)",
+                    "Leprosy (disorder)",
+                    "Ankylosing vertebral hyperostosis (disorder)",
+                    "Vitamin deficiency: [thiamine/niacin] or [beriberi] or [pellagra] or [thiamine] (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does swelling near my ear with tenderness and a fever relate to conditions that might involve moving my ear or having discharge from it?",
+                "disease_name": "Mastoiditis (disorder)",
+                "found": [
+                    "Mastoiditis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Otitis externa (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Rheumatism (disorder)",
+                    "Periapical abscess without sinus tract (disorder)",
+                    "Lower abdominal pain (finding)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My ear feels sore and itchy, but I don't get dizzy or have ringing in my ears. Sometimes I feel like my hearing isn't as clear as usual.",
+                "disease_name": "Otitis externa (disorder)",
+                "found": [
+                    "Otitis externa (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Herpes simplex (disorder)",
+                    "Superficial white onychomycosis (disorder)",
+                    "Chronic otitis media (disorder)",
+                    "Urticaria (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Syphilis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I've got a fever and my ear hurts really bad on one side, but I don't have a sore throat.",
+                "disease_name": "Acute otitis media (disorder)",
+                "found": [
+                    "Acute otitis media (disorder)",
+                    "Mastoiditis (disorder)",
+                    "Infective arthritis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Otitis externa (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Rheumatism (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does persistent ear pus discharge and hearing loss relate to a ruptured eardrum lasting over two weeks, secondary infections with multiple organisms, and reduced effectiveness of oral antibiotics in immunosuppressed patients?",
+                "disease_name": "Chronic otitis media (disorder)",
+                "found": [
+                    "Chronic otitis media (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "Mastoiditis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Cellulitis (disorder)",
+                    "Otitis externa (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Cytomegaloviral retinitis (disorder)",
+                    "Lung abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "When I move my head suddenly, I get this spinning feeling that makes me throw up, and my eyes keep jumping around. But I don't have any headaches or trouble walking.",
+                "disease_name": "[D]Acute vertigo (situation)",
+                "found": [
+                    "Primary angle-closure glaucoma (disorder)",
+                    "Acute angle-closure glaucoma (disorder)",
+                    "Strabismus (disorder)",
+                    "Presbyopia (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Subarachnoid intracranial hemorrhage (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Astigmatism (disorder)",
+                    "Myopia (disorder)",
+                    "Neovascular glaucoma (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What could be causing recurrent nosebleeds without any pain or headache?",
+                "disease_name": "Epistaxis (disorder)",
+                "found": [
+                    "Epistaxis (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Bronchiectasis (disorder)",
+                    "Aplastic anemia (disorder)",
+                    "Fixed drug eruption (disorder)",
+                    "Childhood bronchiectasis (disorder)",
+                    "Traumatic hyphema (disorder)",
+                    "Diabetes mellitus (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "Abnormal uterine bleeding (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does swelling and pain around my nose relate to a bump at the nostril's opening? I don't have any mucous drainage or fever.",
+                "disease_name": "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                "found": [
+                    "Epistaxis (disorder)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Sinusitis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Mastoiditis (disorder)",
+                    "Cellulitis (disorder)",
+                    "Retrobulbar hemorrhage (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does purulent nasal discharge with intermittent occurrence and associated nasal obstruction relate to potential central nervous system complications from sinusitis, given no improvement after antibiotic treatment?",
+                "disease_name": "Bacterial sinusitis (disorder)",
+                "found": [
+                    "Bacterial sinusitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Sinusitis (disorder)",
+                    "Chronic otitis media (disorder)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Acute otitis media (disorder)",
+                    "Acute bronchitis (disorder)",
+                    "Lung abscess (disorder)",
+                    "Peritonsillar abscess (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What conditions besides infections or medication side effects could cause blocked nose with watery discharge, frequent sneezing, nasal itching, conjunctival watering, pale grey mucosa, mouth breathing, and snoring?",
+                "disease_name": "Allergic rhinitis (disorder)",
+                "found": [
+                    "Allergic rhinitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Vernal conjunctivitis (disorder)",
+                    "Sinusitis (disorder)",
+                    "Cellulitis (disorder)",
+                    "Bacterial sinusitis (disorder)",
+                    "(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)",
+                    "Herpes in pregnancy (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Mucopurulent conjunctivitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does a sore throat with pain upon swallowing, inflamed tonsils having multiple white spots, and sudden fever indicate possible causes like peritonsillar abscess?",
+                "disease_name": "Tonsillitis (disorder)",
+                "found": [
+                    "Tonsillitis (disorder)",
+                    "Pharyngitis (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Infection of oropharynx caused by Candida (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Cellulitis (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Syphilis (disorder)",
+                    "Meningitis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does sudden severe coughing with difficulty breathing relate to signs of upper airway obstruction like stridor and the use of accessory muscles for respiration?",
+                "disease_name": "Difficulty with mask ventilation and tracheal intubation (finding)",
+                "found": [
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Tetanus (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Bronchiolitis (disorder)",
+                    "Lung abscess (disorder)",
+                    "Acute left ventricular failure (disorder)",
+                    "Acute respiratory infection (disorder)",
+                    "Complicated malaria (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does chronic laryngopharyngeal reflux contribute to symptoms like excessive throat-clearing, persistent dry cough, non-cold-related sore throats, and sensations of hoarseness or globus pharynges?",
+                "disease_name": "Laryngopharyngeal reflux (disorder)",
+                "found": [
+                    "Laryngopharyngeal reflux (disorder)",
+                    "Pharyngitis (disorder)",
+                    "(Ca lip, oral, pharynx) or (oral carcinomas) (disorder)",
+                    "(Acute nasopharyngitis) or (common cold) or (acute coryza) or (acute rhinitis) or (sniffles) or (snuffles) (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Peritonsillar abscess (disorder)",
+                    "Tonsillitis (disorder)",
+                    "Tetanus (disorder)",
+                    "Childhood bronchiectasis (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could be causing me to feel really tired all the time, sometimes my heart feels like it's racing, I get dizzy easily, and I'm out of breath when I walk up stairs? Also, I don't have any stomach issues or headaches.",
+                "disease_name": "Anemia (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "(Hypertensive disease) or (hypertension) (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Stable angina (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "Should I get a blood transfusion if my hemoglobin is below 8 g/dl? I feel weak and dizzy but don't have chest pain or trouble breathing.",
+                "disease_name": "(Anaemia: [iron deficiency] or [microcytic]) or (Kelly-Paterson syndrome) or (Plummer-Vinson syndrome) (disorder)",
+                "found": [
+                    "Spinal cord compression (disorder)",
+                    "Anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Meningitis (disorder)",
+                    "Hypertensive emergency (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What causes febrile symptoms without respiratory issues or rashes following blood transfusions?",
+                "disease_name": "Platelet transfusion (procedure)",
+                "found": [
+                    "Infective arthritis (disorder)",
+                    "Urinary tract infectious disease (disorder)",
+                    "Burns (& [scalds]) (disorder)",
+                    "Pyelonephritis (disorder)",
+                    "Retropharyngeal abscess (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Cerebral abscess (disorder)",
+                    "Peritonsillar abscess (disorder)",
+                    "Meningitis (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "Does sharp back and chest pain, a 1\u00b0C temperature rise above baseline, and wheezing meet any criteria for suspecting an adverse reaction during blood transfusions?",
+                "disease_name": "Allergic transfusion reaction (disorder)",
+                "found": [
+                    "Lung abscess (disorder)",
+                    "Bronchitis: [unspecified (& chest infection)] or [recurrent wheezy] (disorder)",
+                    "Bronchiolitis (disorder)",
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Acute stress disorder (disorder)",
+                    "Typhoid &/or paratyphoid fevers (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Bronchiectasis (disorder)",
+                    "Pyelonephritis (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "How does an itchy rash localized to the arms and legs present without associated pain or systemic symptoms like fever?",
+                "disease_name": "Mild inflammation (morphologic abnormality)",
+                "found": [
+                    "Herpes simplex (disorder)",
+                    "Urticaria (disorder)",
+                    "Leprosy (disorder)",
+                    "Eczema (disorder)",
+                    "Infestation by Sarcoptes scabiei (disorder)",
+                    "Syphilis (disorder)",
+                    "Fixed drug eruption (disorder)",
+                    "Genital warts (disorder)",
+                    "Subacute irritant contact dermatitis (disorder)",
+                    "Superficial white onychomycosis (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What conditions cause anxiety along with itchy skin? I've been feeling anxious lately and my skin has been really itchy, but I don't have a fever or any stomach issues.",
+                "disease_name": "No reaction (qualifier value)",
+                "found": [
+                    "Urticaria (disorder)",
+                    "Herpes simplex (disorder)",
+                    "Leprosy (disorder)",
+                    "Infestation by Sarcoptes scabiei (disorder)",
+                    "Superficial white onychomycosis (disorder)",
+                    "Otitis externa (disorder)",
+                    "Allergic rhinitis (disorder)",
+                    "Post-traumatic stress disorder (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Hyperthyroidism (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "What could be causing my anxiety and chest tightness? I feel like I'm struggling to breathe and it's hard to catch my breath, but I don't have any stomach pain or headaches.",
+                "disease_name": "Acute stress disorder (disorder)",
+                "found": [
+                    "Acute stress disorder (disorder)",
+                    "Pulmonary embolism (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Acute coronary syndrome (disorder)",
+                    "Stable angina (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Other CVS diseases in pregnancy, childbirth and the puerperium (& [heart disease]) (disorder)",
+                    "Difficulty with mask ventilation and tracheal intubation (finding)",
+                    "Anemia (disorder)",
+                    "Acute left ventricular failure (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "My kid's foot is swollen and hurts a lot, but they don't have a fever. They've never had any issues with their blood or needed transfusions, and no one else in the family has either.",
+                "disease_name": "Sickling disorder due to hemoglobin S (disorder)",
+                "found": [
+                    "Infective arthritis (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)",
+                    "Rheumatism (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "Primary gout (disorder)",
+                    "Compartment syndrome (disorder)",
+                    "Infected tooth socket (disorder)",
+                    "Injury of musculoskeletal system (disorder)",
+                    "Periodontal abscess (disorder)",
+                    "Acute pain of scrotum (finding)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "How does easy bruising and spontaneous gum bleeding relate to conditions causing pallor, petechiae, purpura, and frequent infections without fever?",
+                "disease_name": "Aplastic anemia (disorder)",
+                "found": [
+                    "Aplastic anemia (disorder)",
+                    "Gingivitis (disorder)",
+                    "Dental trauma (disorder)",
+                    "Erysipelas (disorder)",
+                    "Infection of oropharynx caused by Candida (disorder)",
+                    "Genital warts (disorder)",
+                    "Anemia (disorder)",
+                    "Epistaxis (disorder)",
+                    "Ecthyma (disorder)",
+                    "Infected tooth socket (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What might cause me to feel pale along with some other not-specific symptoms but without any chest pain or trouble breathing?",
+                "disease_name": "Anemia of chronic disease (disorder)",
+                "found": [
+                    "(Septicaemia NOS) or (sepsis) (disorder)",
+                    "Toxic epidermal necrolysis, subcorneal type (disorder)",
+                    "Anemia of chronic disease (disorder)",
+                    "Maternal malaria during pregnancy - baby delivered (disorder)",
+                    "Acute osteomyelitis (disorder)",
+                    "Cellulitis (disorder)",
+                    "Peritonitis (disorder)",
+                    "Aplastic anemia (disorder)",
+                    "Severe protein-calorie malnutrition (Gomez: less than 60 percent of standard weight) (disorder)",
+                    "Sickling disorder due to hemoglobin S (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does persistent fatigue and jaundice without abdominal pain or headache relate to haemolysis indicators like anaemia, reticulocytosis, low haptoglobin, elevated lDH, and unconjugated hyperbilirubinaemia?",
+                "disease_name": "Hemolytic anemia (disorder)",
+                "found": [
+                    "Hyperthyroidism (disorder)",
+                    "Strabismus (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "(Acute/subacute necrosis of liver) or (acute liver failure) (disorder)",
+                    "Cretinism (disorder)",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Vitamin deficiency: [thiamine/niacin] or [beriberi] or [pellagra] or [thiamine] (disorder)",
+                    "Amebiasis (disorder)",
+                    "Diabetes mellitus type 1 (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "I've been feeling really tired lately and my nails look kind of spoon-shaped. I don't have any belly pain or aches in my joints.",
+                "disease_name": "Iron deficiency anemia (disorder)",
+                "found": [
+                    "Iron deficiency anemia (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Anemia (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Strabismus (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Iodine-deficiency-related endemic goitre (disorder)",
+                    "Toxic epidermal necrolysis, subcorneal type (disorder)",
+                    "Presbyopia (disorder)",
+                    "(Mania) or (hypomania) or (agitated depression) (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "What could be causing my legs to feel numb and weak lately? I've been feeling really tired all the time, getting dizzy sometimes, and having trouble catching my breath when I walk up stairs. But I don't have any chest pain or headaches.",
+                "disease_name": "Megaloblastic anemia (disorder)",
+                "found": [
+                    "Anemia (disorder)",
+                    "Peripheral vascular disease (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Spinal cord compression (disorder)",
+                    "Ischemic heart disease (disorder)",
+                    "Hypermetropia (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Congestive heart failure (disorder)",
+                    "Deep venous thrombosis of lower extremity (disorder)"
+                ],
+                "matched": 0
+            },
+            {
+                "input": "How do frequent urination and tingling in my feet relate to hyperglycemia? I don't get headaches or have trouble seeing.",
+                "disease_name": "Diabetes mellitus (disorder)",
+                "found": [
+                    "Acute cystitis (disorder)",
+                    "Urinary tract infectious disease (disorder)",
+                    "Acute flaccid paralysis (finding)",
+                    "Hyperthyroidism (disorder)",
+                    "Acute pain of scrotum (finding)",
+                    "Diabetes mellitus (disorder)",
+                    "Fit: [Convulsion) &/or (fit and well] (disorder)",
+                    "(Chronic diarrhoea) or (other non-infective gastroenteritis and colitis NOS) (disorder)",
+                    "Renal colic (finding)",
+                    "Diabetes mellitus type 2 (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "I'm pregnant and have diabetes. I've been throwing up a lot lately, but I haven't had any trouble seeing or headaches. How bad is this going to affect me?",
+                "disease_name": "Diabetes mellitus type 1 (disorder)",
+                "found": [
+                    "Diabetes mellitus type 1 (disorder)",
+                    "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                    "Maternal malaria during pregnancy - baby delivered (disorder)",
+                    "Diabetes mellitus (disorder)",
+                    "Dyspepsia (disorder)",
+                    "Cholera (disorder)",
+                    "Anemia of pregnancy (disorder)",
+                    "Acute gastroenteritis (disorder)",
+                    "Hypoglycemia (disorder)",
+                    "Antepartum hemorrhage (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How does throwing up a lot along with peeing all the time show that I have high blood sugar causing dehydration and acidosis in my body without me having any stomach pain or headache?",
+                "disease_name": "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                "found": [
+                    "Diabetes mellitus (& [ketoacidosis]) (disorder)",
+                    "Renal colic (finding)",
+                    "Diabetes mellitus type 2 (disorder)",
+                    "Acute kidney injury (disorder)",
+                    "Diabetes mellitus type 1 (disorder)",
+                    "Diabetes mellitus (disorder)",
+                    "Chronic renal impairment (disorder)",
+                    "Nephrotic syndrome (disorder)",
+                    "(Acute glomerulonephritis) or (acute nephritis) (disorder)",
+                    "Primary gout (disorder)"
+                ],
+                "matched": 1
+            },
+            {
+                "input": "How should I manage symptoms like trembling, tachycardia, sweating, excessive hunger, drowsiness, confusion from low blood sugar below 70mg/dl (3.9mmol/L)?",
+                "disease_name": "Hypoglycemia (disorder)",
+                "found": [
+                    "Hypoglycemia (disorder)",
+                    "(Alcoholic psychosis: [Korsakov's] or [other]) or (withdrawal syndrome - alcohol) (disorder)",
+                    "Hyperthyroidism (disorder)",
+                    "Complicated malaria (disorder)",
+                    "Poisoning caused by local anesthetic (disorder)",
+                    "Hypoglycemia of childhood (disorder)",
+                    "Hypertensive disorder, systemic arterial (disorder)",
+                    "Korsakoff's psychosis (disorder)",
+                    "Nutritional marasmus (disorder)",
+                    "Anemia (disorder)"
+                ],
+                "matched": 1
+            }
+        ],
+        "final_results": {
+            "total_test_cases": 60,
+            "total_matched": 45,
+            "total_unmatched": 15,
+            "matched_percentage": 0.75
+        }
+    }
+}

@@ -1,6 +1,10 @@
+import os
+from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
+
+load_dotenv()
 
 
 class DiseaseNameClassifierSchema(BaseModel):
@@ -8,8 +12,8 @@ class DiseaseNameClassifierSchema(BaseModel):
 
 
 llm = ChatOpenAI(
-    base_url="http://localhost:1234/v1",
-    model="qwen3-14b",
+    base_url=os.getenv("LLM_URL"),
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
 )

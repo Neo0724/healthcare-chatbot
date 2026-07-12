@@ -1,0 +1,309 @@
+input,actual_output,expected_output,context,source_file
+"How does pulmonary edema manifest through dyspnea, cough with frothy pink sputum, tachypnoea, signs of increased respiratory effort and diffuse rales or crackles?",,,"- Dyspnea,  cough  {often  with  frothy,  pink-tinged  sputum},  tachypnoea,  signs  of increased respiratory effort and diffuse rales or crackles.",Acute left ventricular failure (disorder)
+What condition presents with shortness of breath and a dry cough as symptoms?,,,"- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema",Congestive heart failure (disorder)
+"My baby has been sweating a lot, especially when feeding, and turns blue sometimes. I don't think they have a runny nose or cough.",,,"- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  feeding,  Shock, Finger clubbing, Cyanosis, Cyanotic spells|- Consider if blue baby doesn't pink up with oxygen, check oxygen saturations. The baby may or may not have signs of heart failure. It may be difficult to distinguish from persistent pulmonary hypertension
+- Investigate with chest x ray and cardiac echo",Congenital heart disease (disorder)
+"How do the presence of a sore throat and irregular heartbeats align with the Jones criteria for acute rheumatic fever when considering major criteria like carditis, polyarthritis/polyarthralgia, subcutaneous nodules, erythema marginatum, Sydenham's chorea alongside minor criteria such as fever >38°C, elevated ESR/CRP levels and prolonged PR interval?",,,"New revised Jones criteria  
+1. Evidence of preceding Group A strep throat infection
+2. Major criteria
+- a. Carditis
+- b. Polyarthritis/polyarthralgia
+- c. Subcutaneous nodules
+- d. Erythema marginatum
+- e. Sydenham's chorea
+3. Minor criteria
+- a. Fever &gt;38°C
+- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3
+- c. Prolonged PR interval
+- d. Monoarthralgia  
+To make diagnosis you need one major and 2 minor or 2 major or 3 minor criteria|- FBC, ESR, CRP, Anti-Streptolysin O titer, Throat swab, ECG, Echocardiograph|- Children with complications of acute rheumatic fever
+- Children with Persistent symptoms",Active rheumatic fever (disorder)
+How might fluid accumulation due to heart failure contribute to a heavy chest sensation without causing respiratory distress or lower limb discomfort?,,,"- Symptoms and signs of heart failure
+- Murmurs",Rheumatic heart disease (disorder)
+"How does having a fever over 38°C with no palpable lumps, along with episodes of rapid heartbeat, align with the diagnostic criteria for infective endocarditis involving blood culture positivity and valvular vegetation?",,,"1. Blood  culture  positive  for  typical  microorganism  (e.g.,  Staphylococcus  aureus, Enterococcus, Viridans streptococcus)
+2. Echocardiogram showing valvular vegetation|1. Predisposing cardiac lesion
+2. Temperature &gt;38°C
+3. Embolic  phenomena (e.g.,  stroke,  septic  pulmonary  infarcts,  mycotic  aneurysm, intracranial hemorrhage, conjuctival haemorrhage or Janeway lesions)
+4. Immunologic  phenomena  (e.g.,  glomerulonephritis,  Osler's  nodes,  Roth  spots, positive rheumatoid factor)
+5. Positive blood culture not meeting above criteria|- 2 major or 1 major plus 3 minor criteria|- 1 major and 1 minor OR 3 minor criteria",Bacterial endocarditis (disorder)
+What could be causing my headaches and episodes of rapid heart rate without dizziness or leg soreness during walking?,,,"- Coarctation of the aorta|- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition","Hypertensive disorder, systemic arterial (disorder)"
+What might cause persistent fatigue and occasional headaches without chest pain or dyspnea considering elevated blood pressure ≥140/90 mmHg?,,,"- Usually none
+- Occasionally headaches, palpitations, dizziness, easy fatiguability
+- high Blood pressure ≥ 140/90 mmHg
+- +/-Displaced apex beat
+- Signs pointing to a specific cause for secondary hypertension|- Hydrochlorothiazide  25  mg  each  morning,  increasing  the  dose  is  not  advised. Explain  to  the  patient  that  treatment  must  be  regular  (every  day),  closely monitored and generally must be taken for life
+- Alternatively, give Bendrofluazide 5mg daily or Indapamide 2.5mg daily  
+Note : Avoid in pregnancy feeding and breastfeeding",(Hypertensive disease) or (hypertension) (disorder)
+"What specific neurological symptoms like visual disturbances and retinal hemorrhages associated with hypertensive encephalopathy could indicate a severe increase in blood pressure leading to conditions such as PRES, stroke, or subarachnoid hemorrhage?",,,"- Encephalopathy, convulsions, Posterior reversible  encephalopathy  syndrome (PRES), Visual disturbances, retinal hemorrhages, blindness.|A severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).  The underlying cause may be primary hypertension; however, secondary causes of hypertension must be excluded. In adult patients this often occurs with a BP &gt; 180/120 mmHg, while in children this may occur at lower BP levels.|- Encephalopathy, convulsions, retinal hemorrhages, or blindness.
+- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection|- Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.
+- Alternatively, Labetalol, IV, Adults 20-50 mg STAT. (over a 2-minute period). Repeat at 10-minute intervals, if necessary, to a max. of 200 mg
+- If no IV drugs and patient fully awake give Nifedipine 20mg slow release po
+- If heart failure: add Frusemide 40 mg IV stat  
+Sub-lingual nifedipine (10 mg) should be avoided due to the unpredictable response of the blood pressure. If parenteral drugs are unavailable, then slow release nifedipine 20mg orally can be used.",Hypertensive emergency (disorder)
+"How does central crashing chest heaviness, especially during exertion with radiation to left arm/jaw and nausea, correlate with potential cardiac issues in a patient without shortness of breath or palpitations?",,,"- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting
+- Heaviness feeling on the chest
+- Shortness of breath and palpitations
+- Sweating
+- -/+ signs of pulmonary edema if LVF  
+Note : old and diabetic patients may have silent myocardial infarction (with no chest pain)",Ischemic heart disease (disorder)
+"What cardiac condition presents as central chest discomfort radiating to the left arm at rest, lasting 2-5 minutes with crescendo-decrescendo pattern?",,,"- Central chest pain {squeezing, heavy discomfort} with radiation to the left arm on exertion or at rest lasting 2-5 minutes, crescendo and decrescendo pattern|- Unstable angina, non-ST segment myocardial infarction
+- Central  chest  pain  as  above  lasting  more  than  10  minutes  and  has  a  crescendo pattern
+- Acute myocardial Infarction (ST segment elevation)
+- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities",Stable angina (disorder)
+"My chest feels really tight and it's been like that for over half an hour now. I tried resting and taking some medicine but it didn't help at all. I don't have any stomach pain or a headache, though.",,,"- Unstable angina, non-ST segment myocardial infarction
+- Central  chest  pain  as  above  lasting  more  than  10  minutes  and  has  a  crescendo pattern
+- Acute myocardial Infarction (ST segment elevation)
+- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities|- Chest pain (Sudden onset)
+- Varying  degree  but  often  severe  and  described  as  tightness,  heaviness  or constrictive in nature
+- Symptoms persist for more than 30 minutes) and may not be relieved by rest or glyceryl trinitrate.
+- Chest pain May radiate to the left arm, the neck or jaw
+- Nausea, Vomiting.
+- Shortness of breath or fatigue (this may be the only presentation in diabetics and the elderly)
+- Loss of consciousness
+- Restlessness and apprehension
+- Excessive sweating
+- Peripheral or central cyanosis
+- Pulse may be thready, fast, irregular, slow or normal
+- Blood pressure may be high, low, or unrecordable (following extensive damage to heart muscle)
+- Bilateral crepitations in the chest (with left ventricular failure)
+- Presence of a third or fourth heart sound (suggests heart failure)
+- Confusion in the elderly",Acute coronary syndrome (disorder)
+"What could be causing these muscle cramps in my legs and feet? I feel really cold in those areas sometimes, but I don't have any sores or hair loss.",,,"If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.|- Muscle cramps (thighs, calf muscles)
+- Leg numbness or weakness
+- Coldness in lower leg or foot
+- Sores: legs or feet or toes
+- Hair loss or slower hair growth in legs/feet
+- Weak or no pause in legs/feet
+- Erectile dysfunction in men
+- Shiny skin in legs",Peripheral vascular disease (disorder)
+How do focal seizures cause non-painful spontaneous limb and trunk movements along with altered sensations without fever?,,,"A seizure is a clinical manifestation of an abnormal and excessive discharge of a group of neurons in the brain. It can be convulsive or non-convulsive. When neuronal dysfunction involves a specific area within a brain hemisphere, it is termed as a focal seizure. When neuronal dysfunction generates from a specific area within a brain hemisphere and then spreads to involve both brain hemispheres, it is termed as a generalized seizure. Seizure generalization can occur at the onset of the seizure or as the seizure progresses with time.|- Transient altered consciousness
+- Patients may experience abnormal body movements (head, limbs or trunk)
+- Altered sensation
+- Autonomic changes
+- Psychic events|- Seizures not responding to treatment",Fit: [Convulsion) &/or (fit and well] (disorder)
+"How does sudden unconsciousness followed by rhythmic limb movements, then headache, confusion, and fatigue align with the characteristics of a tonic-clonic seizure?",,,"- Tonic-clonic: sudden loss of consciousness (tonic phase) than rhythmic contractions of all four extremities. Afterwards postictal phase with headache, confusion and fatigue. Often tongue bite, enuresis, encopresis
+- Absence: Impaired awareness and responsiveness. cannot be interrupted by tactile stimulation, often interrupt conversation or ongoing physical activity such as eating and play, usually occur multiple times during the day and last only a few seconds.
+- Atonic: abrupt loss of muscle tone
+- Myoclonic: repetitive muscle contractions",Childhood seizure (finding)
+What neurological conditions could lead to trouble speaking clearly and weakness on my right side?,,,"- Hemiplegia, Facial nerve palsy, Altered mental status, Seizures, Visual disturbances, Dysarthria, Dysphasia and Bulbar palsy|- Medical Rehabilitation Services
+- Treat underlying conditions",Cerebrovascular accident (disorder)
+"What could cause a sudden, severe headache at the back of my head with nausea, vomiting, and stiff neck? I don't feel dizzy or have any runny nose.",,,"- Sudden, severe occipital headache, Collapse, Meningism: neck stiffness, nauseas and vomiting, photophobia, Seizures, Drowsiness → coma|- Brain CT
+- Detects &gt;90% of SAH within first 48hrs.
+- Lumbar Puncture
+- If CT negative and no contraindications &gt;12h after start of headache
+- Xanthochromia due to breakdown of bilirubin",Subarachnoid intracranial hemorrhage (disorder)
+"How do episodic headaches that are often one-sided and associated with nausea and vomiting differ from other types of headache disorders, particularly in terms of their occurrence without numbness or tingling?",,,"Episodic headache, usually focal in nature, which may occur with or without an aura. It is usually accompanied by nausea and vomiting. Several variants of migraine also occur.",Migraine (disorder)
+"How do headaches characterized by abrupt onset, one-sided pain lasting up to two hours in clusters over weeks/months differ from typical cluster headaches without associated ocular redness or nasal discharge?",,,"Repetitive episodes of excruciating headache typically of short duration (up to 2 hours) in clusters for weeks to months at a time. Typically, the headache is of sudden onset, unilateral during the specific cluster, and quickly reaches a climax. Associated redness of the eye with lacrimation and rhinorrhea occurs.",Cluster headache (disorder)
+How do unilateral sharp facial pains with a distinct trigger point relate to potential intracranial issues affecting the trigeminal nerve?,,,"Severe, very short-lived stabs of facial pain in the sensory trigeminal distribution. It is important in the diagnostic workup to exclude intracranial mass lesions,  which  may impinge  on  the  trigeminal  nerve.|- Unilateral pain with a trigger zone",Trigeminal neuralgia (disorder)
+"How do headaches characterized by a tight band sensation over the entire head, typically worsening in the afternoon, differ from other headache types that may present with atypical pain or inadequate therapeutic response?",,,"- Headache over the back of the head, but sometimes over the entire head, described as a tight band around the head, usually worse in the afternoon.|- When there is atypical pain, suggestive of alternate diagnosis.
+- When there is poor response to  therapy.",Psychogenic headache (disorder)
+"What could be causing my headache, stiff neck, and feeling hot? I don't get nauseous or feel dizzy.",,,"- Headache,  Photophobia,  Fever,  Neck  stiffness,  Seizures,  Altered  mental  status, Positive Babinski, Positive Kernig's sign|- Headache,  Photophobia,  Fever,  Neck  stiffness,  Seizures,  Altered  mental  status, Positive Babinski, Positive Kernig's sign|- Suspected brain abscess
+- Signs of raised intracranial pressure
+- Not responding to treatment|- Triad of headache, neck stiffness and fever
+- Photophobia
+- Vomiting
+- Petechial or nonspecific blotchy, red rash (meningococcal)
+- P ositive Kernig's sign
+- Reduced level of consciousness, lateralizing signs, cranial nerve palsies
+- Less severe cases e.g., viral meningitis may have less symptoms and signs|- Brain abscess
+- Seizures
+- Hydrocephalus
+- Cranial nerve palsies
+- Syndrome of inappropriate ADH secretion (SIADH)|- neutrophils may predominate in early TB meningitis
+- AFBs are rarely seen in CSF hence their absence does not exclude the diagnosis of TB meningitis
+- Gene XPert / Xpert RIF can be done on CSF|- CSF is predominantly neutrophils (polymorphs)
+- in partially treated bacterial meningitis, cell count may be lower or predominantly lymphocytes
+- Gram stain can be used to identify some organisms
+- Streptococcus pneumoniae as gram positive diplococci
+- Neisseria meningitidis as gram negative diplococci
+- gram negative bacilli eg Haemophilus influenzae , Non typhoidal salmonella
+- gram positive bacilli -Listeria monocytogenes|- neutrophils may predominate in early TB meningitis
+- AFBs are rarely seen in CSF hence their absence does not exclude the diagnosis of TB meningitis
+- Gene XPert / Xpert RIF can be done on CSF",Meningitis (disorder)
+"What could cause fever, altered behavior, seizures without skin issues, and when is neuroimaging or lumbar puncture necessary?",,,"- Fever, change in behaviour and seizures, which may be either focal or generalized. Evidence of mucocutaneous involvement is usually not present.  lumbar puncture shows the above features of viral meningoencephalitis, but in this condition may be additionally hemorrhagic in nature.|- For  neuroimaging:  patients  whose  condition  deteriorate  not  responding  or worsening  in  condition,  i.e.,  decrease  in  level  of  consciousness  or  develop  and cranial nerve palsies, despite being initiated on appropriate therapy.
+- This is especially urgent in patients with tuberculous meningitis, who may develop hydrocephalus and require an urgent shunting procedure.  
+- Patients with shunts.",Herpes encephalitis (disorder)
+"How do persistent fevers, seizures, and focal neurological signs relate to raised intracranial pressure or syndrome of inappropriate ADH secretion?",,,"- Persistent fevers
+- Seizures
+- Focal neurological signs
+- Altered level of consciousness|- Raised intracranial pressure
+- Seizures
+- Syndrome of Inappropriate ADH Secretion
+- Stroke",Cerebral abscess (disorder)
+"How do seizures without pain or headaches, along with focal neurological deficits and movement abnormalities, relate to conditions like hydrocephalus or developmental regression?",,,"- Asymptomatic
+- Seizures
+- Focal neurological deficits
+- Features of raised intracranial pressure|- Seizures
+- Hydrocephalus
+- Developmental regression  
+Refer all post-op patients for intensive medical rehabilitation Services.",Cysticercosis of central nervous system (disorder)
+"I've been feeling weak in my legs and arms, like I can't move them properly, and I get tingling sensations. But I don't have any trouble breathing or stomach issues.",,,"Acute onset of weakness or paralysis with reduced muscle tone|- Rapid  onset  of  weakness,  Ascending  weakness,  Paraplegia,  Bulbar  weakness, Paresthesia, Stool and urine incontinence, Radicular pain, Autonomic dysfunction|- Respiratory failure, Spinal shock, Pressure sores, Contractures",Acute flaccid paralysis (finding)
+"My body keeps shaking uncontrollably even after taking my medication, but I don't feel sick to my stomach.",,,"- If there is no improvement or poor control with treatment.
+- Increasing on/off phenomenon.
+- Dyskinesias.",Ankylosing vertebral hyperostosis (disorder)
+"What could be causing these random movements in my arms and legs? I've been getting them a lot lately, but there's no pain or numbness.",,,"Involuntary random, irregular movements. Aetiology is classified as:  
+- Primary - Huntington's chorea, benign hereditary chorea, and others
+- Secondary - due to Sydenham's chorea, vascular pathology, metabolic, endocrine, and infective conditions, amongst others.",Chorea (disorder)
+"I've been having sudden weakness in my legs and a loss of feeling there, but I don't have any pain or fever.",,,"Patients  present  with  a  sudden  onset  of  paraparesis,  with  associated  sensory  loss,  i.e.,  a sensory level may be found. Incontinence and autonomic instability may be present.  
+There are numerous causes for this condition, and it is important to exclude neoplastic and infectious conditions, i.e., granulomas and abscesses, causing external compression of the spinal cord. Lesions, such as intervertebral disk prolapse, and mass lesions below the spinal cord  may  present  with  cauda  equina  syndrome.  These  cases  usually  have  asymmetrical weakness but may have saddle anesthesia and sphincter involvement alone. Incontinence is a marker of severity.",Myelopathy due to acute infarction of spinal cord (disorder)
+"How does lower back pain with radicular, stabbing sensations and leg weakness, along with numbness in the feet but no abdominal or head symptoms, align with spinal cord compression features like motor/sensory deficits and autonomic dysfunction?",,,"- Lower limbs weakness|- Deep, local spinal pain
+- Stabbing, radicular pain in a dermatomal distribution and LMN weakness at lesion level
+- Progressive UMN weakness and sensory loss below lesion
+- Bladder hesitancy, frequency → painless retention
+- Faecal incontinence or constipation
+- Look for motor, reflex and sensory level
+- Shooting, radicular pain at level, anaesthesia below
+- LMN signs at level, UMN signs below level
+- Tone and reflexes are usually reduced in acute cord compression|- Back pain (95%)
+- Weakness (60-80%)
+- Sensory deficits (40-90%)
+- Autonomic dysfunction (50%)
+- Ataxia (5%)",Spinal cord compression (disorder)
+"My back has been hurting a lot lately, and I've noticed my legs feel weak. Also, I can't feel things properly on my trunk, and I sometimes wet the bed. But I don't have any chest pain or trouble breathing.",,,"- Inflammation of the spinal cord, acute (hours) -subacute (days) onset
+- Back pain, flaccid paraplegia, sensory level on the trunk, urinary incontinence
+- CSF: Proteins and lymphocytes increased",Acute transverse myelitis (disorder)
+How does swelling near my ear with tenderness and a fever relate to conditions that might involve moving my ear or having discharge from it?,,,"- Swelling behind or above the ear.
+- Fever, Pinna pushed forward, tender
+- Ear discharge",Mastoiditis (disorder)
+"My ear feels sore and itchy, but I don't get dizzy or have ringing in my ears. Sometimes I feel like my hearing isn't as clear as usual.",,,"This is an inflammation of the skin lining the external auditory canal. May be a furuncle or diffuse.|- Ear pain
+- Itchiness
+- Mild Hearing loss",Otitis externa (disorder)
+"I've got a fever and my ear hurts really bad on one side, but I don't have a sore throat.",,,"- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks
+- Red eardrum
+- Occasionally inflamed throat
+- Perforated eardrum",Acute otitis media (disorder)
+"How does persistent ear pus discharge and hearing loss relate to a ruptured eardrum lasting over two weeks, secondary infections with multiple organisms, and reduced effectiveness of oral antibiotics in immunosuppressed patients?",,,"- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.|- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.",Chronic otitis media (disorder)
+"When I move my head suddenly, I get this spinning feeling that makes me throw up, and my eyes keep jumping around. But I don't have any headaches or trouble walking.",,,"An acute syndrome, consisting of vertigo, nystagmus, nausea, vomiting and postural instability.|- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus|- Positive Dix-Hall pike test
+- Need for neuro imaging to find cause and treat appropriately|- Suspected intracranial mass lesions or cerebellar stroke.
+- Suspected vestibular neuritis.
+- Patients not responding to therapy for exclusion of alternative etiology.",[D]Acute vertigo (situation)
+What could be causing recurrent nosebleeds without any pain or headache?,,,- Nose Bleeding,Epistaxis (disorder)
+How does swelling and pain around my nose relate to a bump at the nostril's opening? I don't have any mucous drainage or fever.,,,"- Swelling
+- Pain
+- Mucous Drainage Bump at the opening of the nostril",(Disease of URT NOS) or (nasal vestibulitis) or (chronic pharyngotracheitis) (disorder)
+"How does purulent nasal discharge with intermittent occurrence and associated nasal obstruction relate to potential central nervous system complications from sinusitis, given no improvement after antibiotic treatment?",,,"- Purulent nasal discharge, persistent or intermittent, pain and  tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.|- No symptomatic relief after 48-72 hours of antibiotics
+- CNS complications of sinusitis",Bacterial sinusitis (disorder)
+"What conditions besides infections or medication side effects could cause blocked nose with watery discharge, frequent sneezing, nasal itching, conjunctival watering, pale grey mucosa, mouth breathing, and snoring?",,,"- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.
+- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.",Allergic rhinitis (disorder)
+"How does a sore throat with pain upon swallowing, inflamed tonsils having multiple white spots, and sudden fever indicate possible causes like peritonsillar abscess?",,,"- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.|- Peritonsillar abscess
+- If symptoms persist or recurring episodes of 4-5 attacks per year",Tonsillitis (disorder)
+How does sudden severe coughing with difficulty breathing relate to signs of upper airway obstruction like stridor and the use of accessory muscles for respiration?,,,"- Sudden onset of cough and choking is the frequent initial symptom.   Signs of upper airway obstruction such as difficulties in breathing, stridor, use of accessory muscles to breathe.",Difficulty with mask ventilation and tracheal intubation (finding)
+"How does chronic laryngopharyngeal reflux contribute to symptoms like excessive throat-clearing, persistent dry cough, non-cold-related sore throats, and sensations of hoarseness or globus pharynges?",,,"- Excessive throat-clearing
+- Persistent dry cough
+- Sore throats not associated with a cold
+- Hoarseness, or globes pharynges (feeling of a lump in the throat).",Laryngopharyngeal reflux (disorder)
+"What could be causing me to feel really tired all the time, sometimes my heart feels like it's racing, I get dizzy easily, and I'm out of breath when I walk up stairs? Also, I don't have any stomach issues or headaches.",,,"- Pallor
+- Tachycardia
+- Fatigue
+- Respiratory distress|| Assisted Ventilation   | Assisted Ventilation   | Assisted Ventilation   | CPAP/HFNC   | CPAP/HFNC   | Low flow oxygen (<3L/min)   | Room air         |
+|------------------------|------------------------|------------------------|-------------|-------------|-----------------------------|------------------|
+| <28 days               | <28 days               | ≥ 28 days              | < 28 days   | ≥ 28 days   | FiO 2 ≥ 0.21                | Well in room air |
+| FiO 2 ≥ 0.21           | FiO 2 < 0.21           | Hb < 10g/dL            | Hb < 10g/dL | Hb < 10g/dL | Hb < 8g/dL                  | Hb < 7g/dL       |
+| Hb < 12g/dL            | Hb < 11g/dL            |                        |             |             |                             |                  ||- Fluid overload, Transfusion reactions and Infections|- If no transfusion services are available at health facility
+- Recurrent anaemia requiring repeated transfusions
+- If anaemia is accompanied by thrombocytopenia, leucopenia, and/or leukocytosis
+- Anaemia with bleeding tendencies|SIGNS AND SYMPTOMS  
+General Symptoms  
+- Easy fatigability, dizziness, shortness of breath on exertion, palpitations|- Pale  mucous  membranes  and  palms,  Angular  stomatitis,  ""Spoon  shaped""  and ridged finger and toe nails (if iron deficiency), Spleen, liver and lymph nodes may be  palpable  (if  infection  or  hematological  malignancy),  Signs  of  heart  failure  (in severe anaemia), Jaundice (in haemolysis), Petechiae and purpura (bone marrow failure), Hyperpigmentation of palms and soles of feet and Other Specific signs of the underlying disease",Anemia (disorder)
+Should I get a blood transfusion if my hemoglobin is below 8 g/dl? I feel weak and dizzy but don't have chest pain or trouble breathing.,,,"- If Hb less than 8 g/dl|- Transfusion should be avoided unless the patient has symptomatic anaemia and even then, the minimum possible amount of blood or red cell suspension should be transfused e.g., one pediatric unit for an adult patient.",(Anaemia: [iron deficiency] or [microcytic]) or (Kelly-Paterson syndrome) or (Plummer-Vinson syndrome) (disorder)
+What causes febrile symptoms without respiratory issues or rashes following blood transfusions?,,,"- Febrile,  non-haemolytic  and  allergic  reactions  are  common  in  patients  receiving multiple transfusions.",Platelet transfusion (procedure)
+"Does sharp back and chest pain, a 1°C temperature rise above baseline, and wheezing meet any criteria for suspecting an adverse reaction during blood transfusions?",,,"- Suspect an adverse reaction if any of the following occurs:
+- Severe pain at transfusion site or in the back, loin and/or chest
+- Rise in temperature of 1   Degree Celsius above the baseline
+- Increase in pulse rate of &gt;20/minute above baseline
+- Fall in systolic BP &gt;20 mm  Hg
+- Urticaria
+- Rigors
+- Hemoglobinuria
+- Shortness of breath
+- Wheezing
+- Treatment depends on the severity of the transfusion reactions.",Allergic transfusion reaction (disorder)
+How does an itchy rash localized to the arms and legs present without associated pain or systemic symptoms like fever?,,,- Itchy rash,Mild inflammation (morphologic abnormality)
+"What conditions cause anxiety along with itchy skin? I've been feeling anxious lately and my skin has been really itchy, but I don't have a fever or any stomach issues.",,,"- Anxiety, pruritus, palpitations, mild dyspnea, headache, rigors, fever, tachycardia",No reaction (qualifier value)
+"What could be causing my anxiety and chest tightness? I feel like I'm struggling to breathe and it's hard to catch my breath, but I don't have any stomach pain or headaches.",,,"- Anxiety, chest pain, pain near infusion site , r espiratory distress, loin or back pain , h eadache, dyspnea, r i gors, fever, r estlessness, hypotension, tachycardia, hemoglobinuria, unexplained  bleeding",Acute stress disorder (disorder)
+"My kid's foot is swollen and hurts a lot, but they don't have a fever. They've never had any issues with their blood or needed transfusions, and no one else in the family has either.",,,"- Suspect if patient is chronically  anaemic  and/or received previous blood transfusions and those with family history of siblings/relatives with multiple blood transfusions.
+- Suspect in children who have suffered from one or more of the presentations listed below.  
+| Presentation                                                              | Age        |
+|---------------------------------------------------------------------------|------------|
+| Vaso-occlusive crisis - - painful hand and/or foot swelling early infancy | 0.5 - 2 yr |  
+| Stroke/ CNS complications (reduced consciousness, seizures)                  | 5-10yr    |
+|------------------------------------------------------------------------------|-----------|
+| Bone lnfarct (painful, swollen limbs)                                        | 0.5- 10yr |
+| Splenic sequestration (new or worsening splenomegaly, +/- pallor)            | <3yr      |
+| Acute Chest (difficulty breathing, cough, desaturations)                     | 0.5- 10yr |
+| Bowel infarct /Abdominal crisis (abdominal pain and/or distention, vomiting) |           |
+| Priapism- sudden painful onset of penis that fails to relax                  | 6-20yrsr  |
+| Kidney infarct (abdominal pain, reduced urine output)                        |           |
+| Skin Ulcers                                                                  | >10yrs    |
+| Eye disorders                                                                | >10yrs    |  
+- Crises are typically precipitated by: cold weather, dehydration, infection, physical exertion and mental stress.
+- For sickle cell test, refer for further investigations and management.
+- Investigations
+- FBC, Sickling test, Hb electrophoresis, Annual urine dipstick, Annual ophthalmology review, Transcranial Doppler and Other investigations as indicated in table above|Educate patient and family to ensure early analgesics, and to promptly seek medical attention if  
+- severe pain
+- fast breathing
+- looking much more pale than  usual
+- high temperature
+- vomiting and diarrhoea|- Consider referral to a specialist in case of the following:
+- Bleeding into the eye, priapism, haematuria/renal disease, CNS events including stroke, osteomyelitis, aseptic necrosis of the hip, acute chest syndrome,  persistent  jaundice,  unexplained  high  white  cell/platelet counts (more than 15 and 500 x 109/L respectively), intractable morbid pain, repetitive crises or recurrent severe anaemia interfering with their lives",Sickling disorder due to hemoglobin S (disorder)
+"How does easy bruising and spontaneous gum bleeding relate to conditions causing pallor, petechiae, purpura, and frequent infections without fever?",,,"- Easy bruising, bleeding, blood blisters in the mouth
+- Pallor
+- Petechiae
+- Purpura
+- Bleeding
+- Frequent or severe infections",Aplastic anemia (disorder)
+What might cause me to feel pale along with some other not-specific symptoms but without any chest pain or trouble breathing?,,,- Pallor and signs of underlying condition,Anemia of chronic disease (disorder)
+"How does persistent fatigue and jaundice without abdominal pain or headache relate to haemolysis indicators like anaemia, reticulocytosis, low haptoglobin, elevated lDH, and unconjugated hyperbilirubinaemia?",,,"- Evidence of haemolysis: anaemia, reticulocytosis, decreased haptoglobin, increased lactate dehydrogenase {lDH} and unconjugated hyperbilirubinaemia.",Hemolytic anemia (disorder)
+I've been feeling really tired lately and my nails look kind of spoon-shaped. I don't have any belly pain or aches in my joints.,,,"- Anaemia symptoms and signs
+- Nail spooning|- Full blood count: microcytic anaemia.
+- Iron studies (Iron level, ferritin level).
+- Stool microscopy: worms ova, Schistosoma ova.
+- Urine microscopy: Schistosoma ova.
+- Gastroscopy/colonoscopy if GIT blood loss.
+- Assess for a haematological response  to Iron therapy.",Iron deficiency anemia (disorder)
+"What could be causing my legs to feel numb and weak lately? I've been feeling really tired all the time, getting dizzy sometimes, and having trouble catching my breath when I walk up stairs. But I don't have any chest pain or headaches.",,,"- Fatigue,  general  body  weakness,  lethargy,  dizziness,  palpitation,  shortness  of breath
+- Numbness/burning sensation
+- Mood changes/psychosis (vitamin B12 deficiency)
+- Pallor
+- Red beefy tongue, hyperpigmented skin (vitamin B12 deficiency)
+- Cerebellar ataxia
+- hemiplegia
+- Decreased vibration and discriminative touch sensation
+- Folate Deficiency## NON-PHARMACOLOGICAL|- Fatigue,  general  body  weakness,  lethargy,  dizziness,  palpitation,  shortness  of breath
+- Numbness/burning sensation
+- Mood changes/psychosis (vitamin B12 deficiency)
+- Pallor
+- Red beefy tongue, hyperpigmented skin (vitamin B12 deficiency)
+- Cerebellar ataxia
+- hemiplegia
+- Decreased vibration and discriminative touch sensation
+- Folate Deficiency  
+- Glossitis
+- Neurotube defects (spina bifida) in neonates|- FBC:  Elevated  MCV  {mean  corpuscular  volume}  and  MCH  {mean  corpuscular hemoglobin}.
+- Macro-ovalocytes  on  blood  smear;  poly-segmentation  of  neutrophils  (hyper segmented neutrophils), thrombocytopenia with giant platelets.
+- Decreased serum vitamin B12 or red blood cell folate. Pancytopenia in severe cases.
+- Intrinsic factor antibodies and anti-parietal cell antibodies in vitamin B 12 deficiency due to pernicious  anaemia.|- Include  foods  high  in  folic  acid  e.g.,  green  leafy  vegetables,  broccoli,  peas, chickpeas, kidney beans liver, breakfast cereals fortified with folic acid.
+- Foods  high  in  Vitamin  B12:  Meat,  Fish,  Milk,  Cheese,  Eggs,  fortified  breakfast cereals.",Megaloblastic anemia (disorder)
+How do frequent urination and tingling in my feet relate to hyperglycemia? I don't get headaches or have trouble seeing.,,,"The diagnosis of diabetes is based on 2 abnormal blood sugar measurements (FBS &gt; 7 mmol/L (126 mg/dl) or RBS &gt;11.1mmol/L (200 mg/dl) or HbA1C &gt;6.5%} in an asymptomatic patient or 1 abnormal measurement if the patient has symptoms of hyperglycinemia.|- Polyuria, Polydipsia, Burning sensation/pins and needles (feet), Blurred vision, Foot ulcers, Family history of diabetes (type 2 diabetes),
+- Obesity (some type 2 diabetes patients)
+- Erectile dysfunction in men
+- Recurrent skin boils
+- Recurrent vulvovaginal candidiasis in women
+- Big baby (gestational diabetes)|- Retinopathy and nephropathy, Hypertension, Myocardial infarction, heart failure, Stroke,  Diabetic  foot,  peripheral  neuropathy,  erectile  dysfunction,  Peripheral vascular disease, Recurrent infections: skin, UTI, candidiasis, Pregnancy and Birth complications|- Random or fasting blood sugar, HBA1c, FBC, urea, creatinine, and electrolytes, urine dipstick:  assess  glucosuria,  ketonuria,  proteinuria,  fasting  lipogram,  fundoscopy: screening for diabetes retinopathy, HIV test",Diabetes mellitus (disorder)
+"I'm pregnant and have diabetes. I've been throwing up a lot lately, but I haven't had any trouble seeing or headaches. How bad is this going to affect me?",,,"- As above for section 6.1|- Pregnant diabetic
+- Acutely  ill  diabetic,  particularly  if  vomiting  or  decreased  Glasgow  Coma  Score (GCS}
+- Treatable complications e.g.,  cataracts",Diabetes mellitus type 1 (disorder)
+How does throwing up a lot along with peeing all the time show that I have high blood sugar causing dehydration and acidosis in my body without me having any stomach pain or headache?,,,"- Vomiting, polyuria, dehydration, ketonuria and acidosis. The blood sugar will be high  &gt;15mmol/l",Diabetes mellitus (& [ketoacidosis]) (disorder)
+"How should I manage symptoms like trembling, tachycardia, sweating, excessive hunger, drowsiness, confusion from low blood sugar below 70mg/dl (3.9mmol/L)?",,,"Low blood sugar level below 70mg/dl (3.9mmol/L). Severe hypoglycemia (blood sugar &lt; 2.2mmol/l).|- Sweating
+- Excessive hunger
+- Trembling
+- Tachycardia
+- Drowsiness
+- Confusion
+- Loss of consciousness, seizures, and irreversible brain damage if severe hypoglycaemia",Hypoglycemia (disorder)

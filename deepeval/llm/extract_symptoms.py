@@ -1,9 +1,12 @@
+import os
+from dotenv import load_dotenv
 from typing import List
-
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
+
+load_dotenv()
 
 class SymptomClassifierSchema(BaseModel):
     positive_symptoms: List[str] = Field(
@@ -18,8 +21,8 @@ class SymptomClassifierSchema(BaseModel):
 parser = PydanticOutputParser(pydantic_object=SymptomClassifierSchema)
 
 llm = ChatOpenAI(
-    base_url="http://localhost:1234/v1",
-    model="qwen3-14b",
+    base_url=os.getenv("LLM_URL"),
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
 )

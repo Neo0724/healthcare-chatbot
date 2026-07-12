@@ -1,10 +1,11 @@
+import os
+from dotenv import load_dotenv
 from typing import List, Literal
-
-from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 
+load_dotenv()
 
 class QuestionScopeClassifier(BaseModel):
     scopes: List[Literal["Definition", "Symptoms", "Treatment"]] = Field(
@@ -13,8 +14,8 @@ class QuestionScopeClassifier(BaseModel):
 
 
 llm = ChatOpenAI(
-    base_url="http://localhost:1234/v1",
-    model="qwen3-14b",
+    base_url=os.getenv("LLM_URL"),
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
 )

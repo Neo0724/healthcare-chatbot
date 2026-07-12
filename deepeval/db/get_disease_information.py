@@ -1,11 +1,14 @@
 import os
+from dotenv import load_dotenv
 from typing import List, Literal
 from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import GraphDatabase
 
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+load_dotenv()
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"),os.getenv("NEO4J_PASSWORD"))
 
 os.environ["HF_HOME"] = "D:/hf_cache"
 os.environ["HF_TOKEN"] = "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"

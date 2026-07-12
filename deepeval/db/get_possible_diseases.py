@@ -1,10 +1,13 @@
+import os
+from dotenv import load_dotenv
 from typing import List
-
 from neo4j import GraphDatabase, Record
 
+load_dotenv()
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"),os.getenv("NEO4J_PASSWORD"))
 
 
 def get_possible_diseases(
