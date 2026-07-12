@@ -20,7 +20,11 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.types import Command, interrupt
 from dotenv import load_dotenv
-from app.prompt_templates import ask_follow_up_question_prompt, explain_disease_prompt, preliminary_diagnosis_prompt
+from app.prompt_templates import (
+    ask_follow_up_question_prompt,
+    explain_disease_prompt,
+    preliminary_diagnosis_prompt,
+)
 from app.prompt_templates import (
     refined_diagnosis_prompt,
 )
@@ -397,7 +401,11 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     response = llm.invoke(
         [
             SystemMessage(
-                content=refined_diagnosis_prompt.refined_diagnosis_prompt_template
+                content=refined_diagnosis_prompt.refined_diagnosis_prompt_template.format(
+                    current_positives=current_positives,
+                    current_negatives=current_negatives,
+                    refined_results=refined_results,
+                )
             )
         ],
         config={"tags": ["user_message"]},

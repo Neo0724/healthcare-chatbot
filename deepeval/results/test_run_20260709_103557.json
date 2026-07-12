@@ -1,0 +1,713 @@
+{
+  "testCases": [
+    {
+      "name": "test_case_0",
+      "input": "What are the symptoms of ## acute left ventricular failure in adults?",
+      "actualOutput": "Patient Question:\nWhat are the symptoms of ## acute left ventricular failure in adults?\n\nDisease Symptoms:\n- Dyspnea,  cough  {often  with  frothy,  pink-tinged  sputum},  \ntachypnoea, \nsigns \nof increased respiratory effort and diffuse rales or crackles.",
+      "retrievalContext": [
+        "- Dyspnea,  cough  {often  with  frothy,  pink-tinged  sputum},  tachypnoea,  signs  of increased respiratory effort and diffuse rales or crackles."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8,
+          "reason": "The score is 0.80 because 'tachypnoea' was incorrectly identified as a sign rather than a symptom, which affected the accuracy of the response.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Dyspnea is a symptom of acute left ventricular failure in adults.\",\n    \"Cough with frothy pink-tinged sputum is a symptom of acute left ventricular failure in adults.\",\n    \"Tachypnoea is a symptom of acute left ventricular failure in adults.\",\n    \"Signs of increased respiratory effort are present in acute left ventricular failure in adults.\",\n    \"Diffuse rales or crackles are symptoms of acute left ventricular failure in adults.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Tachypnoea is a sign, not a symptom.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Signs of increased respiratory effort' are signs rather than symptoms. However, they may be associated with the condition and could be considered supporting information.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.382140499999878,
+      "order": 0
+    },
+    {
+      "name": "test_case_1",
+      "input": "What is the recommended initial IV dose and route of administration for ALVF management in adults?",
+      "actualOutput": "I don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Treatment is under local anesthesia with Lignocaine 2% socket debridement and irrigation of 3% hydrogen peroxide . The procedure of irrigation is repeated the 2nd and 3rd day and where necessary can be extended to 4th day if pain persists. On follow-up visits local anesthesia is avoided unless necessary"
+      ],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.0,
+          "reason": "The score is 0.00 because the response indicated insufficient information to answer, which directly addresses that a recommendation cannot be made based on available data.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"The user does not have enough information in the provided medical records to answer.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement indicates that there is insufficient information to answer, which directly addresses the input by stating that a recommendation cannot be made based on available data.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.189099599999736,
+      "order": 1
+    },
+    {
+      "name": "test_case_2",
+      "input": "What are the symptoms of CONGESTIVE HEART FAILURE?",
+      "actualOutput": "Disease Symptoms:\n- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema",
+      "retrievalContext": [
+        "- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8181818181818182,
+          "reason": "The score is 0.82 because diaphoresis and tachypnoea were incorrectly identified as symptoms of congestive heart failure, which they are not.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Shortness of breath is a symptom.\",\n    \"Cough is a symptom.\",\n    \"Fatigue is a symptom.\",\n    \"Orthopnea is a symptom.\",\n    \"Exercise intolerance is a symptom.\",\n    \"Paroxysmal nocturnal dyspnea is a symptom.\",\n    \"Diaphoresis is a symptom.\",\n    \"Failure to thrive is a symptom.\",\n    \"Tachycardia is a symptom.\",\n    \"tachypnoea is a symptom.\",\n    \"Oedema is a symptom.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Diaphoresis' is not a symptom of congestive heart failure.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Failure to thrive' could be related to other conditions, but it's unclear if it specifically refers to congestive heart failure in this context.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'tachypnoea' is not a symptom of congestive heart failure.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.0205133999998,
+      "order": 2
+    },
+    {
+      "name": "test_case_3",
+      "input": "What are the symptoms of Congestive Heart Failure?",
+      "actualOutput": "Disease Symptoms:\n- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema",
+      "retrievalContext": [
+        "- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The answer is fully relevant to the question asked.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Shortness of breath\",\n    \"Cough\",\n    \"Fatigue\",\n    \"Orthopnea\",\n    \"Exercise intolerance\",\n    \"Paroxysmal nocturnal dyspnea\",\n    \"Diaphoresis\",\n    \"Failure to thrive\",\n    \"Tachycardia\",\n    \"tachypnoea, Oedema\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 5.586686199999804,
+      "order": 3
+    },
+    {
+      "name": "test_case_4",
+      "input": "What are the symptoms of Congenital Heart Disease?",
+      "actualOutput": "- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  \n- Shock\n- Finger clubbing \n- Cyanosis,\n - Investigate with chest x ray and cardiac echo",
+      "retrievalContext": [
+        "- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  feeding,  Shock, Finger clubbing, Cyanosis, Cyanotic spells\n- Consider if blue baby doesn't pink up with oxygen, check oxygen saturations. The baby may or may not have signs of heart failure. It may be difficult to distinguish from persistent pulmonary hypertension\n- Investigate with chest x ray and cardiac echo"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5714285714285714,
+          "reason": "The score is 0.57 because some statements were irrelevant due to being general terms, empty entries with hyphens, or incomplete symptom descriptions.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Failure\",\n    \"to\",\n    \"thrive,\",\n    \"Diaphoresis,\",\n    \"Shortness\",\n    \"of\",\n    \"breath especially on\",\n    \"\",\n    \"- Shock\",\n    \"\",\n    \"- Finger clubbing \",\n    \"\",\n    \"- Cyanosis,\",\n    \"\",\n    \"-\",\n    \"\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement is not a symptom but rather a general term that could refer to various conditions.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This entry is empty or contains only a hyphen, which does not provide any meaningful information about symptoms.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement is an incomplete entry and lacks specific symptom details.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.8650572000001375,
+      "order": 4
+    },
+    {
+      "name": "test_case_5",
+      "input": "What are the symptoms of ## cyanotic congenital heart disease?",
+      "actualOutput": "- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  \n- Shock\n- Finger clubbing \n- Cyanosis,\n - Investigate with chest x ray and cardiac echo",
+      "retrievalContext": [
+        "- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  feeding,  Shock, Finger clubbing, Cyanosis, Cyanotic spells\n- Consider if blue baby doesn't pink up with oxygen, check oxygen saturations. The baby may or may not have signs of heart failure. It may be difficult to distinguish from persistent pulmonary hypertension\n- Investigate with chest x ray and cardiac echo"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the response included irrelevant statements such as 'to' and '-', which are not symptoms of cyanotic congenital heart disease.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Failure\",\n    \"to\",\n    \"thrive,\",\n    \"Diaphoresis,\",\n    \"Shortness\",\n    \"of\",\n    \"breath especially on\",\n    \"\",\n    \"- Shock\",\n    \"\",\n    \"- Finger clubbing \",\n    \"\",\n    \"- Cyanosis,\",\n    \"\",\n    \":- Investigate with chest x ray and cardiac echo\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'to' is not a symptom.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'thrive,' may be part of 'failure to thrive', which could be relevant, but the fragment is ambiguous without full context.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'-' is not a symptom.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Cyanosis,' could be relevant, but the fragment may be incomplete or part of another context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \": - is not a symptom.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.180518299999676,
+      "order": 5
+    },
+    {
+      "name": "test_case_6",
+      "input": "What are the defining criteria for group B streptococcus throat infection?",
+      "actualOutput": "Group B streptococcus throat infection does not typically cause symptoms. \n\nHowever, if your baby develops group B strep disease after birth, they may show some of these signs:\n\n- Severe breathing distress\n- Fever \n- Refusal to feed or vomiting\n- Lethargy (drowsiness)\nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": ["nan"],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.3333333333333333,
+          "reason": "The score is 0.33 because the response included irrelevant information about symptoms of group B strep disease in babies instead of focusing on defining criteria for a throat infection, and it admitted insufficient information which does not address the question.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Group B streptococcus throat infection does not typically cause symptoms.\",\n    \"If your baby develops group B strep disease after birth, they may show some of these signs:\",\n    \"- Severe breathing distress\",\n    \"- Fever \",\n    \"- Refusal to feed or vomiting\",\n    \"- Lethargy (drowsiness)\",\n    \"I don't have enough information in the provided medical records to answer that.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement is about symptoms of group B strep disease in babies, not defining criteria for a throat infection.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The statement mentions signs that may be associated with group B strep but does not directly define the criteria for a throat infection.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This is an admission of insufficient information, which is irrelevant to defining the criteria.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.065614399999959,
+      "order": 6
+    },
+    {
+      "name": "test_case_7",
+      "input": "What are the symptoms of ## ACUTE RHEUMATIC FEVER?",
+      "actualOutput": "1. Evidence of preceding Group A strep throat infection\n2. Major criteria  \n- a. Carditis\n- b. Polyarthritis/polyarthralgia\n- c. Subcutaneous nodules\n- d. Erythema marginatum\n- e. Sydenham's chorea \n3. Minor criteria  \n- a. Fever &gt;38\u00b0C\n- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3",
+      "retrievalContext": [
+        "New revised Jones criteria  \n1. Evidence of preceding Group A strep throat infection\n2. Major criteria\n- a. Carditis\n- b. Polyarthritis/polyarthralgia\n- c. Subcutaneous nodules\n- d. Erythema marginatum\n- e. Sydenham's chorea\n3. Minor criteria\n- a. Fever &gt;38\u00b0C\n- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3\n- c. Prolonged PR interval\n- d. Monoarthralgia  \nTo make diagnosis you need one major and 2 minor or 2 major or 3 minor criteria\n- FBC, ESR, CRP, Anti-Streptolysin O titer, Throat swab, ECG, Echocardiograph\n- Children with complications of acute rheumatic fever\n- Children with Persistent symptoms"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.75,
+          "reason": "The score is 0.75 because the response included irrelevant information about subcutaneous nodules and raised acute phase reactants, which are diagnostic criteria rather than symptoms of acute rheumatic fever.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Evidence of preceding Group A strep throat infection\",\n    \"Major criteria - a. Carditis\",\n    \"Major criteria - b. Polyarthritis/polyarthralgia\",\n    \"Major criteria - c. Subcutaneous nodules\",\n    \"Major criteria - d. Erythema marginatum\",\n    \"Major criteria - e. Sydenham's chorea \",\n    \"Minor criteria - a. Fever >38\u00b0C\",\n    \"Minor criteria - b. Raised acute phase reactants, ESR>30mm/hr., CRP>3\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement refers to subcutaneous nodules, which are not a symptom but a major criterion for diagnosing acute rheumatic fever.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement refers to raised acute phase reactants, which are not a symptom but a minor criterion for diagnosing acute rheumatic fever.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.452835599999617,
+      "order": 7
+    },
+    {
+      "name": "test_case_8",
+      "input": "What is the definition of RHEUMATIC HEART DISEASE?",
+      "actualOutput": "Valvular heart disease which occurs as a complication of recurrent acute rheumatic fever.",
+      "retrievalContext": [
+        "Valvular heart disease which occurs as a complication of recurrent acute rheumatic fever.\n- Chest Xray\n- ECG\n- Echocardiography\n- Heart failure\n- Infective endocarditis"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5,
+          "reason": "The score is 0.50 because the response did not provide the definition of rheumatic heart disease as requested, instead describing a complication related to it.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Valvular heart disease occurs as a complication of recurrent acute rheumatic fever.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement does not provide the definition of RHEUMATIC HEART DISEASE but rather describes a complication.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.451179800000318,
+      "order": 8
+    },
+    {
+      "name": "test_case_9",
+      "input": "What are the symptoms of RHEUMATIC HEART DISEASE?",
+      "actualOutput": "Patient Question:\nWhat are the symptoms of RHEUMATIC HEART DISEASE?\n\nDisease Symptoms:\n- Murmurs\n \nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": ["- Symptoms and signs of heart failure\n- Murmurs"],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because 'murmurs' was incorrectly identified as a symptom when it's actually a sign, which lowered the relevancy.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"The patient is asking about the symptoms of rheumatic heart disease.\",\n    \"Murmurs are listed as a symptom of rheumatic heart disease.\",\n    \"There's insufficient information in the medical records to answer the question.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Murmurs' is a sign, not a symptom. Symptoms are subjective experiences reported by the patient.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'There's insufficient information in the medical records to answer the question.' could be relevant if it refers to data availability but does not directly address symptoms of rheumatic heart disease.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.534213600000385,
+      "order": 9
+    },
+    {
+      "name": "test_case_10",
+      "input": "What is the definition of infective endocarditis, particularly in relation to its clinical description as an infection of the heart's endocardium?",
+      "actualOutput": "Infection of the endocardium, mostly affecting the valves.\n- FBC, blood culture: 3 samples, 12 hours apart, inflammatory markers: ESR, CRP, urine dipstick, echocardiography\n- Stroke \n- Metastatic infection (e.g., septic pulmonary infarcts, gangrenous foot)",
+      "retrievalContext": [
+        "Infection of the endocardium, mostly affecting the valves.\n- FBC, blood culture: 3 samples, 12 hours apart, inflammatory markers: ESR, CRP, urine dipstick, echocardiography\n- Stroke\n- Metastatic infection (e.g., septic pulmonary infarcts, gangrenous foot)\n- Thromboembolic phenomenon"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5,
+          "reason": "The score is 0.50 because the response included irrelevant information about diagnostic tests and stroke, which are unrelated to defining infective endocarditis.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Infection of the endocardium mostly affecting the valves.\",\n    \"FBC blood culture 3 samples 12 hours apart inflammatory markers ESR CRP urine dipstick echocardiography\",\n    \"Stroke\",\n    \"Metastatic infection e.g. septic pulmonary infarcts gangrenous foot\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement lists diagnostic tests and markers but does not define infective endocarditis or relate to its clinical description.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Stroke is a separate condition unrelated to the definition of infective endocarditis.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Metastatic infection examples may be associated with complications of infective endocarditis but do not directly define it.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.413254600000073,
+      "order": 10
+    },
+    {
+      "name": "test_case_11",
+      "input": "What are the symptoms of ## infective endocarditis?",
+      "actualOutput": "1. Blood culture positive for typical microorganism (e.g., Staphylococcus aureus, Enterococcus, Viridans streptococcus)\n2. Echocardiogram showing valvular vegetation\n1. Predisposing cardiac lesion\n2. Temperature >38\u00b0C \n3. Embolic phenomena (e.g., stroke, septic pulmonary infarcts, mycotic aneurysm, intracranial hemorrhage, conjunctival haemorrhage or Janeway lesions)\n4. Immunologic phenomena (e.g., glomerulonephritis, Osler's nodes, Roth spots, positive rheumatoid factor)",
+      "retrievalContext": [
+        "1. Blood  culture  positive  for  typical  microorganism  (e.g.,  Staphylococcus  aureus, Enterococcus, Viridans streptococcus)\n2. Echocardiogram showing valvular vegetation\n1. Predisposing cardiac lesion\n2. Temperature &gt;38\u00b0C\n3. Embolic  phenomena (e.g.,  stroke,  septic  pulmonary  infarcts,  mycotic  aneurysm, intracranial hemorrhage, conjuctival haemorrhage or Janeway lesions)\n4. Immunologic  phenomena  (e.g.,  glomerulonephritis,  Osler's  nodes,  Roth  spots, positive rheumatoid factor)\n5. Positive blood culture not meeting above criteria\n- 2 major or 1 major plus 3 minor criteria\n- 1 major and 1 minor OR 3 minor criteria"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the response included irrelevant diagnostic findings such as positive blood culture and echocardiogram results, which are not symptoms but rather diagnostic indicators.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Blood culture is positive for a typical microorganism such as Staphylococcus aureus, Enterococcus or Viridans streptococcus.\",\n    \"Echocardiogram shows valvular vegetation.\",\n    \"There is a predisposing cardiac lesion.\",\n    \"Temperature exceeds 38\u00b0C\",\n    \"Embolic phenomena are present including stroke, septic pulmonary infarcts, mycotic aneurysm, intracranial hemorrhage, conjunctival haemorrhage or Janeway lesions.\",\n    \"Immunologic phenomena include glomerulonephritis, Osler's nodes, Roth spots and positive rheumatoid factor.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This statement describes a diagnostic finding (positive blood culture) rather than a symptom.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Echocardiogram findings are diagnostic imaging results, not symptoms.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"A predisposing cardiac lesion is a risk factor or underlying condition, but it's unclear if this is being presented as a symptom in the context of infective endocarditis.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Immunologic phenomena are complications or signs, but their relevance as symptoms depends on the context of presentation.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 40.615721399999984,
+      "order": 11
+    },
+    {
+      "name": "test_case_12",
+      "input": "What is the definition of hypertension?",
+      "actualOutput": "Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic. \nEssential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\nHypertension in children is dependent on the age, sex, and height  \n|                                          | 1 to 13 years                                                                                             | \u2265 13 years           |\n|------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------|\n| Normal BP                                | Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  | <120/80              |\n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined  \nas systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions",
+      "retrievalContext": [
+        "- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n\n                                          \n 1 to 13 years                                                                                             \n \u2265 13 years           \n\n\n------------------------------------------\n-----------------------------------------------------------------------------------------------------------\n----------------------\n\n\n Normal BP                                \n Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  \n <120/80              \n\n\n Elevated BP (Previously prehypertension) \n SBP and/or DBP \u2265 90 th percentile but < 95 th percentile                                                  \n SBP 120-129, DBP <80 \n\n\n Stage 1 hypertension                     \n SBP and/or DBP \u2265 95 th percentile to < 95 th percentile + 12mmHg or 130/80 to 139/89 (whichever is lower) \n 130/80 - 139/89      \n\n\n Stage 2 hypertension                     \n SBP and/or DBP \u2265 95 th percentile + 12 mmHg or \u2265 140/90 mmHg (whichever is lower)                         \n BP \u2265 140/90          \n\nRenal  disease  (glomerulonephritis,  Hemolytic  uremic  syndrome,  renal  failure,  cystic  renal disease)  \n- Renovascular {renal artery stenosis}\n- Cardiovascular {coarctation of the aorta}\n- Endocrine (Cushing's Syndrome, neuroblastoma}\nRefer all children with hypertension to a doctor for management  \n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined  \n- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Idiopathic\n- Renal parenchymal disease: glomerulonephritis\n- polycystic kidney disease\n- congenital abnormalities of kidney and urinary tract,\n- chronic kidney disease\n- Renal artery stenosis\n- Takayasu arteritis\n- Pheochromocytoma\n- Agangliomas- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Pheochromocytoma\n- Agangliomas  \n- Hyperthyroidism\n- Cushing's syndrome\n- Wilm's tumor\n- neuroblastoma\n- adrenal carcinoma\n- Hypertensive crises\n- Hypertensive retinopathy\n- Hypertensive nephropathy\n- Hypertensive cardiomyopathy  \nReferral  \nRefer all children with hypertension for diagnostic work up"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the response included irrelevant information about asymptomatic nature of hypertension and a table on normal BP ranges, which do not directly answer the definition of hypertension.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\",\n    \"Hypertension is generally asymptomatic.\",\n    \"Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\",\n    \"Hypertension in children is dependent on the age, sex, and height\",\n    \"|                                          | 1 to 13 years                                                                                             | \u2265 13 years           |\",\n    \"|------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------|\",\n    \"| Normal BP                                | Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  | <120/80              |\",\n    \"- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement discusses the asymptomatic nature of hypertension, which does not define it.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \". The statement mentions essential hypertension being unusual in children and young adults but doesn't directly address its definition.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \". This is a table with data about normal BP ranges for different age groups, which does not define hypertension itself.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 14.637151299999914,
+      "order": 12
+    },
+    {
+      "name": "test_case_13",
+      "input": "What are the diagnostic characteristics for Hypertension?",
+      "actualOutput": "- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n|                                          | 1 to 13 years                                                                                             | \u2265 13 years           |\n|------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------|\n| Normal BP                                | Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  | <120/80              |\n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population.\n- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than one year may be calculated as follows:\n- o {Age in years x 3} +100",
+      "retrievalContext": [
+        "- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n\n                                          \n 1 to 13 years                                                                                             \n \u2265 13 years           \n\n\n------------------------------------------\n-----------------------------------------------------------------------------------------------------------\n----------------------\n\n\n Normal BP                                \n Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  \n <120/80              \n\n\n Elevated BP (Previously prehypertension) \n SBP and/or DBP \u2265 90 th percentile but < 95 th percentile                                                  \n SBP 120-129, DBP <80 \n\n\n Stage 1 hypertension                     \n SBP and/or DBP \u2265 95 th percentile to < 95 th percentile + 12mmHg or 130/80 to 139/89 (whichever is lower) \n 130/80 - 139/89      \n\n\n Stage 2 hypertension                     \n SBP and/or DBP \u2265 95 th percentile + 12 mmHg or \u2265 140/90 mmHg (whichever is lower)                         \n BP \u2265 140/90          \n\nRenal  disease  (glomerulonephritis,  Hemolytic  uremic  syndrome,  renal  failure,  cystic  renal disease)  \n- Renovascular {renal artery stenosis}\n- Cardiovascular {coarctation of the aorta}\n- Endocrine (Cushing's Syndrome, neuroblastoma}\nRefer all children with hypertension to a doctor for management  \n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined  \n- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Idiopathic\n- Renal parenchymal disease: glomerulonephritis\n- polycystic kidney disease\n- congenital abnormalities of kidney and urinary tract,\n- chronic kidney disease\n- Renal artery stenosis\n- Takayasu arteritis\n- Pheochromocytoma\n- Agangliomas- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Pheochromocytoma\n- Agangliomas  \n- Hyperthyroidism\n- Cushing's syndrome\n- Wilm's tumor\n- neuroblastoma\n- adrenal carcinoma\n- Hypertensive crises\n- Hypertensive retinopathy\n- Hypertensive nephropathy\n- Hypertensive cardiomyopathy  \nReferral  \nRefer all children with hypertension for diagnostic work up"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.7777777777777778,
+          "reason": "The score is 0.78 because the response included irrelevant information about hypertension being asymptomatic and normal BP values, which do not directly answer the question about diagnostic criteria.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\",\n    \"Hypertension is generally asymptomatic.\",\n    \"Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\",\n    \"Hypertension in children is dependent on the age, sex, and height\",\n    \"Normal BP for 1 to 13 years: Systolic (SBP) and diastolic BP (DBP) < 90 th percentile\",\n    \"Normal BP for \u2265 13 years: <120/80\",\n    \"In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population.\",\n    \"Hypertension in children is defined as systolic and/or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\",\n    \"The upper limit for normal systolic BP in children greater than one year may be calculated as follows: Age in years x 3 +100\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement mentions that hypertension is generally asymptomatic, which does not provide diagnostic characteristics.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \". The statement discusses the prevalence of essential hypertension in children and young adults but doesn't directly address diagnostic criteria for hypertension itself. It may be relevant to differential diagnosis considerations rather than direct diagnostic features.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \". The statement provides normal BP values for adults but does not directly address diagnostic criteria for hypertension in children or adults.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \". The statement explains the rationale behind defining hypertension in children based on statistical percentiles, which is related to diagnosis but doesn't specify direct diagnostic characteristics like thresholds or measurement protocols.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \". The statement provides a formula for calculating normal systolic BP in children, which is indirectly related to hypertension diagnosis but doesn't directly state diagnostic criteria.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.731742600000416,
+      "order": 13
+    },
+    {
+      "name": "test_case_14",
+      "input": "What is the definition of pediatric hypertension?",
+      "actualOutput": "Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\nHypertension is generally asymptomatic.\nEssential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n|                                          | 1 to 13 years                                                                                             | \u2265 13 years           |\n|------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------|\n| Normal BP                                | Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  | <120/80              |\n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population.\nHypertension is defined  \nas systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\nThe upper limit for normal systolic Bp in children greater than one year may be calculated as follows:\n- o {Age in years x 3} +100",
+      "retrievalContext": [
+        "- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n\n                                          \n 1 to 13 years                                                                                             \n \u2265 13 years           \n\n\n------------------------------------------\n-----------------------------------------------------------------------------------------------------------\n----------------------\n\n\n Normal BP                                \n Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  \n <120/80              \n\n\n Elevated BP (Previously prehypertension) \n SBP and/or DBP \u2265 90 th percentile but < 95 th percentile                                                  \n SBP 120-129, DBP <80 \n\n\n Stage 1 hypertension                     \n SBP and/or DBP \u2265 95 th percentile to < 95 th percentile + 12mmHg or 130/80 to 139/89 (whichever is lower) \n 130/80 - 139/89      \n\n\n Stage 2 hypertension                     \n SBP and/or DBP \u2265 95 th percentile + 12 mmHg or \u2265 140/90 mmHg (whichever is lower)                         \n BP \u2265 140/90          \n\nRenal  disease  (glomerulonephritis,  Hemolytic  uremic  syndrome,  renal  failure,  cystic  renal disease)  \n- Renovascular {renal artery stenosis}\n- Cardiovascular {coarctation of the aorta}\n- Endocrine (Cushing's Syndrome, neuroblastoma}\nRefer all children with hypertension to a doctor for management  \n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined  \n- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Idiopathic\n- Renal parenchymal disease: glomerulonephritis\n- polycystic kidney disease\n- congenital abnormalities of kidney and urinary tract,\n- chronic kidney disease\n- Renal artery stenosis\n- Takayasu arteritis\n- Pheochromocytoma\n- Agangliomas- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm\n- Pheochromocytoma\n- Agangliomas  \n- Hyperthyroidism\n- Cushing's syndrome\n- Wilm's tumor\n- neuroblastoma\n- adrenal carcinoma\n- Hypertensive crises\n- Hypertensive retinopathy\n- Hypertensive nephropathy\n- Hypertensive cardiomyopathy  \nReferral  \nRefer all children with hypertension for diagnostic work up"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.625,
+          "reason": "The score is 0.62 because the response included irrelevant information about general hypertension, table formats, and methods for calculating blood pressure without providing a specific definition of pediatric hypertension.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\",\n    \"Hypertension is generally asymptomatic.\",\n    \"Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\",\n    \"- Hypertension in children is dependent on the age, sex, and height\",\n    \"|                                          | 1 to 13 years                                                                                             | \u2265 13 years           |\",\n    \"|------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------|\",\n    \"| Normal BP                                | Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  | <120/80              |\",\n    \"- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population.\",\n    \"Hypertension is defined as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\",\n    \"The upper limit for normal systolic Bp in children greater than one year may be calculated as follows: - o {Age in years x 3} +100\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement discusses the general nature of hypertension but does not provide a definition specific to pediatric hypertension.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Mentions essential hypertension in children, which may be related to defining pediatric hypertension by noting that underlying causes should be considered. However, it's unclear if this is directly addressing the definition itself.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This appears to be a table format or data structure rather than an actual statement providing information about the definition of pediatric hypertension.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Discusses how BP levels vary with age and outcome, which is relevant to defining pediatric hypertension but does not directly provide the definition itself.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This statement provides a method for calculating systolic blood pressure in children but does not define what constitutes hypertension specifically.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 16.862558999999237,
+      "order": 14
+    },
+    {
+      "name": "test_case_15",
+      "input": "What are the symptoms of Hypertension in children?",
+      "actualOutput": "- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition \n\nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Coarctation of the aorta\n- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition"
+      ],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.42857142857142855,
+          "reason": "The score is 0.43 because the response included irrelevant statements such as 'seizures', 'sweating', 'tachycardia', and 'signs of underlying condition' which are not listed symptoms for Hypertension in children, thereby reducing its relevancy.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"seizures\",\n    \"claudication\",\n    \"sweating\",\n    \"headache\",\n    \"tachycardia\",\n    \"altered level of consciousness\",\n    \"signs of underlying condition\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'seizures' is not a symptom listed for Hypertension in children.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'claudication' may be related to peripheral artery disease, but its relevance to Hypertension in children is unclear without further context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'sweating' is not a symptom listed for Hypertension in children.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'headache' can be associated with hypertension, but its specific relevance to children requires confirmation from the context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'tachycardia' is not a symptom listed for Hypertension in children.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'altered level of consciousness' may be a severe complication, but its direct link to Hypertension in children needs clarification from the context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'signs of underlying condition' is too vague and not specific to Hypertension symptoms in children.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 13.187093900000036,
+      "order": 15
+    },
+    {
+      "name": "test_case_16",
+      "input": "What are the symptoms of adults diagnosed with hypertension?",
+      "actualOutput": "seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition \n\nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Coarctation of the aorta\n- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5714285714285714,
+          "reason": "The score is 0.57 because the response included irrelevant statements about seizures, sweating, and altered level of consciousness which are not typically associated with adult hypertension.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"seizures\",\n    \"claudication\",\n    \"sweating\",\n    \"headache\",\n    \"tachycardia\",\n    \"altered level of consciousness\",\n    \"signs of underlying condition\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Seizures are not a typical symptom of hypertension in adults.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Claudication is more commonly associated with peripheral artery disease rather than hypertension, but could be related to underlying conditions.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Sweating is not typically listed as a primary symptom of hypertension in adults.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"Tachycardia can be associated with hypertension but may also result from other conditions, making it somewhat ambiguous.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Altered level of consciousness is not a typical symptom of hypertension in adults.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.237881399999424,
+      "order": 16
+    },
+    {
+      "name": "test_case_17",
+      "input": "What is the pharmacologic treatment approach for treating adult hypertension?",
+      "actualOutput": "- Steroids\n- Reduce salt intake\n- Regular monitored exercise\n- Weight loss \n1. Calcium channel blocker\n  - a. Nifedipine slow release 0.1-0.25mg/kg 6 hourly PO or \n2. ACE-Inhibitor  \n   - a. Enalapril 0.1mg/kg PO daily or",
+      "retrievalContext": [
+        "- Steroids\n- limb  BP,  Urine  dipstick  and  urinalysis,  Urea,  electrolytes,  and  creatinine,  FBC, Abdominal ultrasound scan and doppler, ECG, Echocardiography, Fundoscopy, rest of investigations dependent on underlying cause\n- Reduce salt intake\n- Regular monitored exercise\n- Weight loss\n1. Calcium channel blocker\n- a. Nifedipine slow release 0.1-0.25mg/kg 6 hourly PO or\n- b. Amlodipine 0.1mg/kg 4 to 6 hourly PO\n2. ACE-Inhibitor\n- a. Enalapril 0.1mg/kg PO daily or 12 hourly or  \n- b. Lisinopril 0.1mg/kg PO daily\n- a. Propranolol 0.5-1mg/kg 12 hourly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8333333333333334,
+          "reason": "The score is 0.83 because 'steroids' were incorrectly mentioned as a treatment for hypertension, which they are not.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Steroids\",\n    \"- Reduce salt intake\",\n    \"- Regular monitored exercise\",\n    \"- Weight loss \",\n    \"1. Calcium channel blocker\",\n    \"2. ACE-Inhibitor\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Steroids' are not a standard pharmacologic treatment for hypertension.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Reduce salt intake' is a non-pharmacologic lifestyle intervention, but may be considered supportive in managing hypertension.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Regular monitored exercise' is a non-pharmacologic lifestyle intervention, but may be considered supportive in managing hypertension.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Weight loss ' is a non-pharmacologic lifestyle intervention, but may be considered supportive in managing hypertension.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.150311200000033,
+      "order": 17
+    },
+    {
+      "name": "test_case_18",
+      "input": "What are the symptoms of uncontrolled high blood pressure in children?",
+      "actualOutput": "- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition \n\nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Coarctation of the aorta\n- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8571428571428571,
+          "reason": "The score is 0.86 because 'claudication' was incorrectly mentioned as a symptom associated with uncontrolled high blood pressure in children, when it is actually linked to peripheral artery disease.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"seizures\",\n    \"claudication\",\n    \"sweating\",\n    \"headache\",\n    \"tachycardia\",\n    \"altered level of consciousness\",\n    \"signs of underlying condition\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'claudication' is a symptom associated with peripheral artery disease, not typically linked to uncontrolled high blood pressure in children.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'sweating' can be a non-specific symptom and may or may not be directly related to uncontrolled high blood pressure in children without additional context.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'tachycardia' can occur with hypertension but is not a defining symptom of uncontrolled high blood pressure in children and may be caused by other factors.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'signs of underlying condition' is too vague to determine relevance without knowing the specific underlying conditions involved.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.413948299999902,
+      "order": 18
+    },
+    {
+      "name": "test_case_19",
+      "input": "What is the recommended IV treatment strategy for hypertensive emergencies?",
+      "actualOutput": "I don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Steroids\n- limb  BP,  Urine  dipstick  and  urinalysis,  Urea,  electrolytes,  and  creatinine,  FBC, Abdominal ultrasound scan and doppler, ECG, Echocardiography, Fundoscopy, rest of investigations dependent on underlying cause\n- Reduce salt intake\n- Regular monitored exercise\n- Weight loss\n1. Calcium channel blocker\n- a. Nifedipine slow release 0.1-0.25mg/kg 6 hourly PO or\n- b. Amlodipine 0.1mg/kg 4 to 6 hourly PO\n2. ACE-Inhibitor\n- a. Enalapril 0.1mg/kg PO daily or 12 hourly or  \n- b. Lisinopril 0.1mg/kg PO daily\n- a. Propranolol 0.5-1mg/kg 12 hourly"
+      ],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.0,
+          "reason": "The score is 0.00 because the response failed to provide any relevant information regarding the recommended IV treatment strategy for hypertensive emergencies, as indicated by the lack of addressing this specific clinical guideline.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"The user doesn't have enough information in the provided medical records.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement indicates a lack of information but does not address the recommended IV treatment strategy for hypertensive emergencies.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.550067099999978,
+      "order": 19
+    },
+    {
+      "name": "test_case_20",
+      "input": "What are the symptoms of ## Hypertensive Crisis?",
+      "actualOutput": "- Encephalopathy, convulsions, Posterior reversible encephalopathy syndrome (PRES), Visual disturbances, retinal hemorrhages, blindness.\nA severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).  \n- Encephalopathy, convulsions, retinal hemorrhages, or blindness.\n- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection\n- Give Hydralazine \n5-10 mg IM/IV. Repeat up to every  \n1 hour as necessary.\n-\nAlternatively,\nLabetalol, IV, Adults \n20-50 mg STAT. (over a   \n2-minute period). Repeat at    \n10-minute intervals, if necessary, to a max. of 200 mg\n- If no IV drugs and patient fully awake give Nifedipine  \n20mg slow release po\n- If heart failure: add Frusemide \n40 mg IV stat",
+      "retrievalContext": [
+        "- Encephalopathy, convulsions, Posterior reversible  encephalopathy  syndrome (PRES), Visual disturbances, retinal hemorrhages, blindness.\nA severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).  The underlying cause may be primary hypertension; however, secondary causes of hypertension must be excluded. In adult patients this often occurs with a BP &gt; 180/120 mmHg, while in children this may occur at lower BP levels.\n- Encephalopathy, convulsions, retinal hemorrhages, or blindness.\n- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection\n- Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.\n- Alternatively, Labetalol, IV, Adults 20-50 mg STAT. (over a 2-minute period). Repeat at 10-minute intervals, if necessary, to a max. of 200 mg\n- If no IV drugs and patient fully awake give Nifedipine 20mg slow release po\n- If heart failure: add Frusemide 40 mg IV stat  \nSub-lingual nifedipine (10 mg) should be avoided due to the unpredictable response of the blood pressure. If parenteral drugs are unavailable, then slow release nifedipine 20mg orally can be used."
+      ],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.375,
+          "reason": "The score is 0.38 because the response included multiple treatment recommendations and definitions related to hypertensive crisis instead of listing its symptoms.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Encephalopathy, convulsions, Posterior reversible encephalopathy syndrome (PRES), Visual disturbances, retinal hemorrhages, blindness.\",\n    \"A severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).\",\n    \"- Encephalopathy, convulsions, retinal hemorrhages, or blindness.\",\n    \"- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection\",\n    \"- Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.\",\n    \"- Alternatively, Labetalol, IV, Adults 20-50 mg STAT. (over a 2-minute period). Repeat at 10-minute intervals, if necessary, to a max. of 200 mg\",\n    \"- If no IV drugs and patient fully awake give Nifedipine 20mg slow release po\",\n    \"- If heart failure: add Frusemide 40 mg IV stat\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This statement describes the definition and potential complications of hypertensive crisis rather than listing symptoms.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The statement mentions signs/symptoms related to conditions that can result from a hypertensive crisis but does not explicitly state them as symptoms of the crisis itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This is a treatment recommendation, not a symptom.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This is a treatment recommendation, not a symptom.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This is a treatment recommendation, not a symptom.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This is a treatment recommendation, not a symptom.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.24485850000019,
+      "order": 20
+    },
+    {
+      "name": "test_case_21",
+      "input": "What are the symptoms of ## hypertensive emergency in adults?",
+      "actualOutput": "A severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).  \n- Encephalopathy, convulsions, retinal hemorrhages, or blindness.\n- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection\n- Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.\n- Alternatively, Labetalol, IV, Adults 20-50 mg STAT. (over a 2-minute period). Repeat at 10-minute intervals, if necessary, to a max. of 200 mg\n- If no IV drugs and patient fully awake give Nifedipine 20mg slow release po",
+      "retrievalContext": [
+        "- Encephalopathy, convulsions, Posterior reversible  encephalopathy  syndrome (PRES), Visual disturbances, retinal hemorrhages, blindness.\nA severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia (during pregnancy).  The underlying cause may be primary hypertension; however, secondary causes of hypertension must be excluded. In adult patients this often occurs with a BP &gt; 180/120 mmHg, while in children this may occur at lower BP levels.\n- Encephalopathy, convulsions, retinal hemorrhages, or blindness.\n- symptoms  and  signs  of  heart  failure/stroke/heart  attack/renal  failure/aortic dissection\n- Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.\n- Alternatively, Labetalol, IV, Adults 20-50 mg STAT. (over a 2-minute period). Repeat at 10-minute intervals, if necessary, to a max. of 200 mg\n- If no IV drugs and patient fully awake give Nifedipine 20mg slow release po\n- If heart failure: add Frusemide 40 mg IV stat  \nSub-lingual nifedipine (10 mg) should be avoided due to the unpredictable response of the blood pressure. If parenteral drugs are unavailable, then slow release nifedipine 20mg orally can be used."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the response included treatment recommendations for hypertensive emergencies, such as Hydralazine and Labetalol, instead of describing symptoms.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"A severe and potentially life-threatening increase in blood pressures (BP) which may result in an acute stroke, retinopathy (grade 3-haemorrhage or 4-papilloedema), subarachnoid hemorrhage, seizures (hypertensive encephalopathy), heart attack, acute dissection of the aorta, heart failure, renal damage, or eclampsia during pregnancy.\",\n    \"Encephalopathy convulsions retinal hemorrhages or blindness.\",\n    \"symptoms and signs of heart failure/stroke/heart attack/renal failure/aortic dissection\",\n    \"Give Hydralazine 5-10 mg IM/IV. Repeat up to every 1 hour as necessary.\",\n    \"Alternatively Labetalol IV Adults 20-50 mg STAT over a 2-minute period. Repeat at 10-minute intervals if necessary to a max of 200 mg\",\n    \"If no IV drugs and patient fully awake give Nifedipine 20mg slow release po\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \". The statement lists symptoms like encephalopathy, retinal hemorrhages or blindness which are relevant to hypertensive emergency. However, the phrasing is brief and lacks explicit mention of hypertension as a cause.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \". The statement provides treatment recommendations for hypertensive emergencies (e.g., Hydralazine, Labetalol) rather than symptoms. It does not describe any clinical manifestations.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \". This statement also offers treatment options (Nifedipine) instead of describing symptoms associated with hypertensive emergency in adults.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 16.055089399999815,
+      "order": 21
+    },
+    {
+      "name": "test_case_22",
+      "input": "What are the symptoms of ## ISCHEMIC HEART DISEASE?",
+      "actualOutput": "- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)",
+      "retrievalContext": [
+        "- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating\n- -/+ signs of pulmonary edema if LVF  \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6,
+          "reason": "The score is 0.60 because some symptoms mentioned in the response were deemed non-specific and not directly listed as typical for ischemic heart disease, such as 'heaviness feeling on the chest' and 'sweating'.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\",\n    \"Heaviness feeling on the chest\",\n    \"Shortness of breath and palpitations\",\n    \"Sweating\",\n    \"Old and diabetic patients may have silent myocardial infarction with no chest pain\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Heaviness feeling on the chest' is a non-specific symptom and not directly listed as a typical symptom of ischemic heart disease in standard medical references.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Sweating' is a general symptom that can be associated with many conditions, not specifically indicative of ischemic heart disease.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Old and diabetic patients may have silent myocardial infarction with no chest pain' refers to atypical presentations but does not directly list symptoms of ischemic heart disease itself.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.826320000000123,
+      "order": 22
+    },
+    {
+      "name": "test_case_23",
+      "input": "What are the symptoms of ischemic heart disease?",
+      "actualOutput": "- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)",
+      "retrievalContext": [
+        "- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating\n- -/+ signs of pulmonary edema if LVF  \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6,
+          "reason": "The score is 0.60 because some statements mentioned symptoms like chest heaviness and sweating, which were not explicitly listed as symptoms of ischemic heart disease in the provided context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\",\n    \"- Heaviness feeling on the chest\",\n    \"- Shortness of breath and palpitations\",\n    \"- Sweating \",\n    \"Note : old and diabetic patients may have silent myocardial infarction (with no chest pain)\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement describes a feeling of heaviness on the chest, which is not explicitly listed as a symptom of ischemic heart disease in the provided context.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement mentions sweating but does not directly relate to the symptoms of ischemic heart disease as described in the input.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The note discusses silent myocardial infarction in old and diabetic patients, which is related to ischemic heart disease but may be considered ambiguous or supporting information rather than a direct symptom listed for the condition.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 38.80506630000036,
+      "order": 23
+    },
+    {
+      "name": "test_case_24",
+      "input": "What are the symptoms of Stable Angina?",
+      "actualOutput": "Central chest pain {squeezing, heavy discomfort} with radiation to the left arm on exertion or at rest lasting 2-5 minutes, crescendo and decrescendo pattern\nTypical angina pain plus most patients being restless, anxious, pale and with cold extremities",
+      "retrievalContext": [
+        "- Central chest pain {squeezing, heavy discomfort} with radiation to the left arm on exertion or at rest lasting 2-5 minutes, crescendo and decrescendo pattern\n- Unstable angina, non-ST segment myocardial infarction\n- Central  chest  pain  as  above  lasting  more  than  10  minutes  and  has  a  crescendo pattern\n- Acute myocardial Infarction (ST segment elevation)\n- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the response included information about the pattern of pain (crescendo and decrescendo) which describes characteristics of anginal pain rather than listing actual symptoms as requested.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Central chest pain {squeezing, heavy discomfort} with radiation to the left arm on exertion or at rest lasting 2-5 minutes\",\n    \"Crescendo and decrescendo pattern of the pain\",\n    \"Typical angina pain plus most patients being restless, anxious, pale and with cold extremities\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement refers to the pattern of pain (crescendo and decrescendo) but does not describe a symptom itself. It is more about the characteristics of the pain rather than an actual symptom.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The statement mentions 'typical angina pain' which could be relevant, but also includes additional descriptors like restlessness, anxiety, pallor and cold extremities. These may or may not be considered core symptoms of stable angina.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.186251399999492,
+      "order": 24
+    },
+    {
+      "name": "test_case_25",
+      "input": "What are the pharmacological treatments used to manage stable angina symptoms?",
+      "actualOutput": "- Give Atenolol 50 mg 12 hourly (if not asthmatic)\n- Amlodipine 5-10mg daily or Nifedipine 10-20 mg daily to replace or be cautiously added to Atenolol\n - Alternatively use Isosorbide Dinitrate 5-10mg sublingually as required instead of Glyceryl Trinitrate",
+      "retrievalContext": [
+        "- Give Aspirin 150 mg daily\n- Give Glyceryl Trinitrate 0.5 mg sublingually as required.\n- Maximum 3 tablets per 15 minutes\n- Deteriorates on storage: keep tablets in original container for no more than 3 months after opening\n- Alternatively use Isosorbide Dinitrate 5-10mg sublingually as required instead of Glyceryl Trinitrate\n- Atenolol 50 mg 12 hourly (if not asthmatic)\n- Amlodipine 5-10mg daily or Nifedipine 10-20 mg daily to replace or be cautiously added to Atenolol\n- If pain continues despite the above treatment refer to Medical Specialist\n- Nitrates and Morphine 2-5mg IV for pain control if there is no hypotension.  \nNote: Urgently discuss these patients with medical specialist!"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The answer is comprehensive and directly addresses all aspects of the question without any irrelevant information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"Give Atenolol 50 mg 12 hourly if not asthmatic.\",\n    \"Amlodipine 5-10mg daily or Nifedipine 10-20 mg daily can replace or be cautiously added to Atenolol.\",\n    \"Isosorbide Dinitrate 5-10mg sublingually as required is an alternative to Glyceryl Trinitrate.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 5.591370399999505,
+      "order": 25
+    },
+    {
+      "name": "test_case_26",
+      "input": "What is the definition of ## Acute Coronary Syndrome (ACS)?",
+      "actualOutput": "This is a term that describes symptoms resulting from severe acute myocardial ischemia. The ischemia may, or may not, lead to myocardial infarction (heart attack). ACS is classified as ST segment elevation on an electrocardiogram (ST-segment elevation myocardial infarction - STEMI) or a non-ST-segment elevation myocardial infarction (NSTEMI) and unstable angina (an ACS without elevation of cardiac enzymes).",
+      "retrievalContext": [
+        "This is a term that describes symptoms resulting from severe acute myocardial ischemia. The ischemia may, or may not, lead to myocardial infarction (heart attack). ACS is classified as ST segment elevation on an electrocardiogram (ST-segment elevation myocardial infarction - STEMI) or a non-ST-segment elevation myocardial infarction (NSTEMI) and## PHARMACOLOGICAL  \n- Give Aspirin 150 mg daily\nThis is a term that describes symptoms resulting from severe acute myocardial ischemia. The ischemia may, or may not, lead to myocardial infarction (heart attack). ACS is classified as ST segment elevation on an electrocardiogram (ST-segment elevation myocardial infarction - STEMI) or a non-ST-segment elevation myocardial infarction (NSTEMI) and unstable angina (an ACS without elevation of cardiac enzymes). Atherosclerosis or obstruction of coronary blood vessels lead to reduction in blood supply to the heart muscle.\n- The risk factors for ACS are identical to those for, and include previous episodes of, stable angina pectoris.\n- Risk factors for this condition include:\n- obesity,\n- diabetes mellitus,\n- hypertension,\n- smoking and\n- hyperlipidemia."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because while the response touches on related conditions like myocardial infarction, it fails to provide a direct definition of Acute Coronary Syndrome as specifically requested.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"This is a term that describes symptoms resulting from severe acute myocardial ischemia.\",\n    \"The ischemia may, or may not, lead to myocardial infarction (heart attack).\",\n    \"ACS is classified as ST segment elevation on an electrocardiogram (ST-segment elevation myocardial infarction - STEMI) or a non-ST-segment elevation myocardian infarction (NSTEMI) and unstable angina (an ACS without elevation of cardiac enzymes).\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement discusses the potential outcomes (myocardial infarction) but does not directly define ACS.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Myocardian' is likely a typo for 'myocardial', which could be interpreted as related to myocardium. However, without clarification, it's ambiguous whether this term refers to the same condition or an error in terminology.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.191551199999594,
+      "order": 26
+    },
+    {
+      "name": "test_case_27",
+      "input": "What are the symptoms presented by patients diagnosed with ## ACUTE CORONARY SYNDROME (ACS)?",
+      "actualOutput": "- Unstable angina, non-ST segment myocardial infarction\n- Central chest pain as above lasting more than 10 minutes and has a crescendo pattern\n- Acute myocardial Infarction (ST segment elevation)\n- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities\n- Chest pain (Sudden onset)\n- Varying degree but often severe and described as tightness, heaviness or constrictive in nature\n- Symptoms persist for more than 30 minutes) and may not be relieved by rest or glyceryl trinitrate.\n- Chest pain May radiate to the left arm, the neck or jaw\n- Nausea, Vomiting.\n- Shortness of breath or fatigue (this may be the only presentation in diabetics and the elderly)\n- Loss of consciousness\n- Restlessness and apprehension\n- Excessive sweating\n- Peripheral or central cyanosis \nI don't have enough information in the provided medical records to answer that.",
+      "retrievalContext": [
+        "- Unstable angina, non-ST segment myocardial infarction\n- Central  chest  pain  as  above  lasting  more  than  10  minutes  and  has  a  crescendo pattern\n- Acute myocardial Infarction (ST segment elevation)\n- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities\n- Chest pain (Sudden onset)\n- Varying  degree  but  often  severe  and  described  as  tightness,  heaviness  or constrictive in nature\n- Symptoms persist for more than 30 minutes) and may not be relieved by rest or glyceryl trinitrate.\n- Chest pain May radiate to the left arm, the neck or jaw\n- Nausea, Vomiting.\n- Shortness of breath or fatigue (this may be the only presentation in diabetics and the elderly)\n- Loss of consciousness\n- Restlessness and apprehension\n- Excessive sweating\n- Peripheral or central cyanosis\n- Pulse may be thready, fast, irregular, slow or normal\n- Blood pressure may be high, low, or unrecordable (following extensive damage to heart muscle)\n- Bilateral crepitations in the chest (with left ventricular failure)\n- Presence of a third or fourth heart sound (suggests heart failure)\n- Confusion in the elderly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6428571428571429,
+          "reason": "The score is 0.64 because some statements mention non-specific or atypical symptoms for ACS, such as restlessness, nausea, and cyanosis which are not typically associated with the condition.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"- Unstable angina, non-ST segment myocardial infarction\",\n    \"- Central chest pain as above lasting more than 10 minutes and has a crescendo pattern\",\n    \"- Acute myocardial Infarction (ST segment elevation)\",\n    \"- Typical angina pain plus most patients being restless, anxious, pale and with cold extremities\",\n    \"- Chest pain (Sudden onset)\",\n    \"- Varying degree but often severe and described as tightness, heaviness or constrictive in nature\",\n    \"- Symptoms persist for more than 30 minutes) and may not be relieved by rest or glyceryl trinitrate.\",\n    \"- Chest pain May radiate to the left arm, the neck or jaw\",\n    \"- Nausea, Vomiting.\",\n    \"- Shortness of breath or fatigue (this may be the only presentation in diabetics and the elderly)\",\n    \"- Loss of consciousness\",\n    \"- Restlessness and apprehension\",\n    \"- Excessive sweating\",\n    \"- Peripheral or central cyanosis \",\n    \"I don't have enough information in the provided medical records to answer that.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement mentions 'typical angina pain plus most patients being restless, anxious, pale and with cold extremities' which are not specific symptoms of ACS but rather general signs or associated conditions.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement mentions 'symptoms persist for more than 30 minutes and may not be relieved by rest or glyceryl trinitrate' which is a characteristic of unstable angina, but the mention of 'relieved by rest or glyceryl trinitrate' could imply stable angina rather than ACS. However, since it's part of the definition for unstable angina in ACS, this might be considered relevant.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Nausea and vomiting are not specific to acute coronary syndrome; they can occur with other conditions such as gastrointestinal issues or anxiety disorders.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Restlessness and apprehension' may be associated with ACS but are non-specific symptoms that could also arise from other medical conditions like hypoglycemia, panic attacks, or general anxiety.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Peripheral or central cyanosis is not a typical symptom of acute coronary syndrome. Cyanosis usually indicates issues with oxygenation and may be more indicative of respiratory conditions rather than ACS.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The statement 'I don't have enough information in the provided medical records to answer that.' does not provide any specific symptoms related to acute coronary syndrome, but it is a meta-comment about lack of data rather than an actual symptom or sign.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 23.22134180000012,
+      "order": 27
+    },
+    {
+      "name": "test_case_28",
+      "input": "What are the symptoms of Peripheral Arterial Disease?",
+      "actualOutput": "If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\n- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet",
+      "retrievalContext": [
+        "If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\n- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet\n- Weak or no pause in legs/feet\n- Erectile dysfunction in men\n- Shiny skin in legs"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8333333333333334,
+          "reason": "The score is 0.83 because 'Hair loss or slower hair growth in legs/feet' was incorrectly identified as a symptom of Peripheral Arterial Disease, which it is not.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\",\n    \"Muscle cramps (thighs, calf muscles)\",\n    \"Leg numbness or weakness\",\n    \"Coldness in lower leg or foot\",\n    \"Sores: legs or feet or toes\",\n    \"Hair loss or slower hair growth in legs/feet\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Hair loss or slower hair growth in legs/feet' is not a symptom of Peripheral Arterial Disease.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.61287959999936,
+      "order": 28
+    },
+    {
+      "name": "test_case_29",
+      "input": "What are the symptoms of Peripheral Arterial Disease?",
+      "actualOutput": "If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\n- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet\n- Weak or no pause in legs/feet",
+      "retrievalContext": [
+        "If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\n- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet\n- Weak or no pause in legs/feet\n- Erectile dysfunction in men\n- Shiny skin in legs"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Answer Relevancy",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8571428571428571,
+          "reason": "The score is 0.86 because 'Hair loss or slower hair growth in legs/feet' was incorrectly identified as a symptom of Peripheral Arterial Disease, which it is not.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Statements:\n[\n    \"If there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.\",\n    \"Muscle cramps (thighs, calf muscles)\",\n    \"Leg numbness or weakness\",\n    \"Coldness in lower leg or foot\",\n    \"Sores: legs or feet or toes\",\n    \"Hair loss or slower hair growth in legs/feet\",\n    \"Weak or no pause in legs/feet\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Hair loss or slower hair growth in legs/feet' is not a symptom of Peripheral Arterial Disease.\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"'Weak or no pause in legs/feet' may be ambiguous. It could refer to weak pulses, which are relevant, but the phrasing 'no pause' is unclear and might not directly relate to PAD symptoms as typically described.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.264168699999573,
+      "order": 29
+    }
+  ],
+  "conversationalTestCases": [],
+  "metricsScores": [
+    {
+      "metric": "Answer Relevancy",
+      "scores": [
+        0.8, 0.0, 0.8181818181818182, 1.0, 0.5714285714285714,
+        0.6666666666666666, 0.3333333333333333, 0.75, 0.5, 0.6666666666666666,
+        0.5, 0.6666666666666666, 0.6666666666666666, 0.7777777777777778, 0.625,
+        0.42857142857142855, 0.5714285714285714, 0.8333333333333334,
+        0.8571428571428571, 0.0, 0.375, 0.6666666666666666, 0.6, 0.6,
+        0.6666666666666666, 1.0, 0.6666666666666666, 0.6428571428571429,
+        0.8333333333333334, 0.8571428571428571
+      ],
+      "passes": 25,
+      "fails": 5,
+      "errors": 0
+    }
+  ],
+  "prompts": [],
+  "testPassed": 25,
+  "testFailed": 5,
+  "runDuration": 380.0342593999994,
+  "official": false
+}

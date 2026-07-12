@@ -1,0 +1,430 @@
+{
+  "testCases": [
+    {
+      "name": "test_case_0",
+      "input": "What are the distinguishing signs and symptoms of non-specific inflammatory arthritis compared to rheumatoid arthritis?",
+      "actualOutput": "- Pain and swelling in joint\n- Fever (especially in children)\n- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)",
+      "expectedOutput": "Non-specific inflammatory arthritis presents with pain and swelling in joints, fever (especially in children), while rheumatoid arthritis includes chronic pain, joint swelling, deformity.",
+      "retrievalContext": [
+        "### I NVESTIGATIONS\n- FBC\n- X-ray joint\n- ESR\n### SIGNS AND SYMPTOMS\n- Pain and swelling in joint\n- Fever (especially in children)\n- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)\n### NSAIDS\n- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food\n### Alternatively:\n- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  \n- Review after 7 days\n- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):\n- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  \nor  \n- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  \nConsider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  \n- Intra-articular steroid injection with Depo Medrol or Triamcinolone\n- Disease Modifying anti-rheumatic agents (see RA section below)\n### Children:\n- Always refer to hospital\n- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in retrieval context, with precise symptom-condition mappings confirmed.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions 'pain and swelling in joints' which is present in the retrieval context (2nd node). It also refers to fever, especially in children, found in the same node. The mention of rheumatoid arthritis with chronic pain, joint swelling, and deformity corresponds to the 3rd node: 'For rheumatoid arthritis key symptoms are: Chronic pain, joint swelling, and deformity (see RA section below)'\",\n        \"expected_output\": \"Non-specific inflammatory arthritis presents with pain and swelling in joints, fever (especially in children), while rheumatoid arthritis includes chronic pain, joint swelling, deformity.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.301017499999944,
+      "order": 0
+    },
+    {
+      "name": "test_case_1",
+      "input": "What are the NSAID treatment protocols for non-specific inflammatory arthritis?",
+      "actualOutput": "- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food\n- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions\n- Review after 7 days\n- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):\n- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days\nor\n- o Give Diclofenac Sodium 25-50mg 8 hourly after food or SR 75mg bd for another 7 days",
+      "expectedOutput": "For adults with non-specific inflammatory arthritis, initial NSAID treatment includes Ibuprofen (1.2-1.8g daily in 8-hourly doses after food) or Aspirin (300-900 mg after food every 4 hours up to 4g/day). If not effective within 7 days, alternatives like Indomethacin (25-50mg 8 hourly) or Diclofenac Sodium (25-50mg 8 hourly or SR 75mg bd) are used. Intra-articular steroid injections and referral to a specialist may be considered if NSAIDs fail.",
+      "retrievalContext": [
+        "### I NVESTIGATIONS\n- FBC\n- X-ray joint\n- ESR\n### SIGNS AND SYMPTOMS\n- Pain and swelling in joint\n- Fever (especially in children)\n- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)\n### NSAIDS\n- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food\n### Alternatively:\n- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  \n- Review after 7 days\n- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):\n- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  \nor  \n- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  \nConsider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  \n- Intra-articular steroid injection with Depo Medrol or Triamcinolone\n- Disease Modifying anti-rheumatic agents (see RA section below)\n### Children:\n- Always refer to hospital\n- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in the retrieval context, ensuring complete alignment with the provided information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence about NSAID treatment with Ibuprofen and Aspirin is supported by the retrieval context (4th node).\",\n        \"expected_output\": \"For adults with non-specific inflammatory arthritis, initial NSAID treatment includes Ibuprofen (1.2-1.8g daily in 8-hourly doses after food) or Aspirin (300-900 mg after food every 4 hours up to 4g/day). If not effective within 7 days, alternatives like Indomethacin (25-50mg 8 hourly) or Diclofenac Sodium (25-50mg 8 hourly or SR 75mg bd) are used. Intra-articular steroid injections and referral to a specialist may be considered if NSAIDs fail.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The alternative NSAIDs like Indomethacin and Diclofenac Sodium are mentioned in the retrieval context (6th node).\",\n        \"expected_output\": \"For adults with non-specific inflammatory arthritis, initial NSAID treatment includes Ibuprofen (1.2-1.8g daily in 8-hourly doses after food) or Aspirin (300-900 mg after food every 4 hours up to 4g/day). If not effective within 7 days, alternatives like Indomethacin (25-50mg 8 hourly) or Diclofenac Sodium (25-50mg 8 hourly or SR 75mg bd) are used. Intra-articular steroid injections and referral to a specialist may be considered if NSAIDs fail.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"Referral to a specialist and intra-articular steroid injections are covered in the retrieval context (7th node).\",\n        \"expected_output\": \"For adults with non-specific inflammatory arthritis, initial NSAID treatment includes Ibuprofen (1.2-1.8g daily in 8-hourly doses after food) or Aspirin (300-900 mg after food every 4 hours up to 4g/day). If not effective within 7 days, alternatives like Indomethacin (25-50mg 8 hourly) or Diclofenac Sodium (25-50mg 8 hourly or SR 75mg bd) are used. Intra-articular steroid injections and referral to a specialist may be considered if NSAIDs fail.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 5.98318670000117,
+      "order": 1
+    },
+    {
+      "name": "test_case_2",
+      "input": "What are the characteristic symptoms, diagnostic tests, and antibiotic regimens for septic arthritis?",
+      "actualOutput": "- Fever\n- Swollen, painful, warm joint\n- Severe local tenderness\n- Pain on joint motion\n- Joint aspiration for diagnostic and therapeutic purposes\n- \u2191\u2191 WCC (e.g. &gt;50,0 00/mm3): mostly PMN\n- \u2191ESR/CRP, \u2191WCC, Blood cultures\n- X-ray\n- FBC,\n- VDRL\n- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.\n- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin ) may be required\n- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for 2 weeks followed by oral Erythromycin 500mg 6 hourly and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks\n- Give Ceftriaxone\n50mg/kg daily for 14 days\n- Give Flucloxacillin 25 mg/kg IV q6h for 14 days\n- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course",
+      "expectedOutput": "Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.",
+      "retrievalContext": [
+        "### Complications\n- Osteomyelitis\n- Arthritis\n- Ankylosis: fusion\n### SYMPTOMS AND SIGNS\n- Fever\n- Swollen, painful, warm joint\n- Severe local tenderness\n- Pain on joint motion\n### I NVESTIGATIONS\n- Joint aspiration for diagnostic and therapeutic purposes\n- \u2191\u2191 WCC (e.g. &gt;50,0 00/mm3): mostly PMN\n- \u2191ESR/CRP, \u2191WCC, Blood cultures\n- X-ray\n- FBC,\n- VDRL\n### Treatment Adults:\n- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.\n- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin )  may be required\n### Alternatively, if penicillin allergic:\n- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for  2  weeks  followed  by  oral Erythromycin 500mg  6  hourly  and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks  \nNote : If Pus present, always refer early for anthrotomy\n### Children:\n- Give Ceftriaxone  \n50mg/kg daily for 14 days\n### Or alternatively when staphylococcal infection is suspected:\n- Give Flucloxacillin 25 mg/kg IV q6h for 14 days\n### Or if above drugs not available\n- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there  is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course\n### NON-PHARMACOLOGICAL\n- Consider joint washout under GA\n- Splint joint\n- Physiotherapy after infection resolved\n### Note: Surgical drainage may be indicated\nTB septic arthritis is treated as for other forms of extra-pulmonary TB  \nWhen to refer a septic arthritis patient  \n- If pus present, always refer early for arthrotomy.\n- Suspicion of joint destruction\n- No response to the available antibiotics  \nRED FLAG: Always refer early to hospital for systemic treatment and arthrotomy"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in retrieval context, covering symptoms, investigations, and treatment options without any discrepancies.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The first sentence mentions 'fever', 'swollen painful warm joint with severe local tenderness' which are listed in the retrieval context's SYMPTOMS AND SIGNS section (2nd node).\",\n        \"expected_output\": \"Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"Diagnostic investigations include joint aspiration and elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP which are mentioned in the retrieval context's I NVESTIGATIONS section (3rd node).\",\n        \"expected_output\": \"Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The treatment involving IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline is detailed in the retrieval context's 'Treatment Adults:' section (5th node).\",\n        \"expected_output\": \"Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The alternative treatment if penicillin allergic using Clindamycin or Ceftriaxone followed by oral antibiotics is covered under the 'Alternatively, if penicillin allergic:' section in retrieval context (6th node).\",\n        \"expected_output\": \"Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The mention of Chloramphenicol as an alternative for children when other drugs are unavailable corresponds to the 'Or if above drugs not available' part in the retrieval context's Children section (8th node).\",\n        \"expected_output\": \"Septic Arthritis has symptoms of fever, swollen painful warm joint with severe local tenderness. Diagnostic investigations include joint aspiration (diagnostic/therapeutic), elevated WCC (>50,000/mm3) mostly PMN, raised ESR/CRP and blood cultures. Treatment involves IV Flucloxacillin 1g q6h for at least 14 days plus oral Ciprofloxacin or Doxycycline; if penicillin allergic use Clindamycin or Ceftriaxone followed by oral antibiotics, with alternatives like Chloramphenicol in children when other drugs are unavailable.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 12.861914600000091,
+      "order": 2
+    },
+    {
+      "name": "test_case_3",
+      "input": "What antibiotic regimens, including alternatives for penicillin allergy, are recommended for treating ## SEPTIC ARTHRITIS?",
+      "actualOutput": "- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.\n- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin ) may be required\n- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for 2 weeks followed by oral Erythromycin 500mg 6 hourly and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks\n- Note : If Pus present, always refer early for anthrotomy\n- Give Ceftriaxone 50mg/kg daily for 14 days\n- Or alternatively when staphylococcal infection is suspected: Give Flucloxacillin 25 mg/kg IV q6h for 14 days\n- Or if above drugs not available: Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course",
+      "expectedOutput": "For septic arthritis in adults without a penicillin allergy: Flucloxacillin 1g IV every 6 hours plus Ciprofloxacin or Doxycycline. For those with an allergy, Clindamycin is preferred; if unavailable, use Ceftriaxone followed by Erythromycin and Ciprofloxacin.",
+      "retrievalContext": [
+        "### Complications\n- Osteomyelitis\n- Arthritis\n- Ankylosis: fusion\n### SYMPTOMS AND SIGNS\n- Fever\n- Swollen, painful, warm joint\n- Severe local tenderness\n- Pain on joint motion\n### I NVESTIGATIONS\n- Joint aspiration for diagnostic and therapeutic purposes\n- \u2191\u2191 WCC (e.g. &gt;50,0 00/mm3): mostly PMN\n- \u2191ESR/CRP, \u2191WCC, Blood cultures\n- X-ray\n- FBC,\n- VDRL\n### Treatment Adults:\n- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.\n- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin )  may be required\n### Alternatively, if penicillin allergic:\n- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for  2  weeks  followed  by  oral Erythromycin 500mg  6  hourly  and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks  \nNote : If Pus present, always refer early for anthrotomy\n### Children:\n- Give Ceftriaxone  \n50mg/kg daily for 14 days\n### Or alternatively when staphylococcal infection is suspected:\n- Give Flucloxacillin 25 mg/kg IV q6h for 14 days\n### Or if above drugs not available\n- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there  is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course\n### NON-PHARMACOLOGICAL\n- Consider joint washout under GA\n- Splint joint\n- Physiotherapy after infection resolved\n### Note: Surgical drainage may be indicated\nTB septic arthritis is treated as for other forms of extra-pulmonary TB  \nWhen to refer a septic arthritis patient  \n- If pus present, always refer early for arthrotomy.\n- Suspicion of joint destruction\n- No response to the available antibiotics  \nRED FLAG: Always refer early to hospital for systemic treatment and arthrotomy"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in retrieval context, with clear matches for both treatment regimens and allergy alternatives.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions Flucloxacillin 1g IV every 6 hours plus Ciprofloxacin or Doxycycline, which is directly stated in the retrieval context's 'Treatment Adults:' section (4th node).\",\n        \"expected_output\": \"For septic arthritis in adults without a penicillin allergy: Flucloxacillin 1g IV every 6 hours plus Ciprofloxacin or Doxycycline. For those with an allergy, Clindamycin is preferred; if unavailable, use Ceftriaxone followed by Erythromycin and Ciprofloxacin.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence refers to Clindamycin for penicillin allergy and alternatives like Ceftriaxone followed by Erythromycin and Ciprofloxacin, which is covered in the 'Alternatively, if penicillin allergic:' section (5th node).\",\n        \"expected_output\": \"For septic arthritis in adults without a penicillin allergy: Flucloxacillin 1g IV every 6 hours plus Ciprofloxacin or Doxycycline. For those with an allergy, Clindamycin is preferred; if unavailable, use Ceftriaxone followed by Erythromycin and Ciprofloxacin.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.403802500000893,
+      "order": 3
+    },
+    {
+      "name": "test_case_4",
+      "input": "How is gout defined as an inflammatory arthritis condition caused by uric acid crystal formation due to elevated levels resulting from decreased renal excretion or increased production?",
+      "actualOutput": "Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.",
+      "expectedOutput": "GOUT is the most common form of inflammatory arthritis, characterized by intermittent painful joint attacks caused by crystals formed from excessive uric acid levels due to decreased renal excretion or increased production.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nMost common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.\n### Risk Factors\n- Age, male gender, menopausal status in females, impairment of renal function, hypertension\n- Diets high in red meat or seafood\n- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks\n- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin\n- Secondary  hyperuricemia  can  also  result  from  increased  cell  turnover  and destruction"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the expected output sentence was perfectly aligned with node(s) in retrieval context, as it accurately reflected the clinical description of gout provided in the first node.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence is attributed to the first node in retrieval context. The clinical description mentions 'Most common form of inflammatory arthritis' and 'intermittent painful joint attacks caused by crystals formed from excessive uric acid levels due to decreased renal excretion or increased production.'\",\n        \"expected_output\": \"GOUT is the most common form of inflammatory arthritis, characterized by intermittent painful joint attacks caused by crystals formed from excessive uric acid levels due to decreased renal excretion or increased production.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.512222700001075,
+      "order": 4
+    },
+    {
+      "name": "test_case_5",
+      "input": "How do age, male gender in menopausal females, renal impairment, hypertension, diets high in red meat or seafood consumption of beer spirits fructose sweetened drinks and drugs like thiazides furosemide pyrazinamide low dose aspirin contribute to gout risk factors?",
+      "actualOutput": "- Age, male gender, menopausal status in females, impairment of renal function, hypertension\n- Diets high in red meat or seafood\n- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks\n- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin",
+      "expectedOutput": "These are all recognized risk factors for GOUT as they can lead to increased uric acid levels through either decreased renal excretion or increased production of uric acid.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nMost common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.\n### Risk Factors\n- Age, male gender, menopausal status in females, impairment of renal function, hypertension\n- Diets high in red meat or seafood\n- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks\n- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin\n- Secondary  hyperuricemia  can  also  result  from  increased  cell  turnover  and destruction"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the expected output accurately reflects the retrieval context's nodes, particularly aligning with the clinical description and risk factors related to uric acid levels.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions risk factors leading to increased uric acid levels through decreased renal excretion or increased production, which aligns with the retrieval context's first node (clinical description) and second node (risk factors). The clinical description states 'excessive levels of uric acid occurring mostly in a context of decreased renal excretion... or increased production'...\",\n        \"expected_output\": \"These are all recognized risk factors for GOUT as they can lead to increased uric acid levels through either decreased renal excretion or increased production of uric acid.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.886725600001228,
+      "order": 5
+    },
+    {
+      "name": "test_case_6",
+      "input": "What are the signs and symptoms of musculoskeletal pain and trauma, including presentations like pain, swelling, deformity, and pseudo paralysis?",
+      "actualOutput": "- Pain and swelling in joint\n- Fever (especially in children)\n- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)",
+      "expectedOutput": "The signs and symptoms of MUSCULOSKELETAL PAIN AND TRAUMA include presents as pain, swelling, deformity and pseudo paralysis.",
+      "retrievalContext": [
+        "### I NVESTIGATIONS\n- FBC\n- X-ray joint\n- ESR\n### SIGNS AND SYMPTOMS\n- Pain and swelling in joint\n- Fever (especially in children)\n- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)\n### NSAIDS\n- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food\n### Alternatively:\n- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  \n- Review after 7 days\n- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):\n- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  \nor  \n- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  \nConsider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  \n- Intra-articular steroid injection with Depo Medrol or Triamcinolone\n- Disease Modifying anti-rheumatic agents (see RA section below)\n### Children:\n- Always refer to hospital\n- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the expected output's mention of 'pain, swelling, deformity' directly aligns with the explicit listing in node 2 of the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions 'pain, swelling, deformity' which are explicitly listed in the retrieval context (2nd node).\",\n        \"expected_output\": \"The signs and symptoms of MUSCULOSKELETAL PAIN AND TRAUMA include presents as pain, swelling, deformity and pseudo paralysis.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 3.9520463999997446,
+      "order": 6
+    },
+    {
+      "name": "test_case_7",
+      "input": "What are the key clinical features, diagnostic criteria, causes, and treatment options for compartment syndrome involving elevated osseo-fascial pressure leading to impaired limb perfusion?",
+      "actualOutput": "- High energy trauma, burns\n- Tight casts, dressings, or external wrappings  \n- Extravasation of IV infusion\n- Post-ischemic swelling\n- Bleeding disorders and arterial injury",
+      "expectedOutput": "Compartment Syndrome is characterized by severe progressive pain that worsens with passive motion. It may be caused by high energy trauma, burns, tight casts or dressings, IV extravasation, post-ischemic swelling and bleeding disorders. Treatment options include observation and elevation of the limb as well as bivalving the cast and loosening circumferential dressings for non-operative management; emergent fasciotomy is required for operative treatment.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nCondition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  \npassive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.\n### Causes\n- High energy trauma, burns\n- Tight casts, dressings, or external wrappings  \n- Extravasation of IV infusion\n- Post-ischemic swelling\n- Bleeding disorders and arterial injury\n### SIGNS AND SYMPTOMS\n- Pain out of proportion to the clinical situation is usually the first symptom\n### On Physical examination\n- pain on passive stretch of the compartment\n- paresthesia and hypoesthesia\n- paralysis*\n- palpable swelling*\n- peripheral pulses absent*\n### Late signs\n- Clinical diagnosis but imaging required to rule out fracture\n### Operative\n- Emergent fasciotomy of all limb compartments\n### Non operative\n- Obervation and limb elevation\n- bivalving the cast and loosening circumferential dressings"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in retrieval context, with each clinical description, cause, and treatment option accurately matched to corresponding sections.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The first sentence is attributed to the clinical description node (1st node) which mentions 'severe and progressive limb pain that worsens with passive motion.'\",\n        \"expected_output\": \"Compartment Syndrome is characterized by severe progressive pain that worsens with passive motion. It may be caused by high energy trauma, burns, tight casts or dressings, IV extravasation, post-ischemic swelling and bleeding disorders. Treatment options include observation and elevation of the limb as well as bivalving the cast and loosening circumferential dressings for non-operative management; emergent fasciotomy is required for operative treatment.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The second sentence about causes is covered in the Causes section (2nd node), listing high energy trauma, burns, tight casts/dressings, IV extravasation, post-ischemic swelling and bleeding disorders.\",\n        \"expected_output\": \"Compartment Syndrome is characterized by severe progressive pain that worsens with passive motion. It may be caused by high energy trauma, burns, tight casts or dressings, IV extravasation, post-ischemic swelling and bleeding disorders. Treatment options include observation and elevation of the limb as well as bivalving the cast and loosening circumferential dressings for non-operative management; emergent fasciotomy is required for operative treatment.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The third sentence on treatment options matches with both Non operative (3rd node) and Operative (4th node) sections mentioning observation/elevation, bivalving cast/loosening dressings for non-operative care and emergent fasciotomy as the operative intervention.\",\n        \"expected_output\": \"Compartment Syndrome is characterized by severe progressive pain that worsens with passive motion. It may be caused by high energy trauma, burns, tight casts or dressings, IV extravasation, post-ischemic swelling and bleeding disorders. Treatment options include observation and elevation of the limb as well as bivalving the cast and loosening circumferential dressings for non-operative management; emergent fasciotomy is required for operative treatment.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 8.139453100000537,
+      "order": 7
+    },
+    {
+      "name": "test_case_8",
+      "input": "What are the key signs and symptoms associated with compartment syndrome, including pain disproportionate to injury, paresthesia, hypoesthesia, paralysis, palpable swelling, and absent peripheral pulses?",
+      "actualOutput": "- Pain out of proportion to the clinical situation is usually the first symptom\n- pain on passive stretch of the compartment\n- paresthesia and hypoesthesia\n- paralysis*\n- palpable swelling*\n- peripheral pulses absent*",
+      "expectedOutput": "The key signs of COMPARTMENT SYNDROME include pain on passive stretch of the compartment (out of proportion to clinical situation), paresthesia/hypoesthesia/paralysis/palpable swelling, and absent peripheral pulses.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nCondition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  \npassive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.\n### Causes\n- High energy trauma, burns\n- Tight casts, dressings, or external wrappings  \n- Extravasation of IV infusion\n- Post-ischemic swelling\n- Bleeding disorders and arterial injury\n### SIGNS AND SYMPTOMS\n- Pain out of proportion to the clinical situation is usually the first symptom\n### On Physical examination\n- pain on passive stretch of the compartment\n- paresthesia and hypoesthesia\n- paralysis*\n- palpable swelling*\n- peripheral pulses absent*\n### Late signs\n- Clinical diagnosis but imaging required to rule out fracture\n### Operative\n- Emergent fasciotomy of all limb compartments\n### Non operative\n- Obervation and limb elevation\n- bivalving the cast and loosening circumferential dressings"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all key signs mentioned in the expected output are explicitly supported by specific details in node(s) 2 and 3 of the retrieval context, ensuring complete alignment with the provided information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions 'pain on passive stretch of the compartment (out of proportion to clinical situation)' which is directly stated in the retrieval context's 'On Physical examination' section and also mentioned as a first symptom under 'SIGNS AND SYMPTOMS'.\",\n        \"expected_output\": \"The key signs of COMPARTMENT SYNDROME include pain on passive stretch of the compartment (out of proportion to clinical situation), paresthesia/hypoesthesia/paralysis/palpable swelling, and absent peripheral pulses.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence includes 'paresthesia/hypoesthesia/paralysis/palpable swelling', which are explicitly listed in the retrieval context's 'On Physical examination' section.\",\n        \"expected_output\": \"The key signs of COMPARTMENT SYNDROME include pain on passive stretch of the compartment (out of proportion to clinical situation), paresthesia/hypoesthesia/paralysis/palpable swelling, and absent peripheral pulses.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The mention of 'absent peripheral pulses' is directly stated in the retrieval context's 'On Physical examination' section.\",\n        \"expected_output\": \"The key signs of COMPARTMENT SYNDROME include pain on passive stretch of the compartment (out of proportion to clinical situation), paresthesia/hypoesthesia/paralysis/palpable swelling, and absent peripheral pulses.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.5686025000013615,
+      "order": 8
+    },
+    {
+      "name": "test_case_9",
+      "input": "What are the primary symptoms and physical signs associated with acute osteomyelitis, including pain progression, fever, swelling, tenderness, pseudoparalysis?",
+      "actualOutput": "- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis\n- A high index of suspicion and proper history is important",
+      "expectedOutput": "The major presenting symptom of ACUTE OSTEOMYELITIS is progressive severe pain. Accompanying features include fever and toxicity; physical signs are swelling, localized tenderness and pseudoparalysis.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nHematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.\n### SIGNS AND SYMPTOMS\n- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis  \n- A high index of suspicion and proper history is important\n### I NVESTIGATIONS\n- FBC: A leucocytosis will be demonstrated.\n- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).\n- Blood cultures and sensitivity, ESR, CRP\n### Adults and Children:\n- Refer to the hospital\n- Admit to hospital for rest\n- Splint the affected limb as required\n- Give analgesics- refer to acute pain management\n### If pain is severe:\n- Give Pethidine 1mg/kg IM (Refer to acute pain management)\n- Repeat every 6 hours for a maximum 4 doses\n- Drain pus surgically from the bone and send for culture and sensitivity  testing\n- Do not await culture results before starting antibiotic treatment\n### Children Over 2 years :\n- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled\n### Alternatively:\n- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled\n- Clindamycin 15-40mgs/kg (4 divided doses)\n### Children Under 2 years:\n- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)\n- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  \nNote: Antibiotic treatment should be continued for 4 weeks under hospital supervision."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific details from node(s) in retrieval context, ensuring complete alignment with the provided information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The first sentence in the expected output is attributed to the second node (SIGNS AND SYMPTOMS) of retrieval context, which states 'Pain is the major presenting symptom with progressive severity with time.'\",\n        \"expected_output\": \"The major presenting symptom of ACUTE OSTEOMYELITIS is progressive severe pain. Accompanying features include fever and toxicity; physical signs are swelling, localized tenderness and pseudoparalysis.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The second sentence in the expected output mentions fever and toxicity as accompanying features. This can be attributed to the second node (SIGNS AND SYMPTOMS) of retrieval context, which states 'Commonly accompanying fever, and the patient becomes toxic.'\",\n        \"expected_output\": \"The major presenting symptom of ACUTE OSTEOMYELITIS is progressive severe pain. Accompanying features include fever and toxicity; physical signs are swelling, localized tenderness and pseudoparalysis.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The third sentence in the expected output lists physical signs as swelling, localized tenderness and pseudoparalysis. This is directly stated in the second node (SIGNS AND SYMPTOMS) of retrieval context: 'Main physical signs are swelling, localized tenderness and pseudoparalysis.'\",\n        \"expected_output\": \"The major presenting symptom of ACUTE OSTEOMYELITIS is progressive severe pain. Accompanying features include fever and toxicity; physical signs are swelling, localized tenderness and pseudoparalysis.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.238789000000907,
+      "order": 9
+    },
+    {
+      "name": "test_case_10",
+      "input": "What are the recommended antibiotic regimens and management strategies for acute osteomyelitis in children over two years, including initial IV to oral transition and duration of therapy?",
+      "actualOutput": "- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled\n- Alternatively:\n- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled\n- Clindamycin 15-40mgs/kg (4 divided doses)\nNote: Antibiotic treatment should be continued for 4 weeks under hospital supervision.",
+      "expectedOutput": "For children over 2 years with ACUTE OSTEOMYELITIS, Flucloxacillin 50 mg/kg up to a maximum of 500 mg every 6 hours is recommended initially IV, then orally from 48 hours after fever has settled. Alternatively, Cloxacillin or Clindamycin may be used for the same duration. Therapy should continue for at least four weeks under hospital supervision.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nHematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.\n### SIGNS AND SYMPTOMS\n- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis  \n- A high index of suspicion and proper history is important\n### I NVESTIGATIONS\n- FBC: A leucocytosis will be demonstrated.\n- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).\n- Blood cultures and sensitivity, ESR, CRP\n### Adults and Children:\n- Refer to the hospital\n- Admit to hospital for rest\n- Splint the affected limb as required\n- Give analgesics- refer to acute pain management\n### If pain is severe:\n- Give Pethidine 1mg/kg IM (Refer to acute pain management)\n- Repeat every 6 hours for a maximum 4 doses\n- Drain pus surgically from the bone and send for culture and sensitivity  testing\n- Do not await culture results before starting antibiotic treatment\n### Children Over 2 years :\n- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled\n### Alternatively:\n- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled\n- Clindamycin 15-40mgs/kg (4 divided doses)\n### Children Under 2 years:\n- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)\n- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  \nNote: Antibiotic treatment should be continued for 4 weeks under hospital supervision."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the expected output aligns with the retrieval context on medication choices and dosing for children over 2 years with acute osteomyelitis (nodes matching supportive reasons), but lacks explicit mention of the four-week hospital supervision duration, which is not covered in any node.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions Flucloxacillin dosage and route (IV then oral) for children over 2 years with acute osteomyelitis, which matches the 'Children Over 2 years' node in retrieval context.\",\n        \"expected_output\": \"For children over 2 years with ACUTE OSTEOMYELITIS, Flucloxacillin 50 mg/kg up to a maximum of 500 mg every 6 hours is recommended initially IV, then orally from 48 hours after fever has settled. Alternatively, Cloxacillin or Clindamycin may be used for the same duration. Therapy should continue for at least four weeks under hospital supervision.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"Alternative antibiotics Cloxacillin or Clindamycin are mentioned in the expected output and also listed as alternatives for children over 2 years in the retrieval context's 'Alternatively:' section.\",\n        \"expected_output\": \"For children over 2 years with ACUTE OSTEOMYELITIS, Flucloxacillin 50 mg/kg up to a maximum of 500 mg every 6 hours is recommended initially IV, then orally from 48 hours after fever has settled. Alternatively, Cloxacillin or Clindamycin may be used for the same duration. Therapy should continue for at least four weeks under hospital supervision.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The statement about therapy duration (at least four weeks under hospital supervision) is not explicitly stated in any node of the retrieval context, though similar language appears in a note regarding antibiotic treatment continuation.\",\n        \"expected_output\": \"For children over 2 years with ACUTE OSTEOMYELITIS, Flucloxacillin 50 mg/kg up to a maximum of 500 mg every 6 hours is recommended initially IV, then orally from 48 hours after fever has settled. Alternatively, Cloxacillin or Clindamycin may be used for the same duration. Therapy should continue for at least four weeks under hospital supervision.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 8.82204880000063,
+      "order": 10
+    },
+    {
+      "name": "test_case_11",
+      "input": "What are the signs and symptoms associated with chronic osteomyelitis?",
+      "actualOutput": "- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis  \n- A high index of suspicion and proper history is important",
+      "expectedOutput": "The signs and symptoms include infection remaining quiescent with acute or subacute exacerbations manifesting as discharging sinuses.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nHematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.\n### SIGNS AND SYMPTOMS\n- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis  \n- A high index of suspicion and proper history is important\n### I NVESTIGATIONS\n- FBC: A leucocytosis will be demonstrated.\n- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).\n- Blood cultures and sensitivity, ESR, CRP\n### Adults and Children:\n- Refer to the hospital\n- Admit to hospital for rest\n- Splint the affected limb as required\n- Give analgesics- refer to acute pain management\n### If pain is severe:\n- Give Pethidine 1mg/kg IM (Refer to acute pain management)\n- Repeat every 6 hours for a maximum 4 doses\n- Drain pus surgically from the bone and send for culture and sensitivity  testing\n- Do not await culture results before starting antibiotic treatment\n### Children Over 2 years :\n- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled\n### Alternatively:\n- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled\n- Clindamycin 15-40mgs/kg (4 divided doses)\n### Children Under 2 years:\n- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)\n- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  \nNote: Antibiotic treatment should be continued for 4 weeks under hospital supervision."
+      ],
+      "success": false,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": false,
+          "score": 0.0,
+          "reason": "The score is 0.00 because the sentence in the expected output describing 'infection remaining quiescent with acute or subacute exacerbations manifesting as discharging sinuses' is not found in any node(s) in retrieval context, which instead focus on symptoms like pain, fever, swelling, and leucocytosis.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The sentence mentions 'infection remaining quiescent with acute or subacute exacerbations manifesting as discharging sinuses,' which is not present in any of the retrieval contexts. The signs and symptoms described in the context focus on pain, fever, swelling, localized tenderness, pseudoparalysis, and leucocytosis but do not mention sinus discharge or quiescent infections with exacerbations.\",\n        \"expected_output\": \"The signs and symptoms include infection remaining quiescent with acute or subacute exacerbations manifesting as discharging sinuses.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 6.7908590999995795,
+      "order": 11
+    },
+    {
+      "name": "test_case_12",
+      "input": "What are the surgical and antibiotic treatment options for chronic osteomyelitis in adults?",
+      "actualOutput": "- Drain pus surgically from the bone and send for culture and sensitivity  testing\n- Do not await culture results before starting antibiotic treatment",
+      "expectedOutput": "Surgical treatment involves sequestrectomy when an adequate involucrum has formed. Antibiotic treatments include flucloxacillin 500 mg IV every 6 hours for 2-4 weeks, ciprofloxacin 400 mg IV every 8-12 hours for 14 days, clindamycin 300 mg IV every six hours for seven days, or augmentin (increased to 1.2 g eight hourly in severe infections) with antibiotic impregnated cement spacer indicated.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nHematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.\n### SIGNS AND SYMPTOMS\n- Pain is the major presenting symptom with progressive severity with time.\n- Commonly accompanying fever, and the patient becomes toxic.\n- Main physical signs are swelling, localized tenderness and pseudoparalysis  \n- A high index of suspicion and proper history is important\n### I NVESTIGATIONS\n- FBC: A leucocytosis will be demonstrated.\n- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).\n- Blood cultures and sensitivity, ESR, CRP\n### Adults and Children:\n- Refer to the hospital\n- Admit to hospital for rest\n- Splint the affected limb as required\n- Give analgesics- refer to acute pain management\n### If pain is severe:\n- Give Pethidine 1mg/kg IM (Refer to acute pain management)\n- Repeat every 6 hours for a maximum 4 doses\n- Drain pus surgically from the bone and send for culture and sensitivity  testing\n- Do not await culture results before starting antibiotic treatment\n### Children Over 2 years :\n- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled\n### Alternatively:\n- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled\n- Clindamycin 15-40mgs/kg (4 divided doses)\n### Children Under 2 years:\n- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)\n- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  \nNote: Antibiotic treatment should be continued for 4 weeks under hospital supervision."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5,
+          "reason": "The score is 0.50 because the first sentence about surgical treatment involving sequestrectomy aligns with node 5 in retrieval context, which mentions draining pus surgically from the bone and sending it for culture. However, the second part regarding specific antibiotic treatments (e.g., flucloxacillin dosages) lacks direct support as none of the nodes mention these exact regimens.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The first sentence about surgical treatment involving sequestrectomy is supported by the retrieval context's mention of 'Drain pus surgically from the bone and send for culture...' in node 5.\",\n        \"expected_output\": \"Surgical treatment involves sequestrectomy when an adequate involucrum has formed. Antibiotic treatments include flucloxacillin 500 mg IV every 6 hours for 2-4 weeks, ciprofloxacin 400 mg IV every 8-12 hours for 14 days, clindamycin 300 mg IV every six hours for seven days, or augmentin (increased to 1.2 g eight hourly in severe infections) with antibiotic impregnated cement spacer indicated.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The second part regarding antibiotic treatments with specific dosages (e.g., flucloxacillin, ciprofloxacin) is not directly mentioned in any of the retrieval context nodes. The context provides some antibiotic info for children but does not match these exact regimens.\",\n        \"expected_output\": \"Surgical treatment involves sequestrectomy when an adequate involucrum has formed. Antibiotic treatments include flucloxacillin 500 mg IV every 6 hours for 2-4 weeks, ciprofloxacin 400 mg IV every 8-12 hours for 14 days, clindamycin 300 mg IV every six hours for seven days, or augmentin (increased to 1.2 g eight hourly in severe infections) with antibiotic impregnated cement spacer indicated.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 8.20651799999905,
+      "order": 12
+    },
+    {
+      "name": "test_case_13",
+      "input": "What is the clinical definition and key diagnostic criteria for RHEUMATOID ARTHRITIS?",
+      "actualOutput": "Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.\n\nDiagnosed when any 4 out of the following findings are present\n- Nodules  \n- Morning stiffness >1h (lasting >6wks), Arthritis \u22653 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes",
+      "expectedOutput": "Rheumatoid Arthritis (RA) is a chronic systemic inflammatory disease characterized by symmetrical, deforming peripheral polyarthritis. Diagnosis requires at least four of the following: nodules, morning stiffness >1 hour lasting over 6 weeks, arthritis in \u22653 joints, hand joint involvement, symmetry, rheumatoid nodules, positive RF or anti-CCP antibodies with radiographic changes.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nChronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.\n### SIGNS AND SYMPTOMS\n- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  \u2192  pain, swelling,  deformity,  Swan  neck,  Boutonniere,  Z-thumb,  Ulnar  deviation  of  the fingers, Dorsal subluxation of ulnar styloid\n- Morning stiffness &gt;1hour\n- Improves with exercise\n- Larger joints may become involved\n- Commonly elbows also fingers, feet, heal\n- Firm, non-tender, mobile or fixed  \nDiagnosed when any 4 out of the following findings are present  \n- Nodules  \n- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis \u22653 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes\n### I NVESTIGATIONS\n- Anti-CCP: 98% specific (Ag derived from collagen)\n- Rheumatoid Factor +ve in 70%\n- ANA: +ve in 30%\n- FBC (anaemia, \u2193PMN, \u2191platelet),\n- \u2191ESR\n- \u2191CRP\n- Radiography\n### Complications\n- De Quervain's Tenosynovitis\n- Atlanto-axial subluxation\n- Immune\n- AIHA\n- Vasculitis\n- Amyloid\n- Lymphadenopathy\n- Cardiac: pericarditis and pericardial effusion\n- Carpal Tunnel Syndrome  \n- Pulmonary\n- Fibrosing alveolitis (lower zones)\n- Pleural effusions (exudates)\n- Ophthalmic\n- Epi-/scleritis\n- Raynaud's\n- Felty's Syndrome (RA + splenomegaly + neutropenia)  \nWhen to refer a rheumatoid arthritis patient  \n- Presence or suspicion of complications listed above\n- No response to DMARDs\n- Suspicion of life-threatening drug side effects\n### Treatment objectives\n- relief symptoms\n- modulate immunity with DMARDs as soon as possible\n### NON-PHARMACOLOGICAL\n- Regular exercise\n- Physiotherapy\n- Occupational therapy: aids, splints\n- Surgical: ulna stylectomy, joint prosthesis\n### Principles:\n- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early\n- Steroids: IM, PO or intra-articular for exacerbations\n- Prednisolone 0.5-1 mg/kg body weight 24hourly\n- Take  corticosteroids  with  food  and Omeprazole 20mg  12hourly  to prevent gastric ulcers\n- NSAIDs: good for symptom relief\n- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required\n- Ibuprofen 400mg 12 hourly\n- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  \nConsider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  \n- Prevent osteoporosis and gastric ulcers\n### DMARDs\n- 1st line for treating RA\n- Early DMARD use associated with better long-term outcome\n- All DMARDs can \u2192 myelosuppression \u2192 pancytopenia  \nMain agents (discuss with a specialist before initiating these drugs)  \n- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely\n- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)\n- Give it together with Folic acid 5 to 15mg daily\n- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses\n- (SE: hepatotoxic, SJS, \u2193 sperm count)\n- Preferred agent in pregnancy\n- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day\n- (SE: retinopathy, seizures)\n- Regular eye checkup needed  \nCombination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  \nOther Agents (discuss with a specialist before initiating these drugs)  \n- Leflunomide (SE: \u2191 risk of infection and malignancy)\n- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)\n- Penicillamine (SE: drug-induced lupus, taste change)\n- Biologicals\n- AntiTNF (SE: \u2191 infection (sepsis, TB), \u2191 AI disease, \u2191 Ca)\n- Severe RA not responding to DMARDs\n- Screen and treat for TB first"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because the expected output aligns partially with node(s) in retrieval context; sentences about RA's chronic nature and diagnosis criteria are supported by nodes 1 and 2, but lacks explicit mention of hand joint involvement, symmetry, or RF/anti-CCP with radiographic changes as present in the original expected output.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence about RA being a chronic systemic inflammatory disease with symmetrical polyarthritis is supported by the 1st node in retrieval context which states 'Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.'\",\n        \"expected_output\": \"Rheumatoid Arthritis (RA) is a chronic systemic inflammatory disease characterized by symmetrical, deforming peripheral polyarthritis. Diagnosis requires at least four of the following: nodules, morning stiffness >1 hour lasting over 6 weeks, arthritis in \\u22653 joints, hand joint involvement, symmetry, rheumatoid nodules, positive RF or anti-CCP antibodies with radiographic changes.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The mention of diagnosis requiring at least four criteria (nodules, morning stiffness >1 hour over 6 weeks, arthritis \\u22653 joints) is covered in the 2nd node: 'Diagnosed when any 4 out of the following findings are present... Morning stiffness >1h (lasting >6wks), Arthritis \\u22653 joints...'\",\n        \"expected_output\": \"Rheumatoid Arthritis (RA) is a chronic systemic inflammatory disease characterized by symmetrical, deforming peripheral polyarthritis. Diagnosis requires at least four of the following: nodules, morning stiffness >1 hour lasting over 6 weeks, arthritis in \\u22653 joints, hand joint involvement, symmetry, rheumatoid nodules, positive RF or anti-CCP antibodies with radiographic changes.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The sentence does not mention hand joint involvement, symmetry, or positive RF/anti-CCP with radiographic changes as explicitly stated in retrieval context.\",\n        \"expected_output\": \"Rheumatoid Arthritis (RA) is a chronic systemic inflammatory disease characterized by symmetrical, deforming peripheral polyarthritis. Diagnosis requires at least four of the following: nodules, morning stiffness >1 hour lasting over 6 weeks, arthritis in \\u22653 joints, hand joint involvement, symmetry, rheumatoid nodules, positive RF or anti-CCP antibodies with radiographic changes.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.498893099998895,
+      "order": 13
+    },
+    {
+      "name": "test_case_14",
+      "input": "What are the key signs and symptoms, including joint involvement patterns and morning stiffness duration, associated with rheumatoid arthritis?",
+      "actualOutput": "- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  \u2192  pain, swelling, deformity, Swan neck, Boutonniere, Z-thumb, Ulnar deviation of the fingers,\n- Morning stiffness >1hour\n- Improves with exercise\n- Larger joints may become involved\n- Commonly elbows also fingers, feet, heal",
+      "expectedOutput": "Rheumatoid Arthritis presents with symmetrical polyarthritis affecting MCPs, PIPs of hands and feet leading to pain, swelling, deformity (Swan neck, Boutonniere, Z-thumb), ulnar deviation of fingers, and dorsal subluxation of the ulnar styloid. Morning stiffness lasts more than 1 hour.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nChronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.\n### SIGNS AND SYMPTOMS\n- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  \u2192  pain, swelling,  deformity,  Swan  neck,  Boutonniere,  Z-thumb,  Ulnar  deviation  of  the fingers, Dorsal subluxation of ulnar styloid\n- Morning stiffness &gt;1hour\n- Improves with exercise\n- Larger joints may become involved\n- Commonly elbows also fingers, feet, heal\n- Firm, non-tender, mobile or fixed  \nDiagnosed when any 4 out of the following findings are present  \n- Nodules  \n- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis \u22653 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes\n### I NVESTIGATIONS\n- Anti-CCP: 98% specific (Ag derived from collagen)\n- Rheumatoid Factor +ve in 70%\n- ANA: +ve in 30%\n- FBC (anaemia, \u2193PMN, \u2191platelet),\n- \u2191ESR\n- \u2191CRP\n- Radiography\n### Complications\n- De Quervain's Tenosynovitis\n- Atlanto-axial subluxation\n- Immune\n- AIHA\n- Vasculitis\n- Amyloid\n- Lymphadenopathy\n- Cardiac: pericarditis and pericardial effusion\n- Carpal Tunnel Syndrome  \n- Pulmonary\n- Fibrosing alveolitis (lower zones)\n- Pleural effusions (exudates)\n- Ophthalmic\n- Epi-/scleritis\n- Raynaud's\n- Felty's Syndrome (RA + splenomegaly + neutropenia)  \nWhen to refer a rheumatoid arthritis patient  \n- Presence or suspicion of complications listed above\n- No response to DMARDs\n- Suspicion of life-threatening drug side effects\n### Treatment objectives\n- relief symptoms\n- modulate immunity with DMARDs as soon as possible\n### NON-PHARMACOLOGICAL\n- Regular exercise\n- Physiotherapy\n- Occupational therapy: aids, splints\n- Surgical: ulna stylectomy, joint prosthesis\n### Principles:\n- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early\n- Steroids: IM, PO or intra-articular for exacerbations\n- Prednisolone 0.5-1 mg/kg body weight 24hourly\n- Take  corticosteroids  with  food  and Omeprazole 20mg  12hourly  to prevent gastric ulcers\n- NSAIDs: good for symptom relief\n- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required\n- Ibuprofen 400mg 12 hourly\n- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  \nConsider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  \n- Prevent osteoporosis and gastric ulcers\n### DMARDs\n- 1st line for treating RA\n- Early DMARD use associated with better long-term outcome\n- All DMARDs can \u2192 myelosuppression \u2192 pancytopenia  \nMain agents (discuss with a specialist before initiating these drugs)  \n- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely\n- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)\n- Give it together with Folic acid 5 to 15mg daily\n- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses\n- (SE: hepatotoxic, SJS, \u2193 sperm count)\n- Preferred agent in pregnancy\n- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day\n- (SE: retinopathy, seizures)\n- Regular eye checkup needed  \nCombination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  \nOther Agents (discuss with a specialist before initiating these drugs)  \n- Leflunomide (SE: \u2191 risk of infection and malignancy)\n- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)\n- Penicillamine (SE: drug-induced lupus, taste change)\n- Biologicals\n- AntiTNF (SE: \u2191 infection (sepsis, TB), \u2191 AI disease, \u2191 Ca)\n- Severe RA not responding to DMARDs\n- Screen and treat for TB first"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all sentences in the expected output are directly supported by specific nodes in retrieval context, with symmetrical polyarthritis details aligned to node 1 and morning stiffness to node 2.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence about symmetrical polyarthritis affecting MCPs, PIPs of hands and feet leading to pain, swelling, deformity (Swan neck, Boutonniere, Z-thumb), ulnar deviation of fingers, and dorsal subluxation of the ulnar styloid is directly mentioned in the 1st node. The retrieval context states: 'Chronic systemic inflammatory disease characterized by a symmetrical, deforming peripheral polyarthritis.' Additionally, under Signs and Symptoms (2nd node): 'Arthritis: Symmetrical, polyarthritis of MCPs... \\u2192 pain, swelling deformity...' etc.\",\n        \"expected_output\": \"Rheumatoid Arthritis presents with symmetrical polyarthritis affecting MCPs, PIPs of hands and feet leading to pain, swelling, deformity (Swan neck, Boutonniere, Z-thumb), ulnar deviation of fingers, and dorsal subluxation of the ulnar styloid. Morning stiffness lasts more than 1 hour.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence regarding morning stiffness lasting more than 1 hour is explicitly stated in the retrieval context. The 2nd node under Signs and Symptoms mentions: 'Morning stiffness >1hour' directly aligning with this statement.\",\n        \"expected_output\": \"Rheumatoid Arthritis presents with symmetrical polyarthritis affecting MCPs, PIPs of hands and feet leading to pain, swelling, deformity (Swan neck, Boutonniere, Z-thumb), ulnar deviation of fingers, and dorsal subluxation of the ulnar styloid. Morning stiffness lasts more than 1 hour.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.852168600000368,
+      "order": 14
+    },
+    {
+      "name": "test_case_15",
+      "input": "What are the clinical manifestations of rheumatic fever involving heart, joints, skin and brain?",
+      "actualOutput": "Rheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.",
+      "expectedOutput": "Rheumatic fever involves inflammation in the heart, joints, skin and brain.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nRheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.\n### Prophylaxis in Adults and Children &gt; 30 kg:\n- Give Amoxycillin 3g oral taken 1 hour before the dental procedure\n### Adult and children:\n- Give Flucloxacillin 1g IV  6 hourly  for at least 14 days plus,\n- Give Ciprofloxacin 500mg orally 12 hourly for 5-7 days\n### Treatment\n- Give Benzathine Penicillin 1.2MU IM single dose\n- Children &lt;30 kg: Benzathine  Penicillin 600,000 units\n### Alternatively, if compliance can be ensured:\n- Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days\n- Children: Phenoxymethylpenicillin 12.5 mg/kg/dose\n### Alternatively, if penicillin allergy:\n- Erythromycin 500mg every 8hrs for 10  days\n### ACUTE CARDITIS\n- Strict bed rest until carditis has  resolved\n### Treatment\n- Give Aspirin 25mg/kg, preferably after food, 6 hourly\n- Reduce  dose  if  tinnitus  or  other  toxic  symptoms develop\n- Continue treatment with this until fever and joint inflammation are controlled\n- Then reduce dose gradually over a 2week period\n### If symptoms recur:\n- Restart full dose\n### In severe carditis with heart failure and not responding to aspirin:\n- Add Prednisolone 2 mg/kg OD\n- Reduce dose gradually after 3-4  weeks\n- Treat heart failure\n### Adults and Children :\n- Give Haloperidol 25 micrograms/kg  every 8hrs\n### Prevention of further attacks\n- Continue treatment until at least age  25\n### Treatment\n- Give Benzathine  Penicillin 1.2  MU  IM  monthly.  Children  &lt;  30  kg:  600,000 units/dose\n### Alternative if compliance can be ensured:\n- Give Phenoxymethylpenicillin 250mg  bd\n### Alternative if penicillin allergy:\n- Give Erythromycin 500 mg daily\n- Children &lt;30 kg: 250mg\n### PROPHYLAXIS OF BACTERIAL ENDOCARDITIS\n- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other  cause.\n### Alternatively, if penicillin allergy:\n- Give Erythromycin 1.5g taken 1 hour before the procedure and 500 mg 6 hours  later\n### Prophylaxis in Children &gt; 30 kg:\n- Give Amoxycillin 50  mg/kg  taken  1  hour  before dental procedure, and repeated 6 hours later\n### Alternatively, if penicillin allergy:\n- Give Clindamycin 600mg,  orally,  taken  1  hour  before  the  procedure  and 300mg 6 hours later\n### Prophylaxis in Children &gt; 30kg:\n- Give Clindamycin 600mg IM/IV  30min  prior  to  the  procedure  followed  by 300mg 6  hourly.\n### {20mg/kg for children) OR\n- Give Ceftriaxone\n### For high-risk patients add:\nGentamicin  \n1.6mg/kg prior to the procedure OR  \nVancomycin  \n1g IV (20mg/kg/IV for children &lt;l0 years old) prior to the procedure.\n### For genito-urinary surgery or instrumentation:\n- Give Amoxycillin 1g IV or IM plus\n- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then\n- Give Amoxycillin 500mg taken 6 hours later  \n1g IV prior to the procedure or 50mg/kg## PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  \n- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other  cause.\n### Prophylaxis in Adults and Children &gt; 30 kg:\n- Give Amoxycillin 3g oral taken 1 hour before the dental procedure\n### For genito-urinary surgery or instrumentation:\n- Give Amoxycillin 1g IV or IM plus\n- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then\n- Give Amoxycillin 500mg taken 6 hours later  \n1g IV prior to the procedure or 50mg/kg\n### Alternative if penicillin allergy:\n- Give Erythromycin 500mg every 12hrs for 48 hours, instead of Amoxicillin\n- For obstetric and gynecological  procedures\n- Not  required  except  for  those  with  prosthetic  heart  valves  who  should  receive prophylaxis as for dental procedures\n### CELLULITIS AND TROPICAL PYOMYOSITIS\n- Treatment for cellulitis is both medical and surgical\n- Medical treatment may prevent abscess formation at the start of infection, when the muscle is swollen, hot and painful\n- Immobilize and give:\n### If penicillin allergic:\n- Give Ceftriaxone 2g IV daily for 2  weeks  \nNote: For Pyomyositis, perform surgical treatment (abscess drainage) when the swelling becomes fluctuant, alongside antibiotics"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the sentence in the expected output is directly supported by the first node in retrieval context, which explicitly mentions inflammation in the heart, joints, skin, and brain as part of rheumatic fever.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence 'Rheumatic fever involves inflammation in the heart, joints, skin and brain.' can be attributed to the 1st node of retrieval context. The clinical description states that rheumatic fever is an inflammatory disease involving these areas.\",\n        \"expected_output\": \"Rheumatic fever involves inflammation in the heart, joints, skin and brain.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 6.550078199999916,
+      "order": 15
+    },
+    {
+      "name": "test_case_16",
+      "input": "What are the recommended antibiotic regimens and dosages for treating acute rheumatic fever in adults and children?",
+      "actualOutput": "- Penicillin V Potassium <5years 250mg PO 6 hourly >5years 500mg BD for 10days\n- Aspirin 25mg/kg 6 hourly for at least 14 days\n- If persistent fevers, joint pains consider steroids\n- Bedrest for 14 days\n- Chorea: Haloperidol 25 micrograms/kg daily\n- If not responding, sodium valproate 20mg/kg twice daily, titrate according to response\n- or Phenobarbital 5mg/kg once daily\n- Long term - Antibiotic prophylaxis, Benzathine Penicillin 0.6MU IM <30kg, 1.2MU >30kg IM STAT monthly",
+      "expectedOutput": "For acute rheumatic fever, treat with Benzathine Penicillin 1.2MU IM single dose or Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days if compliance can be ensured; alternatively, Erythromycin 500mg every 8hrs for 10 days in case of penicillin allergy.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nMultisystem condition resulting from immune response to group B streptococcus throat infection\n### Complications\n- Rheumatic heart disease\n- Valvular damage\n### SIGNS AND SYMPTOMS\nNew revised Jones criteria  \n1. Evidence of preceding Group A strep throat infection\n2. Major criteria\n- a. Carditis\n- b. Polyarthritis/polyarthralgia\n- c. Subcutaneous nodules\n- d. Erythema marginatum\n- e. Sydenham's chorea\n3. Minor criteria\n- a. Fever &gt;38\u00b0C\n- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3\n- c. Prolonged PR interval\n- d. Monoarthralgia  \nTo make diagnosis you need one major and 2 minor or 2 major or 3 minor criteria\n### I NVESTIGATIONS\n- FBC, ESR, CRP, Anti-Streptolysin O titer, Throat swab, ECG, Echocardiograph\n### Referral\n- Children with complications of acute rheumatic fever\n- Children with Persistent symptoms\n### Acute management\n- Penicillin V Potassium &lt;5years 250mg PO 6 hourly &gt;5years 500mg BD for 10days\n- Aspirin 25mg/kg 6 hourly for at least 14 days\n### If persistent fevers, joint pains consider steroids\n- Bedrest for 14 days\n- Chorea: Haloperidol 25 micrograms/kg daily\n- If  not  responding,  sodium  valproate  20mg/kg  twice  daily,  titrate  according  to response\n- or Phenobarbital 5mg/kg once daily\n### Long term\n- Antibiotic prophylaxis, Benzathine Penicillin 0.6MU IM &lt; 30kg, 1.2MU &gt; 30kg IM STAT monthly\n- Follow up in pediatric clinic"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Recall",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all treatment options for acute rheumatic fever in the expected output are explicitly present in node(s) 3 and 4 of the retrieval context, with no missing or conflicting information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The sentence mentions treatment options for acute rheumatic fever which are present in the retrieval context. Specifically, 'Benzathine Penicillin 1.2MU IM single dose' is mentioned in the 'Long term' section (3rd node) and 'Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days' corresponds to 'Penicillin V Potassium <5years 250mg PO 6 hourly >5years 500mg BD for 10days' in the 'Acute management' section (4th node).\",\n        \"expected_output\": \"For acute rheumatic fever, treat with Benzathine Penicillin 1.2MU IM single dose or Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days if compliance can be ensured; alternatively, Erythromycin 500mg every 8hrs for 10 days in case of penicillin allergy.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The alternative treatment with Erythromycin is not explicitly mentioned in the retrieval context, but since it's an antibiotic used for penicillin allergy and there are mentions of other antibiotics like Penicillin V Potassium and alternatives if allergic (implied by 'if compliance can be ensured'), this could be inferred. However, as per strict instructions to only use explicit information from the context without extrapolation, we should consider it not directly mentioned.\",\n        \"expected_output\": \"For acute rheumatic fever, treat with Benzathine Penicillin 1.2MU IM single dose or Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days if compliance can be ensured; alternatively, Erythromycin 500mg every 8hrs for 10 days in case of penicillin allergy.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 11.230276600001162,
+      "order": 16
+    }
+  ],
+  "conversationalTestCases": [],
+  "metricsScores": [
+    {
+      "metric": "Contextual Recall",
+      "scores": [
+        1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.6666666666666666,
+        0.0, 0.5, 0.6666666666666666, 1.0, 1.0, 1.0
+      ],
+      "passes": 16,
+      "fails": 1,
+      "errors": 0
+    }
+  ],
+  "prompts": [],
+  "testPassed": 16,
+  "testFailed": 1,
+  "runDuration": 137.147907999999,
+  "official": false
+}

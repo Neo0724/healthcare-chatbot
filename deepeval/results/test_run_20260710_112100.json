@@ -1,0 +1,308 @@
+{
+  "testCases": [
+    {
+      "name": "test_case_0",
+      "input": "What are the signs and symptoms of Mastoiditis?",
+      "actualOutput": "- Swelling behind or above the ear.\n- Fever, Pinna pushed forward, tender\n- Ear discharge",
+      "expectedOutput": "The signs and symptoms of Mastoiditis include swelling behind or above the ear, fever, pinna pushed forward and tenderness, and ear discharge.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nIt is a result of an infection that extends to the air cells of the skull behind the ear. Specifically, it is an inflammation of the mucosal lining of the mastoid antrum and mastoid air cell system inside the mastoid processor. The mastoid is the portion of the temporal bone of the skull that is behind the ear. It is usually caused by untreated acute otitis media and used to be a leading cause of child mortality.\n### I NVESTIGATION\n- Physical Examination, Blood Test, X-Ray, CT-Scan, MRI, Spinal Tap\n### SIGNS AND SYMPTOMS\n- Swelling behind or above the ear.\n- Fever, Pinna pushed forward, tender\n- Ear discharge\n### NON-PHARMACOLOGICAL\n- Eat food rich in vitamins like fruits and vegetables and avoid spicy food.\n- Seek medical attention should you experience any of the signs and symptoms\n### Adults:\n- Give Ceftriaxone , IV, 2g 12 hourly for 5 -day plus\n- Give Analgesics as necessary\n### Children :\n- Give Ceftriaxone 50 mg per kg daily for 5 days\n### Refer:\n- Brain involvement (meningitis or brain abscess).\n- For surgical drainage may be necessary (If  fluctuant)\n- Refer patient to hospital (if no response to drugs)"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"It is a result of an infection that extends to the air cells of the skull behind the ear.\",\n    \"The condition involves inflammation of the mucosal lining of the mastoid antrum and mastoid air cell system inside the mastoid processor.\",\n    \"The mastoid is part of the temporal bone located behind the ear.\",\n    \"It is usually caused by untreated acute otitis media.\",\n    \"It used to be a leading cause of child mortality.\",\n    \"Investigations include physical examination, blood tests, X-rays, CT scans, MRI, and spinal tap.\",\n    \"Signs and symptoms include swelling behind or above the ear.\",\n    \"Fever is a symptom associated with this condition.\",\n    \"The pinna may be pushed forward and tender as a sign of the condition.\",\n    \"Ear discharge is a symptom of this condition.\",\n    \"Non-pharmacological recommendations include eating foods rich in vitamins like fruits and vegetables and avoiding spicy food.\",\n    \"Patients are advised to seek medical attention if they experience any signs or symptoms.\",\n    \"Adults should receive Ceftriaxone IV at 2g every 12 hours for five days plus analgesics as needed.\",\n    \"Children require Ceftriaxone at a dose of 50 mg per kg daily for five days.\",\n    \"Referral is necessary if there is brain involvement such as meningitis or brain abscess.\",\n    \"Surgical drainage may be required if the condition presents with fluctuance.\",\n    \"Patients should be referred to the hospital if they do not respond to drug treatment.\"\n] \n \nClaims:\n[\n    \"Swelling behind or above the ear.\",\n    \"Fever\",\n    \"Pinna pushed forward and is tender\",\n    \"Ear discharge\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 18.737850900000012,
+      "order": 0
+    },
+    {
+      "name": "test_case_1",
+      "input": "What are the symptoms and signs of otitis externa, including associated hearing loss?",
+      "actualOutput": "- Ear pain\n- Itchiness\n- Mild Hearing loss",
+      "expectedOutput": "The symptoms and signs of Otits Externa include ear pain, itchiness, and mild hearing loss.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION:\nThis is an inflammation of the skin lining the external auditory canal. May be a furuncle or diffuse.\n### SYMPTOMS AND SIGNS:\n- Ear pain\n- Itchiness\n- Mild Hearing loss\n### I NVESTIGATION\n- Ear swab for culture and sensitivity\n### A. Furuncle\n- Give Amoxicillin 50 mg/kg in 3 divided doses for 5 days.\n- Give Analgesia\n### Alternatively:\n- Give Flucloxacillin 500mg 6 hourly for 5 days  \n- Make  a  wick  of  ribbon  gauze  impregnated  with  Hydrocortisone  or Betamethasone cream and gently insert in the ear for 2 to 3 days.\n### B. DIFFUSE OTITIS EXTERNA\n- Dry Mop Ear\n- Give Analgesia when necessary\n- Give Ciprofloxacin ear drops 6 hourly for 5  days"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"The clinical description refers to an inflammation of the skin lining the external auditory canal.\",\n    \"The condition may be a furuncle or diffuse.\",\n    \"Symptoms include ear pain, itchiness, and mild hearing loss.\",\n    \"Investigation involves taking an ear swab for culture and sensitivity.\",\n    \"For treatment of Furuncle, Amoxicillin 50 mg/kg is prescribed in three divided doses over five days.\",\n    \"Analgesia should be given as part of the treatment for a furuncle.\",\n    \"An alternative to Amoxicillin is Flucloxacillin at 500mg every six hours for five days.\",\n    \"A wick made from ribbon gauze impregnated with Hydrocortisone or Betamethasone cream should be inserted into the ear for two to three days as an alternative treatment.\",\n    \"For Diffuse Otitis Externa, drying of the ear is recommended.\",\n    \"Analgesia may be necessary for patients with diffuse otitis externa.\",\n    \"Ciprofloxacin ear drops are prescribed six hourly for five days in treating diffuse otitis externa.\"\n] \n \nClaims:\n[\n    \"- Ear pain\",\n    \"- Itchiness\",\n    \"Mild Hearing loss\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 12.278967499999453,
+      "order": 1
+    },
+    {
+      "name": "test_case_2",
+      "input": "What are the symptoms and signs of acute otitis media, including fever prevalence, ear pain characteristics, eardrum appearance, and associated throat inflammation?",
+      "actualOutput": "- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks\n- Red eardrum\n- Occasionally inflamed throat",
+      "expectedOutput": "The symptoms include fever in about 50% of patients with sudden persistent ear pain or pus discharge for <2 weeks. The signs are red eardrum and occasionally inflamed throat.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION:\nThis is an infection of the middle ear, which communicates with the throat. It is important in a febrile child to look for it and treat it. If persists for more than 72 hours, then start antibiotics. If it does not resolve for a further 72 hours, then, refer. Tropical medicine treatment is ineffective and should be  avoided.  \nAcute otitis media is often viral in origin and needs only a simple analgesic for pain\n### SYMPTOMS AND SIGNS:\n- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks\n- Red eardrum\n- Occasionally inflamed throat\n- Perforated eardrum\n### I NVESTIGATION\n- FBC\n- Ear swab for culture and sensitivity\n### PHARMACOLOGICAL\n- Give Amoxicillin 15 mg/kg every 8 hourly for 5 days\n### Alternatively:\n- Give Erythromycin 6.25 mg/kg every 8 hourly or Azithromycin 10mg/kg stat then 5mg/kg q24h for total maximum 5 days for patients with penicillin  allergy\n- Give Analgesia as required"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6666666666666666,
+          "reason": "The score is 0.67 because there are no contradictions identified between the actual output and the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Acute otitis media is an infection of the middle ear that communicates with the throat.\",\n    \"It is important to look for and treat acute otitis media in a febrile child.\",\n    \"If acute otitis media persists for more than 72 hours, antibiotics should be started.\",\n    \"If acute otitis media does not resolve within a further 72 hours after starting antibiotics, referral is necessary.\",\n    \"Tropical medicine treatment is ineffective for acute otitis media and should be avoided.\",\n    \"Acute otitis media is often viral in origin and requires only simple analgesic for pain management.\",\n    \"Fever occurs in approximately 50% of patients with acute otitis media.\",\n    \"Symptoms include sudden persistent ear pain or pus discharge lasting less than two weeks.\",\n    \"A red eardrum is a sign of acute otitis media.\",\n    \"An inflamed throat may occasionally be present in cases of acute otitis media.\",\n    \"Perforated eardrum can occur as a symptom of acute otitis media.\",\n    \"FBC (Full Blood Count) is an investigation recommended for diagnosing acute otitis media.\",\n    \"Ear swab for culture and sensitivity is part of the investigations for acute otitis media.\",\n    \"Amoxicillin at 15 mg/kg every 8 hours for five days is a prescribed treatment regimen.\",\n    \"For patients with penicillin allergy, Erythromycin at 6.25 mg/kg every 8 hourly can be used as an alternative.\",\n    \"Azithromycin can be given as 10mg/kg stat followed by 5mg/kg q24h for up to five days for those allergic to penicillin.\",\n    \"Analgesia should be provided as needed for pain management in acute otitis media cases.\"\n] \n \nClaims:\n[\n    \"Fever occurs in approximately half of the patients.\",\n    \"Sudden and persistent ear pain or pus discharge lasts less than two weeks.\",\n    \"The eardrum is red.\",\n    \"Inflammation of the throat occasionally occurs.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 16.930648699999438,
+      "order": 2
+    },
+    {
+      "name": "test_case_3",
+      "input": "What are the clinical features of Chronic superlative otitis media characterized by tympanic membrane perforation and persistent pus discharge lasting over two weeks?",
+      "actualOutput": "- Persistent pus discharge, hearing loss\n- If the eardrum has been ruptured for over 2 weeks, secondary infection with multiple organisms usually occurs.\n- Common in immunosuppressed patients",
+      "expectedOutput": "Chronic superlative otitis media presents with a perforated tympanic membrane, persistent pus discharge from the ear for more than 2 weeks, hearing loss, and is common in immunosuppressed patients.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nThis is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.\n### SYMPTOMS AND SIGNS:\n- Persistent pus discharge, hearing  loss\n- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.\n- Common in immunosuppressed patients\n- This makes oral antibiotic therapy much less effective.\n### I NVESTIGATION\n- Ear swab for culture and sensitivity\n### NON-PHARMACOLOGICAL\n- Ensure ear is always dry by dry wicking with cotton wool.  \nA chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  \n- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days\n- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)\n- Refer for further assessment if no improvement after 3-4 weeks' therapy\n### Dry the ear by  wicking.\n1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.\n2. Leave for one minute\n3. Remove and replace with a clean wick\n4. Watch the patient/guardian repeat this until the wick is dry when removed.## 4.1.2.3 Chronic superlative otitis media\n### Dry the ear by  wicking.\n1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.\n2. Leave for one minute\n3. Remove and replace with a clean wick\n4. Watch the patient/guardian repeat this until the wick is dry when removed.  \n5. The patient/guardian should dry the ear by wicking at home at least four times daily until the wick stays dry.\n6. If bleeding occurs, temporarily stop drying the ear.\n7. Do not leave anything in the ear between treatments\n8. Commercially made ear buds should be avoided in cleaning the ear.\n9. The patient should avoid swimming or otherwise getting the inside of the ear wet.\n10. Re-assess weekly to ensure that the patient/guardian is drying the ear correctly.\n11. Check for mastoiditis.  \nNote: TB is an important cause of a chronically discharging ear in Malawi, condition is common in HIV infected  children."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"The clinical description refers to chronic infection of the middle ear with tympanic membrane perforation and pus discharge lasting over two weeks.\",\n    \"Persistent pus discharge and hearing loss are symptoms associated with this condition.\",\n    \"If the eardrum has been ruptured for more than two weeks, secondary infections involving multiple organisms typically occur.\",\n    \"This condition is commonly found in immunosuppressed patients.\",\n    \"Oral antibiotic therapy is less effective due to the nature of the infection in these patients.\",\n    \"Ear swabbing for culture and sensitivity testing is recommended as an investigation method.\",\n    \"Non-pharmacological management includes ensuring that the ear remains dry through wicking with cotton wool or absorbent cloth.\",\n    \"A chronically draining ear can only heal if it stays dry, which requires time-consuming drying procedures by both healthcare workers and caregivers.\",\n    \"Topical therapy using Ciprofloxacin ear drops administered six times daily for five days is considered the mainstay of treatment.\",\n    \"Healthcare providers must demonstrate to patients or guardians how to properly perform wicking at home as part of management.\",\n    \"Referral for further assessment should be made if there's no improvement after three to four weeks of therapy.\",\n    \"The process of drying the ear by wicking involves inserting a clean absorbent cloth rolled into a wick, leaving it in place for one minute before removing and replacing with another clean wick until dryness is achieved upon removal.\",\n    \"Patients or guardians should perform this wicking procedure at home four times daily until the removed wicks remain consistently dry.\",\n    \"If bleeding occurs during treatment, drying of the ear should be temporarily halted.\",\n    \"No objects should be left in the ear between treatments to prevent complications.\",\n    \"Commercially produced ear buds are advised against for cleaning purposes due to potential risks associated with their use within the ears.\",\n    \"Patients must avoid activities that could cause water exposure inside the ear such as swimming or other similar actions.\",\n    \"Weekly reassessments should be conducted to confirm proper execution of drying techniques by patients or guardians.\",\n    \"Mastoiditis needs checking during follow-up assessments for this condition's management plan.\",\n    \"Tuberculosis (TB) is a significant cause behind chronic discharging ears in Malawi, especially prevalent among HIV-infected children.\"\n] \n \nClaims:\n[\n    \"Persistent pus discharge and hearing loss are associated conditions.\",\n    \"If the eardrum rupture duration exceeds two weeks, a secondary infection involving multiple organisms typically develops.\",\n    \"The condition is commonly observed in immunosuppressed individuals.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.9867777999998,
+      "order": 3
+    },
+    {
+      "name": "test_case_4",
+      "input": "What are the signs and symptoms of acute vertigo, including sudden onset, intermittent episodes triggered by head movement, associated vertigo, vomiting, nystagmus?",
+      "actualOutput": "- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus",
+      "expectedOutput": "The signs and symptoms of ACUTE VERTIGO include sudden onset and intermittent episodes triggered by head movement, with associated vertigo, vomiting, and nystagmus.",
+      "retrievalContext": [
+        "### TREATMENT\nTreatment will depend on the cause\n### CLINICAL DESCRIPTION\nAn acute syndrome, consisting of vertigo, nystagmus, nausea, vomiting and postural instability.\n### SIGNS AND SYMPTOMS\n- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus\n### I NVESTIGATIONS\n- Positive Dix-Hall pike test\n- Need for neuro imaging to find cause and treat appropriately\n### REFERRAL :\n- Suspected intracranial mass lesions or cerebellar stroke.\n- Suspected vestibular neuritis.\n- Patients not responding to therapy for exclusion of alternative etiology."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Treatment depends on the cause.\",\n    \"The clinical description is an acute syndrome consisting of vertigo, nystagmus, nausea, vomiting and postural instability.\",\n    \"Symptoms include sudden onset and intermittent symptoms with vertigo following head movement, vomiting and nystagmus.\",\n    \"Positive Dix-Hall pike test is one of the investigations.\",\n    \"Neuro imaging is needed to find cause and treat appropriately.\",\n    \"Referral is indicated for suspected intracranial mass lesions or cerebellar stroke.\",\n    \"Referral is also indicated for suspected vestibular neuritis.\",\n    \"Patients not responding to therapy should be referred for exclusion of alternative etiology.\"\n] \n \nClaims:\n[\n    \"Sudden onset and intermittent symptoms include vertigo following head movement, vomiting and nystagmus.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 8.47534110000015,
+      "order": 4
+    },
+    {
+      "name": "test_case_5",
+      "input": "What are the signs and symptoms associated with epistaxis, including its presentation as unilateral or bilateral nosebleeds?",
+      "actualOutput": "- Nose Bleeding",
+      "expectedOutput": "The sign and symptom associated with Epistaxsis is Nose Bleeding. It can be presented as unilateral or bilateral.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nEpistaxis also called nosebleed is a common medical emergency, which requires prompt management to avoid morbidity and mortality. Bleeding can be bilateral or unilateral, or posterior and anterior. Causes include trauma, repeated nose pickings, infections such as rhino sinusitis, systemic causes such as hypertension, bleeding disorders, anaemia and leukemia etc.\n### SIGNS AND SYMPTOMS\n- Nose Bleeding\n### I NVESTIGATIONS\n- FBC,  sickling  test,  coagulation  screen,  liver  function  test,  retroviral  screen,  if indicated\n### NON-PHARMACOLOGICAL\n- Pinch the nose 5-10 minutes let the patient lean forward and breathe through the mouth\n### Alternative:\n- Apply cold pack or ice block to the forehead, using ribbon gauze impregnated with Petroleum Jelly or liquid paraffin.\n### PHARMACOLOGICAL\n- Cauterization of bleeding point by touching the bleeding point with sliver nitrate"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions found between the actual output and the retrieval context, indicating perfect alignment.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Epistaxis is also called nosebleed.\",\n    \"Epistaxis requires prompt management to avoid morbidity and mortality.\",\n    \"Bleeding from epistaxis can be bilateral or unilateral, or posterior and anterior.\",\n    \"Causes of epistaxis include trauma, repeated nose pickings, infections such as rhino sinusitis, systemic causes such as hypertension, bleeding disorders, anaemia and leukemia etc.\",\n    \"The signs and symptoms of epistaxis include Nose Bleeding.\",\n    \"Investigations for epistaxis may include FBC (Full Blood Count), sickling test, coagulation screen, liver function test, retroviral screen if indicated.\",\n    \"Non-pharmacological management includes pinching the nose 5-10 minutes and letting the patient lean forward while breathing through the mouth.\",\n    \"An alternative non-pharmacological method is applying a cold pack or ice block to the forehead using ribbon gauze impregnated with Petroleum Jelly or liquid paraffin.\",\n    \"Pharmacological treatment involves cauterization of the bleeding point by touching it with silver nitrate.\"\n] \n \nClaims:\n[\n    \"Nose bleeding was reported.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.082155500000226,
+      "order": 5
+    },
+    {
+      "name": "test_case_6",
+      "input": "What are the signs and symptoms of Nasal Vestibulitis?",
+      "actualOutput": "- Swelling\n- Pain\n- Mucous Drainage Bump at the opening of the nostril",
+      "expectedOutput": "The signs and symptoms of Nasal Vestibulitis include swelling, pain, mucous drainage bump at the opening of the nostril.",
+      "retrievalContext": [
+        "### \nAn inflammation of the skin within the nasal vestibule is referred to as nasal Vestibulitis. Diffuse infection of the skin of the anterior nares and may occur due to frequent trauma such as occurs in constant nose picking. Persistent nasal discharge leads to excoriation and infection of the skin of the nasal vestibule\n### SIGNS AND SYMPTOMS\n- Swelling\n- Pain\n- Mucous Drainage Bump at the opening of the nostril\n### PHARMACOLOGICAL\n- Give Analgesia\n- Give Amoxicillin 500mg 8 hourly for 5 days\n- Give Liquid Paraffin 2 drops each nose 3 times a day"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context, indicating perfect alignment.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Nasal Vestibulitis is an inflammation of the skin within the nasal vestibule.\",\n    \"Diffuse infection can occur in the anterior nares due to frequent trauma such as constant nose picking.\",\n    \"Persistent nasal discharge may lead to excoriation and infection of the nasal vestibule's skin.\",\n    \"Swelling is a sign or symptom associated with Nasal Vestibulitis.\",\n    \"Pain is reported as a sign or symptom in cases of Nasal Vestibulitis.\",\n    \"Mucous Drainage Bump at the opening of the nostril is listed among the signs and symptoms for this condition.\",\n    \"Analgesia should be administered to patients with Nasal Vestibulitis.\",\n    \"Amoxicillin 500mg, taken every 8 hours for five days, is a recommended pharmacological treatment option.\",\n    \"Liquid Paraffin drops (two drops in each nostril three times daily) are prescribed as part of the management plan.\"\n] \n \nClaims:\n[\n    \"Swelling, pain, mucous drainage and a bump at the opening of the nostril are symptoms.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.048725499999819,
+      "order": 6
+    },
+    {
+      "name": "test_case_7",
+      "input": "What are the characteristic symptoms and signs, such as purulent nasal discharge, pain over sinuses, obstruction, postnasal drip, and fever associated with bacterial sinusitis?",
+      "actualOutput": "- Purulent nasal discharge, persistent or intermittent, pain and tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.",
+      "expectedOutput": "The characteristic symptoms and signs of BACTERIAL SINUSITIS include purulent nasal discharge (persistent or intermittent), pain and tenderness over one or more sinuses, nasal obstruction, postnasal discharge, and occasional fever.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nThis is an acute infection of the para-nasal sinuses. It may lead to complications with attendant morbidity and mortality. Early recognition of this clinical condition is mandatory. Swimming in dirty waters, dental infection or dental extraction, fractures involving the sinuses, nasal obstruction from polyps and allergic rhinitis are predisposing factors to developing acute sinusitis.\n### I NVESTIGATIONS\n- FBC\n- X-ray of paranasal sinuses  \n1.  Sinusitis is uncommon in children under five years as sinuses are not fully developed\n2.  Unilateral foul-smelling nasal discharge is a foreign body until proven otherwise\n### SYMPTOMS AND SIGNS:\n- Purulent nasal discharge, persistent or intermittent, pain and  tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.\n### Referral criteria\n- No symptomatic relief after 48-72 hours of antibiotics\n- CNS complications of sinusitis\n### NON-PHARMACOLOGICAL\n- Adequate hydration\n- Steam inhalation\n### Adults:\n- Give Oxymetazoline 0.05% 2 drops twice a day for not more than one week\n- Give Cetirizine 10mg daily for 3-5  days\n- Give Amoxycillin 500mg 8 hourly for  5 days\n- Steam inhalations using Menthol are advised\n### Children:\n- Give Oxymetazoline 0.025% 2 drops twice a day for not more than one week\n- Give Amoxicillin 25  mg/kg/dose  in  exacerbations  of  chronic  sinusitis  and  HIV positive children who are on Cotrimoxazole prophylaxis.\n### Alternatively: penicillin hypersensitivity:\n- Give Erythromycin 12.5 mg/kg/dose 6 hourly or Azithromycin 10mg/kg STAT then 5mg /kg daily for 7  day\n### If pain or fever:\n- Give Analgesic/Antipyretic treatment as required"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Acute infection of the para-nasal sinuses is a clinical condition that can lead to complications with attendant morbidity and mortality.\",\n    \"Early recognition of acute sinusitis is mandatory for effective management.\",\n    \"Swimming in dirty waters, dental infections or extractions, fractures involving the sinuses, nasal obstruction from polyps and allergic rhinitis are predisposing factors to developing acute sinusitis.\",\n    \"FBC (Full Blood Count) is an investigation used in diagnosing acute sinusitis.\",\n    \"X-ray of paranasal sinuses is an investigative procedure for assessing acute sinusitis.\",\n    \"Sinusitis is uncommon in children under five years as their sinuses are not fully developed.\",\n    \"Unilateral foul-smelling nasal discharge should be considered a foreign body until proven otherwise.\",\n    \"Symptoms of acute sinusitis include purulent nasal discharge, persistent or intermittent pain and tenderness over one or more sinuses, nasal obstruction, postnasal discharge, and occasional fever.\",\n    \"Referral is indicated if there is no symptomatic relief after 48-72 hours of antibiotics treatment for acute sinusitis.\",\n    \"Central nervous system (CNS) complications of sinusitis are a referral criterion for further management.\",\n    \"Non-pharmacological treatments include adequate hydration and steam inhalation with menthol as advised in the management plan.\",\n    \"For adults, Oxymetazoline 0.05% is recommended at 2 drops twice daily for not more than one week to manage nasal congestion associated with acute sinusitis.\",\n    \"Cetirizine 10mg daily for three to five days is prescribed as part of the treatment regimen in adult patients with acute sinusitis.\",\n    \"Amoxycillin 500 mg every eight hours for five days is a recommended antibiotic therapy for adults suffering from acute sinusitis.\",\n    \"Steam inhalations using Menthol are advised as an adjunctive measure in managing symptoms related to acute sinusitis among adults.\",\n    \"For children, Oxymetazoline 0.025% at 2 drops twice daily for not more than one week is recommended for treating nasal congestion associated with acute sinusitis.\",\n    \"Amoxicillin dosing of 25 mg/kg/dose is advised in exacerbations of chronic sinusitis and HIV positive children on Cotrimoxazole prophylaxis.\",\n    \"In cases where there's penicillin hypersensitivity, Erythromycin at a dose of 12.5 mg/kg every six hours or Azithromycin at 10mg/kg initially followed by 5mg/kg daily for seven days is an alternative antibiotic regimen.\",\n    \"Analgesics and antipyretics should be administered as required when managing pain or fever associated with acute sinusitis in both adults and children.\"\n] \n \nClaims:\n[\n    \"Purulent nasal discharge, persistent or intermittent.\",\n    \"Pain and tenderness over one or more sinuses.\",\n    \"Nasal obstruction.\",\n    \"Postnasal discharge.\",\n    \"Occasional fever.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"idk\",\n        \"reason\": \"The claim 'Occasional fever' is not explicitly mentioned in the context. The symptoms listed include 'occasional fever', but it's unclear if this refers to a specific frequency or severity.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 25.678552800000034,
+      "order": 7
+    },
+    {
+      "name": "test_case_8",
+      "input": "What are the characteristic symptoms and signs associated with Allergic Rhinitis?",
+      "actualOutput": "- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.\n- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.",
+      "expectedOutput": "The characteristic symptoms of Allergic Rhinitis include blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation. Other signs may involve conjunctival itching and watering along with edematous pale grey nasal mucosa.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nRecurrent inflammation of the nasal mucosa due to hypersensitivity to inhaled allergens e.g., pollen, house dust, grasses and animal  proteins.\n### SYMPTOMS/SIGNS:\n- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.\n- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.\n### NON-PHARMACOLOGICAL\n- Avoid known triggers/allergens, such as dust (dust mite) where possible\n- Avoid smoking\n- Provide education on the correct technique of administering topical medicines and monitor from time to time. Incorrect technique is a common cause of treatment failure.\n- Allergen avoidance\n### PHARMACOLOGICAL\n- Give corticosteroid nasal sprays e.g., Beclomethasone nasal s p r a y s  1 spray of 50 mcg in each nostril 12 hourly.\n- Give Cetirizine 10mg daily for 3-5 days\n- If  predominant  symptom  is  blocked  nose,  then  add  Oxymetazoline  0.05%, intranasal, administered 8 hourly for a maximum of 5 days.\n- If symptoms persist ADD Prednisone, oral, 30 mg daily for 5 days whilst continuing the topical steroid."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8571428571428571,
+          "reason": "The score is 0.86 because the actual output introduced speculative language ('may occur') regarding mouth breathing as a symptom, while the retrieval context only mentions it without specifying frequency or likelihood.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"Recurrent inflammation of nasal mucosa is due to hypersensitivity to inhaled allergens such as pollen and house dust.\",\n    \"Symptoms include blocked stuffy nose, watery discharge, frequent sneezing with nasal itching and irritation.\",\n    \"Conjunctival itching and watering are associated symptoms.\",\n    \"Edematous pale grey nasal mucosa is a sign of the condition.\",\n    \"Mouth breathing and snoring at night can occur as symptoms.\",\n    \"Other causes like infections or vasomotor rhinitis should be excluded for accurate diagnosis.\",\n    \"Overuse of decongestant drops may contribute to the condition's presentation.\",\n    \"Side effects from antihypertensive medications could mimic this disorder's symptoms.\",\n    \"Avoiding known allergens such as dust mites is a non-pharmacological intervention recommended.\",\n    \"Smoking avoidance is advised in managing the condition.\",\n    \"Proper technique for administering topical medicines should be taught to patients to prevent treatment failure.\",\n    \"Allergen avoidance strategies are part of the management plan.\",\n    \"Corticosteroid nasal sprays like Beclomethasone 50 mcg spray twice daily are prescribed as a pharmacological intervention.\",\n    \"Cetirizine at 10 mg once daily for three to five days is recommended treatment.\",\n    \"Oxymetazoline 0.05% intranasal drops every eight hours up to five days may be added if nasal blockage is the main symptom.\",\n    \"Prednisone oral dose of 30 mg per day for five days might be prescribed if symptoms persist alongside topical steroids.\"\n] \n \nClaims:\n[\n    \"Blocked stuffy nose is a symptom that can be present.\",\n    \"Watery nasal discharge is a symptom that can be present.\",\n    \"Frequent sneezing often accompanied by nasal itching and irritation is a symptom that can be present.\",\n    \"Conjunctival itching and watering are symptoms that can be present.\",\n    \"Edematous pale grey nasal mucosa is an observable condition in the context of this discussion.\",\n    \"Mouth breathing may occur as part of the described conditions or symptoms.\",\n    \"Snoring at night may be associated with these symptoms or conditions.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The retrieval context states that mouth breathing can occur as a symptom, but it does not mention anything about the frequency or likelihood of this occurrence. The claim suggests 'may occur' which is vague and speculative language.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 22.4928460000001,
+      "order": 8
+    },
+    {
+      "name": "test_case_9",
+      "input": "What are the key signs and symptoms associated with acute tonsillitis, including sore throat severity, swallowing difficulty, presence of white spots on tonsils, fever characteristics, and any other notable clinical indicators?",
+      "actualOutput": "- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.",
+      "expectedOutput": "The key signs and symptoms include sore throat with pain and difficulty swallowing; inflamed tonsils with multiple white spots on the surface; sudden onset of fever. These are characteristic features of TONSILLITIS.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nAcute inflammation of the tonsils. The main organism implicated in the causation is betahemolytic streptococcal.\n### SYMPTOMS AND SIGNS:\n- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.\n### Refer if\n- Peritonsillar abscess\n- If symptoms persist or recurring episodes of 4-5 attacks per year\n### I NVESTIGATION\n- FBC\n- Throat swab for culture and sensitivity\n### NON-PHARMACOLOGICAL\n- Warm salt gargles\n### PHARMACOLOGICAL\n- Give Amoxicillin 500mg 8 hourly for 7  days\n- In severe infection, Amoxicillin 250/500mg + Clavulanic acid 125mg 8 hourly for 57 days\n### Alternatively:\n- Give Erythromycin 500mg, every 8 hours in Penicillin allergy\n- Give Analgesia see Section 24.1 on pain relief"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8,
+          "reason": "The score is 0.80 because the actual output incorrectly inferred that multiple white spots on tonsillar surfaces indicate bacterial infections like strep throat, while the context only mentions them as signs observed in acute tonsillitis without explicitly linking to specific bacterial infections.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"The main organism implicated in the causation of acute tonsillitis is betahemolytic streptococcal.\",\n    \"Acute inflammation of the tonsils is a clinical description provided.\",\n    \"Sore throat, difficulty and pain on swallowing are symptoms associated with this condition.\",\n    \"Inflamed tonsils with multiple white spots on the tonsillar surface are signs observed in patients.\",\n    \"A sudden onset of fever is reported as a symptom for acute inflammation of the tonsils.\",\n    \"Patients should be referred if they develop peritonsillar abscess.\",\n    \"Referral is recommended when symptoms persist or there are recurring episodes occurring 4-5 times per year.\",\n    \"FBC (Full Blood Count) is one of the investigations suggested for this condition.\",\n    \"Throat swab for culture and sensitivity testing is an investigation method mentioned in the text.\",\n    \"Warm salt gargles are a non-pharmacological treatment recommended for managing symptoms.\",\n    \"Amoxicillin 500mg every 8 hours for 7 days is prescribed as pharmacological treatment.\",\n    \"In severe infections, Amoxicillin combined with Clavulanic acid at specified dosages and duration is advised.\",\n    \"Erythromycin 500mg every 8 hours serves as an alternative when there's a penicillin allergy.\",\n    \"Analgesia should be administered according to Section 24.1 on pain relief guidelines.\"\n] \n \nClaims:\n[\n    \"Sore throat is a symptom that can be associated with various conditions.\",\n    \"Difficulty and pain on swallowing are symptoms often linked to throat infections or inflammation.\",\n    \"Inflamed tonsils may indicate an infection such as tonsillitis.\",\n    \"Multiple white spots on the tonsillar surface could suggest bacterial infections like strep throat.\",\n    \"Sudden onset of fever is a common sign of acute infectious processes.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The context specifies that multiple white spots on the tonsillar surface are signs observed in patients with acute tonsillitis, but it does not explicitly state that they suggest bacterial infections like strep throat. The main organism mentioned is betahemolytic streptococcal, which may be associated with such findings.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.541290899999694,
+      "order": 9
+    },
+    {
+      "name": "test_case_10",
+      "input": "How do sudden coughing episodes and signs like breathing difficulties, stridor, and accessory muscle use indicate upper airway obstruction in foreign body inhalation cases?",
+      "actualOutput": "I don't have enough information in the provided medical records to answer that.",
+      "expectedOutput": "Sudden onset of cough and choking is the frequent initial symptom. Signs of upper airway obstruction such as difficulties in breathing, stridor, use of accessory muscles to breathe.",
+      "retrievalContext": ["nan"],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions; the actual output perfectly aligns with the retrieval context.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[] \n \nClaims:\n[\n    \"The assistant does not have enough information in the provided medical records to answer a question.\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 3.8564163000000917,
+      "order": 10
+    },
+    {
+      "name": "test_case_11",
+      "input": "What is laryngopharyngeal reflux and what symptoms does it cause?",
+      "actualOutput": "LPR is the retrograde (backward) movement of stomach enzymes (Pepsin) and acid into the lower throat region.\n\n- Excessive throat-clearing\n- Persistent dry cough\n- Sore throats not associated with a cold\n- Hoarseness, or globes pharynges (feeling of a lump in the throat).",
+      "expectedOutput": "LARYNGOPHARYNGEAL REFLUX is the retrograde movement of stomach enzymes (Pepsin) and acid into the lower throat region. It causes excessive throat-clearing, persistent dry cough, sore throats not associated with a cold, hoarseness, or globus pharynges.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nLPR is the retrograde (backward) movement of stomach enzymes (Pepsin) and acid into the lower throat region.\n### SYMPTOMS AND SIGNS\n- Excessive throat-clearing\n- Persistent dry cough\n- Sore throats not associated with a cold\n- Hoarseness, or globes pharynges (feeling of a lump in the throat).\n### NON-PHARMACOLOGICAL\n- Dietary modification  \n- Avoid  Caffeine,  alcohol,  chocolates,  and  peppermints,  Citrus  fruits, pineapples, tomatoes (and other acidic foods), and hot spices.\n- Lifestyle changes\n- Smaller and more frequent feedings\n- Stop eating at least three hours before going to bed\n- Avoid wearing tight fitting clothes\n- Lose weight if needed\n### PHARMACOLOGICAL\n- Proton Pump Inhibitors (PPIs) are the most effective medicines for the treatment of LPR. PPIs must be taken on an empty stomach, \u00bd hour before a meal."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Faithfulness",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.6,
+          "reason": "The score is 0.60 because the actual output incorrectly attributes 'excessive throat-clearing' and 'sore throats not associated with a cold' as symptoms of LPR without proper clarification, while the context only mentions these as possible symptoms but does not explicitly confirm them.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Truths (limit=50):\n[\n    \"LPR is characterized by retrograde movement of stomach enzymes and acid into the lower throat region.\",\n    \"Symptoms include excessive throat-clearing in LPR patients.\",\n    \"Persistent dry cough is associated with LPR according to the text.\",\n    \"Sore throats not related to cold are a symptom of LPR as described here.\",\n    \"Hoarseness or globus pharynges (feeling of lump in throat) are signs reported for LPR.\",\n    \"Dietary modifications such as avoiding caffeine, alcohol, chocolates and peppermints are recommended for managing LPR symptoms.\",\n    \"Citrus fruits like pineapples and tomatoes along with hot spices should be avoided per the guidelines provided here.\",\n    \"Lifestyle changes including smaller more frequent feedings help manage LPR according to this document.\",\n    \"Patients should stop eating at least three hours before bedtime as advised in the text for managing LPR symptoms effectively.\",\n    \"Avoiding tight fitting clothes is suggested as part of non-pharmacological treatment approach for LPR here.\",\n    \"Weight loss may be recommended if needed based on information provided regarding management strategies for LPR.\",\n    \"Proton Pump Inhibitors (PPIs) are highlighted as most effective medicines for treating LPR in this text.\",\n    \"PPIs need to be taken on an empty stomach according to instructions given here for optimal effectiveness against LPR symptoms.\"\n] \n \nClaims:\n[\n    \"LPR is the retrograde movement of stomach enzymes and acid into the lower throat region.\",\n    \"- Excessive throat-clearing\",\n    \"- Persistent dry cough\",\n    \"- Sore throats not associated with a cold\",\n    \"- Hoarseness, or globes pharynges (feeling of a lump in the throat).\"\n] \n \nVerdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Excessive throat-clearing' is not explicitly stated as a symptom of LPR in the context. The text mentions 'symptoms include excessive throat-clearing', but this claim may be incomplete or misphrased.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Sore throats not associated with a cold' is mentioned as a symptom of LPR in the context, but this claim may be misphrased or incomplete.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"\"\n    }\n]"
+        }
+      ],
+      "runDuration": 52.78608040000017,
+      "order": 11
+    }
+  ],
+  "conversationalTestCases": [],
+  "metricsScores": [
+    {
+      "metric": "Faithfulness",
+      "scores": [
+        1.0, 1.0, 0.6666666666666666, 1.0, 1.0, 1.0, 1.0, 1.0,
+        0.8571428571428571, 0.8, 1.0, 0.6
+      ],
+      "passes": 12,
+      "fails": 0,
+      "errors": 0
+    }
+  ],
+  "prompts": [],
+  "testPassed": 12,
+  "testFailed": 0,
+  "runDuration": 221.1210616999997,
+  "official": false
+}

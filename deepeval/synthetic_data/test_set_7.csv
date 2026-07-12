@@ -1,0 +1,179 @@
+input,actual_output,expected_output,context,source_file
+What are the signs and symptoms of Mastoiditis?,,"The signs and symptoms of Mastoiditis include swelling behind or above the ear, fever, pinna pushed forward and tenderness, and ear discharge.","# EAR, NOSE AND THROAT CONDITIONS  
+## MASTOIDITIS  
+### CLINICAL DESCRIPTION  
+It is a result of an infection that extends to the air cells of the skull behind the ear. Specifically, it is an inflammation of the mucosal lining of the mastoid antrum and mastoid air cell system inside the mastoid processor. The mastoid is the portion of the temporal bone of the skull that is behind the ear. It is usually caused by untreated acute otitis media and used to be a leading cause of child mortality.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Swelling behind or above the ear.
+- Fever, Pinna pushed forward, tender
+- Ear discharge|### I NVESTIGATION  
+- Physical Examination, Blood Test, X-Ray, CT-Scan, MRI, Spinal Tap|### TREATMENT:|### NON-PHARMACOLOGICAL  
+- Eat food rich in vitamins like fruits and vegetables and avoid spicy food.
+- Seek medical attention should you experience any of the signs and symptoms|### PHARMACOLOGICAL|### Adults:  
+- Give Ceftriaxone , IV, 2g 12 hourly for 5 -day plus
+- Give Analgesics as necessary|### Children :  
+- Give Ceftriaxone 50 mg per kg daily for 5 days|### Refer:  
+- Brain involvement (meningitis or brain abscess).
+- For surgical drainage may be necessary (If  fluctuant)
+- Refer patient to hospital (if no response to drugs)",
+"What are the symptoms and signs of otitis externa, including associated hearing loss?",,"The symptoms and signs of Otits Externa include ear pain, itchiness, and mild hearing loss.","## OTITIS EXTERNA  
+### CLINICAL DESCRIPTION:  
+This is an inflammation of the skin lining the external auditory canal. May be a furuncle or diffuse.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Ear pain
+- Itchiness
+- Mild Hearing loss|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL|### PHARMACOLOGICAL|### A. Furuncle  
+- Give Amoxicillin 50 mg/kg in 3 divided doses for 5 days.
+- Give Analgesia|### Alternatively:  
+- Give Flucloxacillin 500mg 6 hourly for 5 days  
+- Make  a  wick  of  ribbon  gauze  impregnated  with  Hydrocortisone  or Betamethasone cream and gently insert in the ear for 2 to 3 days.|### B. DIFFUSE OTITIS EXTERNA  
+- Dry Mop Ear
+- Give Analgesia when necessary
+- Give Ciprofloxacin ear drops 6 hourly for 5  days",
+"What are the symptoms and signs of acute otitis media, including fever prevalence, ear pain characteristics, eardrum appearance, and associated throat inflammation?",,The symptoms include fever in about 50% of patients with sudden persistent ear pain or pus discharge for <2 weeks. The signs are red eardrum and occasionally inflamed throat.,"## ACUTE OTITIS MEDIA  
+### CLINICAL DESCRIPTION:  
+This is an infection of the middle ear, which communicates with the throat. It is important in a febrile child to look for it and treat it. If persists for more than 72 hours, then start antibiotics. If it does not resolve for a further 72 hours, then, refer. Tropical medicine treatment is ineffective and should be  avoided.  
+Acute otitis media is often viral in origin and needs only a simple analgesic for pain|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks
+- Red eardrum
+- Occasionally inflamed throat
+- Perforated eardrum|### I NVESTIGATION  
+- FBC
+- Ear swab for culture and sensitivity|### TREATMENT|### PHARMACOLOGICAL  
+- Give Amoxicillin 15 mg/kg every 8 hourly for 5 days|### Alternatively:  
+- Give Erythromycin 6.25 mg/kg every 8 hourly or Azithromycin 10mg/kg stat then 5mg/kg q24h for total maximum 5 days for patients with penicillin  allergy
+- Give Analgesia as required",
+What are the clinical features of Chronic superlative otitis media characterized by tympanic membrane perforation and persistent pus discharge lasting over two weeks?,,"Chronic superlative otitis media presents with a perforated tympanic membrane, persistent pus discharge from the ear for more than 2 weeks, hearing loss, and is common in immunosuppressed patients.","## Chronic superlative otitis media  
+### CLINICAL DESCRIPTION  
+This is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.  
+### CLINICAL DESCRIPTION|### SYMPTOMS AND SIGNS:  
+- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Ensure ear is always dry by dry wicking with cotton wool.  
+A chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  
+- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days
+- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)
+- Refer for further assessment if no improvement after 3-4 weeks' therapy|### Dry the ear by  wicking.  
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.## 4.1.2.3 Chronic superlative otitis media|### CLINICAL DESCRIPTION  
+This is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.  
+### CLINICAL DESCRIPTION|### SYMPTOMS AND SIGNS:  
+- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Ensure ear is always dry by dry wicking with cotton wool.  
+A chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  
+- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days
+- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)
+- Refer for further assessment if no improvement after 3-4 weeks' therapy|### Dry the ear by  wicking.  
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.  
+5. The patient/guardian should dry the ear by wicking at home at least four times daily until the wick stays dry.
+6. If bleeding occurs, temporarily stop drying the ear.
+7. Do not leave anything in the ear between treatments
+8. Commercially made ear buds should be avoided in cleaning the ear.
+9. The patient should avoid swimming or otherwise getting the inside of the ear wet.
+10. Re-assess weekly to ensure that the patient/guardian is drying the ear correctly.
+11. Check for mastoiditis.  
+Note: TB is an important cause of a chronically discharging ear in Malawi, condition is common in HIV infected  children.",
+"What are the signs and symptoms of acute vertigo, including sudden onset, intermittent episodes triggered by head movement, associated vertigo, vomiting, nystagmus?",,"The signs and symptoms of ACUTE VERTIGO include sudden onset and intermittent episodes triggered by head movement, with associated vertigo, vomiting, and nystagmus.","## ACUTE VERTIGO  
+### CLINICAL DESCRIPTION  
+An acute syndrome, consisting of vertigo, nystagmus, nausea, vomiting and postural instability.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus|### I NVESTIGATIONS  
+- Positive Dix-Hall pike test
+- Need for neuro imaging to find cause and treat appropriately|### TREATMENT  
+Treatment will depend on the cause|### REFERRAL :  
+- Suspected intracranial mass lesions or cerebellar stroke.
+- Suspected vestibular neuritis.
+- Patients not responding to therapy for exclusion of alternative etiology.",
+"What are the signs and symptoms associated with epistaxis, including its presentation as unilateral or bilateral nosebleeds?",,The sign and symptom associated with Epistaxsis is Nose Bleeding. It can be presented as unilateral or bilateral.,"## EPISTAXIS  
+### CLINICAL DESCRIPTION  
+Epistaxis also called nosebleed is a common medical emergency, which requires prompt management to avoid morbidity and mortality. Bleeding can be bilateral or unilateral, or posterior and anterior. Causes include trauma, repeated nose pickings, infections such as rhino sinusitis, systemic causes such as hypertension, bleeding disorders, anaemia and leukemia etc.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Nose Bleeding|### I NVESTIGATIONS  
+- FBC,  sickling  test,  coagulation  screen,  liver  function  test,  retroviral  screen,  if indicated|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Pinch the nose 5-10 minutes let the patient lean forward and breathe through the mouth|### Alternative:  
+- Apply cold pack or ice block to the forehead, using ribbon gauze impregnated with Petroleum Jelly or liquid paraffin.|### PHARMACOLOGICAL  
+- Cauterization of bleeding point by touching the bleeding point with sliver nitrate",
+What are the signs and symptoms of Nasal Vestibulitis?,,"The signs and symptoms of Nasal Vestibulitis include swelling, pain, mucous drainage bump at the opening of the nostril.","## NASAL VESTIBULITIS CLINICAL DESCRIPTION  
+An inflammation of the skin within the nasal vestibule is referred to as nasal Vestibulitis. Diffuse infection of the skin of the anterior nares and may occur due to frequent trauma such as occurs in constant nose picking. Persistent nasal discharge leads to excoriation and infection of the skin of the nasal vestibule|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Swelling
+- Pain
+- Mucous Drainage Bump at the opening of the nostril|### TREATMENT:|### PHARMACOLOGICAL  
+- Give Analgesia
+- Give Amoxicillin 500mg 8 hourly for 5 days
+- Give Liquid Paraffin 2 drops each nose 3 times a day",
+"What are the characteristic symptoms and signs, such as purulent nasal discharge, pain over sinuses, obstruction, postnasal drip, and fever associated with bacterial sinusitis?",,"The characteristic symptoms and signs of BACTERIAL SINUSITIS include purulent nasal discharge (persistent or intermittent), pain and tenderness over one or more sinuses, nasal obstruction, postnasal discharge, and occasional fever.","## BACTERIAL SINUSITIS  
+### CLINICAL DESCRIPTION  
+This is an acute infection of the para-nasal sinuses. It may lead to complications with attendant morbidity and mortality. Early recognition of this clinical condition is mandatory. Swimming in dirty waters, dental infection or dental extraction, fractures involving the sinuses, nasal obstruction from polyps and allergic rhinitis are predisposing factors to developing acute sinusitis.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Purulent nasal discharge, persistent or intermittent, pain and  tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.|### I NVESTIGATIONS  
+- FBC
+- X-ray of paranasal sinuses  
+1.  Sinusitis is uncommon in children under five years as sinuses are not fully developed
+2.  Unilateral foul-smelling nasal discharge is a foreign body until proven otherwise|### TREATMENT:|### NON-PHARMACOLOGICAL  
+- Adequate hydration
+- Steam inhalation|### PHARMACOLOGICAL|### Adults:  
+- Give Oxymetazoline 0.05% 2 drops twice a day for not more than one week
+- Give Cetirizine 10mg daily for 3-5  days
+- Give Amoxycillin 500mg 8 hourly for  5 days
+- Steam inhalations using Menthol are advised|### Children:  
+- Give Oxymetazoline 0.025% 2 drops twice a day for not more than one week
+- Give Amoxicillin 25  mg/kg/dose  in  exacerbations  of  chronic  sinusitis  and  HIV positive children who are on Cotrimoxazole prophylaxis.|### Alternatively: penicillin hypersensitivity:  
+- Give Erythromycin 12.5 mg/kg/dose 6 hourly or Azithromycin 10mg/kg STAT then 5mg /kg daily for 7  day|### If pain or fever:  
+- Give Analgesic/Antipyretic treatment as required|### Referral criteria  
+- No symptomatic relief after 48-72 hours of antibiotics
+- CNS complications of sinusitis",
+What are the characteristic symptoms and signs associated with Allergic Rhinitis?,,"The characteristic symptoms of Allergic Rhinitis include blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation. Other signs may involve conjunctival itching and watering along with edematous pale grey nasal mucosa.","## ALLERGIC RHINITIS  
+### CLINICAL DESCRIPTION  
+Recurrent inflammation of the nasal mucosa due to hypersensitivity to inhaled allergens e.g., pollen, house dust, grasses and animal  proteins.|### CLINICAL FEATURES|### SYMPTOMS/SIGNS:  
+- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.
+- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Avoid known triggers/allergens, such as dust (dust mite) where possible
+- Avoid smoking
+- Provide education on the correct technique of administering topical medicines and monitor from time to time. Incorrect technique is a common cause of treatment failure.
+- Allergen avoidance|### PHARMACOLOGICAL  
+- Give corticosteroid nasal sprays e.g., Beclomethasone nasal s p r a y s  1 spray of 50 mcg in each nostril 12 hourly.
+- Give Cetirizine 10mg daily for 3-5 days
+- If  predominant  symptom  is  blocked  nose,  then  add  Oxymetazoline  0.05%, intranasal, administered 8 hourly for a maximum of 5 days.
+- If symptoms persist ADD Prednisone, oral, 30 mg daily for 5 days whilst continuing the topical steroid.",
+"What are the key signs and symptoms associated with acute tonsillitis, including sore throat severity, swallowing difficulty, presence of white spots on tonsils, fever characteristics, and any other notable clinical indicators?",,The key signs and symptoms include sore throat with pain and difficulty swallowing; inflamed tonsils with multiple white spots on the surface; sudden onset of fever. These are characteristic features of TONSILLITIS.,"## TONSILLITIS  
+### CLINICAL DESCRIPTION  
+Acute inflammation of the tonsils. The main organism implicated in the causation is betahemolytic streptococcal.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.|### I NVESTIGATION  
+- FBC
+- Throat swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Warm salt gargles|### PHARMACOLOGICAL  
+- Give Amoxicillin 500mg 8 hourly fAnalgesiaor 7  days
+- In severe infection, Amoxicillin 250/500mg + Clavulanic acid 125mg 8 hourly for 57 days|### Alternatively:  
+- Give Erythromycin 500mg, every 8 hours in Penicillin allergy
+- Give Analgesia see Section 24.1 on pain relief|### Refer if  
+- Peritonsillar abscess
+- If symptoms persist or recurring episodes of 4-5 attacks per year",
+"How do sudden coughing episodes and signs like breathing difficulties, stridor, and accessory muscle use indicate upper airway obstruction in foreign body inhalation cases?",,"Sudden onset of cough and choking is the frequent initial symptom. Signs of upper airway obstruction such as difficulties in breathing, stridor, use of accessory muscles to breathe.","## AIRWAY EMERGENCIES  
+### CLINICAL DESCRIPTION  
+Foreign Body Inhalation|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Sudden onset of cough and choking is the frequent initial symptom.   Signs of upper airway obstruction such as difficulties in breathing, stridor, use of accessory muscles to breathe.|### TREATMENT:|### PHARMACOLOGICAL  
+- Give oxygen
+- Refer for Bronchoscopy",
+What is laryngopharyngeal reflux and what symptoms does it cause?,,"LARYNGOPHARYNGEAL REFLUX is the retrograde movement of stomach enzymes (Pepsin) and acid into the lower throat region. It causes excessive throat-clearing, persistent dry cough, sore throats not associated with a cold, hoarseness, or globus pharynges.","## LARYNGOPHARYNGEAL REFLUX  
+### CLINICAL DESCRIPTION  
+LPR is the retrograde (backward) movement of stomach enzymes (Pepsin) and acid into the lower throat region.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS  
+- Excessive throat-clearing
+- Persistent dry cough
+- Sore throats not associated with a cold
+- Hoarseness, or globes pharynges (feeling of a lump in the throat).|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Dietary modification  
+- Avoid  Caffeine,  alcohol,  chocolates,  and  peppermints,  Citrus  fruits, pineapples, tomatoes (and other acidic foods), and hot spices.
+- Lifestyle changes
+- Smaller and more frequent feedings
+- Stop eating at least three hours before going to bed
+- Avoid wearing tight fitting clothes
+- Lose weight if needed|### PHARMACOLOGICAL  
+- Proton Pump Inhibitors (PPIs) are the most effective medicines for the treatment of LPR. PPIs must be taken on an empty stomach, ½ hour before a meal.",
