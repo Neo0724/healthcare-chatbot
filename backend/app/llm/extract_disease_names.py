@@ -1,68 +1,104 @@
+import os
 from typing import List
-
-from langchain_core.output_parsers import PydanticOutputParser
+from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
-import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
 
 class DiseaseNameClassifierSchema(BaseModel):
-    medical_entities: List[str] = Field(
-        description="All the stated disease name by user"
-    )
+    extracted_disease_name: List[str] = Field(description="The extracted disease name")
 
-
-parser = PydanticOutputParser(pydantic_object=DiseaseNameClassifierSchema)
 
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
-    model="qwen3.5-4b",
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
-    reasoning=None,
 )
 
 prompt_template = """
-You are a strict medical entity extraction system.
 
-Your task:
-Extract ONLY medically relevant entities explicitly mentioned by the user.
+You are a medical information extraction system.
 
-Entities include:
-- Diseases (e.g., diabetes, dengue, influenza)
-- Symptoms (e.g., fever, cough, sore throat, headache)
+Your task is to extract 1 or more disease names mentioned or implied in the user input.
 
 Rules:
-1. Only extract entities explicitly mentioned in the user input.
-2. Do NOT infer, diagnose, or predict conditions.
-3. Do NOT add any medical entities that are not explicitly stated.
-4. Do NOT extract treatments, medications, anatomy, or general health advice.
-5. Preserve original wording as much as possible.
-6. Remove duplicates.
-7. If no valid medical entity is found, return an empty list.
-8. Do NOT classify, explain, or group entities.
-9. Output ONLY valid structured JSON matching the schema. No extra text.
+
+- Extract only 1 or more diseases (the primary condition being asked about).
+- Do NOT include symptoms, treatments, organs, or general medical terms.
+- Do NOT explain anything.
+- Do NOT return multiple diseases.
+- PRESERVE SPECIFICITY: If the question names a specific subtype, severity level, complication, or variant of a condition (e.g. "hypertensive emergency", "hypertensive urgency", "gestational hypertension", "type 2 diabetes"), you MUST extract that exact specific name. NEVER collapse it into the broader parent condition (e.g. "hypertensive emergency" must NOT become "hypertension"; "type 2 diabetes" must NOT become "diabetes"). The specific term is a DIFFERENT, more precise clinical entity than its parent — treat them as different diseases.
+- NORMALIZE ONLY COLLOQUIAL PHRASING, NOT SPECIFICITY: Normalization means converting informal/lay language into its standard medical name for the SAME condition (e.g. "high blood pressure" → "hypertension", "heart attack" → "myocardial infarction"). It does NOT mean simplifying a specific named subtype down to a general category. If the input already uses a specific medical term, output that term unchanged.
+- If no clear disease is present, return "None".
+- Only output string NOT list
+
+Output format:
+
+Return only the list of disease names. No extra text.
+
+Examples:
+
+Input:
+What is the clinical description of hypertension and fever regarding its diagnosis and symptoms?
+Output:
+["hypertension", "fever"]
+
+Input:
+What defines a hypertensive emergency in adults with BP >180/120 mmHg and potential for acute stroke or organ damage?
+Output:
+["hypertensive emergency"]
+
+Input:
+What is the treatment for hypertensive urgency without signs of organ damage?
+Output:
+["hypertensive urgency"]
+
+Input:
+How is diabetes mellitus treated in adults?
+Output:
+["diabetes mellitus"]
+
+Input:
+What is the recommended insulin regimen for type 2 diabetes?
+Output:
+["type 2 diabetes"]
+
+Input:
+What are the symptoms of lung cancer and heart failure and how is it diagnosed?
+Output:
+["lung cancer", "heart failure"]
+
+Input:
+What causes headaches after lack of sleep?
+Output:
+None
+
 ---
-{format_instructions}
----
-User input:
+
+Now extract the disease from the following input:
+
 {input}
+
 """
+
+structured_llm = llm.with_structured_output(
+    DiseaseNameClassifierSchema, method="json_schema"
+)
 
 prompt = PromptTemplate(
     template=prompt_template,
     input_variables=["input"],
-    partial_variables={"format_instructions": parser.get_format_instructions()},
 )
-
-structured_llm = llm.with_structured_output(DiseaseNameClassifierSchema)
 
 classifier_chain = prompt | structured_llm
 
 
 def extract_disease_names(input) -> List[str]:
-    return classifier_chain.invoke({"input": input}).medical_entities
+    print("Extracting disease name ...")
+    result = classifier_chain.invoke({"input": input}).extracted_disease_name
+    print(f"Extracted disease name: **{result}**")
+    return result

@@ -19,7 +19,7 @@ load_dotenv()
 os.environ["TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL"] = "1"
 os.environ["DEEPEVAL_PER_TASK_TIMEOUT_SECONDS_OVERRIDE"] = "600"
 
-TEST_SET_FILE = "./synthetic_data/test_set_combined.csv"
+TEST_SET_FILE = "./synthetic_data/test_set_combined_2.csv"
 
 custom_llm = CustomLLM(
     model=ChatOpenAI(
@@ -84,7 +84,7 @@ print("🚀 Starting local Evaluation using your local model...")
 evaluate(
     test_cases=test_cases,
     # metrics=[faithfulness, relevancy],
-    metrics=[faithfulness],
+    metrics=[relevancy],
     async_config=AsyncConfig(run_async=False, max_concurrent=1, throttle_value=5),
     display_config=DisplayConfig(results_folder="./results/", verbose_mode=False),
 )

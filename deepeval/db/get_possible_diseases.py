@@ -64,7 +64,7 @@ def get_possible_diseases(
 
             ORDER BY post_score DESC
 
-            LIMIT 10
+            LIMIT 1
             """,
             database_="neo4j",
             positive_embedding=positive_embedding,

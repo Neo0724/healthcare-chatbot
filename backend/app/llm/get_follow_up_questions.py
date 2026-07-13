@@ -20,14 +20,6 @@ class QuestionItem(BaseModel):
     )
 
 
-# class QuestionsSchema(BaseModel):
-#     questions: List[QuestionItem] = Field(
-#         max_length=5,
-#         description="Up to 5 high-information-gain diagnostic questions."
-#     )
-
-parser = PydanticOutputParser(pydantic_object=QuestionItem)
-
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
     model="qwen3.5-4b",
@@ -59,8 +51,6 @@ RULES:
 - Keep the question short, clear, and natural for a patient
 
 ---
-{format_instructions}
-
 DISEASES AND SYMPTOM SUMMARIES:
 {input}
 ---
@@ -74,6 +64,9 @@ ALREADY ASKED QUESTIONS:
 {asked_questions}
 """
 
+
+structured_llm = llm.with_structured_output(QuestionItem, method="json_schema")
+
 prompt = PromptTemplate(
     template=prompt_template,
     input_variables=[
@@ -82,10 +75,7 @@ prompt = PromptTemplate(
         "negative_symptoms",
         "asked_questions",
     ],
-    partial_variables={"format_instructions": parser.get_format_instructions()},
 )
-
-structured_llm = llm.with_structured_output(QuestionItem)
 
 classifier_chain = prompt | structured_llm
 

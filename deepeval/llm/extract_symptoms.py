@@ -8,6 +8,7 @@ from pydantic import BaseModel, Field
 
 load_dotenv()
 
+
 class SymptomClassifierSchema(BaseModel):
     positive_symptoms: List[str] = Field(
         description="All the positive symptoms described by patient"
@@ -17,8 +18,6 @@ class SymptomClassifierSchema(BaseModel):
         description="All the negative symptoms described by patient"
     )
 
-
-parser = PydanticOutputParser(pydantic_object=SymptomClassifierSchema)
 
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
@@ -34,8 +33,6 @@ Your task is to extract and normalize medical symptoms from a patient’s free-t
 
 You MUST NOT diagnose the patient.
 You MUST ONLY extract and structure symptoms.
-
-{format_instructions}
 
 ---
 
@@ -92,13 +89,15 @@ Return ONLY structured output in the required format.
 - Preserve medical neutrality
 """
 
+structured_llm = llm.with_structured_output(
+    SymptomClassifierSchema, method="json_schema"
+)
+
 prompt = PromptTemplate(
     template=prompt_template,
     input_variables=["input"],
-    partial_variables={"format_instructions": parser.get_format_instructions()},
 )
 
-structured_llm = llm.with_structured_output(SymptomClassifierSchema)
 
 classifier_chain = prompt | structured_llm
 

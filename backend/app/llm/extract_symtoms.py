@@ -1,11 +1,9 @@
+import os
+from dotenv import load_dotenv
 from typing import List
-
-from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
-from dotenv import load_dotenv
-import os
 
 load_dotenv()
 
@@ -20,14 +18,11 @@ class SymptomClassifierSchema(BaseModel):
     )
 
 
-parser = PydanticOutputParser(pydantic_object=SymptomClassifierSchema)
-
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
-    model="qwen3.5-4b",
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
-    reasoning=None,
 )
 
 prompt_template = """
@@ -37,8 +32,6 @@ Your task is to extract and normalize medical symptoms from a patient’s free-t
 
 You MUST NOT diagnose the patient.
 You MUST ONLY extract and structure symptoms.
-
-{format_instructions}
 
 ---
 
@@ -95,18 +88,20 @@ Return ONLY structured output in the required format.
 - Preserve medical neutrality
 """
 
+structured_llm = llm.with_structured_output(
+    SymptomClassifierSchema, method="json_schema"
+)
+
 prompt = PromptTemplate(
     template=prompt_template,
     input_variables=["input"],
-    partial_variables={"format_instructions": parser.get_format_instructions()},
 )
 
-structured_llm = llm.with_structured_output(SymptomClassifierSchema)
 
 classifier_chain = prompt | structured_llm
 
 
-def extract_medical_entities(input):
+def extract_symptoms(input):
     return classifier_chain.invoke(
         {
             "input": input,

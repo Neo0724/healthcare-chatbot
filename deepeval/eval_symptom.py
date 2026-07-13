@@ -84,7 +84,7 @@ for index, row in df.iterrows():
     )
 
 with open(
-    f"./symptom_results/test_run_hit_at_10{datetime.now().strftime('%Y%m%d_%H_%M_%S')}.json",
+    f"./symptom_results/test_run_hit_at_10_{datetime.now().strftime('%Y%m%d_%H_%M_%S')}.json",
     "w",
     encoding="utf-8",
 ) as f:

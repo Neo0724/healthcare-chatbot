@@ -63,7 +63,7 @@ def test_process_follow_up_response_node(
     mock_extracted.negative_symptoms = extracted_negative
 
     mock_extract = mocker.patch(
-        "app.graph_flow.extract_patient_ans", return_value=mock_extracted
+        "app.graph_flow.extract_symptoms", return_value=mock_extracted
     )
 
     # -------------------------

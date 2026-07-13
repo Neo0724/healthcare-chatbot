@@ -13,9 +13,8 @@ from app.graph_queries.queries import (
     narrow_down,
 )
 from app.llm.extract_disease_names import extract_disease_names
-from app.llm.extract_patient_ans import extract_patient_ans
 from app.llm.get_follow_up_questions import get_follow_up_questions
-from app.llm.extract_symtoms import extract_medical_entities
+from app.llm.extract_symtoms import extract_symptoms
 from langchain_core.runnables import RunnableConfig
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.types import Command, interrupt
@@ -56,6 +55,8 @@ class ChatbotState(TypedDict):
     retrieved_disease_summary: List[str]
     asked_questions_count: int
     follow_up_agreement: str
+    diagnosis_result_query_choice: str
+    ask_more_disease_info_choice: str
 
 
 # Initialize LLM
@@ -134,15 +135,15 @@ def collect_disease_to_lookup_node(state: ChatbotState):
 
 def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
     # Grab the text from the prompt we just sent out
-    disease_names = state["user_messages"][-1]
+    user_query = state["user_messages"][-1]
 
     # 1. Extract name and embed
-    extracted_disease_names: List[str] = extract_disease_names(disease_names)
+    extracted_disease_names: List[str] = extract_disease_names(user_query)
 
     disease_embeddings = [
         embeddings_model.embed_query(d) for d in extracted_disease_names
     ]
-
+    
     driver: Driver = config["configurable"].get("neo4j_driver")
 
     # 2. Query DB / Vector store
@@ -165,7 +166,7 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
         [
             SystemMessage(
                 content=explain_disease_prompt.explain_disease_prompt_template.format(
-                    user_message=disease_names,
+                    user_message=user_query,
                     user_disease=extracted_disease_names,
                     retrieved_information=retrieved_information,
                 )
@@ -176,6 +177,36 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
 
     # Append the user's query and the final AI answer into the chat history state
     return {"messages": [response]}
+
+
+def request_ask_more_disease_info(state: ChatbotState):
+    system_instruction = (
+        "Ask the user whether if he or she would like to ask for more information about a disease. "
+        "User should be able to answer in 'Yes' or 'No'"
+    )
+
+    # Invoke the LLM to get the initial question
+    response = llm.invoke(
+        [SystemMessage(content=system_instruction)], config={"tags": ["user_message"]}
+    )
+
+    # Save the AI message immediately to state so it streams once and terminates
+    return {"messages": [response]}
+
+
+def collect_ask_more_disease_info(state: ChatbotState):
+    # Retrieve the question we just sent
+    last_msg = state["messages"][-1].content
+
+    # The graph pauses here. Upon Command(resume=answer),
+    # execution wakes up exactly here and assigns the input to 'symptoms'.
+    user_input: str = interrupt(last_msg)
+
+    # Append the user's symptoms into the state history
+    return {
+        "user_messages": [user_input.strip()],
+        "ask_more_disease_info_choice": user_input.strip(),
+    }
 
 
 # Diagnosis
@@ -212,14 +243,16 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
 
     # 2. RUN YOUR EXTRACTION FUNCTION HERE
     # Example: extracted = your_extraction_tool(user_initial_text)
-    extracted_entities = extract_medical_entities(user_initial_text)
+    extracted_entities = extract_symptoms(user_initial_text)
 
     # print(f"Extracted Entities: {extracted_entities}")
 
     positive_symptoms = list(extracted_entities.positive_symptoms)
-    negative_symptoms = list(extracted_entities.negative_symptoms)
+    # negative_symptoms = list(extracted_entities.negative_symptoms)
+    negative_symptoms = []
 
     positive_embedding = embeddings_model.embed_query(",".join(positive_symptoms))
+    # negative_embedding = embeddings_model.embed_query(",".join(negative_symptoms))
     negative_embedding = embeddings_model.embed_query(",".join(negative_symptoms))
 
     driver: Driver = config["configurable"].get("neo4j_driver")
@@ -351,7 +384,7 @@ def process_follow_up_response_node(state: ChatbotState):
     current_positives = state.get("extracted_positive_symptoms", [])
     current_negatives = state.get("extracted_negative_symptoms", [])
 
-    extracted_entities = extract_patient_ans(
+    extracted_entities = extract_symptoms(
         answer=user_answer, question=asked_question
     )
 
@@ -368,10 +401,12 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     """Uses full historic lists of positive/negative symptoms for the ultimate query."""
 
     current_positives = state.get("extracted_positive_symptoms", "")
-    current_negatives = state.get("extracted_negative_symptoms", "")
+    # current_negatives = state.get("extracted_negative_symptoms", "")
+    current_negatives = []
     initial_disease_ids = state.get("initial_disease_ids")
 
     positive_embedding = embeddings_model.embed_query(",".join(current_positives))
+    # negative_embedding = embeddings_model.embed_query(",".join(current_negatives))
     negative_embedding = embeddings_model.embed_query(",".join(current_negatives))
 
     driver: Driver = config["configurable"].get("neo4j_driver")
@@ -413,6 +448,52 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     return {"messages": [response]}
 
 
+def request_diagnosis_result_query_node(state: ChatbotState):
+    response = llm.invoke(
+        [
+            SystemMessage(
+                content="Ask the user whether he or she would like to know more about the diagnosed diseases information."
+                "User should be able to answer in 'Yes' or 'No'"
+            )
+        ],
+        config={"tags": ["user_message"]},
+    )
+
+    # Store the prompt message in the state so it streams once
+    return {"messages": [response]}
+
+
+def collect_diagnosis_result_query_node(state: ChatbotState):
+    # Retrieve the question we just sent
+    last_msg = state["messages"][-1].content
+
+    # The graph pauses here. Upon Command(resume=answer),
+    # execution wakes up exactly here and assigns the input to 'symptoms'.
+    user_input: str = interrupt(last_msg)
+
+    # Append the user's symptoms into the state history
+    return {
+        "user_messages": [user_input.strip()],
+        "diagnosis_result_query_choice": user_input.strip(),
+    }
+
+
+def end_node(state: ChatbotState):
+    response = llm.invoke(
+        [
+            SystemMessage(
+                content="Thanks and appreaciate the user for using this medical chatbot."
+                "Let the user know if he or she would like to start a new conversation, he could send a hi message, "
+                "and you will response immediately to provide assistance"
+            )
+        ],
+        config={"tags": ["user_message"]},
+    )
+
+    # Store the prompt message in the state so it streams once
+    return {"messages": [response]}
+
+
 # =====================================================================
 # 3. ROUTING LOGIC
 # =====================================================================
@@ -422,6 +503,14 @@ def route_after_welcome(
     if state.get("routing_choice", "").strip().lower() in ["info", "disease"]:
         return "request_disease_info"
     return "request_symptoms"
+
+
+def route_after_asking_disease_info(
+    state: ChatbotState,
+) -> Literal["request_disease_info", "end_node"]:
+    if "yes" in state.get("ask_more_disease_info_choice", "").strip().lower():
+        return "request_disease_info"
+    return "end_node"
 
 
 def route_after_preliminary(
@@ -440,6 +529,14 @@ def route_follow_up_loop(
     return "ask_follow_up"
 
 
+def route_diagnosis_result_query_node(
+    state: ChatbotState,
+) -> Literal["request_disease_info", "end_node"]:
+    if "yes" in state.get("diagnosis_result_query_choice", "").strip().lower():
+        return "request_disease_info"
+    return "end_node"
+
+
 # =====================================================================
 # 4. INITIALIZING & COMPILING THE GRAPH (THE FIX)
 # =====================================================================
@@ -455,6 +552,8 @@ graph = (
     .add_node("request_disease_info", request_disease_info_node)
     .add_node("collect_disease_to_lookup", collect_disease_to_lookup_node)
     .add_node("process_disease_info", process_disease_info_node)
+    .add_node("request_ask_more_disease_info", request_ask_more_disease_info)
+    .add_node("collect_ask_more_disease_info", collect_ask_more_disease_info)
     # Diagnosis
     .add_node("request_symptoms", request_initial_symptoms_node)
     .add_node("collect_initial_symptoms", collect_initial_symptoms_node)
@@ -469,6 +568,14 @@ graph = (
     .add_node("collect_follow_up_response", collect_follow_up_response_node)
     .add_node("process_follow_up_response", process_follow_up_response_node)
     .add_node("final_refined_diagnosis", final_refined_diagnosis_node)
+    .add_node(
+        "request_diagnosis_result_query_node", request_diagnosis_result_query_node
+    )
+    .add_node(
+        "collect_diagnosis_result_query_node", collect_diagnosis_result_query_node
+    )
+    # End node
+    .add_node("end_node", end_node)
     # Step C: Set up edges and conditional routers
     .add_edge(START, "welcome")
     .add_edge("welcome", "welcome_route_choice")
@@ -482,7 +589,13 @@ graph = (
     )
     .add_edge("request_disease_info", "collect_disease_to_lookup")
     .add_edge("collect_disease_to_lookup", "process_disease_info")
-    .add_edge("process_disease_info", END)
+    .add_edge("process_disease_info", "request_ask_more_disease_info")
+    .add_edge("request_ask_more_disease_info", "collect_ask_more_disease_info")
+    .add_conditional_edges(
+        "collect_ask_more_disease_info",
+        route_after_asking_disease_info,
+        {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+    )
     .add_edge("request_symptoms", "collect_initial_symptoms")
     .add_edge("collect_initial_symptoms", "process_and_diagnose")
     .add_edge("process_and_diagnose", "request_agreement_on_follow_up_node")
@@ -507,7 +620,16 @@ graph = (
             "final_refined_diagnosis": "final_refined_diagnosis",
         },
     )
-    .add_edge("final_refined_diagnosis", END)
+    .add_edge("final_refined_diagnosis", "request_diagnosis_result_query_node")
+    .add_edge(
+        "request_diagnosis_result_query_node", "collect_diagnosis_result_query_node"
+    )
+    .add_conditional_edges(
+        "collect_diagnosis_result_query_node",
+        route_diagnosis_result_query_node,
+        {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+    )
+    .add_edge("end_node", END)
     .compile(checkpointer=memory)
 )
 
@@ -572,6 +694,6 @@ def run_graph(graph, driver: Driver):
                 #     print("CHUNK MESSAGES ENDED")
 
 
-with GraphDatabase.driver(URI, auth=AUTH) as driver:
-    # Define your initial state setup
-    run_graph(graph, driver)
+# with GraphDatabase.driver(URI, auth=AUTH) as driver:
+#     # Define your initial state setup
+#     run_graph(graph, driver)

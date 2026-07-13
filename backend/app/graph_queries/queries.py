@@ -143,10 +143,10 @@ def get_diseases_information(
 ):
     records, _, _ = driver.execute_query(
         """
-        UNWIND $diseases AS disease
-        UNWIND $diseases_embedding AS disease_embedding
+        UNWIND range(0, size($diseases)-1) AS i
+        WITH $diseases[i] AS disease, $diseases_embedding[i] AS disease_embedding
 
-        OPTIONAL MATCH (o:ObjectConcept)
+        OPTIONAL MATCH (o:ObjectConcept)-[:HAS_RESOURCE]->()
         WHERE o.active = "1" AND toLower(o.FSN) = toLower(disease)
 
         WITH disease, disease_embedding, o
@@ -164,17 +164,21 @@ def get_diseases_information(
                 LIMIT 1
             ) SCORE AS score
 
-            MATCH (d)<-[:HAS_DESCRIPTION]-(vec_o:ObjectConcept)
+            MATCH (vec_o:ObjectConcept)-[:HAS_DESCRIPTION]->(d)
+            MATCH (vec_o)-[:HAS_RESOURCE]->()
 
-            RETURN vec_o, score
+            RETURN DISTINCT vec_o, score
+            ORDER BY score DESC
+            LIMIT 1        
         }  
 
-        WITH collect(DISTINCT vec_o) + collect(DISTINCT o) AS matched_diseases, score
+        WITH [x IN collect(DISTINCT vec_o) + collect(DISTINCT o) WHERE x IS NOT NULL] AS matched_diseases, 
+        coalesce(score, 1.0) AS score
 
         UNWIND matched_diseases as matched_disease
 
-        MATCH (matched_disease)-[:HAS_RESOURCE]->(def:Definition)
-        MATCH (matched_disease)-[:HAS_RESOURCE]->(sym:Symptoms)
+        OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(def:Definition)
+        OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(sym:Symptoms)
 
         RETURN matched_disease.FSN AS disease_name, 
             score,
