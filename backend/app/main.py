@@ -75,7 +75,12 @@ def create_app():
             "configurable": {"thread_id": conversation_id, "neo4j_driver": neo4j_driver}
         }
 
+        currentState = graph.get_state(config)
+
         user_response = data["user_response"]
+
+        if not currentState.next:
+            return initialize(conversation_id=conversation_id)
 
         return run_graph_and_response(Command(resume=user_response), config)
 
