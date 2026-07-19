@@ -161,7 +161,7 @@ def get_diseases_information(
             SEARCH d IN (
                 VECTOR INDEX `description_term_embed` 
                 FOR vector(disease_embedding, 768, FLOAT)
-                LIMIT 1
+                LIMIT 30
             ) SCORE AS score
 
             MATCH (vec_o:ObjectConcept)-[:HAS_DESCRIPTION]->(d)
@@ -179,6 +179,7 @@ def get_diseases_information(
 
         OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(def:Definition)
         OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(sym:Symptoms)
+        OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(treat:Treatment)
 
         RETURN matched_disease.FSN AS disease_name, 
             score,
@@ -196,7 +197,15 @@ def get_diseases_information(
               resource_author: sym.resource_author,    
               resource_published_year: sym.resource_published_year,    
               resource_url: sym.resource_url    
-            }) AS symptom_node        
+            }) AS symptom_node,
+
+            collect({
+              content: treat.content,
+              resource_title: treat.resource_title,    
+              resource_author: treat.resource_author,    
+              resource_published_year: treat.resource_published_year,    
+              resource_url: treat.resource_url    
+            }) AS treatment_node        
         """,
         database_="neo4j",
         diseases=diseases,
