@@ -1,0 +1,912 @@
+{
+  "testCases": [
+    {
+      "name": "test_case_0",
+      "input": "What are the defining characteristics of Congestive Heart Failure?",
+      "actualOutput": "- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema",
+      "expectedOutput": "Congestive Heart Failure is defined as a clinical syndrome with symptoms and signs from ventricular function abnormalities, leading to reduced cardiac output and increased venous pressures.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nDefined as a clinical syndrome in which patients have typical symptoms and signs resulting from abnormalities of Ventricular function. There is reduced cardiac output and increased venous pressures. Heart failure is a syndrome not a final diagnosis therefore it is very important to establish the cause",
+        "### SIGNS AND SYMPTOMS\n- Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea,  Diaphoresis, Failure to thrive,  Tachycardia,  tachypnoea, Oedema",
+        "### Symptomatic relief and mortality benefit in heart failure with reduced ejection fraction:\n- ACE inhibitors: Enalapril, start at low doses 2.5-5mg and escalate to 10 mg twice a day.\n- Spironolactone: 25 mg daily dose for patients with persistent symptoms of heart failure (NYHA II-IV)\n- Beta-blockers e.g., Atenolol 50mg od and titrate up to 100mg od po or carvedilol, start at low dose 3.125mg bd then increase to 6.25mg bd then 12.5mg bd then increase to 25mg bd. Dose should be increased at intervals of at least two weeks up to highest tolerated dose or nebilong (nebivolol) 5mg OD po  \nNote: ARB (Angiotensin Receptor Blocker) or Hydralazine + Nitrate can be an alternative if a patient cannot tolerate ACE inhibitors or has acute renal failure.",
+        "### NON-PHARMACOLOGICAL\n- Patient and family education on heart failure\n- Restriction of fluids and salt\n- Reduce salt intake\n- Bed rest\n- Daily weights\n- Moderate exercises\n- Stop smoking and alcohol intake\n- Clinicians to screen and treat other comorbidities\n- Active Cycle Breathing Technique",
+        "### Symptomatic relief:\n- Give Frusemide 40-160 mg in divided doses  \n- Give atenolo l 50-100mg daily or Digoxin (0.125 mg daily) which is recommended in patients with heart failure and rapid atrial fibrillation\n- Oxygen supplement if hypoxic",
+        "### Causes\n- Congenital heart diseases, Cardiomyopathies, Rheumatic heart disease, Ischemic heart disease, Hypertension",
+        "### Objective\n- To reduce preload, afterload and improve myocardial contractility",
+        "### Referral\n- All patients for diagnostic work up",
+        "### I NVESTIGATIONS\n- Chest Xray, ECG, Echocardiography, Urea, electrolytes, and creatinine, Full blood count, HIV, Cardiac enzymes",
+        "### Initial treatment :\n- Frusemide 1mg/kg PO/IV one to four times a day\n- Spironolactone 1mg/kg PO one to two times a day  \nDiscuss with cardiologist before commencing patient on ACE-inhibitors and digoxin"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly answers the input by clearly defining Congestive Heart Failure, while subsequent nodes discuss symptoms, treatments, management strategies, and diagnostic procedures which are irrelevant to the question about defining characteristics.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It clearly addresses the question by stating that 'Congestive Heart Failure is defined as a clinical syndrome in which patients have typical symptoms and signs resulting from abnormalities of Ventricular function. There is reduced cardiac output and increased venous pressures.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Shortness of breath, Cough, fatigue, Orthopnea, Exercise intolerance, Paroxysmal nocturnal dyspnea, Diaphoresis, Failure to thrive, Tachycardia,' are symptoms but not defining characteristics as per the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Symptomatic relief and mortality benefit in heart failure with reduced ejection fraction' discusses treatment options rather than defining characteristics of Congestive Heart Failure.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Non-pharmacological interventions such as patient education, fluid restriction, salt intake reduction etc.' are management strategies not defining features of the condition itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Symptomatic relief measures like Frusemide and Atenolol dosages' relate to treatment rather than diagnostic characteristics of Congestive Heart Failure.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Causes such as congenital heart diseases, cardiomyopathies etc.' are etiological factors not defining clinical features per the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Objective to reduce preload, afterload and improve myocardial contractility' refers to treatment goals rather than diagnostic criteria for Congestive Heart Failure.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Referral for diagnostic work up' indicates management steps not defining characteristics of the syndrome itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Investigations like chest Xray, ECG etc.' are diagnostic procedures rather than inherent features of Congestive Heart Failure as per expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Initial treatment with Frusemide and Spironolactone' relates to therapeutic interventions not defining clinical characteristics of the condition itself.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 21.375191999999515,
+      "order": 0
+    },
+    {
+      "name": "test_case_1",
+      "input": "What are the signs and symptoms of acyanotic and cyanotic congenital heart diseases, including failure to thrive, diaphoresis, shortness of breath on feeding, shock, finger clubbing, cyanosis, and cyanotic spells?",
+      "actualOutput": "- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  feeding,  Shock, Finger clubbing, Cyanosis, Cyanotic spells\n- Stroke\n- Brain abscess\n- Iron deficiency anemia",
+      "expectedOutput": "The signs and symptoms for CONGENITAL HEART DISEASE include Failure to thrive, Diaphoresis, Shortness of breath especially on feeding, Shock, Finger clubbing, Cyanosis, and Cyanotic spells.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Failure  to  thrive,  Diaphoresis,  Shortness  of  breath  especially  on  feeding,  Shock, Finger clubbing, Cyanosis, Cyanotic spells",
+        "### Cyanotic congenital heart disease complications\n- Stroke\n- Brain abscess\n- Iron deficiency anemia",
+        "### Cyanotic congenital heart disease presenting in newborn as cyanosis:\n- Consider if blue baby doesn't pink up with oxygen, check oxygen saturations. The baby may or may not have signs of heart failure. It may be difficult to distinguish from persistent pulmonary hypertension\n- Investigate with chest x ray and cardiac echo",
+        "### CLINICAL DESCRIPTION\nAcyanotic e.g. Ventricular Septal Defect (VSD, Atrial Septal defect (ASD), Atrioventricular Septal Defect (AVSD), truncus arteriosus  \nCyanotic e.g., Tetralogy of Fallot, Tricuspid atresia, Transposition of Great arteries",
+        "### Management of hyper cyanotic spell\n- Place child in knee chest position or\n- encourage squatting in older child.\n- Give oxygen\n- Give 10ml/kg bolus crystalloid\n- Give Morphine 0.1mg/kg IV or PO\n- Oral Propranolol 0.5mg/kg\n- phenylephrine 2-10mcg/kg STAT IV then 1-5mcg/kg/min intravenous infusion\n- if acidotic give sodium bicarbonate 8.4% 2ml/kg IV, dilute 1:1 with normal saline\n- if not responding to above treatment, consult pediatric cardiologist",
+        "### TREATMENT\nIf in heart failure, treat as per heart failure protocol",
+        "### Long term management\n- Propranolol 0.5 -1mg/kg BD to prevent Spells\n- Iron supplementation",
+        "### Complications\n- Pulmonary hypertension\n- Infective endocarditis",
+        "### Management\n- Awake proning\n- Active Cycle Breathing Technique\n- Light functional exercises",
+        "### PHARMACOLOGICAL\n- Antibiotic prophylaxis against bacterial endocarditis when undergoing dental or any surgical procedure.\n- Amoxicillin 45mg/kg PO STAT or Ceftriaxone 50mg/kg IV STAT"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.75,
+          "reason": "The score is 0.75 because node 1 directly lists all symptoms mentioned in the input and should be ranked highest, while nodes 2-3 contain irrelevant information about complications and newborn presentations that are not direct signs/symptoms as requested. Node 4 partially addresses disease categorization but does not list symptoms explicitly, so it is lower than node 1 but still relevant. Nodes 5-10 discuss management, treatment protocols, or complications which are unrelated to the symptom query.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Failure to thrive, Diaphoresis, Shortness of breath especially on feeding, Shock, Finger clubbing, Cyanosis, and Cyanotic spells' is directly listed as signs and symptoms in the context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Stroke', 'Brain abscess', 'Iron deficiency anemia' are complications of cyanotic congenital heart disease but not direct signs/symptoms asked for in the input.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Discusses newborn presentation with cyanosis and diagnostic methods, which is not directly related to listing general symptoms of both acyanotic and cyanotic types as requested.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Acyanotic e.g. Ventricular Septal Defect (VSD)... Cyanotic e.g., Tetralogy of Fallot...' categorizes the diseases but does not list their signs/symptoms directly, so it's partially relevant but doesn't answer the symptom question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Management of hyper cyanotic spell' provides treatment protocols, which are unrelated to listing symptoms as requested in the input.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'If in heart failure, treat as per heart failure protocol' is about management not signs/symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Propranolol... Iron supplementation' relates to long-term treatment rather than symptoms of the disease itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pulmonary hypertension, Infective endocarditis' are complications, not direct signs/symptoms listed in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Awake proning... Light functional exercises' pertain to management techniques and do not address symptoms directly.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Antibiotic prophylaxis... Amoxicillin...' relates to treatment protocols, which are outside the scope of listing signs/symptoms as requested in the input.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.067619900000864,
+      "order": 1
+    },
+    {
+      "name": "test_case_2",
+      "input": "What are the key diagnostic criteria and clinical manifestations of Acute Rheumatic Fever, including major and minor Jones criteria?",
+      "actualOutput": "New revised Jones criteria\n1. Evidence of preceding Group A strep throat infection\n2. Major criteria\n- a. Carditis\n- b. Polyarthritis/polyarthralgia\n- c. Subcutaneous nodules\n- d. Erythema marginatum\n- e. Sydenham's chorea\n3. Minor criteria\n- a. Fever &gt;38\u00b0C\n- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3\n- c. Prolonged PR interval\n- d. Monoarthralgia",
+      "expectedOutput": "Acute Rheumatic Fever is diagnosed using the revised Jones criteria which include one major criterion (carditis, polyarthritis/polyarthralgia, subcutaneous nodules, erythema marginatum, Sydenham's chorea) and two minor criteria or two major criteria. Major symptoms are carditis, polyarthritis/polyarthralgia; minor signs include fever >38\u00b0C and prolonged PR interval.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\nNew revised Jones criteria  \n1. Evidence of preceding Group A strep throat infection\n2. Major criteria\n- a. Carditis\n- b. Polyarthritis/polyarthralgia\n- c. Subcutaneous nodules\n- d. Erythema marginatum\n- e. Sydenham's chorea\n3. Minor criteria\n- a. Fever &gt;38\u00b0C\n- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3\n- c. Prolonged PR interval\n- d. Monoarthralgia  \nTo make diagnosis you need one major and 2 minor or 2 major or 3 minor criteria",
+        "### Referral\n- Children with complications of acute rheumatic fever\n- Children with Persistent symptoms",
+        "### I NVESTIGATIONS\n- FBC, ESR, CRP, Anti-Streptolysin O titer, Throat swab, ECG, Echocardiograph",
+        "### Complications\n- Rheumatic heart disease\n- Valvular damage",
+        "### If persistent fevers, joint pains consider steroids\n- Bedrest for 14 days\n- Chorea: Haloperidol 25 micrograms/kg daily\n- If  not  responding,  sodium  valproate  20mg/kg  twice  daily,  titrate  according  to response\n- or Phenobarbital 5mg/kg once daily",
+        "### Acute management\n- Penicillin V Potassium &lt;5years 250mg PO 6 hourly &gt;5years 500mg BD for 10days\n- Aspirin 25mg/kg 6 hourly for at least 14 days",
+        "### Long term\n- Antibiotic prophylaxis, Benzathine Penicillin 0.6MU IM &lt; 30kg, 1.2MU &gt; 30kg IM STAT monthly\n- Follow up in pediatric clinic",
+        "### CLINICAL DESCRIPTION\nMultisystem condition resulting from immune response to group B streptococcus throat infection"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly addresses the input by listing major and minor Jones criteria, while subsequent nodes discuss irrelevant topics like referral, investigations, complications, management, prophylaxis, and clinical descriptions that do not align with the question about diagnostic criteria.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context lists the major criteria (carditis, polyarthritis/polyarthralgia, subcutaneous nodules, erythema marginatum, Sydenham's chorea) and minor criteria (fever >38\\u00b0C, prolonged PR interval), which directly address the question about diagnostic criteria.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Referral' information is not related to diagnostic criteria or clinical manifestations of Acute Rheumatic Fever.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Investigations' mention tests but do not describe key diagnostic criteria or clinical manifestations directly as asked in the question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Complications' such as rheumatic heart disease are outcomes, not part of the diagnostic criteria or immediate clinical manifestations.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'If persistent fevers... consider steroids' relates to management rather than diagnostic criteria or clinical manifestations.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Acute management' with penicillin and aspirin details treatment, not the diagnostic criteria or symptoms of Acute Rheumatic Fever.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Long term' antibiotic prophylaxis relates to prevention rather than diagnosis or clinical features.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Clinical description' mentions multisystem condition from group B streptococcus, but the question specifies Group A strep and does not mention this detail in expected output.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 14.201509699998496,
+      "order": 2
+    },
+    {
+      "name": "test_case_3",
+      "input": "What are the signs and symptoms of Ischemic Heart Disease?",
+      "actualOutput": "- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating\n- -/+ signs of pulmonary edema if LVF  \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)",
+      "expectedOutput": "The signs and symptoms include central crashing chest pain (worse on exertion) +/- radiation to left arm/jaw/neck, nausea/vomiting, heaviness feeling on the chest, shortness of breath, palpitations, sweating, and possible pulmonary edema if LVF.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nCondition  in  which  there  is  inadequate  blood  and  oxygen  supply  to  any  portion  of  the myocardium, Can be stable angina, unstable angina, or myocardial infarction (acute coronary syndrome).  Risk  factors:  Hypertension,  Diabetes  mellitus,  smoking,  alcohol,  old  age, hyperlipidemia, family history of ischemic heart disease.",
+        "### SIGNS AND SYMPTOMS\n- Central crashing chest pain (worse on exertion) +/-radiation to left arm/jaw/neck + nausea/vomiting\n- Heaviness feeling on the chest\n- Shortness of breath and palpitations\n- Sweating\n- -/+ signs of pulmonary edema if LVF  \nNote : old and diabetic patients may have silent myocardial infarction (with no chest pain)",
+        "### I NVESTIGATIONS\n- FBC,  Cardiac  enzymes  (CK,  CK-MB,  Troponin,  AST,  LDH),  U+E+Creatinine,  RBS, Lipogram, ECG, CXR, Echocardiogram",
+        "### Minimize risk factors by :\n- Weight reduction (if obese)\n- Control of hypertension\n- Control of diabetes\n- Stop smoking",
+        "### Address other factors such as:\n- High blood cholesterol\n- Stressful lifestyle\n- Excessive alcohol intake\n- Encourage monitored regular moderate exercise"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (ranked 1st and 2nd) are correctly identified and ranked higher than irrelevant ones (ranks 3rd, 4th, and 5th), with the first two nodes explicitly mentioning symptoms of Ischemic Heart Disease as per the input query.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Central crashing chest pain (worse on exertion) +/- radiation to left arm/jaw/neck, nausea/vomiting, heaviness feeling on the chest, shortness of breath, palpitations, sweating' are all explicitly listed as signs and symptoms.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'-/+ signs of pulmonary edema if LVF' is mentioned in the context which aligns with 'possible pulmonary edema if LVF' in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document discusses investigations and does not mention any symptoms or signs related to Ischemic Heart Disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document talks about risk factor management, not specific symptoms of Ischemic Heart Disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The text addresses factors to address such as cholesterol and lifestyle but does not list any signs or symptoms of the disease itself.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.467332599999281,
+      "order": 3
+    },
+    {
+      "name": "test_case_4",
+      "input": "What are the diagnostic criteria for hypertension based on blood pressure readings and percentiles in different age groups?",
+      "actualOutput": "- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n\n                                           \n 1 to 13 years                                                                                              \n \u2265 13 years            \n\n------------------------------------------\n-----------------------------------------------------------------------------------------------------------\n----------------------\n\n Normal BP                                 \n Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  \n <120/80               \n\n Elevated BP (Previously prehypertension) \n SBP and/or DBP \u2265 90 th percentile but < 95 th percentile                                                   \n SBP 120-129, DBP <80 \n\n Stage 1 hypertension                     \n SBP and/or DBP \u2265 95 th percentile to < 95 th percentile + 12mmHg or 130/80 to 139/89 (whichever is lower) \n 130/80 - 139/89       \n\n Stage 2 hypertension                     \n SBP and/or DBP \u2265 95 th percentile + 12 mmHg or \u2265 140/90 mmHg (whichever is lower)                          \n BP \u2265 140/90",
+      "expectedOutput": "Hypertension is diagnosed with raised blood pressure measured at rest on 3 separate readings. In children aged 1 to 13 years, normal BP is SBP and DBP <90th percentile; elevated BP is \u226590th but <95th percentile; stage 1 hypertension is \u226595th percentile to <95th +12mmHg or 130/80-139/89. In those aged \u226513 years, normal BP is SBP and DBP <120/80; elevated BP is SBP 120-129, DBP <80; stage 1 hypertension is 130/80 - 139/89.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\n- Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.\n- Hypertension is generally asymptomatic.\n- Essential hypertension is unusual in children and young adults and an underlying cause should be excluded at hospital level\n- Hypertension in children is dependent on the age, sex, and height  \n\n                                          \n 1 to 13 years                                                                                             \n \u2265 13 years           \n\n\n------------------------------------------\n-----------------------------------------------------------------------------------------------------------\n----------------------\n\n\n Normal BP                                \n Systolic (SBP) and diastolic BP (DBP) < 90 th percentile                                                  \n <120/80              \n\n\n Elevated BP (Previously prehypertension) \n SBP and/or DBP \u2265 90 th percentile but < 95 th percentile                                                  \n SBP 120-129, DBP <80 \n\n\n Stage 1 hypertension                     \n SBP and/or DBP \u2265 95 th percentile to < 95 th percentile + 12mmHg or 130/80 to 139/89 (whichever is lower) \n 130/80 - 139/89      \n\n\n Stage 2 hypertension                     \n SBP and/or DBP \u2265 95 th percentile + 12 mmHg or \u2265 140/90 mmHg (whichever is lower)                         \n BP \u2265 140/90",
+        "### CLINICAL DESCRIPTION\nRefer all children with hypertension to a doctor for management  \n- In children, hypertension is defined statistically because BP levels vary with age and outcome. Based data are not available for this population. Hypertension is defined  \n- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm",
+        "### Endocrine\n- Pheochromocytoma\n- Agangliomas- as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions\n- The upper limit for normal systolic Bp in children greater than 0one year may be calculated as follows:\n- o {Age in years x 3} +100\n- o Diastolic BP is 2/3 of systolic BP\n- o 90% of hypertension in children is caused by renal conditions  \nThe table below shows normative blood pressure levels {systolic/diastolic} in children up to age 5 years. Blood pressures above the 95th percentile indicate hypertension  \n\n Age      \n Mean BP levels   \n 95 th Percentile   \n\n\n----------\n------------------\n--------------------\n\n\n 1-3 days \n 64/41 {50}       \n 78/52 {62}         \n\n\n 1mo -2yr \n 95/58 {72}       \n 110/71 {86}        \n\n\n 2-5yr    \n 101/57 {74}      \n 115/68 {85}        \n  \nRemember to use the correct cuff size when measuring BP. It should cover 2/3 of the upper arm",
+        "### Complications\n- Hypertensive crises\n- Hypertensive retinopathy\n- Hypertensive nephropathy\n- Hypertensive cardiomyopathy  \nReferral  \nRefer all children with hypertension for diagnostic work up",
+        "### Primary hypertension\n- Idiopathic",
+        "### I NVESTIGATIONS\n- limb  BP,  Urine  dipstick  and  urinalysis,  Urea,  electrolytes,  and  creatinine,  FBC, Abdominal ultrasound scan and doppler, ECG, Echocardiography, Fundoscopy, rest of investigations dependent on underlying cause",
+        "### SIGNS AND SYMPTOMS\n- seizures, claudication, sweating, headache, tachycardia, altered level of consciousness, signs of underlying condition",
+        "### Causes include:\nRenal  disease  (glomerulonephritis,  Hemolytic  uremic  syndrome,  renal  failure,  cystic  renal disease)  \n- Renovascular {renal artery stenosis}\n- Cardiovascular {coarctation of the aorta}\n- Endocrine (Cushing's Syndrome, neuroblastoma}",
+        "### PHARMACOLOGICAL\n1. Calcium channel blocker\n- a. Nifedipine slow release 0.1-0.25mg/kg 6 hourly PO or\n- b. Amlodipine 0.1mg/kg 4 to 6 hourly PO\n2. ACE-Inhibitor\n- a. Enalapril 0.1mg/kg PO daily or 12 hourly or  \n- b. Lisinopril 0.1mg/kg PO daily",
+        "### Renal disease\n- Renal parenchymal disease: glomerulonephritis\n- polycystic kidney disease\n- congenital abnormalities of kidney and urinary tract,\n- chronic kidney disease"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (nodes 1 and 2) are ranked higher than irrelevant ones, with their reasons directly addressing blood pressure criteria and percentiles for hypertension diagnosis.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It states that 'Diagnosis is based on a raised blood pressure measured while patient is at rest on at least 3 separate readings.' and provides the criteria for normal, elevated BP, and stage 1 hypertension in children aged 1-13 years and those \\u226513 years.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It mentions that 'hypertension is defined as systolic and /or diastolic pressure levels greater than the 95 th percentile for age and gender on at least 3 occasions' which aligns with the diagnostic criteria in children.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pheochromocytoma' is a specific condition, not directly related to general hypertension diagnostic criteria based on blood pressure readings and percentiles.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Complications of hypertension such as hypertensive crises are discussed but do not provide the diagnostic criteria for hypertension itself.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Primary hypertension' being idiopathic does not contribute to defining the diagnostic criteria based on blood pressure readings and percentiles.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Investigations such as limb BP, urine dipstick are part of workup after diagnosis but do not define the initial diagnostic criteria for hypertension.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Signs and symptoms like seizures or headache are clinical manifestations, not diagnostic criteria based on blood pressure readings and percentiles.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pharmacological treatments such as calcium channel blockers do not relate to the diagnostic criteria for hypertension but rather its management.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Renal disease causes like glomerulonephritis are underlying conditions, not part of the general diagnostic criteria based on blood pressure readings and percentiles in different age groups.'\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.95699969999987,
+      "order": 4
+    },
+    {
+      "name": "test_case_5",
+      "input": "What are the signs and symptoms associated with peripheral arterial disease, including muscle cramps in thighs or calves, leg numbness, coldness in lower extremities, non-healing sores on legs/feet/toes, hair loss in limbs, erectile dysfunction in men, and shiny skin on legs?",
+      "actualOutput": "- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet\n- Weak or no pause in legs/feet\n- Erectile dysfunction in men\n- Shiny skin in legs",
+      "expectedOutput": "Peripheral Arterial Disease is associated with muscle cramps (thighs or calf muscles), leg numbness or weakness, coldness in lower leg or foot, sores on legs/feet/toes, hair loss/slower growth in legs/feet, erectile dysfunction in men and shiny skin on legs.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Muscle cramps (thighs, calf muscles)\n- Leg numbness or weakness\n- Coldness in lower leg or foot\n- Sores: legs or feet or toes\n- Hair loss or slower hair growth in legs/feet\n- Weak or no pause in legs/feet\n- Erectile dysfunction in men\n- Shiny skin in legs",
+        "### CLINICAL DESCRIPTION\nIf there are poor pulses and delayed capillary refill, or claudication or non-healing wounds.",
+        "### TREATMENT\n- consider adding Aspirin and Statin\n- Treat risk factors (diabetes, hyperlipidemia, HIV)\n- Patients with critical limb Ischemia should be referred to high level of care to avoid death from septic shock",
+        "### I NVESTIGATIONS:\n- Blood sugar, FBC, lipid profile, HIV"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant ones; node 1 explicitly lists multiple symptoms of peripheral arterial disease, while nodes 2-4 discuss diagnostic indicators, treatment options, or investigations which are not the clinical manifestations asked for in the question.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Muscle cramps (thighs or calf muscles), leg numbness or weakness... sores on legs/feet/toes..., hair loss/slower growth in legs/feet, erectile dysfunction in men and shiny skin on legs' are all explicitly listed as signs of peripheral arterial disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'If there are poor pulses... non-healing wounds.' does not directly list symptoms but mentions clinical indicators that may be related to diagnosis, not the actual symptoms asked for in the question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'consider adding Aspirin and Statin...' discusses treatment rather than signs or symptoms of peripheral arterial disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Blood sugar, FBC... HIV' refers to investigations (diagnostic tests) not the clinical manifestations or symptoms associated with peripheral arterial disease.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.98973930000102,
+      "order": 5
+    },
+    {
+      "name": "test_case_6",
+      "input": "What are the clinical features of DIABETES TYPE 1?",
+      "actualOutput": "- Insulin production absent because of autoimmune pancreatic beta-cell destruction\n- Most children will have type 1 diabetes.",
+      "expectedOutput": "The clinical features of DIABETES TYPE 1 include insulin production absent because of autoimmune pancreatic beta-cell destruction.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\n- Insulin production absent because of autoimmune pancreatic beta-cell destruction\n- Most children will have type 1 diabetes.\n- Children with diabetes should be referred for proper management and treatment.\n- Consider hydration while waiting for transport for referral\n- These children need to be followed up every 3 months to monitor blood sugars and long-term complications of diabetes.",
+        "### PHARMACOLOGICAL TREATMENT\n- Give NPH insulin Lente/Protaphane Insulin 2 doses daily  \nFor proper management of diabetes mellitus refer to Clinical handbooks of QECH College of Medicine and KCH Intern Logbook as well as Pediatric handbook  \n- To decide the starting dose of  Insulin:\n- The total  daily  number  of  Insulin  units  will  be  approximately  half  the patients body weight, e.g., for a 60 Kg person give 30 units Insulin/day divided into 2 doses.\n- Then give 2/3 daily dose half an hour before breakfast, give 1/3 daily dose half an hour before evening meal, preferably 12 hours apart.\n- Adjust Insulin dose according to fasting blood sugar (FBS} or 2 hours postprandial blood sugar; or symptoms of hypo or  hyperglycaemia  \nInsulin requirements can go up when a patient is acutely ill, even if they are not eating. NEVER stop Insulin in a type 1 diabetic.",
+        "### I NVESTIGATIONS\n- As above for section 6.1  \nAdults with no ketoacidosis or other acute Complication and have type 1 diabetes",
+        "### REFERRAL CRITERIA FOR SPECIALIST OPINION IF:\n- Pregnant diabetic\n- Acutely  ill  diabetic,  particularly  if  vomiting  or  decreased  Glasgow  Coma  Score (GCS}\n- Treatable complications e.g.,  cataracts",
+        "### SIGNS AND SYMPTOMS\n- As above for section 6.1",
+        "### Diet\n- Increase fibre intake\n- Reduce refined sugar intake\n- Insulin treated patients require 3 meals a day containing complex carbohydrate to avoid risk of hypoglycaemia\n- Advise patients to eat more before unaccustomed exercise"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly addresses the input by clearly stating a clinical feature of DIABETES TYPE 1, while subsequent nodes are irrelevant as they discuss treatment, referral criteria, or management advice.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It clearly addresses the question by stating that 'Insulin production absent because of autoimmune pancreatic beta-cell destruction' which is a clinical feature of DIABETES TYPE 1.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Give NPH insulin Lente/Protaphane Insulin 2 doses daily' refers to treatment, not clinical features.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'As above for section 6.1' is vague and does not provide specific clinical features of DIABETES TYPE 1.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pregnant diabetic', 'Acutely ill diabetic' etc., refer to referral criteria, not clinical features.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'As above for section 6.1' is vague and does not provide specific clinical features of DIABETES TYPE 1.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Increase fibre intake', 'Reduce refined sugar intake' etc., refer to diet management, not clinical features.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.664129900000262,
+      "order": 6
+    },
+    {
+      "name": "test_case_7",
+      "input": "What are the symptoms and signs associated with hypoglycemia below 70mg/dl (3.9mmol/L) in adults?",
+      "actualOutput": "- Sweating\n- Excessive hunger\n- Trembling\n- Tachycardia\n- Drowsiness\n- Confusion\n- Loss of consciousness, seizures, and irreversible brain damage if severe hypoglycaemia",
+      "expectedOutput": "The symptoms and signs of Hypoglycemia in Adults include sweating, excessive hunger, trembling, tachycardia, drowsiness, confusion, loss of consciousness, seizures and irreversible brain damage if severe hypoglycaemia occurs.",
+      "retrievalContext": [
+        "### SYMPTOMS AND SIGNS\n- Sweating\n- Excessive hunger\n- Trembling\n- Tachycardia\n- Drowsiness\n- Confusion\n- Loss of consciousness, seizures, and irreversible brain damage if severe hypoglycaemia",
+        "### CLINICAL DESCRIPTION:\nLow blood sugar level below 70mg/dl (3.9mmol/L). Severe hypoglycemia (blood sugar &lt; 2.2mmol/l).",
+        "### Treatment objectives\n- Treat hypoglycemia urgently if suspected even without knowing blood sugar level (if glucometer not available)\n- Establish causes and treat appropriately\n- Re-educate patient on meals and medications dose",
+        "### PHARMACOLOGICAL TREATMENT Adults:\n- IV dextrose 50% solution 25-50 ml over 1-3 minutes through a large vein Then 510% solution 500ml 4 hourly until the patient is able to eat normally.\n- Glucose in form of refined sugars in a conscious patient for adults e.g., SOBO, soft drink, sweets.",
+        "### I NVESTIGATIONS\n- Random blood sugar (urgently done using glucometer)\n- urea and creatinine (exclude renal impairment)\n- Liver function test",
+        "### Causes/risk factors:\n- Overdose of anti-diabetic medications (oral or insulin)\n- Anti-diabetic drugs in renal impairment\n- Elderly\n- Omitted meals or inadequate meals\n- Excessive unaccustomed physical activity\n- Excessive alcohol intake\n- Liver failure",
+        "### NONPHARMACOLOGICAL\n- Appropriate advice on medications dosing and meals"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node correctly lists relevant symptoms of hypoglycemia, while subsequent nodes are irrelevant as they discuss definitions, treatments, investigations, causes, and nonpharmacological advice instead of symptoms/signs.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It lists the symptoms such as sweating, excessive hunger, trembling, tachycardia, drowsiness, confusion, loss of consciousness, seizures and irreversible brain damage which match the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Low blood sugar level below 70mg/dl (3.9mmol/L). Severe hypoglycemia (blood sugar < 2.2mmol/l)' does not mention any symptoms or signs of hypoglycaemia, only the definition.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Treatment objectives' do not relate to symptoms and signs associated with hypoglycaemia below 70mg/dl (3.9mmol/L) in adults.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pharmacological treatment Adults:' discusses treatment methods, which are unrelated to the question about symptoms and signs of hypoglycemia.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'INVESTIGATIONS' mentions tests but not symptoms or signs related to hypoglycaemia below 70mg/dl (3.9mmol/L) in adults.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Causes/risk factors:' discusses causes of hypoglycemia, which are unrelated to the question about its symptoms and signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'NONPHARMACOLOGICAL' provides advice on medications dosing and meals but does not mention any symptoms or signs associated with hypoglycaemia below 70mg/dl (3.9mmol/L) in adults.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 14.925804299999072,
+      "order": 7
+    },
+    {
+      "name": "test_case_8",
+      "input": "What is a metabolic disorder caused by excess thyroid hormones, its common causes like Graves' disease and toxic goitre, associated symptoms such as weight loss and palpitations, diagnostic tests including TSH-receptor antibodies, and treatment options involving Carbimazole or surgery?",
+      "actualOutput": "- Metabolic disorder resulting from excessive circulating thyroid hormones\n- Diffuse toxic goitre/ Graves' disease\n- Thyroiditis\n- TSH induced\n- TSH producing tumour\n- Inappropriate secretion of TSH\n- Graves' disease, toxic multinodular goitre, toxic solitary nodule\n- Fatigue,  nervousness  or  anxiety,  weight  loss,  palpitations,  heat  intolerance, irregular menses/sub infertility.\n- Tachycardia (may be irregular if atrial fibrillation), warm moist hands.\n- Goitre (smooth if G rave's disease) and tremor.\n- Diarrhoea, jaundice or heart failure symptoms and signs (if in thyroid storm).\n- I f  Graves' disease:  thyroid  eye  signs:  lid  retraction,  proptosis,  lid lag, chemosis, ophthalmoplegia.\n- Weight loss, Sweating, Palpitations, Tremor, Muscle weakness and Hypertension\n- Give Propranolol 40-120mg q8h to control symptoms, especially tachycardia\n- Give Carbimazole 40mg od or in divided doses for approximately 2 months then reduce dose according to symptoms improvement and improved thyroid function tests. Monitor side effects of carbimazole (neutropenia with infection, hepatitis)\n- In Graves' disease continue for 12 to 18 months then stop and monitor TSH every 3 months for a year, then once a year (In large percentage, hyperthyroidism will be resolved)\n- If patient pregnant or breast-feeding, use Propylthiouracil instead of carbimazole\n- For persistent hyperthyroidism on treatment in Grave's disease, and relapsed hyperthyroidism after remission following treatment, consider total thyroidectomy (or radioactive iodine once it becomes available in the country)\n- In other causes continue Carbimazole and refer for surgery or radioactive iodine once it becomes available in the country which might be soon; these patients should be considered for radioiodine first before surgery unless it not suitable in their case\n- All patients with suspected hyperthyroidism\nIf a patient develops a fever or sore throat while taking Carbimazole, neutropenia should be urgently excluded. If present, then stop Carbimazole and treat with antibiotics.",
+      "expectedOutput": "Hyperthyroidism in adults is a metabolic disorder caused by excess thyroid hormones. Common causes include Graves' disease and toxic goitre. Symptoms associated are weight loss and palpitations. Diagnostic tests involve TSH-receptor antibodies, while treatment options include Carbimazole or surgery.",
+      "retrievalContext": [
+        "### \nMetabolic disorder resulting from excessive circulating thyroid hormones",
+        "### CLINICAL DESCRIPTION\n- Metabolic disorder resulting from excessive circulating thyroid hormones",
+        "### Treatment:\n- Give Propranolol 40-120mg q8h to control symptoms, especially tachycardia\n- Give Carbimazole 40mg od or in divided doses for approximately 2 months then reduce dose according to symptoms improvement and improved thyroid function tests. Monitor side effects of carbimazole (neutropenia with infection, hepatitis)\n- In Graves' disease continue for 12 to 18 months then stop and monitor TSH every 3 months for a year, then once a year (In large percentage, hyperthyroidism will be resolved)\n- If patient pregnant or breast-feeding, use Propylthiouracil instead of carbimazole\n- For  persistent  hyperthyroidism  on  treatment  in  Grave's  disease,  and  relapsed hyperthyroidism after remission following treatment, consider total thyroidectomy (or radioactive iodine once it becomes available in the country)\n- In other causes continue Carbimazole and refer for  surgery or radioactive iodine once  it  becomes  available  in  the  country  which  might  be  soon;  these  patients should be considered for radioiodine first before surgery unless it not suitable in their case)",
+        "### SIGNS AND SYMPTOMS:\n- Fatigue,  nervousness  or  anxiety,  weight  loss,  palpitations,  heat  intolerance, irregular menses/sub infertility.\n- Tachycardia (may be irregular if atrial fibrillation), warm moist hands.\n- Goitre (smooth if G rave's disease) and tremor.\n- Diarrhoea, jaundice or heart failure symptoms and signs (if in thyroid storm).\n- I f  Graves'  disease:  thyroid  eye  signs:  lid  retraction,  proptosis,  lid  lag,  chemosis, ophthalmoplegia.",
+        "### Causes:\n- Diffuse toxic goitre/ Graves' disease\n- Thyroiditis\n- TSH induced\n- TSH producing tumour\n- Inappropriate secretion of TSH",
+        "### Causes\n- Graves' disease, toxic multinodular goitre, toxic solitary nodule",
+        "### TREATMENT\n- Treatment objectives are to reduce thyroid hormone levels in the blood to normal, reduce symptoms associated with thyrotoxicosis, and prevent or treat complications e.g., heart failure, atrial fibrillation and ophthalmopathy.",
+        "### SIGNS AND SYMPTOMS\n- Weight loss, Sweating, Palpitations, Tremor, Muscle weakness and Hypertension",
+        "### REFERRAL\n- All patients with suspected hyperthyroidism  \nIf a patient develops a fever or sore throat while taking Carbimazole, neutropenia should be urgently excluded. If present, then stop Carbimazole and treat with antibiotics.",
+        "### TREATMENT\n- The aim is to Induce remission and Improve symptoms of thyrotoxicosis.  \n\u00b7"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant ones, with each 'yes' node directly addressing parts of the input query about hyperthyroidism's definition, causes, symptoms, treatments, and diagnostic tests. The first eight nodes (ranked 1-8) provide comprehensive coverage of the question\u2019s components. Nodes ranked 9 and 10 are marked as irrelevant since they discuss referral criteria, side effects, or general treatment goals without specific details on diagnostic tests like TSH-receptor antibodies.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Metabolic disorder resulting from excessive circulating thyroid hormones' directly answers the question about what hyperthyroidism is.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Metabolic disorder resulting from excessive circulating thyroid hormones' repeats the same information as the first context, still relevant to defining hyperthyroidism.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Give Carbimazole 40mg od or in divided doses... consider total thyroidectomy...' addresses treatment options including Carbimazole and surgery as requested.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Fatigue, nervousness or anxiety, weight loss, palpitations... Goitre (smooth if Graves' disease)...' lists symptoms like weight loss and palpitations, along with mention of Graves' disease.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Causes: Diffuse toxic goitre/Graves' disease... TSH producing tumour...' includes common causes such as Graves' disease and toxic goitre.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Causes\\n- Graves' disease, toxic multinodular goitre, toxic solitary nodule' again lists the same common causes mentioned in the question.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'The aim is to Induce remission and Improve symptoms of thyrotoxicosis.' aligns with treatment objectives but doesn't specifically mention Carbimazole or surgery. However, other contexts already covered these details.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Weight loss, Sweating, Palpitations... Hypertension' lists associated symptoms including weight loss and palpitations as asked.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'All patients with suspected hyperthyroidism... If a patient develops a fever or sore throat while taking Carbimazole...' discusses referral criteria and side effects but does not directly answer the question about causes, symptoms, diagnosis, or treatment options beyond what's already covered.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'The aim is to Induce remission and Improve symptoms of thyrotoxicosis.' repeats general treatment goals without specific tests like TSH-receptor antibodies mentioned in the expected output. No context explicitly mentions diagnostic tests as requested.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 21.39320769999904,
+      "order": 8
+    },
+    {
+      "name": "test_case_9",
+      "input": "What are the signs and symptoms of hypothyroidism in adults, including fatigue, cold intolerance, dry skin, weight gain, bradycardia, hyperlipidaemia, goitre (+/-), dementia, pallor, puffy face hair loss and eyebrow loss?",
+      "actualOutput": "- General fatigue, constipation, cold intolerance, dry and coarse skin, hoarse voice, weight gain, bradycardia (slow heart rate, slow relaxing reflexes, hyperlipidaemia, goitre (+/-), dementia, pallor, puffy face, hair loss and eyebrow loss",
+      "expectedOutput": "The signs and symptoms of hypothyroidism in adults include general fatigue, constipation, cold intolerance, dry and coarse skin, hoarse voice, weight gain, bradycardia (slow heart rate), slow relaxing reflexes, hyperlipidaemia (elevated cholesterol level), goitre (+/-), dementia, pallor (pale appearance), puffy face with hair loss and eyebrow loss.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Cretinism in infants: Poor growth, development, and poor school performance in children\n- Signs Neonate: Prolonged neonatal jaundice, Excessive sleep, Feeding problems\n- Cretinism in Children: mental sub-normality, short stature, large tongue, dry skin, sparse hair, protuberant abdomen, umbilical hernia, abnormal facies)\n- Adults: menstrual  irregularity and  infertility, mental  health conditions  and dementia.\n- General fatigue, constipation, cold intolerance, dry and coarse skin, hoarse voice, weight gain, bradycardia (slow heart rate, slow relaxing reflexes, hyperlipidaemia, goitre (+/-), dementia, pallor, puffy face, hair loss and eyebrow loss",
+        "### CLINICAL DESCRIPTION\nHypothyroidism is a condition associated with reduction in thyroid hormone production. Thyroid hormone is required for normal metabolism and growth. Its deficiency has major consequences on fetal development as well as intellectual and physical development in infants and children (cause of cretinism). In adults, it may be the cause of several problems.",
+        "### TREATMENT\n- Treatment  objectives  are  to  correct  blood  level  of  thyroid  hormones  and  to maintain lifelong normal levels of thyroid hormones",
+        "### Causes:\n- Antibody-related thyroid gland destruction (Hashimoto thyroiditis)\n- Subtotal thyroidectomy\n- Pituitary surgery or lesions\n- Congenital\n- Severe iodine deficiency\n- Drug induced (e.g., radioiodine therapy, amiodarone etc.)",
+        "### PHARMACOLOGICAL TREATMENT\n- Start treatment with a low dose of Levothyroxine, especially in the elderly, those with  heart  disease  and  Children  (e.g.,  25-50  microgram),  and  adjust  dose  as appropriate every 2-8 weeks until TSH levels are within normal reference range. Treatment is often life-long.",
+        "### I NVESTIGATIONS\n- Thyroid function tests T3, T4, TSH.\n- Fasting blood lipids (for elevated cholesterol level)\n- Full blood count",
+        "### Adults\n- 25-200 microgram daily (can start with dose 25 to 100mcg daily)",
+        "### REFERRAL CRITERIA\n- All cases need to be managed by a doctor/specialist",
+        "### Children\n- &gt; 12 years; 25 micrograms daily (max. 200 micrograms)\n- 2-12 years; 25 micrograms daily (max. 100 micrograms)\n- &lt; 2 years; 25-75 micrograms daily."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly lists all the required signs and symptoms of hypothyroidism in adults, while subsequent nodes discuss causes, treatments, investigations, referral criteria, and dosages which are irrelevant to the input query.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'General fatigue, constipation, cold intolerance, dry and coarse skin, hoarse voice, weight gain, bradycardia (slow heart rate), slow relaxing reflexes, hyperlipidaemia (elevated cholesterol level), goitre (+/-), dementia, pallor (pale appearance), puffy face with hair loss and eyebrow loss' directly lists the signs and symptoms of hypothyroidism in adults including those mentioned in the input.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Hypothyroidism is a condition associated with reduction in thyroid hormone production. Thyroid hormone is required for normal metabolism and growth. Its deficiency has major consequences on fetal development as well as intellectual and physical development in infants and children (cause of cretinism). In adults, it may be the cause of several problems.' discusses hypothyroidism but does not mention any specific signs or symptoms related to adult patients.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Treatment objectives are to correct blood level of thyroid hormones and to maintain lifelong normal levels of thyroid hormones' refers to treatment rather than signs/symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Causes: Antibody-related thyroid gland destruction (Hashimoto thyroiditis), Subtotal thyroidectomy, Pituitary surgery or lesions, Congenital, Severe iodine deficiency, Drug induced (e.g., radioiodine therapy, amiodarone etc.)' refers to causes rather than signs/symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pharmacological treatment: Start treatment with a low dose of Levothyroxine... Treatment is often life-long.' discusses pharmacological treatment and not symptoms or signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'INVESTIGATIONS: Thyroid function tests T3, T4, TSH. Fasting blood lipids (for elevated cholesterol level). Full blood count' refers to investigations rather than signs/symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Adults: 25-200 microgram daily... ' discusses treatment dosage and not symptoms or signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'REFERRAL CRITERIA: All cases need to be managed by a doctor/specialist' refers to referral criteria rather than signs/symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Children: > 12 years; 25 micrograms daily... ' discusses treatment dosage for children and not symptoms or signs.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 20.613640300000043,
+      "order": 9
+    },
+    {
+      "name": "test_case_10",
+      "input": "What are the intestinal and hepatic manifestations of amoebiasis, including symptoms like dysentery, abdominal pain, right upper quadrant pain with jaundice?",
+      "actualOutput": "- Intestinal: amoebic dysentery\n- Hepatic: amoebic liver abscess",
+      "expectedOutput": "The intestinal manifestation is amoebic dysentery (diarrhoea +/- fever and abdominal pain), while the hepatic manifestation is amoebic liver abscess (right upper quadrant abdominal pain and jaundice).",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Diarrhoea (dysentery) +/- fever\n- Abdominal pain\n- Right upper quadrant abdominal pain and jaundice in amoebic liver abscess",
+        "### CLINICAL DESCRIPTION\nAn infection caused by protozoan Entamoeba histolytica transmitted through food and drink contaminated with human faeces.  \n- Clinical manifestations\n- Intestinal: amoebic dysentery\n- Hepatic: amoebic liver abscess",
+        "### I NVESTIGATIONS\n- Full blood count\n- Fresh wet stool analysis\n- Liver function test\n- Abdominal Ultrasound (if amoebic liver abscess suspected)",
+        "### NON-PHARMACOLOGICAL\n- Health education on fecal disposal, hand washing and food hygiene.",
+        "### Adults :\n- Metronidazole 800mg 8 hourly for 5 days' preferably after food.",
+        "### Children:\n- Metronidazole 7.5 mg/kg 8 hourly for 5 days"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (nodes 1 and 2) are ranked higher than irrelevant ones, with their reasons directly addressing intestinal and hepatic symptoms as requested.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Diarrhoea (dysentery) +/- fever and abdominal pain' directly addresses the intestinal manifestation, while 'right upper quadrant abdominal pain and jaundice in amoebic liver abscess' covers the hepatic symptoms.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Intestinal: amoebic dysentery' and 'Hepatic: amoebic liver abscess' explicitly state both manifestations, aligning with the expected output.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Full blood count', 'stool analysis', and 'liver function test' pertain to investigations rather than symptoms or clinical descriptions.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Health education on fecal disposal, hand washing and food hygiene' relates to prevention measures, not the manifestations of amoebiasis.'\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Metronidazole dosage for adults' is treatment-related information, which does not address symptoms or clinical features.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Metronidazole dosage for children' also pertains to pharmacological treatment rather than the manifestations of amoebiasis.'\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.756418299999496,
+      "order": 10
+    },
+    {
+      "name": "test_case_11",
+      "input": "What are the signs and symptoms of Bacillary Dysentery?",
+      "actualOutput": "- Bloody and mucoid diarrhea\n- Abdominal pain",
+      "expectedOutput": "Bloody and mucoid diarrhea, abdominal pain.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Bloody and mucoid diarrhea\n- Abdominal pain",
+        "### CLINICAL DESCRIPTION\n- Bloody and mucoid diarrhoea caused by Shigella species\n- Alternative names: dysentery, shigellosis",
+        "### I NVESTIGATIONS\n- FBC\n- Stool microscopy",
+        "### PHARMACOLOGICAL\nUse antibiotics only if the patient is systemically unwell, septic or immunosuppressed Adults  \n- Ciprofloxacin 500mg PO 12 hourly for 5  days",
+        "### NON-PHARMACOLOGICAL\n- Health education on handwashing with soap, food hygiene, appropriate disposal of faeces\n- Isolate the patient\n- Hygiene precautions by all in contact with the  patient\n- Investigate source of contamination and inform environmental health authorities",
+        "### Children\n- Ciprofloxacin 10mg/kg PO  12 hourly for  5 days"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant ones; node 1 explicitly lists symptoms of Bacillary Dysentery, while subsequent nodes discuss non-symptom topics like investigations (node 3), treatment (nodes 4 and 6), and prevention measures (node 5).",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Bloody and mucoid diarrhea, abdominal pain' are explicitly listed as signs and symptoms in the first document.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document describes clinical description but does not mention any specific signs or symptoms beyond 'bloody and mucoid diarrhoea', which is already covered by the first context. It also mentions alternative names, which are not relevant to listing symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'FBC' and 'stool microscopy' refer to investigations, not signs or symptoms of Bacillary Dysentery.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document discusses pharmacological treatment with antibiotics, which is unrelated to the question about signs and symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Health education on handwashing', 'isolate the patient', and other non-pharmacological measures are not signs or symptoms of Bacillary Dysentery.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document discusses antibiotic use in children, which is unrelated to the question about signs and symptoms.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.363851199999772,
+      "order": 11
+    },
+    {
+      "name": "test_case_12",
+      "input": "What are the specific signs and symptoms associated with cholera, including its characteristic watery diarrhea and vomiting?",
+      "actualOutput": "- Severe watery diarrhea (usually painless, rice water like)\n- Vomiting",
+      "expectedOutput": "Cholera is characterized by severe watery diarrhoea (usually painless, rice water like) and vomiting.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Severe watery diarrhea (usually painless, rice water like)\n- Vomiting",
+        "### CLINICAL DESCRIPTION\n- Bacterial infection caused by Vibrio cholerae\n- Causes se vere watery, 'rice water' diarrhoea and may lead to death",
+        "### I NVESTIGATIONS\n- Usually clinical diagnosis\n- Cholera Ag rapid test (stool sample)",
+        "### NON-PHARMACOLOGICAL\n- Isolate the patient\n- Ensure hygienic precautions by all in contact with patient\n- Investigate source of contamination, inform environmental health  authorities\n- Trace close contacts and give antibiotics as  below",
+        "### PHARMACOLOGICAL\n- Rehydration is mainstay of treatment\n- Type of resuscitation fluid is  less  important than  quantity  of  fluid  replaced  may need 1L/hour initially\n- if available, IV Ringer's Lactate is the preferred fluid of choice\n- maintenance  fluids  after  resuscitation:  IV  fluids  and  oral  rehydration solution (ORS)",
+        "### Adults:\n- Doxycycline 300 mg STAT OR Azithromycin 1g STAT"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (nodes 1 and 2) are ranked higher than irrelevant ones, with the first two nodes explicitly mentioning cholera's characteristic watery diarrhea and vomiting as symptoms.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Severe watery diarrhea (usually painless, rice water like)' and 'Vomiting' are explicitly mentioned as signs and symptoms of cholera.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Causes severe watery, 'rice water' diarrhoea and may lead to death' directly refers to the characteristic symptom of cholera.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Usually clinical diagnosis' and 'Cholera Ag rapid test (stool sample)' pertain to diagnostic methods rather than signs or symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Isolate the patient', 'hygienic precautions', and 'investigate source of contamination' are related to management and prevention, not specific signs or symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Rehydration is mainstay of treatment', 'IV Ringer's Lactate', and 'oral rehydration solution (ORS)' discuss treatment protocols rather than symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Doxycycline 300 mg STAT OR Azithromycin 1g STAT' refers to pharmacological treatments, not signs or symptoms.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.454422499999055,
+      "order": 12
+    },
+    {
+      "name": "test_case_13",
+      "input": "What are the signs and symptoms associated with amoebic liver abscess, including presentation as a single mass in the right lobe and complications like jaundice or peritonitis?",
+      "actualOutput": "- Large tender liver.\n- Tenderness and/or bulging at right intercostal spaces.\n- Jaundice,  dullness  to  percussion  on  the  right  lower  chest  zones  with  basal crepitation's amoebic empyema following extension into the chest cavity.\n- Peritonitis (uncommon)",
+      "expectedOutput": "Amoebic Liver Abscess presents with large tender liver, tenderness/bulging at right intercostal spaces, jaundice, dullness to percussion on the right lower chest zones with basal crepitations (amoebic empyema), and peritonitis (uncommon). It typically occurs as a single mass in the right lobe.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nAmoebic liver abscess is a collection of typically brownish coloured fluid in the liver, occurring often as a single mass in the right lobe and a complication of intestinal infection with Entamoeba histolytica. Lung, heart and brain infections are uncommon sequelae. Occasionally, pyogenic abscesses may have a similar clinical presentation.",
+        "### SIGNS AND SYMPTOMS\n- Large tender liver.\n- Tenderness and/or bulging at right intercostal spaces.\n- Jaundice,  dullness  to  percussion  on  the  right  lower  chest  zones  with  basal crepitation's amoebic empyema following extension into the chest cavity.\n- Peritonitis (uncommon)",
+        "### I NVESTIGATIONS\n- Abdominal ultrasound\n- Chest X-ray\n- FBC\n- ESR\n- Stool examination\n- Abdominal CT scan\n- Serology (amoebic antibodies)",
+        "### REFERAL CRITERIA\n- In  cases  of  large  abscesses  or  superficial  abscesses,  to  the  tertiary  facility  for aspiration under ultrasound guidance.## Children:  \n- Metronidazole 7.5 mg/kg 8 hourly for 5 days",
+        "### REFERAL CRITERIA\n- In  cases  of  large  abscesses  or  superficial  abscesses,  to  the  tertiary  facility  for aspiration under ultrasound guidance.",
+        "### TREATMENT\n- Give Metronidazole 800mg 8 hourly for 10 days\n- Give oral (preferably after food} or IV (depending on the condition of the patient}\n- If necessary, repeat treatment course after 2 weeks"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first two nodes (ranked 1 and 2) directly mention relevant signs/symptoms like single mass in the right lobe, jaundice, peritonitis, and liver tenderness, while lower-ranked nodes (3-6) discuss investigations, referral criteria, or treatment unrelated to symptoms.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It mentions that amoebic liver abscess occurs as a single mass in the right lobe and discusses complications like jaundice (though not explicitly stating 'peritonitis' here).\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"This document lists signs and symptoms including large tender liver, tenderness/bulging at right intercostal spaces, jaundice, dullness to percussion on the right lower chest zones with basal crepitations (amoebic empyema), and peritonitis (uncommon).\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document discusses investigations such as abdominal ultrasound, chest X-ray, FBC, ESR, stool examination, CT scan, and serology. These are not signs or symptoms of amoebic liver abscess.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Referral criteria for large or superficial abscesses to tertiary facilities for aspiration under ultrasound guidance is unrelated to the question about signs and symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document repeats referral criteria similar to another entry, which is not relevant to signs and symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The treatment section mentions Metronidazole dosage but does not address signs or symptoms of amoebic liver abscess.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 12.27345989999958,
+      "order": 13
+    },
+    {
+      "name": "test_case_14",
+      "input": "What are the signs and symptoms associated with reduced stool frequency and hardened feces in patients experiencing constipation?",
+      "actualOutput": "- Hard stools or no passage of stools/flatus\n- Absent or reduced frequency of passage of stools; when passed, stool is harder than usual. Commonly related to inadequate dietary fiber intake and/or psychological factors. Investigate and treat the underlying  cause",
+      "expectedOutput": "Hard stools or no passage of stools/flatus.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Hard stools or no passage of stools/flatus",
+        "### CLINICAL DESCRIPTION\n- Absent or reduced frequency of passage of stools; when passed, stool is harder than usual. Commonly related to inadequate dietary fiber intake and/or psychological factors. Investigate and treat the underlying  cause",
+        "### Alternatively\n- glycerol suppositories prn  \nConstipation in the neonate is usually due to a significant underlying problem such as bowel atresia or Hirschsprung's disease.  \nIf a neonate has not passed stools in the first 48 hours of life: Refer urgently for surgical and/or paediatric assessment especially if there is abdominal distension and/or vomiting  \nRefer all infants with constipation for specialist assessment.  \n- In the event of chronic constipation that is not responding to fluids and laxatives, please refer to a specialist for further investigations.",
+        "### NON-PHARMACOLOGICAL\n- High residue diet e.g. papaya seeds and increased fluid intake\n- Do not use oral laxatives in children. Glycerine infant and paediatric suppositories can be used in the short term.\n- If increased fiber and oral fluids are insufficient to cure constipation and a laxative is considered necessary  \nIn  the  event  of  an  acute  constipation  that  is  not  responding  to  fluids  and  oral  laxatives, consider a soap enema.",
+        "### I NVESTIGATIONS\n- Digital rectal examination\n- Abdominal erect and supine x-rays",
+        "### Adults:\n- liquid paraffin 5 -10 mls every day for 5 days OR\n- bisacodyl 5-10mg nocte for 5 days\n- Reserve medication for severe cases only confirmed by examination."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly addresses 'hardened feces' and 'reduced stool frequency', while subsequent nodes discuss treatments or investigations rather than symptoms, thus ranking relevant nodes higher as required.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Hard stools or no passage of stools/flatus' directly answers the question about signs and symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The context discusses clinical description but does not explicitly mention 'hardened feces' as a symptom, though it relates to stool hardness indirectly.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'glycerol suppositories prn' is about treatment, not signs or symptoms of constipation.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'High residue diet e.g. papaya seeds and increased fluid intake' refers to non-pharmacological management rather than symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Digital rectal examination' is an investigation method, not a symptom or sign of constipation.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'liquid paraffin 5 -10 mls every day for 5 days OR bisacodyl 5-10mg nocte for 5 days' refers to treatment options, not symptoms.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.59987750000073,
+      "order": 14
+    },
+    {
+      "name": "test_case_15",
+      "input": "What is the clinical definition of acute diarrhea according to medical guidelines?",
+      "actualOutput": "Passage of 3 or more watery stools per day for less than 14 days.",
+      "expectedOutput": "Acute Diarrhoea is defined as passage of 3 or more watery stools per day for less than 14 days.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nPassage of 3 or more watery stools per day for less than 14 days.",
+        "### PHARMACOLOGICAL\n- Doxycycline 300mg PO STAT\n- Mild dehydration/not vomiting: Give ORS\n- Moderate/severe dehydration/ vomiting/hypovolaemia: IV fluids\n- preferably Ringer's Lactate\n- use Normal Saline if Ringer's Lactate unavailable\n- Dysentery  (fever/bloody  stools/systemically  unwell):  Ciprofloxacin  500mg  12 hourly PO x 5 days",
+        "### SIGNS AND SYMPTOMS\n- Watery diarrhea +/- abdominal pain",
+        "### NON-PHARMACOLOGICAL\n- Hygiene; washing hands regularly\n- Avoid taking foods that seem spoiled/contaminated  \n- Take a lot water when passing loose stool to rehydrate\n- Seek medical intervention when passing loose stool more than three times a day as well as when passing blood stool\n- Take a solution of sugar and salt to retain lost minerals salts (more especially for children)\n- Eat heated foods\n- Drink boiled or chlorine treated water",
+        "### I NVESTIGATIONS\n- Full Blood Count\n- Stool analysis\n- Urea, Electrolytes +creatinine"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly provides the clinical definition of acute diarrhea as stated in the input, while subsequent nodes contain irrelevant information such as treatment guidelines, symptom descriptions, non-pharmacological advice, and diagnostic investigations which do not address the clinical definition.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context states 'Passage of 3 or more watery stools per day for less than 14 days.' which directly matches the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Doxycycline 300mg PO STAT' and other treatment guidelines are not related to the clinical definition of acute diarrhea.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Watery diarrhea +/- abdominal pain' describes symptoms but does not provide a clinical definition of acute diarrhea.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Take a lot water when passing loose stool to rehydrate' and other non-pharmacological advice are not relevant to the clinical definition.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Full Blood Count', 'Stool analysis', and other investigations do not define acute diarrhea but rather guide its diagnosis.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.614230699999098,
+      "order": 15
+    },
+    {
+      "name": "test_case_16",
+      "input": "What are the signs and symptoms of Chronic Diarrhea?",
+      "actualOutput": "- Diarrhea +/- abdominal pain",
+      "expectedOutput": "Diarrhea +/- abdominal pain.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Diarrhea +/- abdominal pain",
+        "### Adults:\n- Replace fluids and electrolytes\n- oral rehydration solution\n- If  severe dehydration/hypovolaemia:  IV  fluids,  preferably  Ringer's  Lactate treat underlying cause.\n- if HIV positive\n- ensure patient is on effective ART\n- empiric treatment\n- Cotrimoxazole 1920mg PO 12 hourly for 14 days (to treat Isospora )\n- o If no improvement on Cotrimoxazole, Metronidazole 2g po 24 hourly for 5 days (to treat Giardia).\n- o if  no  improvement  on  Metronidazole,  Albendazole  400mg every 12 hourly PO for 14 days (to treat Microsporidia )\n- Anti-motility agents\n- o Loperamide  4mg  initially  then  2mg  after  each  loose stool (maximum 16mg per day)\n- o alternative: Codeine Phosphate 30mg 8 hourly PO for 5 days  \nAvoid anti-motility agents in colitis/bloody diarrhoea -may precipitate toxic mega colon",
+        "### CLINICAL DESCRIPTION\nPassage of loose stools &gt; 3 times/day for &gt; 4 weeks. Common presentation in HIV/AIDS patients.",
+        "### I NVESTIGATIONS\n- Full blood count\n- Stool analysis\n- HIV test\n- Urea, creatinine and electrolytes"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8333333333333333,
+          "reason": "The score is 0.83 because nodes ranked 1 and 3 are relevant (signs/symptoms) while nodes 2 and 4 are irrelevant (treatment/investigations). The first two relevant nodes appear before the irrelevant ones, but the latter half of the list contains some lower-ranked relevant information.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Diarrhea +/- abdominal pain' directly answers the question about signs and symptoms of Chronic Diarrhea.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This text discusses treatment options, not signs or symptoms of chronic diarrhea.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Passage of loose stools > 3 times/day for > 4 weeks' is a key symptom of chronic diarrhea as per the question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This text lists investigations, not signs or symptoms of chronic diarrhea.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 7.137919200000397,
+      "order": 16
+    },
+    {
+      "name": "test_case_17",
+      "input": "What are the key symptoms and signs of Acute Gastroenteritis?",
+      "actualOutput": "- Shock\n- Vomiting  \n- Diarrhoea\n- Failure to thrive\n- Abdominal pain",
+      "expectedOutput": "The key symptoms and signs include shock, vomiting, diarrhoea, failure to thrive, abdominal pain.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Shock\n- Vomiting  \n- Diarrhoea\n- Failure to thrive\n- Abdominal pain",
+        "### TREATMENT\n- Assess nutritional status. If malnourished, refer to malnutrition protocol\n- Assess dehydration and treat accordingly\n- Plan C: see severe dehydration protocol\n- Plan B: give 75ml/kg ORS over 4 hours\n- Plan A give ORS 5ml/kg after each loose stool.\n- Continue breastfeeding or give extra fluid.\n- Correct electrolyte imbalances.\n- Zinc 10mg PO 24 hourly &lt; 6 months and 20mg if &gt; 6months old for 10 days.\n- ONLY give antibiotics if bloody diarrhoea or if child is toxic.\n- Ciprofloxacin 10mg/kg PO 12 hourly for 5-7 days or Ceftriaxone 25 mg -50mg/kg IV 24 hourly for 5 days if not tolerating orally.  \n\n Classification     \n Signs and Symptoms                                                                                                                                    \n Treatment   \n\n\n--------------------\n-------------------------------------------------------------------------------------------------------------------------------------------------------\n-------------\n\n\n Severe Dehydration \n Two or more of the following signs: Lethargy/unconsciousness Sunken Eyes Unable to drink/drinks poorly Skin pinch goes back very slowly ( \u2265 2seconds) \n PLAN C      \n\n\n Some Dehydration   \n Two or more of the following signs: Restlessness/irritability Sunken eyes Drinks eagerly/thirsty Skin pinch goes back slowly                          \n PLAN B      \n\n\n No Dehydration     \n Not enough signs to classify as some or severe dehydration                                                                                            \n PLAN A",
+        "### \n- Passage of more than 3 loose stools in a day.",
+        "### Causes\n- Infection:  majority  are  caused  by  viruses,  bacteria,  parasites,  Toxins,  Drugs Malabsorption:  e.g.  lactose  intolerance  and  Food  Protein  Induced  Entero-Colitis Syndrome (FPIES).",
+        "### REFERRAL\nPersistent diarrhea not responding to treatment",
+        "### Complications\n- Acute Kidney injury\n- Electrolyte imbalance\n- Haemolytic Uraemic Syndrome (HUS)",
+        "### I NVESTIGATIONS\n- Stool microscopy and culture\n- Random blood glucose\n- Blood gas\n- Urea, electrolytes, and Creatinine\n- FBC"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly lists key symptoms of Acute Gastroenteritis, while subsequent nodes discuss treatment, causes, referral criteria, complications, and investigations which are irrelevant to the query about symptoms and signs.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It lists the key symptoms such as shock, vomiting, diarrhoea, failure to thrive, and abdominal pain directly.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Assess nutritional status... antibiotics if bloody diarrhoea' relates to treatment rather than symptoms or signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Passage of more than 3 loose stools in a day.' is a symptom but not listed as one of the key symptoms in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Infection... parasites, Toxins...' refers to causes rather than symptoms or signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Persistent diarrhea not responding to treatment' relates to referral criteria, not symptoms or signs.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Acute Kidney injury... HUS' are complications, not key symptoms or signs of Acute Gastroenteritis itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Stool microscopy and culture...' refers to investigations rather than symptoms or signs.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 37.01917510000021,
+      "order": 17
+    },
+    {
+      "name": "test_case_18",
+      "input": "What are the specific symptoms associated with DYSPEPSIA, such as heart burn or epigastric burning pain?",
+      "actualOutput": "- Heart burn or epigastric burning pain",
+      "expectedOutput": "The specific symptom of DYSPEPSIA is heart burn or epigastric burning pain.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Heart burn or epigastric burning pain",
+        "### CLINICAL DESCRIPTION\nMeal related non-specific abdominal discomfort and pain.",
+        "### NON-PHARMACOLOGICAL TREATMENT\n- Advise patient to avoid hot spices, alcohol, smoking, tobacco, carbonated drinks, NSAIDs and Aspirin\n- Eating foods rich in proteins to promote healing\n- encourage patient to take regular meal\n- Do not eat something heavy after staying long time without eating something",
+        "### I NVESTIGATIONS\n- only refer for gastroscopy if not improving on anti-acid treatment",
+        "### PHARMACOLOGIC\n- Chew 2 magnesium trisilicate tablets 6 hourly or more frequently as required for 7 days.  \nAlternatively:  \nOmeprazole 20mg at night for 4 weeks  \nor  \nRanitidine  \n300mg at night or 150mg 12 hourly for 4 weeks  \nor  \nCimetidine 400mg 12 hourly or 800mg at night for 4 weeks"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node explicitly mentions 'heart burn or epigastric burning pain' as a symptom of DYSPEPSIA, directly answering the input query, while subsequent nodes discuss treatment advice, diagnostic procedures, and non-specific symptoms that are irrelevant to the specific symptoms asked for.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Heart burn or epigastric burning pain' is explicitly mentioned as a symptom of DYSPEPSIA.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Meal related non-specific abdominal discomfort and pain.' does not specify heart burn or epigastric burning pain, which are the specific symptoms asked for.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The text discusses treatment advice but does not mention any symptoms of DYSPEPSIA such as heart burn or epigastric burning pain.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'only refer for gastroscopy if not improving on anti-acid treatment' is about diagnostic procedures, not specific symptoms of DYSPEPSIA like heart burn or epigastric burning pain.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The pharmacologic treatments listed do not mention any symptoms associated with DYSPEPSIA such as heart burn or epigastric burning pain.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.619014099998822,
+      "order": 18
+    },
+    {
+      "name": "test_case_19",
+      "input": "What dietary modifications and lifestyle changes are recommended for managing Peptic Ulcer Disease/Gastritis?",
+      "actualOutput": "- Avoid spicy foods\n- Avoid alcohol and tobacco intake\n- Avoid foods that aggravate pain\n- Avoid or reduce on fizzy drinks",
+      "expectedOutput": "Avoid spicy foods, alcohol, tobacco intake, and fizzy drinks to manage peptic ulcer disease/gastritis.",
+      "retrievalContext": [
+        "### Red Flag:\n- Refer  for  endoscopy  and  further  management  if  ongoing  pain  and  alarm symptoms\n- weight loss, haematemesis, melaena, anaemia, dysphagia, recent progressive symptoms, age &gt; 16 years.  \nAspirin and  other  non-steroidal  anti-  inflammatory  drugs  (NSAIDS)  e.g.  Indomethacin, Ibuprofen, diclofenac are contraindicated in patients with a history of peptic  ulcer disease.",
+        "### NON-PHARMACOLOGICAL\n- Avoid spicy foods\n- Avoid alcohol and tobacco intake\n- Avoid foods that aggravate pain\n- Avoid or reduce on fizzy drinks",
+        "### \n- look for underlying cause and treat accordingly\n- Do not give symptomatic treatment without knowing the cause\n- exclude mechanical  obstruction\n- Recognize  that  bilious  or  faeculent  vomiting  is  a  sign  of  mechanical obstruction\n- These patients must be managed at a tertiary facility.\n- correct dehydration as necessary",
+        "### TREATMENT\n- Giv e Metoclopramide 10 mg IV/IM or PO (if patient can keep food down)  \nPatients less than 20 years require special caution -they  are  at  higher  risk  of  developing extrapyramidal side effects from metoclopramide. Use alternative anti-emetic if available. Children:  \n- All children with profuse vomiting must be admitted for hydration, observation and investigation. When a guardian comes back with a child who is still vomiting, admit or refer the child. Do not send them home.\n- All children with bilious vomiting should be referred",
+        "### PHARMACOLOGICAL\nTreatment {Triple Therapy):  \n- Omeprazole 40mg 24 hourly for 2 weeks\n- Metronidazole 400mg 8 hourly for 2 weeks\n- Give Amoxycillin 1g  12 hourly  for 2 weeks",
+        "### \nCommonly caused by Helicobacter  pylori.  \nOther risk factors: NSAIDs chronic use, alcohol, smoking",
+        "### Alternatively:\n- Omeprazole 20 mg 12 hourly for  2weeks\n- Metronidazole 400mg 8 hourly for 2 weeks\n- Give Clarithromycin 500mg 12 hourly for 2 weeks"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5,
+          "reason": "The score is 0.50 because the first node (ranked #1) was relevant with a reason of \"'Avoid spicy foods', 'avoid alcohol and tobacco intake', 'avoid or reduce fizzy drinks' are all directly stated in this context.\" while other nodes were irrelevant but ranked lower.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Avoid spicy foods', 'avoid alcohol and tobacco intake', 'avoid or reduce fizzy drinks' are all directly stated in this context.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Avoid spicy foods, alcohol and tobacco intake' is not mentioned here.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.610382599999866,
+      "order": 19
+    },
+    {
+      "name": "test_case_20",
+      "input": "How is gastroschisis characterized as a birth defect involving the abdominal wall?",
+      "actualOutput": "- This is a birth de fect in the abdominal wall where the baby's intestines are found outside the body exiting through a hole beside the umbilicus.\n- This differs from Omphalocele where the defect is paraumbilical and has associated intestinal abnormalities. They are more often noted in syndromic babies or noted to have other associated system abnormalities.",
+      "expectedOutput": "Gastroschisis is a birth defect in the abdominal wall where the baby's intestines are found outside the body, exiting through a hole beside the umbilicus.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION:\n- This is a birth de fect in the abdominal wall where the baby's intestines are found outside the baby's body exiting through a hole beside the umbilicus.\n- This differs from Omphalocele where the defect is paraumbilical and has associated intestinal abnormalities. They are more often noted in syndromic babies or noted to have other associated system abnormalities.",
+        "### CLINICAL DESCRIPTION:\n- This is a birth de fect in the abdominal wall where the baby's intestines are found outside the baby's body exiting through a hole beside the umbilicus.\n- This differs from Omphalocele where the defect is paraumbilical and has associated intestinal abnormalities. They are more often noted in syndromic babies or noted to have other associated system abnormalities.## 7.7 PEPTIC ULCER DISEASE/GASTRITIS  \n- look for underlying cause and treat accordingly\n- Do not give symptomatic treatment without knowing the cause\n- exclude mechanical  obstruction\n- Recognize  that  bilious  or  faeculent  vomiting  is  a  sign  of  mechanical obstruction\n- These patients must be managed at a tertiary facility.\n- correct dehydration as necessary",
+        "### TREATMENT\n- In the case of a gastroschisis, these babies have to be referred to a tertiary hospital at the earliest convenience. But before referral, the baby needs to be stabilized in the following way",
+        "### NON-PHARMACOLOGICAL\n- Keep baby warm and check the random blood sugar\n- Cover bowels with a plastic. Do not cover with wet gauze as this makes the babies prone to hypothermia from the evaporation of the fluid\n- Insert an Orogastric Tube for decompression",
+        "### PHARMACOLOGICAL\n- Establish  IV  access  and  give  maintenance  fluids  (see  paediatric  section  of  fluid management).\n- Give Benzylpenicillin 50,000 iu/kg/dose STAT\n- Give Gentamycin 3.5mg/kg (preterm neonate) or 5mg/kg (term neonate) STAT\n- Give Vitamin K 0.5mg-1mg STAT  \nReferral with health personnel",
+        "### TREATMENT\n- Giv e Metoclopramide 10 mg IV/IM or PO (if patient can keep food down)  \nPatients less than 20 years require special caution -they  are  at  higher  risk  of  developing extrapyramidal side effects from metoclopramide. Use alternative anti-emetic if available. Children:  \n- All children with profuse vomiting must be admitted for hydration, observation and investigation. When a guardian comes back with a child who is still vomiting, admit or refer the child. Do not send them home.\n- All children with bilious vomiting should be referred"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (nodes 1 and 2) are ranked higher than irrelevant ones, with the first two nodes directly answering the input using identical quotes about gastroschisis characterization, while subsequent nodes discuss treatment, care instructions, or management unrelated to defining the condition.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'This is a birth defect in the abdominal wall where the baby's intestines are found outside the baby's body exiting through a hole beside the umbilicus.' directly answers how gastroschisis is characterized.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'This is a birth defect in the abdominal wall where the baby's intestines are found outside the baby's body exiting through a hole beside the umbilicus.' directly answers how gastroschisis is characterized.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'In the case of a gastroschisis, these babies have to be referred to a tertiary hospital at the earliest convenience' discusses treatment and management rather than characterization as a birth defect.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Keep baby warm and check the random blood sugar' provides care instructions for affected infants but does not describe how gastroschisis is characterized as a birth defect.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Establish IV access and give maintenance fluids' outlines medical treatment protocols, which are unrelated to defining or characterizing the condition itself.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Giv e Metoclopramide 10 mg IV/IM or PO' provides medication guidelines for managing symptoms but does not contribute information about how gastroschisis is characterized as a birth defect involving the abdominal wall.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 13.68805429999884,
+      "order": 20
+    },
+    {
+      "name": "test_case_21",
+      "input": "What is the congenital condition involving absent rectal and colonic nerve development causing fecal accumulation post-birth?",
+      "actualOutput": "A congenital condition in which the rectum and part of the colon fail to develop a normal system of nerves, leading to an accumulation of faeces in the colon following birth.",
+      "expectedOutput": "Hirschsprung's disease is a congenital condition in which the rectum and part of the colon fail to develop a normal system of nerves, leading to an accumulation of faeces in the colon following birth.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nA congenital condition in which the rectum and part of the colon fail to develop a normal system of nerves, leading to an accumulation of faeces in the colon following birth.",
+        "### SIGNS AND SYMPTOMS\nThis may be suspected in  \n- Delayed passage of stools/meconium in a neonate\n- Chronic constipation since birth\n- Some present later with signs of bowel obstruction (bilious vomiting, abdominal distension), poor feeding and failure to thrive",
+        "### I NVESTIGATIONS\n- FBC\n- AXR",
+        "### NON-PHARMACOLOGICAL\n- This  condition  has  a  life-threatening  complication  of  enterocolitis  which  may present with sepsis and shock from bacterial overgrowth\n- These patients need to be referred to a tertiary hospital.",
+        "### PHARMACOLOGICAL\nA rectal washout and antibiotics (Ceftriaxone 50mg/kg/dose and Metronidazole 7.5mg/kg/day) may be considered before referral in the event of:  \n- Abdominal distension\n- Vomiting\n- Fever\n- Gush of stools on DRE.  \n*These are signs of an enterocolitis"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly matches the input with a clear explanation, while subsequent nodes discuss symptoms, investigations, and complications without mentioning the condition's name or defining characteristics related to nerve development.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context explicitly states 'A congenital condition in which the rectum and part of the colon fail to develop a normal system of nerves, leading to an accumulation of faeces in the colon following birth.' This directly matches the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'This may be suspected in Delayed passage of stools/meconium in a neonate Chronic constipation since birth Some present later with signs of bowel obstruction (bilious vomiting, abdominal distension), poor feeding and failure to thrive' discusses symptoms but does not mention the name or definition of Hirschsprung's disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'- FBC - AXR' lists investigations but does not provide information about the condition's name or its defining characteristics related to nerve development.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'This condition has a life-threatening complication of enterocolitis which may present with sepsis and shock from bacterial overgrowth These patients need to be referred to a tertiary hospital.' refers to complications but does not mention the name or definition of Hirschsprung's disease.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'A rectal washout and antibiotics (Ceftriaxone 50mg/kg/dose and Metronidazole 7.5mg/kg/day) may be considered before referral in the event of: Abdominal distension Vomiting Fever Gush of stools on DRE. These are signs of an enterocolitis' discusses treatment for complications but does not mention the name or definition of Hirschsprung's disease.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 13.116565700000137,
+      "order": 21
+    },
+    {
+      "name": "test_case_22",
+      "input": "How do symptoms like vomiting progressing from non-bilious to bilious, abdominal pain, currant jelly stools, lethargy and palpable mass relate to intussusception?",
+      "actualOutput": "- Vomiting (can be primarily non bilious and progress to bilious as the obstruction occurs)\n- Abdominal pain\n- Passage of blood and mucus PR (currant jelly stools)\n- Lethargy\n- Palpable abdominal mass",
+      "expectedOutput": "These are clinical features of INTUSSUSCEPTION. Symptoms include vomiting (progressing from non-bilious to bilious), abdominal pain, passage of blood and mucus per rectum (currant jelly stools), lethargy, and a palpable abdominal mass.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Vomiting (can be primarily non bilious and progress to bilious as the obstruction occurs)\n- Abdominal pain\n- Passage of blood and mucus PR (currant jelly stools)\n- Lethargy\n- Palpable abdominal mass",
+        "### CLINICAL DESCRIPTION\nIt is a process in which a segment of intestine invaginates into the adjoining intestinal lumen causing bowel obstruction.",
+        "### I NVESTIGATIONS\n- FBC\n- AXR\n- Abdominal USS.  \nRefer to the nearest tertiary hospital after resuscitation"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant ones; the first node directly addresses the input's symptoms in relation to intussusception, while subsequent nodes do not mention specific symptom progression.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context explicitly lists vomiting progressing from non-bilious to bilious, abdominal pain, currant jelly stools, lethargy, and palpable mass as signs and symptoms of intussusception.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document describes the clinical description of intussusception but does not mention any specific symptoms or their progression related to the question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"The context discusses investigations for intussusception (FBC, AXR, abdominal USS) and hospital referral but does not address the listed symptoms or their relation to intussusception.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 6.77451850000034,
+      "order": 22
+    },
+    {
+      "name": "test_case_23",
+      "input": "What are the signs of painful anal fissures, including sphincter spasms and defaecation-related bleeding?",
+      "actualOutput": "- May cause spasm of the anal sphincter, and maybe associated with bleeding on defaecation.",
+      "expectedOutput": "Anal fissures may cause spasm of the anal sphincter and may be associated with bleeding on defaecation.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- May cause spasm of the anal sphincter, and maybe associated with bleeding on defaecation.",
+        "### REFERRAL:\n- severe pain\n- recurrent episodes\n- Poor response to symptomatic treatment\n- Persistent anal bleeding",
+        "### CLINICAL DESCRIPTION\nPainful small cracks just inside the anal margin, sometimes may be present with a linear ulcer. It is often seen with a sentinel pile or external haemorrhoids.",
+        "### Adults\n- lactulose, oral, 10-20ml once daily\n- If poor response increase frequency to twice daily\n- Bismuth subgallate compound, ointment, topical, applied 2-4 times daily  \nOr  \n- Lidocaine 2% cream applied before and after each bowel action.",
+        "### NON-PHARMACOLOGY\n- Dietary advice to promote soft stools",
+        "### Children\n- Lactulose oral 0.5ml/kg/dose daily\n- If no response increase frequency to twice daily."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly addresses the question with spasm of the anal sphincter and defaecation-related bleeding, while subsequent nodes discuss treatments, non-specific symptoms, or unrelated details, which are ranked lower as expected.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"It directly mentions spasm of the anal sphincter and bleeding on defaecation, which are exactly the signs asked for.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'severe pain', 'recurrent episodes', 'Poor response to symptomatic treatment' and 'Persistent anal bleeding' do not specifically address the question about signs including sphincter spasms and defaecation-related bleeding.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Painful small cracks just inside the anal margin, sometimes may be present with a linear ulcer. It is often seen with a sentinel pile or external haemorrhoids.' does not specifically mention spasm of the anal sphincter or defaecation-related bleeding.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'lactulose', 'Bismuth subgallate compound' and 'Lidocaine 2% cream' are treatments, not signs of painful anal fissures.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Dietary advice to promote soft stools' is a non-pharmacological treatment approach, not a sign of the condition.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Lactulose oral 0.5ml/kg/dose daily' and 'If no response increase frequency to twice daily.' are specific treatments for children, unrelated to signs or symptoms of anal fissures.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 12.163433800000348,
+      "order": 23
+    },
+    {
+      "name": "test_case_24",
+      "input": "What are the characteristic symptoms of Hemorrhoids?",
+      "actualOutput": "I don't have enough information in the provided medical records to answer that.",
+      "expectedOutput": "Varicose veins of the anorectal area. Usually accompanied by a history of constipation.",
+      "retrievalContext": [
+        "### REFERRAL:\n- Haemorrhoids cannot be reduced\n- Thrombosed\n- poor response to symptomatic treatment\n- Children\n- If Persistent bleeding",
+        "### CLINICAL DESCRIPTION\n- Varicose  veins  of  the  anorectal  area.  Usually  accompanied  by  a  history  of constipation. In older patients consider a diagnosis of an underlying carcinoma.",
+        "### NON-PHARMACOLOGY\n- Management\n- High fiber diet\n- Counsel against chronic use of laxatives\n- Avoid straining with defecation",
+        "### PHARMACOLOGY\n- (Hydrocortisone acetate, Allantoin, Zinc oxide, Lidocaine) combination suppositories once daily for 2 weeks\n- If no response increase frequency to 2-3 for 2 weeks"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node explicitly mentions 'Varicose veins of the anorectal area' as a characteristic symptom, which directly answers the input question, while subsequent nodes discuss treatment, management, and clinical features that are irrelevant to identifying symptoms.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context explicitly states 'Varicose veins of the anorectal area. Usually accompanied by a history of constipation.' which matches the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Haemorrhoids cannot be reduced, Thrombosed, poor response to symptomatic treatment, Children, If Persistent bleeding' are not characteristic symptoms but rather clinical features or management considerations.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Management, High fiber diet, Counsel against chronic use of laxatives, Avoid straining with defecation' relate to treatment and prevention rather than symptoms.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'(Hydrocortisone acetate, Allantoin, Zinc oxide, Lidocaine) combination suppositories once daily for 2 weeks. If no response increase frequency to 2-3 for 2 weeks' are pharmacological treatments and not symptoms.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 9.234218599998712,
+      "order": 24
+    },
+    {
+      "name": "test_case_25",
+      "input": "How do perianal abscesses manifest clinically, including their typical presentation as a tender or hardened region near the anal area?",
+      "actualOutput": "An abscess adjacent to the anus. Present as an indurated or tender area adjacent to the anus.",
+      "expectedOutput": "Perianal abscesses present as an indurated or tender area adjacent to the anus.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nAn abscess adjacent to the anus. Present as an indurated or tender area adjacent to the anus.",
+        "### TREATMENT\nThis is by surgical drainage"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because the first node directly answers the question about perianal abscesses presenting as a tender or hardened region near the anal area, while the second node discusses treatment rather than clinical presentation and is correctly ranked lower.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"The context states that perianal abscesses present as an indurated or tender area adjacent to the anus, which directly answers the question about their clinical manifestation.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'This is by surgical drainage' refers to treatment rather than clinical presentation and does not address how they manifest clinically.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 4.899888199999623,
+      "order": 25
+    },
+    {
+      "name": "test_case_26",
+      "input": "What are the characteristic signs like rebound tenderness, guarding, rigidity in peritonitis patients and associated conditions such as septic shock from bowel perforation or appendiceal rupture?",
+      "actualOutput": "- Rebound tenderness, guarding, rigidity of the abdominal wall. The patients may also present in septic shock if there is a bowel perforation, appendiceal rupture or cholangitis.",
+      "expectedOutput": "Rebound tenderness, guarding, and abdominal wall rigidity are characteristic signs of peritonitis. Septic shock may occur due to complications like bowel perforation or appendiceal rupture.",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Rebound tenderness, guarding, rigidity of the abdominal wall. The patients may also present in septic shock if there is a bowel perforation, appendiceal rupture or cholangitis.",
+        "### Surgery:\n- Indicated in all patients with peritonitis, large bowel obstruction, adhesions and small bowel obstruction after failed conservative management, appendicitis (with or without rupture) and perforated peptic ulcers.\n- Indicated for all bowel obstruction due to adhesions or other causes if full blood count shows a leucocytosis.",
+        "### \n- Refers to inflammation of the peritoneum.\n- Possible Causes: appendicitis, pancreatitis, acute cholecystitis, bowel obstruction or perforated peptic ulcer.",
+        "### TREATMENT\n- Intravenous fluids, analgesia , NPO and insert nasogastric tube\n- IV antibiotics: Only indicated for appendicitis, cholecystitis and bowel obstruction with perforation.  \n- Do  not  prescribe  antibiotics for pancreatitis  or  bowel  obstruction  without perforation.\n- IV Ceftriaxone 2g 24 hourly for 5-7 days\n- IV Metronidazole 500mg 8 hourly for 5 -7 days",
+        "### I NVESTIGATIONS\n- Full blood count\n- Group and save\n- Amylase and lipase (if pancreatitis suspected)\n- Abdominal x-ray (supine and erect) if obstructive causes suspected\n- Abdominal ultrasound -if pancreatitis, appendicitis, cholecystitis suspected",
+        "### REFERRAL:\n- if there is no expertise available.\n- If  the  patient  is  operated  and  develops  complications  and  requires  ICU  or  re -operation.\n- For cholecystitis if no improvement after course of antibiotics."
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8333333333333333,
+          "reason": "The score is 0.83 because the first and third nodes are relevant (mentioning signs like rebound tenderness, guarding, rigidity and etiology of peritonitis) while the other four nodes are irrelevant (discussing treatment protocols, referral criteria, investigations unrelated to clinical signs or septic shock).",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Rebound tenderness, guarding, rigidity of the abdominal wall' are explicitly mentioned as signs in peritonitis patients.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document discusses surgical indications but does not mention characteristic signs of peritonitis or associated conditions like septic shock.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Refers to inflammation of the peritoneum' and 'possible causes: appendicitis, ... perforated peptic ulcer' provide context on peritonitis and its etiology including bowel perforation.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document outlines treatment protocols but does not mention characteristic signs or septic shock as an associated condition.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"Investigations listed are not related to the clinical signs of peritonitis or its complications like septic shock from bowel perforation.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Referral' criteria do not address characteristic signs of peritonitis or associated conditions such as septic shock.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 10.403634000000238,
+      "order": 26
+    },
+    {
+      "name": "test_case_27",
+      "input": "What are the key clinical signs and symptoms associated with acute liver failure, including manifestations like jaundice, altered consciousness, and bleeding tendencies?",
+      "actualOutput": "- Jaundice\n- Fever\n- Malaise\n- Altered level of consciousness\n- Right upper quadrant pain\n- hepatomegaly\n- Bleeding tendencies",
+      "expectedOutput": "The key clinical signs and symptoms of ACUTE LIVER FAILURE include jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, and bleeding tendencies.",
+      "retrievalContext": [
+        "### CLINICAL DESCRIPTION\nAcute liver failure (ALF) manifests with rapid deterioration in the synthetic and excretory liver functions with impaired coagulation (INR &gt;1.5) and signs of encephalopathy in adults and pediatrics. ALF may  lead to the following complications: Hypoglycemia, electrolyte abnormalities, acidosis, renal impairment, ascites, sepsis.",
+        "### SIGNS AND SYMPTOMS\n- Jaundice\n- Fever\n- Malaise\n- Altered level of consciousness\n- Right upper quadrant pain\n- hepatomegaly\n- Bleeding tendencies",
+        "### Acute Liver failure can be caused by the following:\n- Infection (acute viral hepatitis, herpes simplex virus, CMV, HIV, TORCH)\n- Autoimmune hepatitis\n- Alcoholic hepatitis\n- Drugs and Toxins (Paracetamol, ART, TB drugs especially isoniazid, NSAIDS, statins, antibiotics (amoxicillin, sulfonamides, tetracyclines), amanita mushroom)\n- Metabolic diseases\n- Pregnancy: fatty liver, HELLP syndrome",
+        "### I NVESTIGATIONS:\n- Random blood glucose\n- Liver function test\n- Hepatitis serology\n- Viral serology\n- HIV test\n- Urea, electrolytes and Creatinine  \n- Clotting profile\n- Drug levels\n- Ferritin\n- Serum copper\n- serum iron",
+        "### Adults :\n- Vitamin K 10mg IV for 3 days, consider giving FFP 3 units if bleeding actively.",
+        "### NON-PHARMACOLOGICAL\n- Stop offending drugs or alcohol.\n- Acute: ABCD approach\n- Treat hypoglycemia according to protocol\n- Restrict dietary protein.\n- Monitor urine output.\n- Counsel parents",
+        "### Adults :\n- Give Ceftriaxone 1g every day IV for 5 days  \n- 50mls 50% Dextrose IV push, maintenance with 10% Dextrose 1 litre/12 hours",
+        "### Adults:\n- Give Lactulose  30mg  po  every  4hrs -aim  for  2-4  bowel  movements/day  OR Neomycin 1g every 6hrs for 7 days",
+        "### Adults:\n- Neuroprotective measures\n- Mannitol 0.5-2g /kg IV over 1 hour (repeated every 6 to 8 hours for maximum 48 hours) Don't repeat if no response.",
+        "### Paediatrics :\n- Vitamin K 5-10mg/kg IV daily (DO NOT GIVE IM)\n- Fresh frozen plasma 10ml/kg IV\n- Cryoprecipitate, platelets or factor VII concentrate"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.5,
+          "reason": "The score is 0.50 because the first node (ranked #1) was incorrectly marked as irrelevant despite mentioning key symptoms like jaundice and encephalopathy; however, the second node (#2) correctly listed all required signs/symptoms, but nodes ranked higher than it were irrelevant.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Acute liver failure (ALF) manifests with rapid deterioration in the synthetic and excretory liver functions with impaired coagulation (INR &gt;1.5) and signs of encephalopathy in adults and pediatrics.' does not mention any clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'- Jaundice\\n- Fever\\n- Malaise\\n- Altered level of consciousness\\n- Right upper quadrant pain\\n- hepatomegaly\\n- Bleeding tendencies' directly lists the key clinical signs and symptoms mentioned in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Acute Liver failure can be caused by the following: ...' discusses causes rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### I NVESTIGATIONS:\\n- Random blood glucose\\n- Liver function test... ' discusses investigations rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### Adults :\\n- Vitamin K 10mg IV for 3 days... ' discusses treatment rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### NON-PHARMACOLOGICAL\\n- Stop offending drugs or alcohol... ' discusses management rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### Adults :\\n- Give Ceftriaxone 1g every day IV for 5 days ... ' discusses treatment rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### Adults:\\n- Give Lactulose 30mg po every 4hrs ... ' discusses treatment rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### Adults:\\n- Neuroprotective measures ... ' discusses treatment rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'### Paediatrics :\\n- Vitamin K 5-10mg/kg IV daily ... ' discusses treatment rather than clinical signs or symptoms like jaundice, fever, malaise, altered level of consciousness, right upper quadrant pain, hepatomegaly, or bleeding tendencies.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 27.615991399999984,
+      "order": 27
+    },
+    {
+      "name": "test_case_28",
+      "input": "What are the characteristic signs and symptoms of meningitis, including headache, neck stiffness, fever, photophobia, vomiting and rash?",
+      "actualOutput": "- Triad of headache, neck stiffness and fever\n- Photophobia\n- Vomiting\n- Petechial or nonspecific blotchy, red rash (meningococcal)\n- Positive Kernig's sign\n- Reduced level of consciousness, lateralizing signs, cranial nerve palsies\n- Headache,  Photophobia,  Fever,  Neck  stiffness,  Seizures,  Altered  mental  status, Positive Babinski, Positive Kernig's sign",
+      "expectedOutput": "The triad of headache, neck stiffness and fever is a classic sign of Meningitis. Other associated features include photophobia,vomiting and petechial or nonspecific blotchy red rash (meningococcal).",
+      "retrievalContext": [
+        "### SIGNS AND SYMPTOMS\n- Triad of headache, neck stiffness and fever\n- Photophobia\n- Vomiting\n- Petechial or nonspecific blotchy, red rash (meningococcal)\n- P ositive Kernig's sign\n- Reduced level of consciousness, lateralizing signs, cranial nerve palsies\n- Less severe cases e.g., viral meningitis may have less symptoms and signs",
+        "### SIGNS AND SYMPTOMS\n- Headache,  Photophobia,  Fever,  Neck  stiffness,  Seizures,  Altered  mental  status, Positive Babinski, Positive Kernig's sign",
+        "### Complications of Meningitis\n- Brain abscess\n- Seizures\n- Hydrocephalus\n- Cranial nerve palsies\n- Syndrome of inappropriate ADH secretion (SIADH)",
+        "### CLINICAL DESCRIPTION\nClinical syndrome characterized by inflammation of the meninges.",
+        "### PHARMACOLOGICAL TREATMENT\n- Assess and manage Airway, Breathing, Circulation and Disability\n- Treat seizures as per protocol\n- Neuroprotective measures\n- Analgesia as per WHO pain ladder\n- Bacterial meningitis\n- o Ceftriaxone 100mg/kg IV q24h (maximum dose 2g) for 10 to 14 days\n- Adjust treatment as guided by culture results\n- Viral encephalitis\n- o Acyclovir 10mg/Kg IV 8 hourly for 10 days if suspecting Herpes Simplex or Varicella encephalitis\n- Cryptococcal meningitis## 3.6 INFECTIOUS AND PARASITIC CONDITIONS",
+        "### CLINICAL DESCRIPTION\nInfection of the brain meninges. Microorganisms reach the meninges through the bloodstream or by direct extension from the ears, nasopharynx, cranial injury and congenital meningeal defects. Immunocompromised patients are at risk of infection with unusual organisms.  \n- Causes can be infective or non-infective (malignant meningitis, intrathecal drugs and blood following subarachnoid hemorrhage).\n- Can be acute or chronic",
+        "### Cell count may be low in severely immunocompromised patients Bacterial meningitis\n- CSF is predominantly neutrophils (polymorphs)\n- in partially treated bacterial meningitis, cell count may be lower or predominantly lymphocytes\n- Gram stain can be used to identify some organisms\n- Streptococcus pneumoniae as gram positive diplococci\n- Neisseria meningitidis as gram negative diplococci\n- gram negative bacilli eg Haemophilus influenzae , Non typhoidal salmonella\n- gram positive bacilli -Listeria monocytogenes",
+        "### Cell count may be low in severely immunocompromised patients Bacterial meningitis\n- CSF is predominantly neutrophils (polymorphs)\n- in partially treated bacterial meningitis, cell count may be lower or predominantly lymphocytes\n- Gram stain can be used to identify some organisms\n- Streptococcus pneumoniae as gram positive diplococci\n- Neisseria meningitidis as gram negative diplococci\n- gram negative bacilli eg Haemophilus influenzae , Non typhoidal salmonella\n- gram positive bacilli -Listeria monocytogenes",
+        "### TB meningitis\n- neutrophils may predominate in early TB meningitis\n- AFBs are rarely seen in CSF hence their absence does not exclude the diagnosis of TB meningitis\n- Gene XPert / Xpert RIF can be done on CSF",
+        "### Infective Causes\n- Bacterial: Streptococcus pneumoniae, Neisseria meningitidis, Haemophilus influenza,  Staphylococcus  aureus,  Escherichia  coli  (neonates),  Mycobacterium tuberculosis\n- Viral: Herpes simplex virus, Epstein Barr virus, Mumps  \n- Fungi: Cryptococcus neoformans, rarely -Candida albicans, Histoplasma capsulatum, Coccidioides immitis"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 1.0,
+          "reason": "The score is 1.00 because all relevant nodes (nodes 1 and 2) are ranked higher than irrelevant ones, with their reasons explicitly matching the signs/symptoms of meningitis as asked.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Triad of headache, neck stiffness and fever' is explicitly mentioned as a classic sign of meningitis. 'Petechial or nonspecific blotchy red rash (meningococcal)' also matches the expected output.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Headache, Photophobia, Fever, Neck stiffness' are all listed in the context and align with the signs mentioned in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Complications of Meningitis' such as 'Brain abscess', 'Seizures', etc., do not directly address characteristic signs or symptoms but rather complications, which is outside the scope of the question.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Clinical syndrome characterized by inflammation of the meninges.' describes meningitis itself, not its specific signs and symptoms as asked in the input.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Pharmacological treatment' details like 'Ceftriaxone 100mg/kg IV q24h' are unrelated to describing clinical signs or symptoms of meningitis.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Clinical description about infection routes and causes (e.g., 'Microorganisms reach the meninges through the bloodstream') does not provide information on characteristic signs/symptoms, which is what was requested in the input.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Cell count' details related to CSF analysis are more relevant for diagnostic testing than describing clinical symptoms as asked by the user.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"This document repeats information about cell counts and Gram stain findings, which pertain to laboratory diagnosis rather than patient-reported signs/symptoms of meningitis.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'TB meningitis' details like 'AFBs are rarely seen in CSF' relate more to diagnostic challenges or lab results rather than the characteristic symptoms described by patients.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Infective Causes' lists pathogens but does not mention any signs/symptoms of meningitis, which is what was requested in the input question.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 19.792753100000482,
+      "order": 28
+    },
+    {
+      "name": "test_case_29",
+      "input": "What are the treatment options for Cryptococcal Meningitis?",
+      "actualOutput": "### Fluconazole + Flucytosine for 14 days\n- This option requires FBC monitoring: at baseline and 2-3 times in the second week of treatment.  \nFluconazole tabs  \nAdult  \n- 1200mg 24-hourly  \nChild  \n- 12mg/kg (max 800mg) 24-hourly\n### Option 1:\n- Liposomal Amphotericin B 1 + Flucytosine for 7 days, followed by fluconazole tabs for 7 days\n- Preferred option if both meds are available \nLiposomal Amphotericin B 1\n### Option 3:\nLiposomal Amphotericin B Error! Bookmark not defined. + Fluconazole for 14 days \n- This option requires FBC, Creatinine and K+ monitoring: at baseline and 2-3 times in the second week of treatment.",
+      "expectedOutput": "The treatment options for CRYPTOCOCCAL MENINGITIS include Option 1: Liposomal Amphotericin B plus Flucytosine for 7 days, followed by fluconazole; Option 2: Fluconazole plus Flucytosine for 14 days; and Option 3: Liposomal Amphotericin B plus Fluconazole for 14 days.",
+      "retrievalContext": [
+        "### Fluconazole + Flucytosine for 14 days\n- This option requires FBC monitoring: at baseline and 2-3 times in the second week of treatment.  \nFluconazole tabs  \nAdult  \n- 1200mg 24-hourly  \nChild  \n- 12mg/kg (max 800mg) 24-hourly",
+        "### DIAGNOSIS / INVESTIGATIONS\n- Lumbar puncture (LP) feasible / not contraindicated\n- Cryptococcal antigen (CrAg) rapid test or India Ink stain on CSF.",
+        "### Option 1:\n- Liposomal Amphotericin B 1  + Flucytosine for 7 days,  followed by fluconazole tabs for 7 days\n- Preferred option if both meds are available  \nLiposomal Amphotericin B 1",
+        "### Option 3:\nLiposomal Amphotericin B Error! Bookmark not defined. + Fluconazole for 14 days  \n- This option requires FBC, Creatinine and K+ monitoring: at baseline and 2-3 times in the second week of treatment.",
+        "### Admit\n- Daily  therapeutic  spinal  tap  if  high  intracranial  pressure,  severe  headache  or vomiting is present (up to 30 ml per puncture).\n- If  HIV  positive,  not  already  on  ART,  start  ART  only  5  weeks  after  antifungal treatment initiation.",
+        "### Induction phase\n- Do not give adjunctive corticosteroids during induction treatment.\n- Before giving Liposomal Amphotericin B: Pre-hydrate and supplement electrolytes: 1000ml NS (weight-based for children) + Potassium 2 tabs 12-hourly + Magnesium trisilicate 1 tabs 24-hourly in the evening.",
+        "### Child\n- 6mg/kg IV over 6 hours, 24-hourly.  \nFlucytosine tabs  \n- 100mg/kg/day divided into 4 doses (6-hourly)  \nFluconazole tabs  \nAdult  \n- 1200mg 24-hourly  \nChild  \n- 12mg/kg (max 800mg) 24-hourly",
+        "### Adult\n- 3-4 mg/kg IV over 6 hours, 24-hourly. Use up to 6 mg/kg for treatment failure or serious disease.",
+        "### Consolidation phase\nFluconazole tabs for 8 weeks  \nAdult  \n- 800mg 24-hourly",
+        "### Maintenance phase\nFluconazole tabs, lifelong  \nAdult  \n- 200mg 24-hourly"
+      ],
+      "success": true,
+      "metricsData": [
+        {
+          "name": "Contextual Precision",
+          "threshold": 0.5,
+          "success": true,
+          "score": 0.8055555555555555,
+          "reason": "The score is 0.81 because the first three nodes are relevant (nodes ranked 1,3) and provide direct treatment options for Cryptococcal Meningitis as per their reasons, while other nodes discuss diagnosis methods, management during admission, preparation before treatment, dosing information, and different phases of treatment which are less directly related to listing distinct initial treatment options.",
+          "strictMode": false,
+          "evaluationModel": "qwen3-14b",
+          "verboseLogs": "Verdicts:\n[\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Option 1:\\n- Liposomal Amphotericin B + Flucytosine for 7 days, followed by fluconazole tabs for 7 days' directly addresses the treatment options.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'DIAGNOSIS / INVESTIGATIONS\\n- Lumbar puncture (LP) feasible / not contraindicated\\\\n- Cryptococcal antigen (CrAg) rapid test or India Ink stain on CSF.' discusses diagnosis methods, not treatment options.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Option 1:\\n- Liposomal Amphotericin B + Flucytosine for 7 days, followed by fluconazole tabs for 7 days' directly addresses the treatment options.\"\n    },\n    {\n        \"verdict\": \"yes\",\n        \"reason\": \"'Option 3:\\\\nLiposomal Amphotericin B Error! Bookmark not defined. + Fluconazole for 14 days\\\\n- This option requires FBC, Creatinine and K+ monitoring: at baseline and 2-3 times in the second week of treatment.' provides another treatment option.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Admit\\\\n- Daily therapeutic spinal tap if high intracranial pressure, severe headache or vomiting is present (up to 30 ml per puncture).\\\\n- If HIV positive, not already on ART, start ART only 5 weeks after antifungal treatment initiation.' relates to management during admission and ART timing, not direct treatment options.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Induction phase\\\\n- Do not give adjunctive corticosteroids during induction treatment.\\\\n- Before giving Liposomal Amphotericin B: Pre-hydrate and supplement electrolytes: 1000ml NS (weight-based for children) + Potassium 2 tabs 12-hourly + Magnesium trisilicate 1 tabs 24-hourly in the evening.' discusses preparation before treatment, not the options themselves.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Child\\\\n- 6mg/kg IV over 6 hours, 24-hourly. \\\\nFlucytosine tabs \\\\n- 100mg/kg/day divided into 4 doses (6-hourly) \\\\nFluconazole tabs \\\\nAdult \\\\n- 1200mg 24-hourly \\\\nChild \\\\n- 12mg/kg (max 800mg) 24-hourly' provides dosing information, not treatment options.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Adult\\\\n- 3-4 mg/kg IV over 6 hours, 24-hourly. Use up to 6 mg/kg for treatment failure or serious disease.' gives dosage details but does not list a distinct treatment option.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Consolidation phase\\\\nFluconazole tabs for 8 weeks \\\\nAdult \\\\n- 800mg 24-hourly' refers to the consolidation phase, which is part of treatment management but not an initial treatment option listed in the expected output.\"\n    },\n    {\n        \"verdict\": \"no\",\n        \"reason\": \"'Maintenance phase\\\\nFluconazole tabs, lifelong \\\\nAdult \\\\n- 200mg 24-hourly' discusses long-term maintenance rather than initial treatment options.\"\n    }\n]"
+        }
+      ],
+      "runDuration": 29.77208410000094,
+      "order": 29
+    }
+  ],
+  "conversationalTestCases": [],
+  "metricsScores": [
+    {
+      "metric": "Contextual Precision",
+      "scores": [
+        1.0, 0.75, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+        1.0, 1.0, 0.8333333333333333, 1.0, 1.0, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0,
+        1.0, 0.8333333333333333, 0.5, 1.0, 0.8055555555555555
+      ],
+      "passes": 30,
+      "fails": 0,
+      "errors": 0
+    }
+  ],
+  "prompts": [],
+  "testPassed": 30,
+  "testFailed": 0,
+  "runDuration": 439.0250025000005,
+  "official": false
+}
