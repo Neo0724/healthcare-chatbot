@@ -6,7 +6,6 @@ import 'package:chatbot/states/auth_state.dart';
 import 'package:go_router/go_router.dart';
 
 final authState = AuthState();
-
 final protectedRoute = <String>['/first_page', '/profile'];
 
 final guestRoute = <String>['/login', '/register'];

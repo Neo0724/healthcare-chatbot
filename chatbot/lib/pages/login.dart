@@ -20,6 +20,10 @@ class _LoginState extends State<Login> {
     super.dispose();
   }
 
+  void handleLogin(String username, String password) {
+    debugPrint("Username: $username | Password: $password");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +91,7 @@ class _LoginState extends State<Login> {
       onTap: () {
         final username = _usernameController.text;
         final password = _passwordController.text;
-        debugPrint("Username: $username | Password: $password");
+        handleLogin(username, password);
       },
       child: Container(
         height: 40,

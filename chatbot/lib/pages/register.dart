@@ -20,6 +20,10 @@ class _RegisterState extends State<Register> {
     super.dispose();
   }
 
+  void handleRegister(String username, String password) {
+    debugPrint("Username: $username | Password: $password");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +91,7 @@ class _RegisterState extends State<Register> {
       onTap: () {
         final username = _usernameController.text;
         final password = _passwordController.text;
-        debugPrint("Username: $username | Password: $password");
+        handleRegister(username, password);
       },
       child: Container(
         height: 40,
