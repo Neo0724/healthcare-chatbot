@@ -25,6 +25,12 @@ def run_graph_and_response(graph_state, config):
                         pass
                         # retrieved_messages.append(message.content)
                         # print(f"Updated message: {message.content}")
+                
+                if state and "extracted_positive_symptoms" in state:
+                    print(state["extracted_positive_symptoms"])
+
+                if state and "extracted_negative_symptoms" in state:
+                    print(state["extracted_negative_symptoms"])
             
         elif chunk["type"] == "messages" and "tags" in chunk["data"][1] and "user_message" in chunk["data"][1]["tags"]:
             msg += chunk["data"][0].content
@@ -32,11 +38,6 @@ def run_graph_and_response(graph_state, config):
                 retrieved_messages.append(msg)
                 msg = ""
 
-                # if state and "extracted_positive_symptoms" in state:
-                #     print(state["extracted_positive_symptoms"])
-
-                # if state and "extracted_negative_symptoms" in state:
-                #     print(state["extracted_negative_symptoms"])
 
             # if "__interrupt__" in chunk["data"]:
             #     interrupt_value = chunk["data"]["__interrupt__"][0].value
@@ -95,10 +96,10 @@ def create_app():
 
         state_input = {
             "messages": [],
-            "routing_choice": "diagnosis",  # Your router reads this
+            "routing_choice": "",  
             "extracted_positive_symptoms": [],
             "extracted_negative_symptoms": [],
-            "asked_questions": [],  # Track exact text of previous questions
+            "asked_questions": [], 
             "initial_disease_ids": [],
             "retrieved_disease_summary": [],
             "asked_questions_count": 0,

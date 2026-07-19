@@ -48,7 +48,7 @@ def get_possible_diseases(
             post_nodes.id as disease_id, 
             max(post_score) as post_score, 
             collect({
-                summary: sym.content, 
+                summary: sym.summary, 
                 resource_title: sym.resource_title,
                 resource_author: sym.resource_author,
                 resource_published_year: sym.resource_published_year,
@@ -57,7 +57,7 @@ def get_possible_diseases(
 
         ORDER BY post_score DESC
 
-        LIMIT 10
+        LIMIT 5
         """,
         database_="neo4j",
         positive_embedding=positive_embedding,

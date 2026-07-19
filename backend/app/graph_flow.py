@@ -4,6 +4,7 @@ from typing import Annotated, List, Literal
 from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import Driver, GraphDatabase
 from sentence_transformers import CrossEncoder
+import torch
 from typing_extensions import TypedDict
 from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
@@ -14,6 +15,9 @@ from app.graph_queries.queries import (
     narrow_down,
 )
 from app.llm.extract_disease_names import extract_disease_names
+from app.llm.extract_follow_up_question_symptom import (
+    extract_follow_up_question_symptom,
+)
 from app.llm.get_follow_up_questions import get_follow_up_questions
 from app.llm.extract_symtoms import extract_symptoms
 from langchain_core.runnables import RunnableConfig
@@ -32,7 +36,7 @@ from app.prompt_templates import (
 load_dotenv()
 
 os.environ["TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL"] = "1"
-os.environ["HF_HOME"] = "D:/hf_cache"
+os.environ["HF_HOME"] = "C:/hf_cache"
 os.environ["HF_TOKEN"] = "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"
 
 URI = os.getenv("NEO4J_URL")
@@ -69,7 +73,13 @@ llm = ChatOpenAI(
     extra_body={"chat_template_kwargs": {"enable_thinking": True}},
 )
 
-reranker = CrossEncoder("BAAI/bge-reranker-v2-m3")
+reranker = CrossEncoder(
+    "BAAI/bge-reranker-v2-m3",
+    max_length=256,
+    model_kwargs={
+        "torch_dtype": torch.float16,
+    },
+)
 
 
 # Initialize embedding model
@@ -415,7 +425,9 @@ def process_follow_up_response_node(state: ChatbotState):
     current_positives = state.get("extracted_positive_symptoms", [])
     current_negatives = state.get("extracted_negative_symptoms", [])
 
-    extracted_entities = extract_symptoms(answer=user_answer, question=asked_question)
+    extracted_entities = extract_follow_up_question_symptom(
+        input=user_answer, question=asked_question
+    )
 
     positive_symptoms = list(extracted_entities.positive_symptoms)
     negative_symptoms = list(extracted_entities.negative_symptoms)
@@ -723,6 +735,6 @@ def run_graph(graph, driver: Driver):
                 #     print("CHUNK MESSAGES ENDED")
 
 
-with GraphDatabase.driver(URI, auth=AUTH) as driver:
-    # Define your initial state setup
-    run_graph(graph, driver)
+# with GraphDatabase.driver(URI, auth=AUTH) as driver:
+#     # Define your initial state setup
+#     run_graph(graph, driver)
