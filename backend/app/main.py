@@ -48,7 +48,6 @@ def run_graph_and_response(graph_state, config):
     return retrieved_messages
 
 def create_app():
-
     app = Flask(__name__)
 
     app.register_blueprint(auth_bp, url_prefix="/auth")

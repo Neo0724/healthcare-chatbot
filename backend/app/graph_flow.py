@@ -3,6 +3,7 @@ import os
 from typing import Annotated, List, Literal
 from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import Driver, GraphDatabase
+from sentence_transformers import CrossEncoder
 from typing_extensions import TypedDict
 from langchain_core.messages import SystemMessage
 from langchain_openai import ChatOpenAI
@@ -62,14 +63,30 @@ class ChatbotState(TypedDict):
 # Initialize LLM
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
-    model="qwen3.5-4b",
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
     extra_body={"chat_template_kwargs": {"enable_thinking": True}},
 )
 
+reranker = CrossEncoder("BAAI/bge-reranker-v2-m3")
+
+
 # Initialize embedding model
 embeddings_model = HuggingFaceEmbeddings(model_name="abhinand/MedEmbed-base-v0.1")
+
+
+def rerank_contexts(user_query, contexts):
+    pairs = [[user_query, context] for context in contexts]
+
+    scores = reranker.predict(pairs)
+
+    updated_context = sorted(zip(scores, pairs), key=lambda x: x[0], reverse=True)
+
+    cleaned = [context[1][1] for context in updated_context]
+
+    return cleaned[:15]
+
 
 # =====================================================================
 # 2. UPDATED CONVERSATION NODES
@@ -80,7 +97,7 @@ def welcome_node(state: ChatbotState):
     # Pass an isolated, clean prompt to avoid triggering LM Studio's internal Jinja rendering issues
     system_instruction = (
         "You are a medical decision support assistant. Greet the patient politely and ask them "
-        "if they would like to 'ask disease-related information' or 'get a preliminary diagnosis'."
+        "if they would like to 'ask disease-related information such as what is the disease, treatment and symptoms' or 'get a preliminary diagnosis'."
     )
 
     response = llm.invoke(
@@ -137,13 +154,15 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
     # Grab the text from the prompt we just sent out
     user_query = state["user_messages"][-1]
 
+    print(f"\nUser Query:\n{user_query}")
+
     # 1. Extract name and embed
     extracted_disease_names: List[str] = extract_disease_names(user_query)
 
     disease_embeddings = [
         embeddings_model.embed_query(d) for d in extracted_disease_names
     ]
-    
+
     driver: Driver = config["configurable"].get("neo4j_driver")
 
     # 2. Query DB / Vector store
@@ -151,15 +170,27 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
         driver, extracted_disease_names, disease_embeddings
     )
 
-    retrieved_information = [
-        {
-            "disease_name": r.get("disease_name", ""),
-            "score": r.get("score", 0),
-            "definitions": r.get("definition_node", []),
-            "symptom": r.get("symptom_node", []),
-        }
-        for r in records
-    ]
+    contexts = []
+
+    for record in records:
+        for definition in record.get("definition_node"):
+            contexts.append(
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Definitions: {str(definition)}"
+            )
+
+        for symptom in record.get("symptom_node"):
+            contexts.append(
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Symptoms: {str(symptom)}"
+            )
+
+        for treatment in record.get("treatment_node"):
+            contexts.append(
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Treatment: {str(treatment)}"
+            )
+
+    reranked_context = rerank_contexts(user_query=user_query.content, contexts=contexts)
+
+    print(f"\nReranked Context: {reranked_context}\n")
 
     # Second LLM call: Generates the actual final educational breakdown
     response = llm.invoke(
@@ -168,7 +199,7 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
                 content=explain_disease_prompt.explain_disease_prompt_template.format(
                     user_message=user_query,
                     user_disease=extracted_disease_names,
-                    retrieved_information=retrieved_information,
+                    retrieved_information=reranked_context,
                 )
             )
         ],
@@ -301,7 +332,7 @@ def request_agreement_on_follow_up_node(state: ChatbotState):
     response = llm.invoke(
         [
             SystemMessage(
-                content="Ask the user whether he or she wants to answer follow up questions to refine preliminary diagnosis"
+                content="Ask the user whether he or she wants to answer follow up questions to refine preliminary diagnosis. If no, a final refined preliminary diagnosis will be provided"
             )
         ],
         config={"tags": ["user_message"]},
@@ -384,9 +415,7 @@ def process_follow_up_response_node(state: ChatbotState):
     current_positives = state.get("extracted_positive_symptoms", [])
     current_negatives = state.get("extracted_negative_symptoms", [])
 
-    extracted_entities = extract_symptoms(
-        answer=user_answer, question=asked_question
-    )
+    extracted_entities = extract_symptoms(answer=user_answer, question=asked_question)
 
     positive_symptoms = list(extracted_entities.positive_symptoms)
     negative_symptoms = list(extracted_entities.negative_symptoms)
@@ -694,6 +723,6 @@ def run_graph(graph, driver: Driver):
                 #     print("CHUNK MESSAGES ENDED")
 
 
-# with GraphDatabase.driver(URI, auth=AUTH) as driver:
-#     # Define your initial state setup
-#     run_graph(graph, driver)
+with GraphDatabase.driver(URI, auth=AUTH) as driver:
+    # Define your initial state setup
+    run_graph(graph, driver)

@@ -1,34 +1,12 @@
-from datetime import datetime
 import json
 import pandas as pd
 
 # 1. Load the JSON data
-with open(".deepeval/.temp_test_run_data.json", "r", encoding="utf-8") as file:
+with open('./.deepeval/.temp_test_run_data.json', 'r', encoding='utf-8') as file:
     json_data = json.load(file)
 
 test_cases = json_data["testCases"]
 
 total = sum([tc["metricsData"][0]["score"] for tc in test_cases])
-failed = [tc["name"] if tc["metricsData"][0]["score"] < 0.5 else None for tc in test_cases]
 
-print(failed)
 print(total / len(test_cases))
-
-# arr = [
-# 0.8, 1.0, 0.7272727272727273, 0.8571428571428571, 0.875, 0.8, 0.5,
-#         0.6666666666666666, 0.52, 0.75, 0.5, 1.0, 0.6666666666666666, 1.0,
-#         0.6666666666666666, 1.0, 1.0, 0.6666666666666666, 1.0, 1.0,
-#         0.6666666666666666, 0.6666666666666666, 0.8, 0.5, 0.6666666666666666,
-#         1.0, 0.8, 0.7142857142857143, 0.75, 1.0, 0.6666666666666666,
-#         0.6666666666666666, 0.5, 0.8, 0.5, 1.0, 0.8, 1.0, 0.5, 1.0, 0.8, 1.0,
-#         0.6666666666666666, 1.0, 0.625, 0.6, 1.0, 0.8571428571428571,
-#         0.7058823529411765, 0.6666666666666666, 0.75, 0.75, 0.6666666666666666,
-#         0.8888888888888888, 0.8333333333333334, 0.75, 0.6, 0.6666666666666666,
-#         0.8, 1.0, 1.0, 0.625
-# ]
-
-
-
-# print(sum(arr)/len(arr))
-
-# print(datetime.now().strftime("%Y%m%d_%H:%M:%S"))

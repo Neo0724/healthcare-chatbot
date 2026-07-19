@@ -22,7 +22,7 @@ class QuestionItem(BaseModel):
 
 llm = ChatOpenAI(
     base_url=os.getenv("LLM_URL"),
-    model="qwen3.5-4b",
+    model=os.getenv("LLM_MODEL"),
     api_key="lm-studio",
     temperature=0,
     reasoning=None,
