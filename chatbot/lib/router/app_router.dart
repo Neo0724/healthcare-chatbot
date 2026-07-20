@@ -25,7 +25,7 @@ final GoRouter appRouter = GoRouter(
 
     return null;
   },
-  initialLocation: '/',
+  initialLocation: '/login',
   routes: <GoRoute>[
     GoRoute(path: '/', builder: (context, state) => const NewConversation()),
     GoRoute(

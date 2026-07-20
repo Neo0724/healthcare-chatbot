@@ -6,10 +6,10 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class CustomDio {
-  final Dio _customDio = Dio();
-  final storage = FlutterSecureStorage();
+  static final Dio _customDio = Dio();
+  static final storage = FlutterSecureStorage();
 
-  CustomDio() {
+  static void initialize() {
     _customDio.options.baseUrl = dotenv.get("API_URL");
     _customDio.options.connectTimeout = Duration(seconds: 5);
     _customDio.options.receiveTimeout = Duration(seconds: 5);
@@ -55,10 +55,11 @@ class CustomDio {
     );
   }
 
-  Future<bool> _refreshAccessToken(String refreshToken) async {
+  static Future<bool> _refreshAccessToken(String refreshToken) async {
     try {
+      final apiUrl = dotenv.get("API_URL");
       final response = await Dio().post(
-        "/auth/refresh_access_token",
+        "$apiUrl/auth/refresh_access_token",
         data: {"refresh_token": refreshToken},
       );
 
@@ -79,10 +80,14 @@ class CustomDio {
     }
   }
 
-  void _handleLogout() {
+  static void _handleLogout() {
     if (appRouter.routerDelegate.currentConfiguration.uri.path != '/login') {
       appRouter.go("/login");
     }
     AuthState.logout();
+  }
+
+  static Dio getCustomDio() {
+    return _customDio;
   }
 }

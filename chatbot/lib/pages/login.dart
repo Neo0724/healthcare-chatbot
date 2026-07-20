@@ -1,3 +1,4 @@
+import 'package:chatbot/utils/custom_dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,6 +13,7 @@ class _LoginState extends State<Login> {
   bool _isPasswordVisible = false;
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
+  String errorMessage = "";
 
   @override
   void dispose() {
@@ -20,8 +22,31 @@ class _LoginState extends State<Login> {
     super.dispose();
   }
 
-  void handleLogin(String username, String password) {
-    debugPrint("Username: $username | Password: $password");
+  Future<void> handleLogin(String username, String password) async {
+    errorMessage = "";
+
+    try {
+      final response = await CustomDio.getCustomDio().post(
+        "/auth/login",
+        data: {"username": username, "password": password},
+      );
+
+      if (response.statusCode == 200 && response.data["success"]) {
+        debugPrint(response.data.toString());
+        return;
+      }
+
+      if (response.statusCode == 400) {
+        errorMessage = response.data["error"][0]["msg"];
+        debugPrint(response.data.toString());
+        return;
+      }
+
+      errorMessage = response.data["error"];
+      debugPrint(response.data.toString());
+    } catch (e) {
+      debugPrint(e.toString());
+    }
   }
 
   @override
@@ -30,7 +55,7 @@ class _LoginState extends State<Login> {
       appBar: AppBar(title: Text("Login")),
       body: Center(
         child: Container(
-          height: 400,
+          height: 450,
           width: 350,
           margin: EdgeInsets.all(10),
           padding: EdgeInsets.all(20),
@@ -60,6 +85,15 @@ class _LoginState extends State<Login> {
                   _passwordInput(),
                   SizedBox(height: 30),
                   _submitBtn(),
+                  SizedBox(height: 10),
+                  if (errorMessage.isNotEmpty)
+                    Text(
+                      errorMessage,
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight(800),
+                      ),
+                    ),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

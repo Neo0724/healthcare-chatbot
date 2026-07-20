@@ -21,7 +21,7 @@ class _RegisterState extends State<Register> {
   }
 
   void handleRegister(String username, String password) {
-    debugPrint("Username: $username | Password: $password");
+    // debugPrint("Username: $username | Password: $password");
   }
 
   @override
