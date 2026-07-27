@@ -1,0 +1,24 @@
+from datetime import datetime
+from typing import Literal
+
+from bson import ObjectId
+
+from app.mongodb_client import get_database
+
+db = get_database()
+message_collection = db["message"]
+
+
+def store_conversation_message(
+    conversation_id: str, content: str, type: Literal["ai", "human"]
+):
+    created_message = message_collection.insert_one(
+        {
+            "conversation_id": ObjectId(conversation_id),
+            "content": content,
+            "type": type,
+            "createdAt": datetime.now(),
+        }
+    )
+
+    return str(created_message.inserted_id)

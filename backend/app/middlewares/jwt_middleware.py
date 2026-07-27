@@ -5,6 +5,7 @@ from flask import request, jsonify
 
 SECRET = os.getenv("SECRET")
 
+
 def jwt_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
@@ -17,11 +18,7 @@ def jwt_required(f):
         try:
             token = auth_header.split(" ")[1]  # Bearer <token>
 
-            payload = jwt.decode(
-                token,
-                SECRET,
-                algorithms="HS256"
-            )
+            payload = jwt.decode(token, SECRET, algorithms="HS256")
 
             request.user = payload  # attach user info to request
 

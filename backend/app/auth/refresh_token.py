@@ -1,13 +1,18 @@
 from datetime import datetime, timedelta, timezone
 
+from bson import ObjectId
 from flask import jsonify
 import jwt
 import os
 from dotenv import load_dotenv
 
+from app.mongodb_client import get_database
+
 load_dotenv()
 
 SECRET = os.getenv("SECRET")
+db = get_database()
+refresh_token_collection = db["issued_refresh_token"]
 
 
 def refresh_token(refresh_token):
@@ -16,6 +21,17 @@ def refresh_token(refresh_token):
 
         user_id = decoded["sub"]
         username = decoded["username"]
+
+        # Check if it is revoked or missing
+        stored_token = refresh_token_collection.find_one(
+            {"user_id": ObjectId(user_id), "token": str(refresh_token)}
+        )
+
+        if not stored_token:
+            return jsonify({"success": False, "error": "token missing"}), 401
+
+        if stored_token and stored_token["revoked"]:
+            return jsonify({"success": False, "error": "token has been revoked"}), 401
 
         access_token_payload = {
             "sub": str(user_id),
@@ -35,6 +51,20 @@ def refresh_token(refresh_token):
 
         new_refresh_token = jwt.encode(
             payload=refresh_token_payload, key=SECRET, algorithm="HS256"
+        )
+
+        refresh_token_collection.find_one_and_update(
+            {"user_id": ObjectId(user_id), "token": str(refresh_token)},
+            {"$set": {"revoked": True}},
+        )
+
+        refresh_token_collection.insert_one(
+            {
+                "user_id": ObjectId(user_id),
+                "token": str(new_refresh_token),
+                "revoked": False,
+                "createdAt": datetime.now(),
+            }
         )
 
         return jsonify(

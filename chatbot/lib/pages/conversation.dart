@@ -1,0 +1,216 @@
+import 'package:chatbot/utils/socket_service.dart';
+import 'package:chatbot/widgets/side_drawer.dart';
+import 'package:chatbot/models/message_history_model.dart';
+import 'package:chatbot/utils/custom_dio.dart';
+import 'package:flutter/material.dart';
+
+class Conversation extends StatefulWidget {
+  final String conversationId;
+  const Conversation({super.key, required this.conversationId});
+
+  @override
+  State<Conversation> createState() => _ConversationState();
+}
+
+class _ConversationState extends State<Conversation> {
+  List<MessageHistoryModel> _messageHistoryModel = [];
+  List<MessageHistoryModel> _newMessages = [];
+  final SocketService socketService = SocketService();
+  late final ScrollController _scrollController;
+
+  final _messageController = TextEditingController();
+  Future<void> _getMessageAndResumeGraph() async {
+    final response = await CustomDio.getCustomDio().get(
+      "/get_conversation_message/${widget.conversationId}",
+    );
+    if (response.data["success"]) {
+      final List<dynamic> rawList = response.data["message"];
+
+      final List<MessageHistoryModel> converted = _messageHistoryModel = rawList
+          .map((json) => MessageHistoryModel.fromJson(json))
+          .toList();
+
+      setState(() {
+        _messageHistoryModel = converted;
+      });
+
+      if (rawList.length == 1) {
+        _resumeGraph(converted[0].content);
+      }
+
+      _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+    }
+  }
+
+  Future<void> _resumeGraph(String userMessage) async {
+    setState(() {
+      _newMessages.add(
+        MessageHistoryModel(
+          id: "temp_${DateTime.now().toString()}",
+          messageType: MessageType.human,
+          content: userMessage,
+          createdAt: DateTime.now(),
+        ),
+      );
+    });
+
+    final response = await CustomDio.getCustomDio().post(
+      "/resume/${widget.conversationId}",
+      data: {"user_response": userMessage},
+    );
+  }
+
+  Future<void> _handleReceiveMessage(dynamic data) async {
+    final String receivedMessageId = data["id"];
+    final String receivedMessage = data["content"];
+
+    if (!_newMessages.any((msg) => msg.id == receivedMessageId)) {
+      setState(() {
+        _newMessages.add(
+          MessageHistoryModel(
+            id: receivedMessageId,
+            messageType: MessageType.ai,
+            content: receivedMessage,
+            createdAt: DateTime.now(),
+          ),
+        );
+      });
+    } else {
+      final index = _newMessages.indexWhere(
+        (msg) => msg.id == receivedMessageId,
+      );
+
+      if (index != -1) {
+        // Replace the old item with a new one
+        setState(() {
+          _newMessages[index] = MessageHistoryModel(
+            id: _newMessages[index].id, // keep same id or update if needed
+            messageType: _newMessages[index].messageType,
+            content: _newMessages[index].content + receivedMessage,
+            createdAt: _newMessages[index].createdAt,
+          );
+        });
+      }
+    }
+
+    _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+  }
+
+  Future<void> _handleSendMessage() async {
+    final String newMessage = _messageController.text;
+
+    _resumeGraph(newMessage);
+
+    _messageController.text = "";
+  }
+
+  @override
+  void didUpdateWidget(covariant Conversation oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    if (oldWidget.conversationId != widget.conversationId) {
+      setState(() {
+        _messageController.text = "";
+        _messageHistoryModel.clear();
+        _newMessages.clear();
+      });
+      socketService.disconnect();
+      socketService.connect(widget.conversationId, _handleReceiveMessage);
+      _getMessageAndResumeGraph();
+      _scrollController = ScrollController();
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    socketService.connect(widget.conversationId, _handleReceiveMessage);
+    _getMessageAndResumeGraph();
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    socketService.disconnect();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Conversation")),
+      drawer: SideDrawer(),
+      body: Column(
+        children: [
+          _displayMessage([..._messageHistoryModel, ..._newMessages]),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20, left: 10, right: 10),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: TextField(
+                controller: _messageController,
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding: EdgeInsets.all(15),
+                  hintText: "Sends a message",
+                  hintStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none,
+                  ),
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: IconButton(
+                      onPressed: () => _handleSendMessage(),
+                      icon: const Icon(Icons.send),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Expanded _displayMessage(List<MessageHistoryModel> messages) {
+    return Expanded(
+      child: ListView.builder(
+        controller: _scrollController,
+        padding: const EdgeInsets.all(12),
+        itemCount: messages.length,
+        itemBuilder: (context, index) {
+          final message = messages[index];
+
+          final isUser = message.messageType.name == "human";
+
+          return Align(
+            alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+            child: Container(
+              margin: const EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width * 0.75,
+              ),
+              decoration: BoxDecoration(
+                color: isUser ? Colors.blue : Colors.grey.shade300,
+                borderRadius: BorderRadius.circular(12).copyWith(
+                  bottomRight: isUser ? Radius.zero : const Radius.circular(12),
+                  bottomLeft: isUser ? const Radius.circular(12) : Radius.zero,
+                ),
+              ),
+              child: Text(
+                message.content,
+                style: TextStyle(color: isUser ? Colors.white : Colors.black),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}

@@ -1,38 +1,58 @@
-import 'package:chatbot/pages/first_page.dart';
+import 'package:chatbot/pages/profile.dart';
+import 'package:chatbot/pages/conversation.dart';
 import 'package:chatbot/pages/login.dart';
 import 'package:chatbot/pages/new_conversation.dart';
 import 'package:chatbot/pages/register.dart';
 import 'package:chatbot/states/auth_state.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:go_router/go_router.dart';
 
-final authState = AuthState();
 final protectedRoute = <String>['/first_page', '/profile'];
 
 final guestRoute = <String>['/login', '/register'];
 
+final storage = FlutterSecureStorage();
+
 final GoRouter appRouter = GoRouter(
-  refreshListenable: authState,
+  refreshListenable: AuthState(),
   redirect: (context, state) {
-    final loggedIn = authState.isLoggedIn;
+    final loggedIn = AuthState.isLoggedIn;
 
     if (!loggedIn && protectedRoute.contains(state.matchedLocation)) {
       return "/login";
     }
 
     if (loggedIn && guestRoute.contains(state.matchedLocation)) {
-      return '/first_page';
+      return '/';
     }
 
     return null;
   },
-  initialLocation: '/login',
+  initialLocation: '/',
   routes: <GoRoute>[
     GoRoute(path: '/', builder: (context, state) => const NewConversation()),
     GoRoute(
-      path: '/first_page',
-      builder: (context, state) => const FirstPage(),
+      path: '/conversation/:id',
+      builder: (context, state) {
+        final conversationId = state.pathParameters['id'] ?? "";
+        return Conversation(conversationId: conversationId);
+      },
+      name: "conversation",
     ),
-    GoRoute(path: '/login', builder: (context, state) => const Login()),
-    GoRoute(path: '/register', builder: (context, state) => const Register()),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const Login(),
+      name: 'login',
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (context, state) => const Register(),
+      name: 'register',
+    ),
+    GoRoute(
+      path: '/profile',
+      builder: (context, state) => Profile(),
+      name: 'profile',
+    ),
   ],
 );

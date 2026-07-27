@@ -1,11 +1,16 @@
+import os
+
 from flask import Blueprint, jsonify, request
 from pydantic import ValidationError
 
-from app.auth.refresh_token import refresh_token
 from app.auth.login import login_user
+from app.auth.logout import logout_user
+from app.auth.refresh_token import refresh_token
 from app.auth.register import register_user
-from app.schemas.auth import LoginRequest
-from app.schemas.auth import RegisterRequest
+from app.schemas.auth import LoginRequest, RegisterRequest
+
+SECRET = os.getenv("SECRET")
+
 
 # Create the blueprint
 auth_bp = Blueprint("auth", __name__)
@@ -41,9 +46,19 @@ def register():
 
 @auth_bp.post("/refresh")
 def refresh():
-    data = request.get_json()
+    auth_header = request.headers.get("Authorization")
 
-    if "refresh_token" not in data or not data["refresh_token"]:
-        return jsonify({"success": False, "error": "Refresh token is required"}), 404
+    if not auth_header:
+        return jsonify({"success": False, "error": "missing token"}), 401
 
-    return refresh_token(data["refresh_token"])
+    token = auth_header.split(" ")[1]  # Bearer <token>
+
+    return refresh_token(token)
+
+@auth_bp.post("/logout")
+def logout():
+    auth_header = request.headers.get("Authorization")
+
+    token = auth_header.split(" ")[1]  # Bearer <token>
+
+    return logout_user(token)

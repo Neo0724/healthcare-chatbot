@@ -1,9 +1,8 @@
+import bcrypt
 from flask import jsonify
 
-from app.schemas.auth import RegisterRequest
-import bcrypt
-
 from app.mongodb_client import get_database
+from app.schemas.auth import RegisterRequest
 
 dbname = get_database()
 user_collection = dbname["user"]

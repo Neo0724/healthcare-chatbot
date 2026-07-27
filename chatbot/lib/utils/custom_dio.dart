@@ -19,7 +19,13 @@ class CustomDio {
         onRequest:
             (RequestOptions options, RequestInterceptorHandler handler) async {
               final accessToken = await storage.read(key: "access_token");
-              if (accessToken != null) {
+              final refreshToken = await storage.read(key: "refresh_token");
+
+              if (options.path == "/auth/logout" && refreshToken != null) {
+                options.headers["Authorization"] = "Bearer $refreshToken";
+              }
+
+              if (options.path != "/auth/logout" && accessToken != null) {
                 options.headers["Authorization"] = "Bearer $accessToken";
               }
 
@@ -59,9 +65,11 @@ class CustomDio {
     try {
       final apiUrl = dotenv.get("API_URL");
       final response = await Dio().post(
-        "$apiUrl/auth/refresh_access_token",
-        data: {"refresh_token": refreshToken},
+        "$apiUrl/auth/refresh",
+        options: Options(headers: {"Authorization": "Bearer $refreshToken"}),
       );
+
+      final String responseStr = response.toString();
 
       if (response.statusCode == 200) {
         final newRefreshToken = response.data["refresh_token"];
@@ -81,10 +89,10 @@ class CustomDio {
   }
 
   static void _handleLogout() {
+    AuthState.logout();
     if (appRouter.routerDelegate.currentConfiguration.uri.path != '/login') {
       appRouter.go("/login");
     }
-    AuthState.logout();
   }
 
   static Dio getCustomDio() {

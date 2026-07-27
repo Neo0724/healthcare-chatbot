@@ -1,20 +1,21 @@
-import bcrypt
-from flask import jsonify
-import jwt
-
-from app.mongodb_client import get_database
 import os
-from dotenv import load_dotenv
 from datetime import datetime, timedelta, timezone
 
+import bcrypt
+import jwt
+from dotenv import load_dotenv
+from flask import jsonify
+
+from app.mongodb_client import get_database
 from app.schemas.auth import LoginRequest
 
 load_dotenv()
 
 SECRET = os.getenv("SECRET")
 
-dbname = get_database()
-user_collection = dbname["user"]
+db = get_database()
+user_collection = db["user"]
+refresh_token_collection = db["issued_refresh_token"]
 
 
 def login_user(data: LoginRequest):
@@ -57,6 +58,15 @@ def login_user(data: LoginRequest):
 
     refresh_token = jwt.encode(
         payload=refresh_token_payload, key=SECRET, algorithm="HS256"
+    )
+
+    refresh_token_collection.insert_one(
+        {
+            "token": refresh_token,
+            "user_id": user["_id"],
+            "revoked": False,
+            "createdAt": datetime.now(),
+        }
     )
 
     return jsonify(
