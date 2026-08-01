@@ -22,6 +22,15 @@ class MessageHistoryModel {
     );
   }
 
+  MessageHistoryModel copyWith({String? content}) {
+    return MessageHistoryModel(
+      id: id,
+      messageType: messageType,
+      content: content ?? this.content,
+      createdAt: createdAt,
+    );
+  }
+
   String get id => _id;
   MessageType get messageType => _messageType;
   String get content => _content;

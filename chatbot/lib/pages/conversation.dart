@@ -1,4 +1,5 @@
 import 'package:chatbot/utils/socket_service.dart';
+import 'package:chatbot/widgets/chat_bubble.dart';
 import 'package:chatbot/widgets/side_drawer.dart';
 import 'package:chatbot/models/message_history_model.dart';
 import 'package:chatbot/utils/custom_dio.dart';
@@ -83,17 +84,18 @@ class _ConversationState extends State<Conversation> {
       if (index != -1) {
         // Replace the old item with a new one
         setState(() {
-          _newMessages[index] = MessageHistoryModel(
-            id: _newMessages[index].id, // keep same id or update if needed
-            messageType: _newMessages[index].messageType,
+          _newMessages[index] = _newMessages[index].copyWith(
             content: _newMessages[index].content + receivedMessage,
-            createdAt: _newMessages[index].createdAt,
           );
         });
       }
     }
 
-    _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+      }
+    });
   }
 
   Future<void> _handleSendMessage() async {
@@ -185,29 +187,12 @@ class _ConversationState extends State<Conversation> {
         itemCount: messages.length,
         itemBuilder: (context, index) {
           final message = messages[index];
-
           final isUser = message.messageType.name == "human";
 
-          return Align(
-            alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-            child: Container(
-              margin: const EdgeInsets.only(bottom: 10),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-              constraints: BoxConstraints(
-                maxWidth: MediaQuery.of(context).size.width * 0.75,
-              ),
-              decoration: BoxDecoration(
-                color: isUser ? Colors.blue : Colors.grey.shade300,
-                borderRadius: BorderRadius.circular(12).copyWith(
-                  bottomRight: isUser ? Radius.zero : const Radius.circular(12),
-                  bottomLeft: isUser ? const Radius.circular(12) : Radius.zero,
-                ),
-              ),
-              child: Text(
-                message.content,
-                style: TextStyle(color: isUser ? Colors.white : Colors.black),
-              ),
-            ),
+          return ChatBubble(
+            key: ValueKey(message.id), // use a stable id if you have one
+            isUser: isUser,
+            content: message.content,
           );
         },
       ),
