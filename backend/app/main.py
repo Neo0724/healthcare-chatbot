@@ -9,6 +9,7 @@ from flask_socketio import SocketIO, join_room
 from langgraph.types import Command
 from neo4j import GraphDatabase
 
+from app.conversation.delete_conversation_history import delete_conversation_history
 from app.conversation.retrieve_conversation_history import retrieve_conversation_history
 from app.conversation.retrieve_conversation_message import retrieve_conversation_message
 from app.conversation.store_conversation_history import store_conversation_history
@@ -21,6 +22,10 @@ from app.routes.auth import auth_bp
 from app.routes.profile_management import profile_management_bp
 
 load_dotenv()
+
+
+def get_user_id(request):
+    return str(request.user["sub"])
 
 
 # async def run_graph_and_response(
@@ -193,24 +198,13 @@ def create_app():
     @app.route("/get_conversation_history")
     @jwt_required
     def get_conversation_history():
-        user_id = request.user["sub"]
+        user_id = get_user_id(request)
         return retrieve_conversation_history(user_id)
 
     @app.route("/get_conversation_message/<conversation_id>")
     @jwt_required
     def get_conversation_message(conversation_id: str):
         return retrieve_conversation_message(conversation_id)
-
-    @app.route("/send_message/<conversation_id>")
-    def send_message(conversation_id: str):
-        for i in range(5):
-            time.sleep(1)
-            socketio.emit(
-                "message",
-                {"message": f"Hello: {i}", "id": "1234"},
-                room=conversation_id,
-            )
-        return jsonify({"success": True}), 200
 
     @app.route("/profile")
     @jwt_required
@@ -220,12 +214,16 @@ def create_app():
     @app.route("/create_conversation", methods=["POST"])
     @jwt_required
     def create_conversation():
-        data = request.json()
-
+        data = request.get_json()
         user_input = str(data["user_input"])
-        user_id = str(request.user["sub"])
+        user_id = get_user_id(request)
 
-        store_conversation_history(user_id=user_id, user_query=user_input)
+        return store_conversation_history(user_id=user_id, user_query=user_input)
+
+    @app.route("/delete_conversation/<conversation_id>", methods=["DELETE"])
+    @jwt_required
+    def delete_conversation(conversation_id):
+        return delete_conversation_history(conversation_id)
 
     # WebSocket event
     @socketio.on("join_room")

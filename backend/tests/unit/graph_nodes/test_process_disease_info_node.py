@@ -1,4 +1,3 @@
-import pytest
 from unittest.mock import MagicMock
 
 from pytest_mock import MockerFixture
@@ -18,17 +17,26 @@ def test_process_disease_info_node(
     mock_embedding: MagicMock = mocker.patch("app.graph_flow.embeddings_model")
     mock_embedding.embed_query.return_value = [1, 1, 1]
 
-    mock_extract_disease_name: MagicMock = mocker.patch("app.graph_flow.extract_disease_names")
+    mock_extract_disease_name: MagicMock = mocker.patch(
+        "app.graph_flow.extract_disease_names"
+    )
     mock_extract_disease_name.return_value = ["diabetes"]
 
-    mock_get_disease_information: MagicMock = mocker.patch("app.graph_flow.get_diseases_information")
+    mock_get_disease_information: MagicMock = mocker.patch(
+        "app.graph_flow.get_diseases_information"
+    )
     mock_get_disease_information.return_value = [
         {
-            "disease_name": "a",
+            "disease_name": "diabetes",
             "score": 0.8,
             "definition_node": ["a", "b", "c"],
+            "symptom_node": ["a", "b", "c"],
+            "treatment_node": ["a", "b", "c"],
         }
     ]
+
+    mock_reranker = mocker.patch("app.graph_flow.rerank_contexts")
+    mock_reranker.return_value = ["b", "c", "a"]
 
     mock_llm: MagicMock = mocker.patch("app.graph_flow.llm")
     mock_llm.invoke.return_value = mock_response_message
@@ -45,14 +53,13 @@ def test_process_disease_info_node(
     mock_get_disease_information.assert_called_once_with(
         mock_driver,
         mock_extract_disease_name.return_value,
-        [mock_embedding.embed_query.return_value]
+        [mock_embedding.embed_query.return_value],
     )
     mock_llm.invoke.assert_called_once()
 
     _, kwargs = mock_llm.invoke.call_args
 
     assert kwargs["config"]["tags"] == ["user_message"]
-
 
     for d in mock_extract_disease_name.return_value:
         mock_embedding.embed_query.assert_called_with(d)

@@ -63,7 +63,7 @@ def test_process_follow_up_response_node(
     mock_extracted.negative_symptoms = extracted_negative
 
     mock_extract = mocker.patch(
-        "app.graph_flow.extract_symptoms", return_value=mock_extracted
+        "app.graph_flow.extract_follow_up_question_symptom", return_value=mock_extracted
     )
 
     # -------------------------
@@ -77,7 +77,7 @@ def test_process_follow_up_response_node(
 
     # 1. extractor called correctly
     mock_extract.assert_called_once_with(
-        answer=user_answer, question="Do you have fever?"
+        input=user_answer, question="Do you have fever?"
     )
 
     # 2. positive symptoms merged correctly

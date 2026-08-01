@@ -1,7 +1,4 @@
-from typing import Literal
-
 from bson import ObjectId
-from flask import jsonify
 
 from app.mongodb_client import get_database
 
@@ -20,5 +17,3 @@ def update_conversation_message(message_id: str, new_content: str):
             }
         },
     )
-
-    return jsonify({"success": True}), 200

@@ -1,16 +1,28 @@
+import os
+
 import pytest
+
 from app.main import create_app
 from app.routes.test_route import create_test_route
+
 
 @pytest.fixture
 def client():
     # Initialize the app with testing configurations
     app = create_app()
     create_test_route(app)
-    app.config.update({
-        "TESTING": True,  # Propagates exceptions to the test runner
-    })
+    app.config.update(
+        {
+            "TESTING": True,  # Propagates exceptions to the test runner
+        }
+    )
 
     # Yield the Flask test client
     with app.test_client() as client:
         yield client
+
+@pytest.fixture(autouse=True)
+def set_testing_env():
+    os.environ["ENVIRONMENT"] = "testing"
+    yield
+    os.environ.pop("ENVIRONMENT", None)

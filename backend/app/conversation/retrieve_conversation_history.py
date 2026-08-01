@@ -7,8 +7,8 @@ db = get_database()
 conversation_collection = db["conversation_history"]
 
 
-def retrieve_conversation_history(user_id: str):
-    conversations = (
+def query_conversation_history(user_id):
+    return (
         conversation_collection.find(
             {"user_id": ObjectId(user_id)},
             {"_id": 1, "createdAt": 1, "title": 1},
@@ -16,6 +16,10 @@ def retrieve_conversation_history(user_id: str):
         .sort("createdAt", -1)
         .to_list()
     )
+
+
+def retrieve_conversation_history(user_id: str):
+    conversations = query_conversation_history(user_id)
 
     for conversation in conversations:
         conversation["_id"] = str(conversation["_id"])

@@ -7,6 +7,10 @@ from app.profile_management.change_username import change_username
 profile_management_bp = Blueprint("profile_management", __name__)
 
 
+def get_user_id(request):
+    return request.user["sub"]
+
+
 @profile_management_bp.post("/update-username")
 @jwt_required
 def update_username():
@@ -26,7 +30,7 @@ def update_username():
             {"success": False, "error": "Only up-to 20 characters are allowed"}
         ), 400
 
-    user_id = request.user["sub"]
+    user_id = get_user_id(request)
 
     return change_username(username, user_id)
 
@@ -68,6 +72,5 @@ def update_password():
             }
         ), 400
 
-    user_id = request.user["sub"]
-
+    user_id = get_user_id(request)
     return change_password(current_password, new_password, user_id)

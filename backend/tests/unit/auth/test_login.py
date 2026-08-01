@@ -1,5 +1,5 @@
-from bson import ObjectId
 import pytest
+from bson import ObjectId
 
 
 def test_login_incorrect_password(client, mocker):

@@ -12,6 +12,9 @@ message_collection = db["message"]
 def store_conversation_message(
     conversation_id: str, content: str, type: Literal["ai", "human"]
 ):
+    if type not in ["ai", "human"]:
+        raise Exception("Invalid message type")  # noqa: TRY002
+
     created_message = message_collection.insert_one(
         {
             "conversation_id": ObjectId(conversation_id),

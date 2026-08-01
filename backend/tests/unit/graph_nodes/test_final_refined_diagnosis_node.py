@@ -14,11 +14,7 @@ def test_final_refined_diagnosis_node(mocker):
         "initial_disease_ids": ["D1", "D2"],
     }
 
-    config = {
-        "configurable": {
-            "neo4j_driver": MagicMock()
-        }
-    }
+    config = {"configurable": {"neo4j_driver": MagicMock()}}
 
     # -------------------------
     # Mock embeddings
@@ -45,7 +41,7 @@ def test_final_refined_diagnosis_node(mocker):
                 "post_score": 0.75,
                 "symptom_node": ["cough"],
             },
-        ]
+        ],
     )
 
     # -------------------------
@@ -75,13 +71,11 @@ def test_final_refined_diagnosis_node(mocker):
         config["configurable"]["neo4j_driver"],
         [0.1, 0.2, 0.3],
         [0.4, 0.5, 0.6],
-        ["D1", "D2"]
+        ["D1", "D2"],
     )
 
     # 3. LLM called once
     mock_llm.invoke.assert_called_once()
 
     # 4. return value
-    assert result == {
-        "messages": [fake_llm_response]
-    }
+    assert result == {"messages": [fake_llm_response]}
