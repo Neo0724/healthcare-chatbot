@@ -9,7 +9,7 @@ load_dotenv()
 
 
 class ConversationTitleSchema(BaseModel):
-    title: list[str] = Field(description="The conversation title")
+    title: str = Field(description="The conversation title")
 
 
 llm = ChatOpenAI(

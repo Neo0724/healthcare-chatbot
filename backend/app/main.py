@@ -141,13 +141,14 @@ def create_app():
                 current_state = await graph.aget_state(config)
                 checkpoint = await memory.aget(config=config)
 
-                store_conversation_message(
-                    conversation_id=conversation_id, content=user_response, type="human"
-                )
-
                 if not current_state.next or not checkpoint:
                     await initialize(conversation_id=conversation_id)
                 else:
+                    store_conversation_message(
+                        conversation_id=conversation_id,
+                        content=user_response,
+                        type="human",
+                    )
                     await run_graph_and_response(
                         graph_state=Command(resume=user_response),
                         config=config,
