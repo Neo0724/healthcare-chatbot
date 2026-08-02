@@ -65,7 +65,7 @@ def login_user(data: LoginRequest):
             "token": refresh_token,
             "user_id": user["_id"],
             "revoked": False,
-            "createdAt": datetime.now(),
+            "createdAt": datetime.now(timezone(timedelta(hours=8))),
         }
     )
 

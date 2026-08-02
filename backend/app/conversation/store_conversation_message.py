@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from typing import Literal
 
 from bson import ObjectId
@@ -20,7 +20,7 @@ def store_conversation_message(
             "conversation_id": ObjectId(conversation_id),
             "content": content,
             "type": type,
-            "createdAt": datetime.now(),
+            "createdAt": datetime.now(timezone(timedelta(hours=8))),
         }
     )
 

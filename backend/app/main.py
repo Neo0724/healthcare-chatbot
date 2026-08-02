@@ -45,14 +45,7 @@ async def run_graph_and_response(
             config=config,
         ):
             if chunk["type"] == "updates":
-                print("Update Chunk")
-                for _, state in chunk["data"].items():
-                    if state and "messages" in state:
-                        for message in state["messages"]:
-                            pass
-                            # retrieved_messages.append(message.content)
-                            # print(f"Updated message: {message.content}")
-
+                for state in chunk["data"].values():
                     if state and "extracted_positive_symptoms" in state:
                         print(state["extracted_positive_symptoms"])
 
@@ -75,7 +68,6 @@ async def run_graph_and_response(
 
                 msg += streamed_content
                 # Handle emit to client
-                # To be added later
                 socket_io.emit(
                     "message",
                     {"content": streamed_content, "id": currentMsgId, "is_last": False},
@@ -96,13 +88,14 @@ async def run_graph_and_response(
                         room=conversation_id,
                     )
                     msg += streamed_content
+
+                    # Synchronize with db when current message ended
                     update_conversation_message(
                         message_id=currentMsgId, new_content=msg.strip()
                     )
                     msg = ""
                     currentMsgId = ""
                     is_first_chunk = True
-                    # Handle update the current content
 
                 # if "__interrupt__" in chunk["data"]:
                 #     interrupt_value = chunk["data"]["__interrupt__"][0].value

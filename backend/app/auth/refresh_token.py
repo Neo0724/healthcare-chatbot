@@ -63,7 +63,7 @@ def refresh_token(refresh_token):
                 "user_id": ObjectId(user_id),
                 "token": str(new_refresh_token),
                 "revoked": False,
-                "createdAt": datetime.now(),
+                "createdAt": datetime.now(timezone(timedelta(hours=8))),
             }
         )
 

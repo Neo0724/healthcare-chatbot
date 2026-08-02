@@ -1,5 +1,7 @@
+from datetime import datetime, timedelta, timezone
+
 import jwt
-from datetime import datetime, timezone, timedelta
+
 from app.routes.test_route import SECRET
 
 

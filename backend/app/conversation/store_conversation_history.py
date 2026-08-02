@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from bson import ObjectId
 from flask import jsonify
@@ -16,8 +16,8 @@ def store_conversation_history(user_id: str, user_query: str):
     created_conversation = conversation_collection.insert_one(
         {
             "user_id": ObjectId(user_id),
-            "createdAt": datetime.now(),
             "title": str(conversation_title),
+            "createdAt": datetime.now(timezone(timedelta(hours=8))),
         }
     )
 
@@ -26,7 +26,7 @@ def store_conversation_history(user_id: str, user_query: str):
             "conversation_id": created_conversation.inserted_id,
             "content": user_query,
             "type": "human",
-            "createdAt": datetime.now(),
+            "createdAt": datetime.now(timezone(timedelta(hours=8))),
         }
     )
 
