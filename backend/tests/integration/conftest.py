@@ -1,6 +1,6 @@
 import os
 
-from app.mongodb_client import get_database
+from app.utils.mongodb_client import get_database
 
 os.environ["MONGODB_DB"] = "chatbot_test"
 import pytest

@@ -19,8 +19,11 @@ def test_final_refined_diagnosis_node(mocker):
     # -------------------------
     # Mock embeddings
     # -------------------------
-    mock_embed = mocker.patch("app.graph_flow.embeddings_model")
-    mock_embed.embed_query.side_effect = [
+    mock_embed = mocker.patch("app.graph_flow.get_embedding_model")
+    mock_model_instance = MagicMock()
+    mock_embed.return_value = mock_model_instance
+
+    mock_model_instance.embed_query.side_effect = [
         [0.1, 0.2, 0.3],  # positive
         [0.4, 0.5, 0.6],  # negative
     ]
@@ -63,7 +66,7 @@ def test_final_refined_diagnosis_node(mocker):
     # -------------------------
 
     # 1. embeddings called correctly
-    mock_embed.embed_query.assert_any_call("fever,cough")
+    mock_model_instance.embed_query.assert_any_call("fever,cough")
     # mock_embed.embed_query.assert_any_call("headache")
 
     # 2. DB query called correctly

@@ -1,7 +1,7 @@
 import bcrypt
 from flask import jsonify
 
-from app.mongodb_client import get_database
+from app.utils.mongodb_client import get_database
 from app.schemas.auth import RegisterRequest
 
 dbname = get_database()

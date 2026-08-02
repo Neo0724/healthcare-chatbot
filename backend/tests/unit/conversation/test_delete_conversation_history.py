@@ -1,6 +1,3 @@
-from datetime import datetime
-from unittest.mock import MagicMock
-
 from bson import ObjectId
 
 
@@ -22,20 +19,23 @@ def test_delete_conversation_history_valid(client, mocker):
     mock_conversation_history = mocker.patch(
         "app.conversation.delete_conversation_history.conversation_history"
     )
+    mock_message = mocker.patch("app.conversation.delete_conversation_history.message")
 
-    mock_conversation_history_find_result = MagicMock()
-    mock_conversation_history_find_result._id = ObjectId("507f1f77bcf86cd799439011")
-
-    mock_conversation_history.find_one.return_value = (
-        mock_conversation_history_find_result
-    )
+    # Use a standard dictionary instead of MagicMock for the find_one return value
+    mock_conversation_history.find_one.return_value = {
+        "_id": ObjectId("507f1f77bcf86cd799439011")
+    }
 
     response = client.delete("/delete_conversation/507f1f77bcf86cd799439011")
-
     body = response.get_json()
 
-    args, _ = mock_conversation_history.delete_one.call_args
+    mock_message.delete_one.assert_called_once()
+    mock_conversation_history.delete_one.assert_called_once()
+
+    conversation_args, _ = mock_conversation_history.delete_one.call_args
+    message_args, _ = mock_message.delete_one.call_args
 
     assert response.status_code == 200
     assert body["success"] is True
-    assert args[0]["_id"] == ObjectId("507f1f77bcf86cd799439011")
+    assert conversation_args[0]["_id"] == ObjectId("507f1f77bcf86cd799439011")
+    assert message_args[0]["conversation_id"] == ObjectId("507f1f77bcf86cd799439011")

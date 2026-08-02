@@ -1,7 +1,7 @@
 from bson import ObjectId
 from flask import jsonify
 
-from app.mongodb_client import get_database
+from app.utils.mongodb_client import get_database
 
 db = get_database()
 conversation_collection = db["conversation_history"]

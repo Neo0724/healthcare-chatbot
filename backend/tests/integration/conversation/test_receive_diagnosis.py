@@ -1,4 +1,4 @@
-def test_conversation_flow(client, socket_client):
+def test_receive_diagnosis(client, socket_client):
     # Create an account and login
     username = "test_username"
     password = "test_password"
@@ -116,3 +116,9 @@ def test_conversation_flow(client, socket_client):
     )
 
     assert len(get_socket_messages(socket_client)) > 1
+
+    # Delete the current conversation
+    delete_response = client.delete(f"/delete_conversation/{converation_id}", headers=headers)
+
+    assert delete_response.status_code == 200
+    assert delete_response.get_json()["success"] is True

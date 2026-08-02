@@ -1,11 +1,9 @@
-from typing import List
-
 from neo4j import Driver, Record
 
 
 def get_possible_diseases(
-    driver: Driver, positive_embedding: List[float], negative_embedding: List[float]
-) -> List[Record]:
+    driver: Driver, positive_embedding: list[float], negative_embedding: list[float]
+) -> list[Record]:
     records, _, _ = driver.execute_query(
         """
         CALL() {
@@ -69,10 +67,10 @@ def get_possible_diseases(
 
 def narrow_down(
     driver: Driver,
-    positive_embedding: List[float],
-    negative_embedding: List[float],
-    initial_ids: List[str],
-) -> List[Record]:
+    positive_embedding: list[float],
+    negative_embedding: list[float],
+    initial_ids: list[str],
+) -> list[Record]:
     records, _, _ = driver.execute_query(
         """
         CALL() {
@@ -139,7 +137,7 @@ def narrow_down(
 
 
 def get_diseases_information(
-    driver: Driver, diseases: List[str], diseases_embedding: List[float]
+    driver: Driver, diseases: list[str], diseases_embedding: list[float]
 ):
     records, _, _ = driver.execute_query(
         """

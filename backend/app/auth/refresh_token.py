@@ -6,7 +6,7 @@ from bson import ObjectId
 from dotenv import load_dotenv
 from flask import jsonify
 
-from app.mongodb_client import get_database
+from app.utils.mongodb_client import get_database
 
 load_dotenv()
 

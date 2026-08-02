@@ -12,4 +12,4 @@ wheels/
 .env
 
 # Langgraph checkpoint memory
-checkpints.sqlite
+checkpoints.sqlite

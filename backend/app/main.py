@@ -1,5 +1,4 @@
 import asyncio
-import os
 
 from dotenv import load_dotenv
 from flask import Flask, current_app, jsonify, request
@@ -7,7 +6,6 @@ from flask_cors import CORS
 from flask_socketio import SocketIO, join_room
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 from langgraph.types import Command
-from neo4j import GraphDatabase
 
 from app.conversation.delete_conversation_history import delete_conversation_history
 from app.conversation.retrieve_conversation_history import retrieve_conversation_history
@@ -19,6 +17,7 @@ from app.graph_flow import build_graph
 from app.middlewares.jwt_middleware import jwt_required
 from app.routes.auth import auth_bp
 from app.routes.profile_management import profile_management_bp
+from app.utils.neo4j_driver import get_neo4j_driver
 
 load_dotenv()
 
@@ -117,12 +116,7 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(profile_management_bp)
 
-    driver = GraphDatabase.driver(
-        "bolt://localhost:7687",
-        auth=(os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD")),
-    )
-
-    app.extensions["neo4j_driver"] = driver
+    app.extensions["neo4j_driver"] = get_neo4j_driver()
     app.extensions["socketio"] = socketio
 
     @app.route("/")

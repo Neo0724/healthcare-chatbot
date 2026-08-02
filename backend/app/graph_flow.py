@@ -2,16 +2,13 @@ import json
 import os
 from typing import Annotated, Literal
 
-import torch
 from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage
 from langchain_core.runnables import RunnableConfig
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, START, StateGraph, add_messages
 from langgraph.types import Command, interrupt
 from neo4j import Driver
-from sentence_transformers import CrossEncoder
 from typing_extensions import TypedDict
 
 from app.graph_queries.queries import (
@@ -31,15 +28,14 @@ from app.prompt_templates import (
     preliminary_diagnosis_prompt,
     refined_diagnosis_prompt,
 )
+from app.utils.get_embedding_model import get_embedding_model
+from app.utils.get_reranker_model import get_reranker_model
 
 load_dotenv()
 
 os.environ["TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL"] = "1"
 os.environ["HF_HOME"] = "C:/hf_cache"
 os.environ["HF_TOKEN"] = "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"
-
-URI = os.getenv("NEO4J_URL")
-AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 
 
 # =====================================================================
@@ -72,23 +68,11 @@ llm = ChatOpenAI(
     extra_body={"chat_template_kwargs": {"enable_thinking": True}},
 )
 
-reranker = CrossEncoder(
-    "BAAI/bge-reranker-v2-m3",
-    max_length=256,
-    model_kwargs={
-        "torch_dtype": torch.float16,
-    },
-)
-
-
-# Initialize embedding model
-embeddings_model = HuggingFaceEmbeddings(model_name="abhinand/MedEmbed-base-v0.1")
-
 
 def rerank_contexts(user_query, contexts):
     pairs = [[user_query, context] for context in contexts]
 
-    scores = reranker.predict(pairs)
+    scores = get_reranker_model().predict(pairs)
 
     updated_context = sorted(zip(scores, pairs), key=lambda x: x[0], reverse=True)
 
@@ -168,8 +152,10 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
     # 1. Extract name and embed
     extracted_disease_names: list[str] = extract_disease_names(user_query)
 
+    embedding_model = get_embedding_model()
+
     disease_embeddings = [
-        embeddings_model.embed_query(d) for d in extracted_disease_names
+        embedding_model.embed_query(d) for d in extracted_disease_names
     ]
 
     driver: Driver = config["configurable"].get("neo4j_driver")
@@ -291,9 +277,11 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
     # negative_symptoms = list(extracted_entities.negative_symptoms)
     negative_symptoms = []
 
-    positive_embedding = embeddings_model.embed_query(",".join(positive_symptoms))
-    # negative_embedding = embeddings_model.embed_query(",".join(negative_symptoms))
-    negative_embedding = embeddings_model.embed_query(",".join(negative_symptoms))
+    embedding_model = get_embedding_model()
+
+    positive_embedding = embedding_model.embed_query(",".join(positive_symptoms))
+    # negative_embedding = get_embedding_model().embed_query(",".join(negative_symptoms))
+    negative_embedding = embedding_model.embed_query(",".join(negative_symptoms))
 
     driver: Driver = config["configurable"].get("neo4j_driver")
 
@@ -445,9 +433,11 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     current_negatives = []
     initial_disease_ids = state.get("initial_disease_ids")
 
-    positive_embedding = embeddings_model.embed_query(",".join(current_positives))
-    # negative_embedding = embeddings_model.embed_query(",".join(current_negatives))
-    negative_embedding = embeddings_model.embed_query(",".join(current_negatives))
+    embedding_model = get_embedding_model()
+
+    positive_embedding = embedding_model.embed_query(",".join(current_positives))
+    # negative_embedding = get_embedding_model().embed_query(",".join(current_negatives))
+    negative_embedding = embedding_model.embed_query(",".join(current_negatives))
 
     driver: Driver = config["configurable"].get("neo4j_driver")
 
@@ -703,7 +693,7 @@ def run_graph(graph, driver: Driver):
             config=config,
         ):
             if chunk["type"] == "updates":
-                for _, state in chunk["data"].items():
+                for state in chunk["data"].values():
                     if state and "messages" in state:
                         for message in state["messages"]:
                             print(f"Updated message: {message.content}")

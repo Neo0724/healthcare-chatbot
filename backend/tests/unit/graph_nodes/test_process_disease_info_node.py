@@ -14,8 +14,11 @@ def test_process_disease_info_node(
     mock_response_message = MagicMock()
     mock_response_message.content = "Response by LLM"
 
-    mock_embedding: MagicMock = mocker.patch("app.graph_flow.embeddings_model")
-    mock_embedding.embed_query.return_value = [1, 1, 1]
+    mock_embedding: MagicMock = mocker.patch("app.graph_flow.get_embedding_model")
+    mock_model_instance = MagicMock()
+    mock_embedding.return_value = mock_model_instance
+
+    mock_model_instance.embed_query.return_value = [1, 1, 1]
 
     mock_extract_disease_name: MagicMock = mocker.patch(
         "app.graph_flow.extract_disease_names"
@@ -53,7 +56,7 @@ def test_process_disease_info_node(
     mock_get_disease_information.assert_called_once_with(
         mock_driver,
         mock_extract_disease_name.return_value,
-        [mock_embedding.embed_query.return_value],
+        [mock_model_instance.embed_query.return_value],
     )
     mock_llm.invoke.assert_called_once()
 
@@ -62,7 +65,7 @@ def test_process_disease_info_node(
     assert kwargs["config"]["tags"] == ["user_message"]
 
     for d in mock_extract_disease_name.return_value:
-        mock_embedding.embed_query.assert_called_with(d)
+        mock_model_instance.embed_query.assert_called_with(d)
 
     # 2. check return value
     assert result["messages"] == [mock_response_message]
