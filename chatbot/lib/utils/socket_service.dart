@@ -22,7 +22,6 @@ class SocketService {
 
     // Listen for AI messages
     socket.on("message", (data) {
-      print("Received data: ${data.toString()}");
       // Example:
       // {
       //   "conversation_id": "123",

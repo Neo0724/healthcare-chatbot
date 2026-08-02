@@ -26,7 +26,7 @@ class _NewConversationState extends State<NewConversation> {
         final String conversationId = response.data["conversation_id"];
         appRouter.goNamed(
           "conversation",
-          pathParameters: {"id": conversationId},
+          pathParameters: {"id": conversationId, "redirectFromNew": "true"},
         );
       }
     } on DioException catch (e) {

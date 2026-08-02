@@ -7,7 +7,12 @@ import 'package:flutter/material.dart';
 
 class Conversation extends StatefulWidget {
   final String conversationId;
-  const Conversation({super.key, required this.conversationId});
+  bool redirectFromNew = false;
+  Conversation({
+    super.key,
+    required this.conversationId,
+    this.redirectFromNew = false,
+  });
 
   @override
   State<Conversation> createState() => _ConversationState();
@@ -16,6 +21,8 @@ class Conversation extends StatefulWidget {
 class _ConversationState extends State<Conversation> {
   List<MessageHistoryModel> _messageHistoryModel = [];
   List<MessageHistoryModel> _newMessages = [];
+  bool redirectFromNew = false;
+
   final SocketService socketService = SocketService();
   late final ScrollController _scrollController;
 
@@ -44,16 +51,20 @@ class _ConversationState extends State<Conversation> {
   }
 
   Future<void> _resumeGraph(String userMessage) async {
-    setState(() {
-      _newMessages.add(
-        MessageHistoryModel(
-          id: "temp_${DateTime.now().toString()}",
-          messageType: MessageType.human,
-          content: userMessage,
-          createdAt: DateTime.now(),
-        ),
-      );
-    });
+    if (!redirectFromNew) {
+      setState(() {
+        _newMessages.add(
+          MessageHistoryModel(
+            id: "temp_${DateTime.now().toString()}",
+            messageType: MessageType.human,
+            content: userMessage,
+            createdAt: DateTime.now(),
+          ),
+        );
+      });
+    }
+
+    redirectFromNew = false;
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
@@ -98,7 +109,9 @@ class _ConversationState extends State<Conversation> {
     }
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients && _scrollController.offset < _scrollController.position.maxScrollExtent - 200) {
+      if (_scrollController.hasClients &&
+          _scrollController.offset <
+              _scrollController.position.maxScrollExtent - 200) {
         _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
       }
     });
@@ -125,13 +138,13 @@ class _ConversationState extends State<Conversation> {
       socketService.disconnect();
       socketService.connect(widget.conversationId, _handleReceiveMessage);
       _getMessageAndResumeGraph();
-      _scrollController = ScrollController();
     }
   }
 
   @override
   void initState() {
     super.initState();
+    redirectFromNew = widget.redirectFromNew;
     socketService.connect(widget.conversationId, _handleReceiveMessage);
     _getMessageAndResumeGraph();
     _scrollController = ScrollController();

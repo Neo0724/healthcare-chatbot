@@ -207,7 +207,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         onTap: () {
                           appRouter.goNamed(
                             "conversation",
-                            pathParameters: {'id': conversation.id},
+                            pathParameters: {'id': conversation.id, "redirectFromNew": "false"},
                           );
                           Navigator.pop(context);
                         },
