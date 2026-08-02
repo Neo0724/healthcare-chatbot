@@ -55,7 +55,13 @@ class _ConversationState extends State<Conversation> {
       );
     });
 
-    final response = await CustomDio.getCustomDio().post(
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+      }
+    });
+
+    await CustomDio.getCustomDio().post(
       "/resume/${widget.conversationId}",
       data: {"user_response": userMessage},
     );
@@ -92,7 +98,7 @@ class _ConversationState extends State<Conversation> {
     }
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients) {
+      if (_scrollController.hasClients && _scrollController.offset < _scrollController.position.maxScrollExtent - 200) {
         _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
       }
     });
@@ -189,10 +195,9 @@ class _ConversationState extends State<Conversation> {
           final message = messages[index];
           final isUser = message.messageType.name == "human";
 
-          return ChatBubble(
-            key: ValueKey(message.id), // use a stable id if you have one
-            isUser: isUser,
-            content: message.content,
+          return SingleChildScrollView(
+            key: ValueKey(message.id),
+            child: ChatBubble(isUser: isUser, content: message.content),
           );
         },
       ),
