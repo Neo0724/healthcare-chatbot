@@ -21,6 +21,7 @@ def client():
     with app.test_client() as client:
         yield client
 
+
 @pytest.fixture(autouse=True)
 def set_testing_env():
     os.environ["ENVIRONMENT"] = "testing"

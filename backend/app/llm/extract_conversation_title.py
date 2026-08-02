@@ -1,5 +1,5 @@
 import os
-from typing import List
+
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -9,7 +9,7 @@ load_dotenv()
 
 
 class ConversationTitleSchema(BaseModel):
-    title: List[str] = Field(description="The conversation title")
+    title: list[str] = Field(description="The conversation title")
 
 
 llm = ChatOpenAI(
@@ -39,5 +39,5 @@ classifier_chain = prompt | structured_llm
 
 
 def extract_conversation_title(input: str) -> str:
-    result = classifier_chain.invoke({"input": input}).title
+    result = classifier_chain.invoke({"user_query": input}).title
     return result

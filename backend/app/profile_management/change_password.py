@@ -28,7 +28,7 @@ def change_password(current_password, new_password, user_id):
         {
             "_id": ObjectId(user_id),
         },
-        {"$set": {"password": hashed_password}},
+        {"$set": {"password": hashed_password.decode()}},
     )
 
     return jsonify({"success": True}), 200

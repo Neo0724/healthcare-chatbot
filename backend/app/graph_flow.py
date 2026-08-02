@@ -1,14 +1,19 @@
 import json
 import os
-from typing import Annotated, List, Literal
-from langchain_huggingface import HuggingFaceEmbeddings
-from neo4j import Driver, GraphDatabase
-from sentence_transformers import CrossEncoder
+from typing import Annotated, Literal
+
 import torch
-from typing_extensions import TypedDict
+from dotenv import load_dotenv
 from langchain_core.messages import SystemMessage
+from langchain_core.runnables import RunnableConfig
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, START, END, add_messages
+from langgraph.graph import END, START, StateGraph, add_messages
+from langgraph.types import Command, interrupt
+from neo4j import Driver
+from sentence_transformers import CrossEncoder
+from typing_extensions import TypedDict
+
 from app.graph_queries.queries import (
     get_diseases_information,
     get_possible_diseases,
@@ -18,18 +23,12 @@ from app.llm.extract_disease_names import extract_disease_names
 from app.llm.extract_follow_up_question_symptom import (
     extract_follow_up_question_symptom,
 )
-from app.llm.get_follow_up_questions import get_follow_up_questions
 from app.llm.extract_symtoms import extract_symptoms
-from langchain_core.runnables import RunnableConfig
-from langgraph.checkpoint.memory import MemorySaver
-from langgraph.types import Command, interrupt
-from dotenv import load_dotenv
+from app.llm.get_follow_up_questions import get_follow_up_questions
 from app.prompt_templates import (
     ask_follow_up_question_prompt,
     explain_disease_prompt,
     preliminary_diagnosis_prompt,
-)
-from app.prompt_templates import (
     refined_diagnosis_prompt,
 )
 
@@ -48,16 +47,16 @@ AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 # =====================================================================
 class ChatbotState(TypedDict):
     messages: Annotated[list, add_messages]
-    user_messages: Annotated[List, add_messages]
+    user_messages: Annotated[list, add_messages]
     routing_choice: str  # "info" or "diagnosis"
 
     # Symptom & Question Tracking State
-    extracted_positive_symptoms: List[str]
-    extracted_negative_symptoms: List[str]
-    asked_questions: List[str]  # Track exact text of previous questions
-    initial_disease_ids: List[str]
+    extracted_positive_symptoms: list[str]
+    extracted_negative_symptoms: list[str]
+    asked_questions: list[str]  # Track exact text of previous questions
+    initial_disease_ids: list[str]
 
-    retrieved_disease_summary: List[str]
+    retrieved_disease_summary: list[str]
     asked_questions_count: int
     follow_up_agreement: str
     diagnosis_result_query_choice: str
@@ -167,7 +166,7 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
     print(f"\nUser Query:\n{user_query}")
 
     # 1. Extract name and embed
-    extracted_disease_names: List[str] = extract_disease_names(user_query)
+    extracted_disease_names: list[str] = extract_disease_names(user_query)
 
     disease_embeddings = [
         embeddings_model.embed_query(d) for d in extracted_disease_names
@@ -523,9 +522,9 @@ def end_node(state: ChatbotState):
     response = llm.invoke(
         [
             SystemMessage(
-                content="Thanks and appreaciate the user for using this medical chatbot."
-                "Let the user know if he or she would like to start a new conversation, he could send a hi message, "
-                "and you will response immediately to provide assistance"
+                content="You may say good bye to the patient."
+                "Let the patient know if he or she would like to start a new conversation, he could send a hi message, "
+                "and you will response immediately to provide medical assistance"
             )
         ],
         config={"tags": ["user_message"]},
@@ -583,101 +582,101 @@ def route_diagnosis_result_query_node(
 # =====================================================================
 # Step A: Instantiate the StateGraph with your ChatbotState definition
 
-memory = MemorySaver()
 
-graph = (
-    StateGraph(ChatbotState)
-    .add_node("welcome", welcome_node)
-    .add_node("welcome_route_choice", welcome_route_choice_node)
-    # Disease info
-    .add_node("request_disease_info", request_disease_info_node)
-    .add_node("collect_disease_to_lookup", collect_disease_to_lookup_node)
-    .add_node("process_disease_info", process_disease_info_node)
-    .add_node("request_ask_more_disease_info", request_ask_more_disease_info)
-    .add_node("collect_ask_more_disease_info", collect_ask_more_disease_info)
-    # Diagnosis
-    .add_node("request_symptoms", request_initial_symptoms_node)
-    .add_node("collect_initial_symptoms", collect_initial_symptoms_node)
-    .add_node("process_and_diagnose", process_and_diagnose_node)
-    .add_node(
-        "request_agreement_on_follow_up_node", request_agreement_on_follow_up_node
+def build_graph():
+    graph = (
+        StateGraph(ChatbotState)
+        .add_node("welcome", welcome_node)
+        .add_node("welcome_route_choice", welcome_route_choice_node)
+        # Disease info
+        .add_node("request_disease_info", request_disease_info_node)
+        .add_node("collect_disease_to_lookup", collect_disease_to_lookup_node)
+        .add_node("process_disease_info", process_disease_info_node)
+        .add_node("request_ask_more_disease_info", request_ask_more_disease_info)
+        .add_node("collect_ask_more_disease_info", collect_ask_more_disease_info)
+        # Diagnosis
+        .add_node("request_symptoms", request_initial_symptoms_node)
+        .add_node("collect_initial_symptoms", collect_initial_symptoms_node)
+        .add_node("process_and_diagnose", process_and_diagnose_node)
+        .add_node(
+            "request_agreement_on_follow_up_node", request_agreement_on_follow_up_node
+        )
+        .add_node(
+            "collect_agreement_on_follow_up_node", collect_agreement_on_follow_up_node
+        )
+        .add_node("ask_follow_up", ask_follow_up_question_node)
+        .add_node("collect_follow_up_response", collect_follow_up_response_node)
+        .add_node("process_follow_up_response", process_follow_up_response_node)
+        .add_node("final_refined_diagnosis", final_refined_diagnosis_node)
+        .add_node(
+            "request_diagnosis_result_query_node", request_diagnosis_result_query_node
+        )
+        .add_node(
+            "collect_diagnosis_result_query_node", collect_diagnosis_result_query_node
+        )
+        # End node
+        .add_node("end_node", end_node)
+        # Step C: Set up edges and conditional routers
+        .add_edge(START, "welcome")
+        .add_edge("welcome", "welcome_route_choice")
+        .add_conditional_edges(
+            "welcome_route_choice",
+            route_after_welcome,
+            {
+                "request_disease_info": "request_disease_info",
+                "request_symptoms": "request_symptoms",
+            },
+        )
+        .add_edge("request_disease_info", "collect_disease_to_lookup")
+        .add_edge("collect_disease_to_lookup", "process_disease_info")
+        .add_edge("process_disease_info", "request_ask_more_disease_info")
+        .add_edge("request_ask_more_disease_info", "collect_ask_more_disease_info")
+        .add_conditional_edges(
+            "collect_ask_more_disease_info",
+            route_after_asking_disease_info,
+            {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+        )
+        .add_edge("request_symptoms", "collect_initial_symptoms")
+        .add_edge("collect_initial_symptoms", "process_and_diagnose")
+        .add_edge("process_and_diagnose", "request_agreement_on_follow_up_node")
+        .add_edge(
+            "request_agreement_on_follow_up_node", "collect_agreement_on_follow_up_node"
+        )
+        .add_conditional_edges(
+            "collect_agreement_on_follow_up_node",
+            route_after_preliminary,
+            {
+                "ask_follow_up": "ask_follow_up",
+                "final_refined_diagnosis": "final_refined_diagnosis",
+            },
+        )
+        .add_edge("ask_follow_up", "collect_follow_up_response")
+        .add_edge("collect_follow_up_response", "process_follow_up_response")
+        .add_conditional_edges(
+            "process_follow_up_response",
+            route_follow_up_loop,
+            {
+                "ask_follow_up": "ask_follow_up",
+                "final_refined_diagnosis": "final_refined_diagnosis",
+            },
+        )
+        .add_edge("final_refined_diagnosis", "request_diagnosis_result_query_node")
+        .add_edge(
+            "request_diagnosis_result_query_node", "collect_diagnosis_result_query_node"
+        )
+        .add_conditional_edges(
+            "collect_diagnosis_result_query_node",
+            route_diagnosis_result_query_node,
+            {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+        )
+        .add_edge("end_node", END)
     )
-    .add_node(
-        "collect_agreement_on_follow_up_node", collect_agreement_on_follow_up_node
-    )
-    .add_node("ask_follow_up", ask_follow_up_question_node)
-    .add_node("collect_follow_up_response", collect_follow_up_response_node)
-    .add_node("process_follow_up_response", process_follow_up_response_node)
-    .add_node("final_refined_diagnosis", final_refined_diagnosis_node)
-    .add_node(
-        "request_diagnosis_result_query_node", request_diagnosis_result_query_node
-    )
-    .add_node(
-        "collect_diagnosis_result_query_node", collect_diagnosis_result_query_node
-    )
-    # End node
-    .add_node("end_node", end_node)
-    # Step C: Set up edges and conditional routers
-    .add_edge(START, "welcome")
-    .add_edge("welcome", "welcome_route_choice")
-    .add_conditional_edges(
-        "welcome_route_choice",
-        route_after_welcome,
-        {
-            "request_disease_info": "request_disease_info",
-            "request_symptoms": "request_symptoms",
-        },
-    )
-    .add_edge("request_disease_info", "collect_disease_to_lookup")
-    .add_edge("collect_disease_to_lookup", "process_disease_info")
-    .add_edge("process_disease_info", "request_ask_more_disease_info")
-    .add_edge("request_ask_more_disease_info", "collect_ask_more_disease_info")
-    .add_conditional_edges(
-        "collect_ask_more_disease_info",
-        route_after_asking_disease_info,
-        {"request_disease_info": "request_disease_info", "end_node": "end_node"},
-    )
-    .add_edge("request_symptoms", "collect_initial_symptoms")
-    .add_edge("collect_initial_symptoms", "process_and_diagnose")
-    .add_edge("process_and_diagnose", "request_agreement_on_follow_up_node")
-    .add_edge(
-        "request_agreement_on_follow_up_node", "collect_agreement_on_follow_up_node"
-    )
-    .add_conditional_edges(
-        "collect_agreement_on_follow_up_node",
-        route_after_preliminary,
-        {
-            "ask_follow_up": "ask_follow_up",
-            "final_refined_diagnosis": "final_refined_diagnosis",
-        },
-    )
-    .add_edge("ask_follow_up", "collect_follow_up_response")
-    .add_edge("collect_follow_up_response", "process_follow_up_response")
-    .add_conditional_edges(
-        "process_follow_up_response",
-        route_follow_up_loop,
-        {
-            "ask_follow_up": "ask_follow_up",
-            "final_refined_diagnosis": "final_refined_diagnosis",
-        },
-    )
-    .add_edge("final_refined_diagnosis", "request_diagnosis_result_query_node")
-    .add_edge(
-        "request_diagnosis_result_query_node", "collect_diagnosis_result_query_node"
-    )
-    .add_conditional_edges(
-        "collect_diagnosis_result_query_node",
-        route_diagnosis_result_query_node,
-        {"request_disease_info": "request_disease_info", "end_node": "end_node"},
-    )
-    .add_edge("end_node", END)
-    .compile(checkpointer=memory)
-)
+
+    return graph
 
 
 def run_graph(graph, driver: Driver):
     # Define your initial state setup
-
     print("--- Kicking off Graph ---")
     state_input = {
         "messages": [],

@@ -10,3 +10,6 @@ wheels/
 .venv
 
 .env
+
+# Langgraph checkpoint memory
+checkpints.sqlite
