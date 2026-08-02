@@ -42,31 +42,34 @@ class _ProfileState extends State<Profile> {
           builder: (context, setDialogState) {
             return AlertDialog(
               title: const Text("Change Username"),
-              content: TextField(
-                controller: controller,
-                onChanged: (_) {
-                  setDialogState(() {
-                    errorMessage = "";
-                  });
-                },
-                decoration: InputDecoration(
-                  labelText: "New Username",
-                  errorText: errorMessage.isNotEmpty ? errorMessage : null,
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.grey),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.blue),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Colors.red),
+              content: SizedBox(
+                width: 350,
+                child: TextField(
+                  controller: controller,
+                  onChanged: (_) {
+                    setDialogState(() {
+                      errorMessage = "";
+                    });
+                  },
+                  decoration: InputDecoration(
+                    labelText: "New Username",
+                    errorText: errorMessage.isNotEmpty ? errorMessage : null,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(color: Colors.grey),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(color: Colors.blue),
+                    ),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(color: Colors.red),
+                    ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                      borderSide: const BorderSide(color: Colors.red),
+                    ),
                   ),
                 ),
               ),
@@ -161,7 +164,7 @@ class _ProfileState extends State<Profile> {
               title: const Text("Change Password"),
               content: SingleChildScrollView(
                 child: SizedBox(
-                  width: 500,
+                  width: 350,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -393,41 +396,54 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Profile")),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const CircleAvatar(radius: 45, child: Icon(Icons.person, size: 50)),
-
-            const SizedBox(height: 40),
-
-            Card(
-              child: ListTile(
-                leading: const Icon(Icons.person_outline),
-                title: const Text("Username"),
-                subtitle: Text(_username),
-                trailing: IconButton(
-                  icon: const Icon(Icons.edit),
-                  onPressed: () => _showUsernameDialog(context),
+      appBar: AppBar(
+        title: const Text(
+          "Profile",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: Center(
+        child: SizedBox(
+          width: 500,
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              children: [
+                const CircleAvatar(
+                  radius: 45,
+                  child: Icon(Icons.person, size: 50),
                 ),
-              ),
-            ),
 
-            const SizedBox(height: 16),
+                const SizedBox(height: 40),
 
-            Card(
-              child: ListTile(
-                leading: const Icon(Icons.lock_outline),
-                title: const Text("Password"),
-                subtitle: const Text("••••••••"),
-                trailing: IconButton(
-                  icon: const Icon(Icons.edit),
-                  onPressed: () => _showPasswordDialog(context),
+                Card(
+                  child: ListTile(
+                    leading: const Icon(Icons.person_outline),
+                    title: const Text("Username"),
+                    subtitle: Text(_username),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.edit),
+                      onPressed: () => _showUsernameDialog(context),
+                    ),
+                  ),
                 ),
-              ),
+
+                const SizedBox(height: 16),
+
+                Card(
+                  child: ListTile(
+                    leading: const Icon(Icons.lock_outline),
+                    title: const Text("Password"),
+                    subtitle: const Text("••••••••"),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.edit),
+                      onPressed: () => _showPasswordDialog(context),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
