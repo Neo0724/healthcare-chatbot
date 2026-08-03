@@ -7,8 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:go_router/go_router.dart';
 
+enum ConversationPopupOption { delete }
+
 class SideDrawer extends StatefulWidget {
-  const SideDrawer({super.key});
+  final String? conversationId;
+  const SideDrawer({super.key, this.conversationId});
 
   @override
   State<SideDrawer> createState() => _SideDrawerState();
@@ -139,6 +142,78 @@ class _SideDrawerState extends State<SideDrawer> {
     );
   }
 
+  void _confirmDeleteDialog(BuildContext context, String conversationId) {
+    bool onSameConversation = conversationId == widget.conversationId;
+    showDialog(
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          title: Text("Confirm Deletion"),
+          content: SizedBox(
+            width: 250,
+            height: 100,
+            child: Text(
+              "Are you sure you want to delete selected conversation?",
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("Cancel"),
+            ),
+            FilledButton(
+              onPressed: () async {
+                try {
+                  final response = await CustomDio.getCustomDio().delete(
+                    "/delete_conversation/$conversationId",
+                  );
+
+                  debugPrint(response.toString());
+
+                  if (!context.mounted) return;
+
+                  if (response.statusCode == 200 && response.data["success"]) {
+                    // Pop off alert dialog
+                    Navigator.pop(context);
+
+                    // Close drawer
+                    Scaffold.of(context).closeDrawer();
+
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: const Text('Deleted Successfully!'),
+                          duration: const Duration(seconds: 2),
+                          behavior: SnackBarBehavior.floating,
+                          width: 300,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: .circular(10.0),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0,
+                            vertical: 10.0,
+                          ),
+                          action: SnackBarAction(label: 'OK', onPressed: () {}),
+                        ),
+                      );
+
+                      if (onSameConversation) {
+                        appRouter.go("/");
+                      }
+                    }
+                  }
+                } on DioException catch (err) {
+                  debugPrint("Error deleting conversation: ${err.toString()}");
+                }
+              },
+              child: const Text("Confirm Delete"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -196,6 +271,7 @@ class _SideDrawerState extends State<SideDrawer> {
                         bottom: 10,
                       ),
                       child: ListTile(
+                        titleAlignment: ListTileTitleAlignment.center,
                         tileColor: Colors.cyan,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(7),
@@ -207,10 +283,34 @@ class _SideDrawerState extends State<SideDrawer> {
                         onTap: () {
                           appRouter.goNamed(
                             "conversation",
-                            pathParameters: {'id': conversation.id, "redirectFromNew": "false"},
+                            pathParameters: {'id': conversation.id},
+                            queryParameters: {"redirectFromNew": "false"},
                           );
                           Navigator.pop(context);
                         },
+                        trailing: Transform.translate(
+                          offset: const Offset(17, 0),
+                          child: PopupMenuButton<ConversationPopupOption>(
+                            onSelected: (ConversationPopupOption? value) {
+                              if (value == ConversationPopupOption.delete) {
+                                _confirmDeleteDialog(context, conversation.id);
+                              }
+                            },
+                            itemBuilder: (BuildContext context) =>
+                                <PopupMenuEntry<ConversationPopupOption>>[
+                                  const PopupMenuItem<ConversationPopupOption>(
+                                    value: ConversationPopupOption.delete,
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.delete),
+                                        SizedBox(width: 10),
+                                        Text("Delete"),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                          ),
+                        ),
                       ),
                     );
                   }),

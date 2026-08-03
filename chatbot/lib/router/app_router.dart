@@ -32,11 +32,12 @@ final GoRouter appRouter = GoRouter(
   routes: <GoRoute>[
     GoRoute(path: '/', builder: (context, state) => const NewConversation()),
     GoRoute(
-      path: '/conversation/:id/:redirectFromNew',
+      path: '/conversation/:id',
       builder: (context, state) {
         final conversationId = state.pathParameters['id'] ?? "";
         final bool redirectFromNew =
-            state.pathParameters['redirectFromNew']?.toLowerCase() == "true";
+            state.uri.queryParameters["redirectFromNew"]?.toLowerCase() ==
+            "true";
         return Conversation(
           conversationId: conversationId,
           redirectFromNew: redirectFromNew,

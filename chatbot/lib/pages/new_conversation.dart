@@ -1,5 +1,4 @@
 import 'package:chatbot/widgets/side_drawer.dart';
-import 'package:chatbot/models/conversation_history_model.dart';
 import 'package:chatbot/router/app_router.dart';
 import 'package:chatbot/utils/custom_dio.dart';
 import 'package:dio/dio.dart';
@@ -26,7 +25,8 @@ class _NewConversationState extends State<NewConversation> {
         final String conversationId = response.data["conversation_id"];
         appRouter.goNamed(
           "conversation",
-          pathParameters: {"id": conversationId, "redirectFromNew": "true"},
+          pathParameters: {"id": conversationId},
+          queryParameters: {"redirectFromNew": "true"},
         );
       }
     } on DioException catch (e) {

@@ -111,11 +111,25 @@ class _ProfileState extends State<Profile> {
                           _username = newUsername;
                         });
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text("Username updated successfully"),
+                          SnackBar(
+                            content: const Text(
+                              "Username updated successfully",
+                            ),
                             backgroundColor: Colors.green,
-                            duration: Duration(seconds: 2),
+                            duration: const Duration(seconds: 2),
                             behavior: SnackBarBehavior.floating,
+                            width: 500,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: .circular(10.0),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 15.0,
+                              vertical: 10.0,
+                            ),
+                            action: SnackBarAction(
+                              label: 'OK',
+                              onPressed: () {},
+                            ),
                           ),
                         );
                         return;
@@ -350,11 +364,25 @@ class _ProfileState extends State<Profile> {
                       if (response.statusCode == 200 &&
                           response.data["success"]) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text("Password updated successfully"),
+                          SnackBar(
+                            content: const Text(
+                              "Password updated successfully",
+                            ),
                             backgroundColor: Colors.green,
-                            duration: Duration(seconds: 2),
+                            duration: const Duration(seconds: 2),
                             behavior: SnackBarBehavior.floating,
+                            width: 500,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: .circular(10.0),
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 15.0,
+                              vertical: 10.0,
+                            ),
+                            action: SnackBarAction(
+                              label: 'OK',
+                              onPressed: () {},
+                            ),
                           ),
                         );
                         Navigator.pop(context);

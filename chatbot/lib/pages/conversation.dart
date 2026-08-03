@@ -160,7 +160,7 @@ class _ConversationState extends State<Conversation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Conversation")),
-      drawer: SideDrawer(),
+      drawer: SideDrawer(conversationId: widget.conversationId),
       body: Column(
         children: [
           _displayMessage([..._messageHistoryModel, ..._newMessages]),
