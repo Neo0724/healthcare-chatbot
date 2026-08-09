@@ -29,11 +29,11 @@ def test_delete_conversation_history_valid(client, mocker):
     response = client.delete("/delete_conversation/507f1f77bcf86cd799439011")
     body = response.get_json()
 
-    mock_message.delete_one.assert_called_once()
+    mock_message.delete_many.assert_called_once()
     mock_conversation_history.delete_one.assert_called_once()
 
     conversation_args, _ = mock_conversation_history.delete_one.call_args
-    message_args, _ = mock_message.delete_one.call_args
+    message_args, _ = mock_message.delete_many.call_args
 
     assert response.status_code == 200
     assert body["success"] is True
