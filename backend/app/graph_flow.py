@@ -185,8 +185,6 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
 
     reranked_context = rerank_contexts(user_query=user_query.content, contexts=contexts)
 
-    print(f"\nReranked Context: {reranked_context}\n")
-
     # Second LLM call: Generates the actual final educational breakdown
     response = llm.invoke(
         [
@@ -295,8 +293,6 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
         }
         for r in db_results
     ]
-
-    print(f"Retrieved possible diseases: {retrieved_disease_summary}")
 
     initial_disease_ids = [r.get("disease_id", "") for r in db_results]
 
@@ -445,10 +441,10 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
         driver, positive_embedding, negative_embedding, initial_disease_ids
     )
 
-    for index, record in enumerate(records):
-        print(
-            f"Rank: {index + 1} | FSN: {record.get('disease_name', '')} | Score: {record.get('post_score', ''):.4f}"
-        )
+    # for index, record in enumerate(records):
+    #     print(
+    #         f"Rank: {index + 1} | FSN: {record.get('disease_name', '')} | Score: {record.get('post_score', ''):.4f}"
+    #     )
 
     refined_results = [
         {
@@ -461,7 +457,7 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
 
     refined_results.sort(key=lambda x: x["match_score"], reverse=True)
 
-    print(f"Refined Results:\n{refined_results}\n\n")
+    # print(f"Refined Results:\n{refined_results}\n\n")
 
     response = llm.invoke(
         [
