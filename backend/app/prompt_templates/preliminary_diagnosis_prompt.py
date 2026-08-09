@@ -25,41 +25,39 @@ STRICT CLINICAL INSTRUCTIONS:
 For each disease, present:
 - Disease Name
 - Match Score
-- Interpretation of score (what it means clinically in simple terms)
+- Interpretation of score, in plain everyday language (e.g. "this means most of your described symptoms overlap with this condition" rather than clinical terminology)
 
 2. Symptom Correlation (VERY IMPORTANT):
-For each disease, explicitly map:
-- User symptoms → matching disease symptoms
-- For EACH matched symptom, cite the supporting symptom node details
-
-You MUST show this in a structured format like:
+For each disease, explicitly map user symptoms to matching disease symptoms using this format:
 
 - Symptom Match:
     - User symptom: "<user symptom>"
-    - Matched medical symptom: "<symptom summary>"
-    - Source:
-        • Title: <resource_title>
-        • Author: <resource_author>
-        • Year: <resource_published_year>
-        • URL: <resource_url>
+    - Matched medical symptom: "<symptom summary, explained simply>" [n]
 
-3. Evidence Requirement:
-Do NOT mention a disease unless at least one symptom node supports it.
+Where [n] is a reference marker number. DO NOT repeat the title/author/year/URL here — that goes only in the References section at the end. Every [n] marker used anywhere in the response must correspond to exactly one entry in that final list.
 
-4. References Section (MANDATORY):
-At the end, include a section:
+3. Plain-Language Requirement:
+- Write all explanations as if speaking to a patient with no medical background.
+- Avoid clinical jargon. If a medical term is unavoidable, give the plain-language meaning first, then the term in parentheses (e.g. "shortness of breath (dyspnea)").
+- Do not simplify to the point of dropping or distorting what the source actually says — every simplified explanation must still be strictly and verifiably grounded in its cited [n] source. If a source doesn't clearly support a claim, don't make the claim.
 
-## References Used
+4. Evidence Requirement:
+Do NOT mention a disease unless at least one symptom node supports it. Do NOT introduce any symptom, cause, or fact that isn't traceable to a numbered source.
 
-List ALL unique sources used across all diseases in this format:
+5. References Section (MANDATORY, ONLY AT THE END):
+After all disease sections, include a single consolidated section:
 
-- <resource_title> (by <resource_author>, <resource_published_year>)
+## References
+
+[n] <resource_title> — <resource_author>, <resource_published_year>
     <resource_url>
 
-Group duplicate URLs only once.
+- List each unique source once, numbered in the order first cited.
+- If the same URL appears in multiple symptom nodes, merge into one numbered entry and reuse that number wherever it's cited in the body.
+- Do not include any source, title, author, year, or URL text anywhere in the response except in this final section.
 
-5. Medical Disclaimer:
-Always include a clear disclaimer:
+6. Medical Disclaimer:
+Always include a clear disclaimer at the very end, after the References:
 - This is a preliminary AI-based analysis
 - It is not a medical diagnosis
 - User should consult a qualified healthcare professional
@@ -69,6 +67,7 @@ Always include a clear disclaimer:
 FORMAT REQUIREMENTS:
 - Use Markdown headings
 - Use bullet points for clarity
-- Keep clinical explanations simple and patient-friendly
-- Ensure traceability: every claim about a symptom must be backed by a referenced node
+- Use simple, patient-friendly language throughout — no unexplained jargon
+- Use numbered [n] markers for traceability instead of inline source blocks
+- References appear exactly once, only at the bottom of the entire response
 """
