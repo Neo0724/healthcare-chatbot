@@ -133,6 +133,10 @@ class _ConversationState extends State<Conversation> {
   Future<void> _handleSendMessage() async {
     final String newMessage = _messageController.text;
 
+    if (newMessage.trim().isEmpty) {
+      return;
+    }
+
     _resumeGraph(newMessage);
 
     _messageController.text = "";
@@ -218,12 +222,12 @@ class _ConversationState extends State<Conversation> {
                     ),
                   ),
                   suffixIcon: Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
+                    padding: EdgeInsets.only(right: 8.0),
                     child: IconButton(
-                      onPressed: () => _handleSendMessage(),
-                      icon: const Icon(
+                      onPressed: _isLoading ? null : () => _handleSendMessage(),
+                      icon: Icon(
                         Icons.send,
-                        color: Colors.white,
+                        color: _isLoading ? Colors.grey : Colors.white,
                       ), // Matching action accent color
                     ),
                   ),

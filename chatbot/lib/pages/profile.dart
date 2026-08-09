@@ -61,6 +61,7 @@ class _ProfileState extends State<Profile> {
                     filled: true,
                     fillColor: const Color(0xFF2C2C2C), //
                     errorText: errorMessage.isNotEmpty ? errorMessage : null,
+                    errorStyle: const TextStyle(color: Colors.redAccent),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(color: Colors.grey[700]!),
@@ -224,6 +225,7 @@ class _ProfileState extends State<Profile> {
                           errorText: currentPasswordError.isNotEmpty
                               ? currentPasswordError
                               : null,
+                          errorStyle: const TextStyle(color: Colors.redAccent),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(color: Colors.grey[700]!),
@@ -256,13 +258,14 @@ class _ProfileState extends State<Profile> {
                           });
                         },
                         decoration: InputDecoration(
-                          filled: true,
-                          fillColor: const Color(0xFF2C2C2C), //
                           labelText: "New Password",
                           labelStyle: const TextStyle(color: Colors.white70),
+                          filled: true,
+                          fillColor: const Color(0xFF2C2C2C), //
                           errorText: newPasswordError.isNotEmpty
                               ? newPasswordError
                               : null,
+                          errorStyle: const TextStyle(color: Colors.redAccent),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(color: Colors.grey[700]!),
@@ -301,10 +304,6 @@ class _ProfileState extends State<Profile> {
                           fillColor: const Color(
                             0xFF2C2C2C,
                           ), // Matches your dark input field background
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 14,
-                          ),
                           errorText: confirmPasswordError.isNotEmpty
                               ? confirmPasswordError
                               : null,
