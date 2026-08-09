@@ -70,35 +70,32 @@ class _SideDrawerState extends State<SideDrawer> {
     }
   }
 
-  Padding _logoutBtn() {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: SizedBox(
-        width: double.infinity,
-        height: 40,
-        child: GestureDetector(
-          onTap: () => _handleLogout(),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.lightBlue,
-              borderRadius: BorderRadius.circular(7),
-            ),
-            child: const Center(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "Logout",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+  Widget _logoutBtn() {
+    return SizedBox(
+      width: double.infinity,
+      height: 48,
+      child: GestureDetector(
+        onTap: () => _handleLogout(),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white, // Dark text for contrast
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: const Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Logout",
+                  style: TextStyle(
+                    color: Color(0xFF121212), // Dark text for contrast
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
                   ),
-                  SizedBox(width: 8),
-                  Icon(Icons.logout_outlined, color: Colors.white),
-                ],
-              ),
+                ),
+                SizedBox(width: 8),
+                Icon(Icons.logout_outlined, color: Colors.black),
+              ],
             ),
           ),
         ),
@@ -106,35 +103,32 @@ class _SideDrawerState extends State<SideDrawer> {
     );
   }
 
-  Padding _loginBtn() {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: SizedBox(
-        width: double.infinity,
-        height: 40,
-        child: GestureDetector(
-          onTap: () => context.goNamed('login'),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.lightBlue,
-              borderRadius: BorderRadius.circular(7),
-            ),
-            child: const Center(
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+  Widget _loginBtn() {
+    return SizedBox(
+      width: double.infinity,
+      height: 48,
+      child: GestureDetector(
+        onTap: () => context.goNamed('login'),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white, // Dark text for contrast
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: const Center(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Color(0xFF121212), // Dark text for contrast
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
                   ),
-                  SizedBox(width: 8),
-                  Icon(Icons.login_outlined, color: Colors.white),
-                ],
-              ),
+                ),
+                SizedBox(width: 8),
+                Icon(Icons.login_outlined, color: Colors.black),
+              ],
             ),
           ),
         ),
@@ -217,22 +211,35 @@ class _SideDrawerState extends State<SideDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: const Color(0xFF121212), // Dark mode drawer background
       child: Column(
         children: [
           if (!AuthState.isLoggedIn)
             Expanded(
               child: Center(
-                child: Text(
-                  "Please login to view conversation histories",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                  child: Text(
+                    "Please login to view conversation histories",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.grey[400],
+                    ),
+                  ),
                 ),
               ),
             ),
 
           if (AuthState.isLoggedIn)
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.fromLTRB(
+                16,
+                48,
+                16,
+                16,
+              ), // Extra top spacing for status bar
               child: SizedBox(
                 width: double.infinity,
                 child: Row(
@@ -240,13 +247,14 @@ class _SideDrawerState extends State<SideDrawer> {
                   children: [
                     Text(
                       "Welcome back, $_username!",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                     IconButton(
-                      icon: const Icon(Icons.settings),
+                      icon: const Icon(Icons.settings, color: Colors.white70),
                       onPressed: () {
                         // Navigate to settings page
                         context.goNamed('profile');
@@ -265,20 +273,21 @@ class _SideDrawerState extends State<SideDrawer> {
                 children: [
                   ..._conversationHistoryModel.map((conversation) {
                     return Padding(
-                      padding: const EdgeInsets.only(
-                        left: 10,
-                        right: 10,
-                        bottom: 10,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 5,
                       ),
                       child: ListTile(
                         titleAlignment: ListTileTitleAlignment.center,
-                        tileColor: Colors.cyan,
+                        tileColor: const Color(
+                          0xFF1E1E1E,
+                        ), // Matches your dark card color
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(7),
+                          borderRadius: BorderRadius.circular(8),
                         ),
                         title: Text(
                           conversation.title,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white70),
                         ),
                         onTap: () {
                           appRouter.goNamed(
@@ -291,6 +300,13 @@ class _SideDrawerState extends State<SideDrawer> {
                         trailing: Transform.translate(
                           offset: const Offset(17, 0),
                           child: PopupMenuButton<ConversationPopupOption>(
+                            color: const Color(
+                              0xFF2C2C2C,
+                            ), // Dark dropdown menu background
+                            icon: const Icon(
+                              Icons.more_vert,
+                              color: Colors.grey,
+                            ),
                             onSelected: (ConversationPopupOption? value) {
                               if (value == ConversationPopupOption.delete) {
                                 _confirmDeleteDialog(context, conversation.id);
@@ -302,9 +318,17 @@ class _SideDrawerState extends State<SideDrawer> {
                                     value: ConversationPopupOption.delete,
                                     child: Row(
                                       children: [
-                                        Icon(Icons.delete),
+                                        Icon(
+                                          Icons.delete,
+                                          color: Colors.redAccent,
+                                        ),
                                         SizedBox(width: 10),
-                                        Text("Delete"),
+                                        Text(
+                                          "Delete",
+                                          style: TextStyle(
+                                            color: Colors.white70,
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -319,9 +343,11 @@ class _SideDrawerState extends State<SideDrawer> {
             ),
 
           // Logout button
-          if (AuthState.isLoggedIn) _logoutBtn(),
+          if (AuthState.isLoggedIn)
+            Padding(padding: const EdgeInsets.all(16.0), child: _logoutBtn()),
 
-          if (!AuthState.isLoggedIn) _loginBtn(),
+          if (!AuthState.isLoggedIn)
+            Padding(padding: const EdgeInsets.all(16.0), child: _loginBtn()),
         ],
       ),
     );
