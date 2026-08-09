@@ -22,13 +22,6 @@ class SocketService {
 
     // Listen for AI messages
     socket.on("message", (data) {
-      // Example:
-      // {
-      //   "conversation_id": "123",
-      //   "content": "Hello",
-      //   "type": "AI"
-      // }
-
       handleIncomingMessage(data);
     });
 

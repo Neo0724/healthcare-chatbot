@@ -37,51 +37,79 @@ class _NewConversationState extends State<NewConversation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("New Conversation")),
-      drawer: SideDrawer(),
+      backgroundColor: const Color(0xFF121212), // Global dark gray background
+      appBar: AppBar(
+        title: const Text("New Conversation"),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: const Color(0xFF1E1E1E),
+        foregroundColor: Colors.white,
+      ),
+      drawer: const SideDrawer(),
       body: Center(
-        child: Container(
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Ready when you are",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-
-              SizedBox(height: 30),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 600),
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Ready when you are",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-                child: TextField(
+                const SizedBox(height: 32),
+                TextField(
                   controller: _messageController,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ), // Input text color
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: EdgeInsets.all(15),
-                    hintText: "Let's start the conversation!",
-                    hintStyle: TextStyle(
-                      color: Color(0xffDDDADA),
+                    fillColor: const Color(
+                      0xFF1E1E1E,
+                    ), // Dark input background matching cards
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 16,
+                    ),
+                    labelText: "Let's start the conversation!",
+                    labelStyle: const TextStyle(
+                      color: Colors.grey,
                       fontSize: 14,
                     ),
-                    border: OutlineInputBorder(
+                    enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
+                      borderSide: BorderSide(
+                        color: Colors.transparent,
+                        width: 1,
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(
+                        color: Colors.white,
+                        width: 1.5,
+                      ),
                     ),
                     suffixIcon: Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: IconButton(
                         onPressed: () => _handleSendMessage(),
-                        icon: const Icon(Icons.send),
+                        icon: const Icon(
+                          Icons.send,
+                          color: Colors.white,
+                        ), // Matching action accent color
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

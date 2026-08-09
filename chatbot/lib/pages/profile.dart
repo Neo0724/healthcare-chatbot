@@ -41,7 +41,11 @@ class _ProfileState extends State<Profile> {
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
-              title: const Text("Change Username"),
+              backgroundColor: const Color(0xFF121212),
+              title: const Text(
+                "Change Username",
+                style: TextStyle(color: Colors.white),
+              ),
               content: SizedBox(
                 width: 350,
                 child: TextField(
@@ -53,22 +57,25 @@ class _ProfileState extends State<Profile> {
                   },
                   decoration: InputDecoration(
                     labelText: "New Username",
+                    labelStyle: const TextStyle(color: Colors.white70),
+                    filled: true,
+                    fillColor: const Color(0xFF2C2C2C), //
                     errorText: errorMessage.isNotEmpty ? errorMessage : null,
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: Colors.grey[700]!),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: const BorderSide(color: Colors.blue),
+                      borderSide: const BorderSide(color: Colors.white),
                     ),
                     errorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: const BorderSide(color: Colors.red),
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                     focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: const BorderSide(color: Colors.red),
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -76,7 +83,13 @@ class _ProfileState extends State<Profile> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text("Cancel"),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Color(0xFF2C2C2C)),
+                  ),
+                  child: const Text(
+                    "Cancel",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 FilledButton(
                   onPressed: () async {
@@ -150,7 +163,16 @@ class _ProfileState extends State<Profile> {
                       });
                     }
                   },
-                  child: const Text("Save"),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(Colors.white),
+                  ),
+                  child: const Text(
+                    "Save",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             );
@@ -175,7 +197,11 @@ class _ProfileState extends State<Profile> {
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
-              title: const Text("Change Password"),
+              backgroundColor: const Color(0xFF121212),
+              title: const Text(
+                "Change Password",
+                style: TextStyle(color: Colors.white),
+              ),
               content: SingleChildScrollView(
                 child: SizedBox(
                   width: 350,
@@ -192,24 +218,31 @@ class _ProfileState extends State<Profile> {
                         },
                         decoration: InputDecoration(
                           labelText: "Current Password",
+                          labelStyle: const TextStyle(color: Colors.white70),
+                          filled: true,
+                          fillColor: const Color(0xFF2C2C2C), //
                           errorText: currentPasswordError.isNotEmpty
                               ? currentPasswordError
                               : null,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.grey),
+                            borderSide: BorderSide(color: Colors.grey[700]!),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.blue),
+                            borderSide: const BorderSide(color: Colors.white),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                         ),
                       ),
@@ -223,25 +256,32 @@ class _ProfileState extends State<Profile> {
                           });
                         },
                         decoration: InputDecoration(
+                          filled: true,
+                          fillColor: const Color(0xFF2C2C2C), //
                           labelText: "New Password",
+                          labelStyle: const TextStyle(color: Colors.white70),
                           errorText: newPasswordError.isNotEmpty
                               ? newPasswordError
                               : null,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.grey),
+                            borderSide: BorderSide(color: Colors.grey[700]!),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.blue),
+                            borderSide: const BorderSide(color: Colors.white),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                         ),
                       ),
@@ -256,24 +296,38 @@ class _ProfileState extends State<Profile> {
                         },
                         decoration: InputDecoration(
                           labelText: "Confirm Password",
+                          labelStyle: const TextStyle(color: Colors.white70),
+                          filled: true,
+                          fillColor: const Color(
+                            0xFF2C2C2C,
+                          ), // Matches your dark input field background
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 14,
+                          ),
                           errorText: confirmPasswordError.isNotEmpty
                               ? confirmPasswordError
                               : null,
+                          errorStyle: const TextStyle(color: Colors.redAccent),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.grey),
+                            borderSide: BorderSide(color: Colors.grey[700]!),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.blue),
+                            borderSide: const BorderSide(color: Colors.white),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
-                            borderSide: const BorderSide(color: Colors.red),
+                            borderSide: const BorderSide(
+                              color: Colors.redAccent,
+                            ),
                           ),
                         ),
                       ),
@@ -284,7 +338,13 @@ class _ProfileState extends State<Profile> {
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text("Cancel"),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Color(0xFF2C2C2C)),
+                  ),
+                  child: const Text(
+                    "Cancel",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 FilledButton(
                   onPressed: () async {
@@ -411,7 +471,16 @@ class _ProfileState extends State<Profile> {
                       }
                     }
                   },
-                  child: const Text("Save"),
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(Colors.white),
+                  ),
+                  child: const Text(
+                    "Save",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
               ],
             );
@@ -429,42 +498,83 @@ class _ProfileState extends State<Profile> {
           "Profile",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: const Color(0xFF1E1E1E),
+        foregroundColor: Colors.white,
       ),
       body: Center(
-        child: SizedBox(
-          width: 500,
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 500),
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(24.0),
             child: Column(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 45,
-                  child: Icon(Icons.person, size: 50),
+                  backgroundColor: const Color(0xFF1E1E1E),
+                  child: const Icon(
+                    Icons.person,
+                    size: 50,
+                    color: Colors.white,
+                  ),
                 ),
-
                 const SizedBox(height: 40),
-
                 Card(
+                  elevation: 4,
+                  color: const Color(0xFF1E1E1E), // Dark card background
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                   child: ListTile(
-                    leading: const Icon(Icons.person_outline),
-                    title: const Text("Username"),
-                    subtitle: Text(_username),
+                    leading: const Icon(
+                      Icons.person_outline,
+                      color: Colors.white70,
+                    ),
+                    title: const Text(
+                      "Username",
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                    ),
+                    subtitle: Text(
+                      _username,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     trailing: IconButton(
-                      icon: const Icon(Icons.edit),
+                      icon: const Icon(Icons.edit, color: Colors.white),
                       onPressed: () => _showUsernameDialog(context),
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 16),
-
                 Card(
+                  elevation: 4,
+                  color: const Color(0xFF1E1E1E), // Dark card background
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                   child: ListTile(
-                    leading: const Icon(Icons.lock_outline),
-                    title: const Text("Password"),
-                    subtitle: const Text("••••••••"),
+                    leading: const Icon(
+                      Icons.lock_outline,
+                      color: Colors.white70,
+                    ),
+                    title: const Text(
+                      "Password",
+                      style: TextStyle(color: Colors.grey, fontSize: 12),
+                    ),
+                    subtitle: const Text(
+                      "••••••••",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     trailing: IconButton(
-                      icon: const Icon(Icons.edit),
+                      icon: const Icon(Icons.edit, color: Colors.white),
                       onPressed: () => _showPasswordDialog(context),
                     ),
                   ),

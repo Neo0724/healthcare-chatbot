@@ -1,5 +1,6 @@
 import 'package:chatbot/utils/socket_service.dart';
 import 'package:chatbot/widgets/chat_bubble.dart';
+import 'package:chatbot/widgets/message_loading_bubble.dart';
 import 'package:chatbot/widgets/side_drawer.dart';
 import 'package:chatbot/models/message_history_model.dart';
 import 'package:chatbot/utils/custom_dio.dart';
@@ -22,6 +23,7 @@ class _ConversationState extends State<Conversation> {
   List<MessageHistoryModel> _messageHistoryModel = [];
   List<MessageHistoryModel> _newMessages = [];
   bool redirectFromNew = false;
+  bool _isLoading = false;
 
   final SocketService socketService = SocketService();
   late final ScrollController _scrollController;
@@ -72,6 +74,10 @@ class _ConversationState extends State<Conversation> {
       }
     });
 
+    setState(() {
+      _isLoading = true;
+    });
+
     await CustomDio.getCustomDio().post(
       "/resume/${widget.conversationId}",
       data: {"user_response": userMessage},
@@ -81,6 +87,13 @@ class _ConversationState extends State<Conversation> {
   Future<void> _handleReceiveMessage(dynamic data) async {
     final String receivedMessageId = data["id"];
     final String receivedMessage = data["content"];
+    // final bool isLast = data["is_last"] is bool
+    //     ? data["is_last"]
+    //     : data["is_last"]?.toString().toLowerCase() == "true";
+
+    setState(() {
+      _isLoading = false;
+    });
 
     if (!_newMessages.any((msg) => msg.id == receivedMessageId)) {
       setState(() {
@@ -159,7 +172,16 @@ class _ConversationState extends State<Conversation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Conversation")),
+      appBar: AppBar(
+        title: Text(
+          "Conversation",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: const Color(0xFF1E1E1E),
+        foregroundColor: Colors.white,
+      ),
       drawer: SideDrawer(conversationId: widget.conversationId),
       body: Column(
         children: [
@@ -172,21 +194,37 @@ class _ConversationState extends State<Conversation> {
               ),
               child: TextField(
                 controller: _messageController,
+                style: const TextStyle(color: Colors.white), // Input text color
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
-                  contentPadding: EdgeInsets.all(15),
-                  hintText: "Sends a message",
-                  hintStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
-                  border: OutlineInputBorder(
+                  fillColor: const Color(
+                    0xFF1E1E1E,
+                  ), // Dark input background matching cards
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 16,
+                  ),
+                  labelText: "Sends a message",
+                  labelStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+                  enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
+                    borderSide: BorderSide(color: Colors.transparent, width: 1),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Colors.grey,
+                      width: 1.5,
+                    ),
                   ),
                   suffixIcon: Padding(
                     padding: const EdgeInsets.only(right: 8.0),
                     child: IconButton(
                       onPressed: () => _handleSendMessage(),
-                      icon: const Icon(Icons.send),
+                      icon: const Icon(
+                        Icons.send,
+                        color: Colors.white,
+                      ), // Matching action accent color
                     ),
                   ),
                 ),
@@ -203,8 +241,13 @@ class _ConversationState extends State<Conversation> {
       child: ListView.builder(
         controller: _scrollController,
         padding: const EdgeInsets.all(12),
-        itemCount: messages.length,
+        itemCount: _isLoading ? messages.length + 1 : messages.length,
         itemBuilder: (context, index) {
+          // Display loading bubble when there is a pending message
+          if (index == messages.length && _isLoading) {
+            return const MessageLoadingBubble(); // Your simple loading bubble
+          }
+
           final message = messages[index];
           final isUser = message.messageType.name == "human";
 

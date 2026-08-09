@@ -278,7 +278,7 @@ class _LoginState extends State<Login> {
               borderSide: BorderSide(
                 color: _errorUsername.isNotEmpty
                     ? Colors.redAccent
-                    : Colors.grey[700]!, // Subtle border for dark mode
+                    : Colors.transparent, // Subtle border for dark mode
                 width: 1.5,
               ),
               borderRadius: BorderRadius.circular(8),
@@ -289,7 +289,7 @@ class _LoginState extends State<Login> {
               borderSide: BorderSide(
                 color: _errorUsername.isNotEmpty
                     ? Colors.redAccent
-                    : Colors.blueAccent,
+                    : Colors.white,
                 width: 1.5,
               ),
               borderRadius: BorderRadius.circular(8),
@@ -329,7 +329,7 @@ class _LoginState extends State<Login> {
             fillColor: const Color(0xFF2C2C2C),
             contentPadding: EdgeInsets.all(10),
             labelText: "Enter Password",
-            labelStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
+            labelStyle: TextStyle(color: Colors.grey, fontSize: 14),
             suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
@@ -351,15 +351,15 @@ class _LoginState extends State<Login> {
                     : Colors.transparent,
                 width: 1.5,
               ),
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(8),
             ),
 
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                color: _errorPassword.isNotEmpty ? Colors.red : Colors.blue,
+                color: _errorPassword.isNotEmpty ? Colors.red : Colors.white,
                 width: 1.5,
               ),
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(8),
             ),
 
             errorText: _errorPassword.isNotEmpty ? _errorPassword : null,

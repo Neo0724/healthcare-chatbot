@@ -142,18 +142,29 @@ class _SideDrawerState extends State<SideDrawer> {
       context: context,
       builder: (_) {
         return AlertDialog(
-          title: Text("Confirm Deletion"),
+          backgroundColor: const Color(0xFF121212),
+          title: Text(
+            "Confirm Deletion",
+            style: TextStyle(color: Colors.white),
+          ),
           content: SizedBox(
             width: 250,
-            height: 100,
+            height: 50,
             child: Text(
               "Are you sure you want to delete selected conversation?",
+              style: TextStyle(color: Colors.white),
             ),
           ),
           actions: [
             TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Color(0xFF2C2C2C)),
+              ),
               onPressed: () => Navigator.pop(context),
-              child: const Text("Cancel"),
+              child: const Text(
+                "Cancel",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             FilledButton(
               onPressed: () async {
@@ -200,7 +211,16 @@ class _SideDrawerState extends State<SideDrawer> {
                   debugPrint("Error deleting conversation: ${err.toString()}");
                 }
               },
-              child: const Text("Confirm Delete"),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.white),
+              ),
+              child: const Text(
+                "Confirm Delete",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         );
@@ -257,7 +277,7 @@ class _SideDrawerState extends State<SideDrawer> {
                       icon: const Icon(Icons.settings, color: Colors.white70),
                       onPressed: () {
                         // Navigate to settings page
-                        context.goNamed('profile');
+                        context.pushNamed('profile');
                       },
                     ),
                   ],
@@ -271,6 +291,32 @@ class _SideDrawerState extends State<SideDrawer> {
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
+                  // Tile to create new conversation
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 5,
+                    ),
+                    child: ListTile(
+                      titleAlignment: ListTileTitleAlignment.center,
+                      tileColor: Colors.white, // Matches your dark card color
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      title: Text(
+                        "Create New Conversation",
+                        style: const TextStyle(color: Colors.black),
+                      ),
+                      onTap: () {
+                        appRouter.go("/");
+                        Navigator.pop(context);
+                      },
+                      trailing: Transform.translate(
+                        offset: const Offset(17, 0),
+                        child: Icon(Icons.create_sharp, color: Colors.black),
+                      ),
+                    ),
+                  ),
                   ..._conversationHistoryModel.map((conversation) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
@@ -279,15 +325,21 @@ class _SideDrawerState extends State<SideDrawer> {
                       ),
                       child: ListTile(
                         titleAlignment: ListTileTitleAlignment.center,
-                        tileColor: const Color(
-                          0xFF1E1E1E,
+                        tileColor: Color(
+                          widget.conversationId == conversation.id
+                              ? 0xFFFFFFFF
+                              : 0xFF1E1E1E,
                         ), // Matches your dark card color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
                         title: Text(
                           conversation.title,
-                          style: const TextStyle(color: Colors.white70),
+                          style: TextStyle(
+                            color: widget.conversationId == conversation.id
+                                ? Colors.black
+                                : Colors.white,
+                          ),
                         ),
                         onTap: () {
                           appRouter.goNamed(

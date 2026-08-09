@@ -18,7 +18,7 @@ class ChatBubble extends StatelessWidget {
           maxWidth: MediaQuery.of(context).size.width * 0.75,
         ),
         decoration: BoxDecoration(
-          color: isUser ? Colors.blue : Colors.grey.shade300,
+          color: Color(0xFF2C2C2C),
           borderRadius: BorderRadius.circular(12).copyWith(
             bottomRight: isUser ? Radius.zero : const Radius.circular(12),
             bottomLeft: isUser ? const Radius.circular(12) : Radius.zero,
@@ -27,7 +27,12 @@ class ChatBubble extends StatelessWidget {
         child: isUser
             // user messages are plain, skip markdown parsing entirely
             ? Text(content, style: const TextStyle(color: Colors.white))
-            : GptMarkdown(content, style: const TextStyle(color: Colors.black)),
+            : SelectionArea(
+                child: GptMarkdown(
+                  content,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
       ),
     );
   }

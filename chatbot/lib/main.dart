@@ -3,6 +3,7 @@ import 'package:chatbot/states/auth_state.dart';
 import 'package:chatbot/utils/custom_dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:gpt_markdown/gpt_markdown.dart';
 
 Future<void> main() async {
   await dotenv.load();
@@ -20,7 +21,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: appRouter,
-      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF121212)),
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF121212),
+        extensions: [
+          GptMarkdownThemeData(
+            brightness: Brightness.dark,
+            h1: const TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.w900,
+              letterSpacing: -0.5,
+              color: Colors.white,
+            ),
+            h2: const TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+            h3: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
