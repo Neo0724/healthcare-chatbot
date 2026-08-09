@@ -16,8 +16,6 @@ def delete_conversation_history(conversation_id):
 
     conversation_history.delete_one({"_id": exist["_id"]})
 
-    message.delete_one({
-        "conversation_id": exist["_id"]
-    })
+    message.delete_many({"conversation_id": exist["_id"]})
 
     return jsonify({"success": True}), 200
