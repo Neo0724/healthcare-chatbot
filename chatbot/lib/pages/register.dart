@@ -110,78 +110,103 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Register")),
+      backgroundColor: const Color(0xFF121212), // Global dark gray background
+      appBar: AppBar(
+        title: const Text("Register"),
+        elevation: 0,
+        centerTitle: true,
+        backgroundColor: const Color(0xFF1E1E1E),
+        foregroundColor: Colors.white,
+      ),
       body: Center(
-        child: Container(
-          height: 450,
-          width: 350,
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.circular(7.0),
-            border: BoxBorder.all(color: Colors.red, width: 3),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Center(
-                    child: Text(
-                      "Register Now",
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16.0),
+              ),
+              color: const Color(0xFF1E1E1E), // Card dark background
+              child: Padding(
+                padding: const EdgeInsets.all(24.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Text(
+                      "Create Account",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 24,
+                        color: Colors.white,
                       ),
                     ),
-                  ),
-                  SizedBox(height: 30),
-                  _usernameInput(),
-                  SizedBox(height: 30),
-                  _passwordInput(),
-                  SizedBox(height: 30),
-                  _submitBtn(),
-                  SizedBox(height: 15),
-                  if (_errorMessage.isNotEmpty)
-                    Text(
-                      _errorMessage,
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontWeight: FontWeight(800),
-                      ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      "Register Now to get started",
                       textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
                     ),
-                  if (_registerSuccess)
-                    Text(
-                      "Register Successfull! You may login now.",
-                      style: TextStyle(
-                        color: Colors.green,
-                        fontWeight: FontWeight(800),
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Already have an account?"),
-                      SizedBox(width: 5),
-                      GestureDetector(
-                        onTap: () {
-                          context.go('/login');
-                        },
-                        child: Text(
-                          "Login now",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(height: 32),
+                    _usernameInput(),
+                    const SizedBox(height: 16),
+                    _passwordInput(),
+                    const SizedBox(height: 24),
+                    _submitBtn(),
+                    if (_errorMessage.isNotEmpty) ...[
+                      const SizedBox(height: 16),
+                      Text(
+                        _errorMessage,
+                        style: const TextStyle(
+                          color: Colors.redAccent,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
                         ),
+                        textAlign: TextAlign.center,
                       ),
                     ],
-                  ),
-                ],
+                    if (_registerSuccess) ...[
+                      const SizedBox(height: 16),
+                      const Text(
+                        "Register Successful! You may login now.",
+                        style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                    const SizedBox(height: 24),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Already have an account?",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                        const SizedBox(width: 4),
+                        GestureDetector(
+                          onTap: () {
+                            context.go('/login');
+                          },
+                          child: Text(
+                            "Login now",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blueAccent,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ],
+            ),
           ),
         ),
       ),
@@ -196,15 +221,19 @@ class _RegisterState extends State<Register> {
         handleRegister(username, password);
       },
       child: Container(
-        height: 40,
+        height: 48,
         decoration: BoxDecoration(
-          color: Colors.lightBlue,
-          borderRadius: BorderRadius.circular(7),
+          color: Colors.white, // Crisp white stands out sharply in dark mode
+          borderRadius: BorderRadius.circular(8),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             "Register",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Color(0xFF121212), // Dark text for contrast
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
           ),
         ),
       ),
@@ -214,42 +243,55 @@ class _RegisterState extends State<Register> {
   Column _usernameInput() {
     return Column(
       children: [
-        Align(
+        const Align(
           alignment: Alignment.centerLeft,
-          child: Text("Username:", textAlign: TextAlign.start),
+          child: Text(
+            "Username:",
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              color: Colors.white70, // Matches dark mode text hierarchy
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         TextField(
           controller: _usernameController,
+          style: const TextStyle(color: Colors.white),
           onChanged: (value) => setState(() {
             _errorUsername = "";
           }),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.white,
-            contentPadding: EdgeInsets.all(10),
-            hintText: "Enter Username",
-            hintStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
-            // Show red border if error exists
+            fillColor: const Color(0xFF2C2C2C),
+            contentPadding: const EdgeInsets.all(14),
+            labelText: "Enter Username",
+            labelStyle: const TextStyle(color: Colors.grey, fontSize: 14),
+
+            // Enabled Border
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
                 color: _errorUsername.isNotEmpty
-                    ? Colors.red
-                    : Colors.transparent,
+                    ? Colors.redAccent
+                    : Colors.grey[700]!, // Subtle border for dark mode
                 width: 1.5,
               ),
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(8),
             ),
 
+            // Focused Border
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                color: _errorUsername.isNotEmpty ? Colors.red : Colors.blue,
+                color: _errorUsername.isNotEmpty
+                    ? Colors.redAccent
+                    : Colors.blueAccent,
                 width: 1.5,
               ),
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(8),
             ),
 
             errorText: _errorUsername.isNotEmpty ? _errorUsername : null,
+            errorStyle: const TextStyle(color: Colors.redAccent),
           ),
         ),
       ],
@@ -261,7 +303,14 @@ class _RegisterState extends State<Register> {
       children: [
         Align(
           alignment: Alignment.centerLeft,
-          child: Text("Password:", textAlign: TextAlign.start),
+          child: Text(
+            "Password:",
+            textAlign: TextAlign.start,
+            style: TextStyle(
+              color: Colors.white70, // Matches dark mode text hierarchy
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ),
         SizedBox(height: 10),
         TextField(
@@ -269,20 +318,26 @@ class _RegisterState extends State<Register> {
           onChanged: (value) => setState(() {
             _errorPassword = "";
           }),
+          style: const TextStyle(color: Colors.white),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.white,
+            fillColor: const Color(0xFF2C2C2C),
             contentPadding: EdgeInsets.all(10),
-            hintText: "Enter Password",
-            hintStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
-            suffix: GestureDetector(
-              child: Text("Visible"),
-              onTap: () {
+            labelText: "Enter Password",
+            labelStyle: TextStyle(color: Color(0xffDDDADA), fontSize: 14),
+            suffixIcon: IconButton(
+              onPressed: () {
                 setState(() {
                   _isPasswordVisible = !_isPasswordVisible;
                 });
               },
+              icon: Icon(
+                _isPasswordVisible ? Icons.visibility_off : Icons.visibility,
+                color: Colors.white,
+              ),
+              iconSize: 14,
             ),
+
             // Show red border if error exists
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
@@ -303,6 +358,7 @@ class _RegisterState extends State<Register> {
             ),
 
             errorText: _errorPassword.isNotEmpty ? _errorPassword : null,
+            errorStyle: const TextStyle(color: Colors.redAccent),
           ),
           obscureText: !_isPasswordVisible,
           keyboardType: TextInputType.visiblePassword,
