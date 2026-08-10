@@ -1,7 +1,9 @@
-import pytest
 from unittest.mock import MagicMock
 
+import pytest
+
 from app.graph_flow import welcome_route_choice_node
+
 
 @pytest.mark.parametrize(
     "user_choice, expected",

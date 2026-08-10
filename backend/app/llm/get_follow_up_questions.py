@@ -1,11 +1,10 @@
 import json
-from typing import List, TypedDict
-from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.prompts import PromptTemplate
-from pydantic import BaseModel, Field
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from langchain_core.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
