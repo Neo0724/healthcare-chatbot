@@ -31,13 +31,7 @@ def test_query_disease_info(client, socket_client):
     # Join the room of conversation id
     socket_client.emit("join_room", {"conversation_id": converation_id})
 
-    # Sends the user query to resume the conversation
-    client.post(
-        f"/resume/{converation_id}", json={"user_response": "hi"}, headers=headers
-    )
-
-    assert socket_client.is_connected()
-
+    # Helper functions
     def get_socket_messages(socket_client):
         all_chunks = []
         is_complete = False
@@ -54,53 +48,37 @@ def test_query_disease_info(client, socket_client):
                     if payload.get("is_last") is True:
                         return all_chunks
 
-    assert len(get_socket_messages(socket_client)) > 1
+    def resume_conversation(conversation_id, user_response):
+        response = client.post(
+            f"/resume/{conversation_id}",
+            json={"user_response": user_response},
+            headers=headers,
+        )
+
+        assert response.status_code == 200
+        assert len(get_socket_messages(socket_client)) > 1
+
+    # Sends the user query to resume the conversation
+    client.post(
+        f"/resume/{converation_id}", json={"user_response": "hi"}, headers=headers
+    )
+
+    assert socket_client.is_connected()
 
     # Answer to search for disease information
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "info"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "info")
 
     # Provide the disease name
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "I would like to know more about diabetes"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "I would like to know more about diabetes")
 
     # Answer yes to ask about other disease
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "yes"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "Yes")
 
     # Ask another disease info
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "I would like to know about dengue"},
-        headers=headers,
-    )
-
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "I would like to know about dengue")
 
     # Answer no to terminate current conversation
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "no"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "No")
 
     # Delete the current conversation
     delete_response = client.delete(f"/delete_conversation/{converation_id}", headers=headers)

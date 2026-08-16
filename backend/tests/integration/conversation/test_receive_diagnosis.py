@@ -28,13 +28,7 @@ def test_receive_diagnosis(client, socket_client):
     # Join the room of conversation id
     socket_client.emit("join_room", {"conversation_id": converation_id})
 
-    # Sends the user query to resume the conversation
-    client.post(
-        f"/resume/{converation_id}", json={"user_response": "hi"}, headers=headers
-    )
-
-    assert socket_client.is_connected()
-
+    # Helper functions
     def get_socket_messages(socket_client):
         all_chunks = []
         is_complete = False
@@ -51,74 +45,47 @@ def test_receive_diagnosis(client, socket_client):
                     if payload.get("is_last") is True:
                         return all_chunks
 
-    assert len(get_socket_messages(socket_client)) > 1
-
-    # Answer to receive preliminary diagnosis
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "diagnosis"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
-
-    # Provide some initial symptom
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "I have headache"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
-
-    # Answer follow up question
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "yes"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
-
-    # Required to answer 5 questions with either "Yes" or "No"
-    for _ in range(5):
-        client.post(
-            f"/resume/{converation_id}",
-            json={"user_response": "yes"},
+    def resume_conversation(conversation_id, user_response):
+        response = client.post(
+            f"/resume/{conversation_id}",
+            json={"user_response": user_response},
             headers=headers,
         )
 
+        assert response.status_code == 200
         assert len(get_socket_messages(socket_client)) > 1
 
-    # Answer yes to ask follow question about diagnosed disease information
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "yes"},
-        headers=headers,
-    )
+    # Sends the user query to resume the conversation
+    resume_conversation(converation_id, "hi")
 
-    assert len(get_socket_messages(socket_client)) > 1
+    assert socket_client.is_connected()
+
+    # Answer to receive preliminary diagnosis
+    resume_conversation(converation_id, "diagnosis")
+
+    # Provide some initial symptom
+    resume_conversation(converation_id, "I have headache")
+
+    # Answer follow up question
+    resume_conversation(converation_id, "Yes")
+
+    # Required to answer 5 questions with either "Yes" or "No"
+    for _ in range(5):
+        resume_conversation(converation_id, "Yes")
+
+    # Answer yes to ask follow question about diagnosed disease information
+    resume_conversation(converation_id, "Yes")
 
     # Ask about a disease information
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "I would like to know more about migraine"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "I would like to know more about migraine")
 
     # Answer no to terminate the current conversation
-    client.post(
-        f"/resume/{converation_id}",
-        json={"user_response": "no"},
-        headers=headers,
-    )
-
-    assert len(get_socket_messages(socket_client)) > 1
+    resume_conversation(converation_id, "No")
 
     # Delete the current conversation
-    delete_response = client.delete(f"/delete_conversation/{converation_id}", headers=headers)
+    delete_response = client.delete(
+        f"/delete_conversation/{converation_id}", headers=headers
+    )
 
     assert delete_response.status_code == 200
     assert delete_response.get_json()["success"] is True

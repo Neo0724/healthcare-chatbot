@@ -7,6 +7,7 @@ from app.auth.login import login_user
 from app.auth.logout import logout_user
 from app.auth.refresh_token import refresh_token
 from app.auth.register import register_user
+from app.middlewares.jwt_middleware import jwt_required
 from app.schemas.auth import LoginRequest, RegisterRequest
 
 SECRET = os.getenv("SECRET")
@@ -55,7 +56,9 @@ def refresh():
 
     return refresh_token(token)
 
+
 @auth_bp.post("/logout")
+@jwt_required
 def logout():
     auth_header = request.headers.get("Authorization")
 

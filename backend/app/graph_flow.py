@@ -508,9 +508,11 @@ def end_node(state: ChatbotState):
     response = llm.invoke(
         [
             SystemMessage(
-                content="You may say good bye to the patient."
-                "Let the patient know if he or she would like to start a new conversation, he could send a hi message, "
-                "and you will response immediately to provide medical assistance"
+                content=(
+                    "Conclude the conversation warmly and professionally. "
+                    "Inform the user that if they wish to start a new conversation at any time, "
+                    "they can simply send a 'hi' message, and you will be ready to provide medical assistance."
+                )
             )
         ],
         config={"tags": ["user_message"]},

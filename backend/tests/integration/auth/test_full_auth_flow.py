@@ -1,3 +1,6 @@
+from app.utils.mongodb_client import get_database
+
+
 def test_full_auth_flow(client):
     username = "test_user"
     password = "test_password"
@@ -23,6 +26,7 @@ def test_full_auth_flow(client):
     assert "refresh_token" in signin_body
 
     access_token = signin_body["access_token"]
+    refresh_token = signin_body["refresh_token"]
 
     headers = {"Authorization": f"Bearer {access_token}"}
 
@@ -58,3 +62,16 @@ def test_full_auth_flow(client):
     assert new_signin_body["success"] is True
     assert "access_token" in new_signin_body
     assert "refresh_token" in new_signin_body
+
+    headers = {"Authorization": f"Bearer {refresh_token}"}
+
+    signout_response = client.post("/auth/logout", headers=headers)
+
+    db = get_database()
+    refresh_token_collection = db["issued_refresh_token"]
+
+    assert signout_response.status_code == 200
+
+    updated_token = refresh_token_collection.find_one({"token": refresh_token})
+
+    assert updated_token["revoked"] is True

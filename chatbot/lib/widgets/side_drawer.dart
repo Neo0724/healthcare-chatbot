@@ -70,12 +70,57 @@ class _SideDrawerState extends State<SideDrawer> {
     }
   }
 
+  void _openLogoutDialog() {
+    showDialog(
+      context: context,
+      builder: (_) {
+        return AlertDialog(
+          backgroundColor: const Color(0xFF121212),
+          title: Text("Confirm Logout", style: TextStyle(color: Colors.white)),
+          content: SizedBox(
+            width: 250,
+            height: 50,
+            child: Text(
+              "Are you sure you want to logout?",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+          actions: [
+            TextButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Color(0xFF2C2C2C)),
+              ),
+              onPressed: () => Navigator.pop(context),
+              child: const Text(
+                "Cancel",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            FilledButton(
+              onPressed: () => _handleLogout(),
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(Colors.white),
+              ),
+              child: const Text(
+                "Confirm Logout",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Widget _logoutBtn() {
     return SizedBox(
       width: double.infinity,
       height: 48,
       child: GestureDetector(
-        onTap: () => _handleLogout(),
+        onTap: () => _openLogoutDialog(),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white, // Dark text for contrast
