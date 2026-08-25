@@ -69,19 +69,16 @@ class CustomDio {
         options: Options(headers: {"Authorization": "Bearer $refreshToken"}),
       );
 
-      final String responseStr = response.toString();
-
-      if (response.statusCode == 200) {
-        final newRefreshToken = response.data["refresh_token"];
-        final newAccessToken = response.data["access_token"];
-
-        await storage.write(key: "refresh_token", value: newRefreshToken);
-        await storage.write(key: "access_token", value: newAccessToken);
-        return true;
-      } else {
-        await storage.deleteAll();
+      if (response.statusCode != 200) {
         return false;
       }
+
+      final newRefreshToken = response.data["refresh_token"];
+      final newAccessToken = response.data["access_token"];
+
+      await storage.write(key: "refresh_token", value: newRefreshToken);
+      await storage.write(key: "access_token", value: newAccessToken);
+      return true;
     } catch (e) {
       debugPrint("Refresh Access Token Error : $e");
       return false;
@@ -89,7 +86,7 @@ class CustomDio {
   }
 
   static void _handleLogout() {
-    AuthState.logout();
+    AuthState.instance.logout();
     if (appRouter.routerDelegate.currentConfiguration.uri.path != '/login') {
       appRouter.go("/login");
     }

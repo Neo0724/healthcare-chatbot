@@ -7,7 +7,7 @@ import 'package:gpt_markdown/gpt_markdown.dart';
 
 Future<void> main() async {
   await dotenv.load();
-  await AuthState.initialize();
+  await AuthState.instance.initialize();
   CustomDio.initialize();
   runApp(const MyApp());
 }

@@ -16,7 +16,7 @@ final storage = FlutterSecureStorage();
 final GoRouter appRouter = GoRouter(
   refreshListenable: AuthState(),
   redirect: (context, state) {
-    final loggedIn = AuthState.isLoggedIn;
+    final loggedIn = AuthState.instance.isLoggedIn;
 
     if (!loggedIn && protectedRoute.contains(state.matchedLocation)) {
       return "/login";

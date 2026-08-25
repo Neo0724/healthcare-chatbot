@@ -29,7 +29,7 @@ class _SideDrawerState extends State<SideDrawer> {
   }
 
   Future<void> _loadUsername() async {
-    if (AuthState.isLoggedIn) {
+    if (AuthState.instance.isLoggedIn) {
       final storage = FlutterSecureStorage();
 
       final String? username = await storage.read(key: "username");
@@ -43,7 +43,7 @@ class _SideDrawerState extends State<SideDrawer> {
   }
 
   Future<void> _loadConversationHistory() async {
-    if (AuthState.isLoggedIn) {
+    if (AuthState.instance.isLoggedIn) {
       final response = await CustomDio.getCustomDio().get(
         "/get_conversation_history",
       );
@@ -62,7 +62,7 @@ class _SideDrawerState extends State<SideDrawer> {
     try {
       final response = await CustomDio.getCustomDio().post("/auth/logout");
       if (response.data["success"] && response.statusCode == 200) {
-        AuthState.logout();
+        AuthState.instance.logout();
         appRouter.goNamed("login");
       }
     } on DioException catch (err) {
@@ -279,7 +279,7 @@ class _SideDrawerState extends State<SideDrawer> {
       backgroundColor: const Color(0xFF1E1E1E), // Dark mode drawer background
       child: Column(
         children: [
-          if (!AuthState.isLoggedIn)
+          if (!AuthState.instance.isLoggedIn)
             Expanded(
               child: Center(
                 child: Padding(
@@ -297,7 +297,7 @@ class _SideDrawerState extends State<SideDrawer> {
               ),
             ),
 
-          if (AuthState.isLoggedIn)
+          if (AuthState.instance.isLoggedIn)
             Padding(
               padding: const EdgeInsets.fromLTRB(
                 16,
@@ -330,7 +330,7 @@ class _SideDrawerState extends State<SideDrawer> {
               ),
             ),
 
-          if (AuthState.isLoggedIn)
+          if (AuthState.instance.isLoggedIn)
             // Conversation Histories
             Expanded(
               child: ListView(
@@ -438,10 +438,10 @@ class _SideDrawerState extends State<SideDrawer> {
             ),
 
           // Logout button
-          if (AuthState.isLoggedIn)
+          if (AuthState.instance.isLoggedIn)
             Padding(padding: const EdgeInsets.all(16.0), child: _logoutBtn()),
 
-          if (!AuthState.isLoggedIn)
+          if (!AuthState.instance.isLoggedIn)
             Padding(padding: const EdgeInsets.all(16.0), child: _loginBtn()),
         ],
       ),

@@ -84,11 +84,7 @@ class _LoginState extends State<Login> {
         final String accessToken = response.data["access_token"];
         final String refreshToken = response.data["refresh_token"];
 
-        await storage.write(key: "access_token", value: accessToken);
-        await storage.write(key: "refresh_token", value: refreshToken);
-        await storage.write(key: "username", value: username);
-
-        AuthState.login();
+        AuthState.instance.login(accessToken, refreshToken, username);
         appRouter.go("/");
         return;
       }
