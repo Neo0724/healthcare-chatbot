@@ -6,8 +6,8 @@ import jwt
 from dotenv import load_dotenv
 from flask import jsonify
 
-from app.utils.mongodb_client import get_database
 from app.schemas.auth import LoginRequest
+from app.utils.mongodb_client import get_database
 
 load_dotenv()
 

@@ -27,18 +27,18 @@ class MyApp extends StatelessWidget {
           GptMarkdownThemeData(
             brightness: Brightness.dark,
             h1: const TextStyle(
-              fontSize: 32,
+              fontSize: 24,
               fontWeight: FontWeight.w900,
               letterSpacing: -0.5,
               color: Colors.white,
             ),
             h2: const TextStyle(
-              fontSize: 24,
+              fontSize: 20,
               fontWeight: FontWeight.w700,
               color: Colors.white,
             ),
             h3: const TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               color: Colors.white,
             ),

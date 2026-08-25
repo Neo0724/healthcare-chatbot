@@ -170,17 +170,17 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
     for record in records:
         for definition in record.get("definition_node"):
             contexts.append(
-                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Definitions: {str(definition)}"
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {round(float(record.get('score')), 2)}\n### Retrieved Disease Definitions: {str(definition)}"
             )
 
         for symptom in record.get("symptom_node"):
             contexts.append(
-                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Symptoms: {str(symptom)}"
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {round(float(record.get('score')), 2)}\n### Retrieved Disease Symptoms: {str(symptom)}"
             )
 
         for treatment in record.get("treatment_node"):
             contexts.append(
-                f"### Disease Name: {record.get('disease_name')}\n### Score: {record.get('score')}\n### Retrieved Disease Treatment: {str(treatment)}"
+                f"### Disease Name: {record.get('disease_name')}\n### Score: {round(float(record.get('score')), 2)}\n### Retrieved Disease Treatment: {str(treatment)}"
             )
 
     reranked_context = rerank_contexts(user_query=user_query.content, contexts=contexts)
@@ -288,7 +288,7 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
     retrieved_disease_summary = [
         {
             "disease_name": r.get("disease_name", ""),
-            "match_score": r.get("post_score", 0),
+            "match_score": round(float(r.get("post_score", 0)), 2),
             "disease_symptom_details": r.get("symptom_node", []),
         }
         for r in db_results
@@ -449,7 +449,7 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     refined_results = [
         {
             "disease_name": r.get("disease_name", ""),
-            "match_score": float(r.get("post_score", 0)),
+            "match_score": round(float(r.get("post_score", 0)), 2),
             "symptom_details": r.get("symptom_node", []),
         }
         for r in records

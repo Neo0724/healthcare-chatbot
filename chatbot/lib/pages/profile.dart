@@ -55,6 +55,7 @@ class _ProfileState extends State<Profile> {
                       errorMessage = "";
                     });
                   },
+                  style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     labelText: "New Username",
                     labelStyle: const TextStyle(color: Colors.white70),
@@ -128,8 +129,9 @@ class _ProfileState extends State<Profile> {
                           SnackBar(
                             content: const Text(
                               "Username updated successfully",
+                              style: TextStyle(color: Colors.black),
                             ),
-                            backgroundColor: Colors.green,
+                            backgroundColor: Colors.white,
                             duration: const Duration(seconds: 2),
                             behavior: SnackBarBehavior.floating,
                             width: 500,
@@ -142,6 +144,7 @@ class _ProfileState extends State<Profile> {
                             ),
                             action: SnackBarAction(
                               label: 'OK',
+                              textColor: Colors.black,
                               onPressed: () {},
                             ),
                           ),
@@ -195,6 +198,10 @@ class _ProfileState extends State<Profile> {
         String newPasswordError = "";
         String confirmPasswordError = "";
 
+        bool currentPasswordVisible = false;
+        bool newPasswordVisible = false;
+        bool confirmPasswordVisible = false;
+
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return AlertDialog(
@@ -211,12 +218,16 @@ class _ProfileState extends State<Profile> {
                     children: [
                       TextField(
                         controller: currentController,
-                        obscureText: true,
+                        style: const TextStyle(color: Colors.white),
+                        obscureText: !currentPasswordVisible,
                         onChanged: (_) {
-                          setDialogState(() {
-                            currentPasswordError = "";
-                          });
+                          if (currentPasswordError.isNotEmpty) {
+                            setDialogState(() {
+                              currentPasswordError = "";
+                            });
+                          }
                         },
+
                         decoration: InputDecoration(
                           labelText: "Current Password",
                           labelStyle: const TextStyle(color: Colors.white70),
@@ -226,6 +237,21 @@ class _ProfileState extends State<Profile> {
                               ? currentPasswordError
                               : null,
                           errorStyle: const TextStyle(color: Colors.redAccent),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setDialogState(() {
+                                currentPasswordVisible =
+                                    !currentPasswordVisible;
+                              });
+                            },
+                            icon: Icon(
+                              currentPasswordVisible
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.white,
+                            ),
+                            iconSize: 14,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(color: Colors.grey[700]!),
@@ -251,11 +277,14 @@ class _ProfileState extends State<Profile> {
                       const SizedBox(height: 16),
                       TextField(
                         controller: newController,
-                        obscureText: true,
+                        style: const TextStyle(color: Colors.white),
+                        obscureText: !newPasswordVisible,
                         onChanged: (_) {
-                          setDialogState(() {
-                            newPasswordError = "";
-                          });
+                          if (newPasswordError.isNotEmpty) {
+                            setDialogState(() {
+                              newPasswordError = "";
+                            });
+                          }
                         },
                         decoration: InputDecoration(
                           labelText: "New Password",
@@ -266,6 +295,20 @@ class _ProfileState extends State<Profile> {
                               ? newPasswordError
                               : null,
                           errorStyle: const TextStyle(color: Colors.redAccent),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setDialogState(() {
+                                newPasswordVisible = !newPasswordVisible;
+                              });
+                            },
+                            icon: Icon(
+                              newPasswordVisible
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.white,
+                            ),
+                            iconSize: 14,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(color: Colors.grey[700]!),
@@ -291,11 +334,14 @@ class _ProfileState extends State<Profile> {
                       const SizedBox(height: 16),
                       TextField(
                         controller: confirmController,
-                        obscureText: true,
+                        style: const TextStyle(color: Colors.white),
+                        obscureText: !confirmPasswordVisible,
                         onChanged: (_) {
-                          setDialogState(() {
-                            confirmPasswordError = "";
-                          });
+                          if (confirmPasswordError.isNotEmpty) {
+                            setDialogState(() {
+                              confirmPasswordError = "";
+                            });
+                          }
                         },
                         decoration: InputDecoration(
                           labelText: "Confirm Password",
@@ -308,6 +354,21 @@ class _ProfileState extends State<Profile> {
                               ? confirmPasswordError
                               : null,
                           errorStyle: const TextStyle(color: Colors.redAccent),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              setDialogState(() {
+                                confirmPasswordVisible =
+                                    !confirmPasswordVisible;
+                              });
+                            },
+                            icon: Icon(
+                              confirmPasswordVisible
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.white,
+                            ),
+                            iconSize: 14,
+                          ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(color: Colors.grey[700]!),
@@ -426,8 +487,9 @@ class _ProfileState extends State<Profile> {
                           SnackBar(
                             content: const Text(
                               "Password updated successfully",
+                              style: TextStyle(color: Colors.black),
                             ),
-                            backgroundColor: Colors.green,
+                            backgroundColor: Colors.white,
                             duration: const Duration(seconds: 2),
                             behavior: SnackBarBehavior.floating,
                             width: 500,
@@ -440,6 +502,7 @@ class _ProfileState extends State<Profile> {
                             ),
                             action: SnackBarAction(
                               label: 'OK',
+                              textColor: Colors.black,
                               onPressed: () {},
                             ),
                           ),

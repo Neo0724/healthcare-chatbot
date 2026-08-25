@@ -87,13 +87,15 @@ class _ConversationState extends State<Conversation> {
   Future<void> _handleReceiveMessage(dynamic data) async {
     final String receivedMessageId = data["id"];
     final String receivedMessage = data["content"];
-    // final bool isLast = data["is_last"] is bool
-    //     ? data["is_last"]
-    //     : data["is_last"]?.toString().toLowerCase() == "true";
+    final bool isLast = data["is_last"] is bool
+        ? data["is_last"]
+        : data["is_last"]?.toString().toLowerCase() == "true";
 
-    setState(() {
-      _isLoading = false;
-    });
+    if (isLast) {
+      setState(() {
+        _isLoading = false;
+      });
+    }
 
     if (!_newMessages.any((msg) => msg.id == receivedMessageId)) {
       setState(() {

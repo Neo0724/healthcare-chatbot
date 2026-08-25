@@ -90,11 +90,7 @@ class _RegisterState extends State<Register> {
 
         if (statusCode == 400) {
           setState(() {
-            _errorMessage = data["error"][0]["msg"];
-          });
-        } else {
-          setState(() {
-            _errorMessage = data["error"] ?? "Something went wrong";
+            _errorMessage = data["error"];
           });
         }
       } else {

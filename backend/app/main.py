@@ -1,5 +1,7 @@
 import asyncio
 
+from bson import ObjectId
+from bson.errors import InvalidId
 from dotenv import load_dotenv
 from flask import Flask, current_app, jsonify, request
 from flask_cors import CORS
@@ -17,13 +19,26 @@ from app.graph_flow import build_graph
 from app.middlewares.jwt_middleware import jwt_required
 from app.routes.auth import auth_bp
 from app.routes.profile_management import profile_management_bp
+from app.utils.mongodb_client import get_database
 from app.utils.neo4j_driver import get_neo4j_driver
 
 load_dotenv()
 
+db = get_database()
+
 
 def get_user_id(request):
     return str(request.user["sub"])
+
+
+def validate_conversation_id(conversation_id):
+    try:
+        parsed_id = ObjectId(conversation_id)
+        conversation_history_db = db["conversation_history"]
+        conversation = conversation_history_db.find_one({"_id": parsed_id})
+        return conversation != None
+    except InvalidId:
+        return False
 
 
 async def run_graph_and_response(
@@ -125,6 +140,9 @@ def create_app():
 
     @app.route("/resume/<conversation_id>", methods=["POST"])
     def resume(conversation_id):
+        if not validate_conversation_id(conversation_id):
+            return jsonify({"success": False, "error": "Invalid conversation id"}), 400
+
         data = request.get_json()
         neo4j_driver = current_app.extensions["neo4j_driver"]
         config = {

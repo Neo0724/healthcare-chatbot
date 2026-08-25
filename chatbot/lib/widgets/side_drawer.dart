@@ -276,7 +276,7 @@ class _SideDrawerState extends State<SideDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: const Color(0xFF121212), // Dark mode drawer background
+      backgroundColor: const Color(0xFF1E1E1E), // Dark mode drawer background
       child: Column(
         children: [
           if (!AuthState.isLoggedIn)
@@ -415,15 +415,13 @@ class _SideDrawerState extends State<SideDrawer> {
                                     value: ConversationPopupOption.delete,
                                     child: Row(
                                       children: [
-                                        Icon(
-                                          Icons.delete,
-                                          color: Colors.redAccent,
-                                        ),
+                                        Icon(Icons.delete, color: Colors.white),
                                         SizedBox(width: 10),
                                         Text(
                                           "Delete",
                                           style: TextStyle(
-                                            color: Colors.white70,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                       ],

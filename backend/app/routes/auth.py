@@ -20,13 +20,12 @@ auth_bp = Blueprint("auth", __name__)
 @auth_bp.route("/login", methods=["POST"])
 def login():
     try:
-        # Parse and validate data against the Pydantic schema
+        # Validate data
         data = LoginRequest(**request.get_json())
 
         return login_user(data)
 
     except ValidationError as e:
-        # Returns clear, structured errors to the client
         response = {"success": False, "error": e.errors()}
         return jsonify(response), 400
 

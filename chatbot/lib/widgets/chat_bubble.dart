@@ -30,7 +30,7 @@ class ChatBubble extends StatelessWidget {
             : SelectionArea(
                 child: GptMarkdown(
                   content,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white, fontSize: 14),
                 ),
               ),
       ),
