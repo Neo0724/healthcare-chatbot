@@ -7,14 +7,14 @@ import 'package:chatbot/states/auth_state.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:go_router/go_router.dart';
 
-final protectedRoute = <String>['/first_page', '/profile'];
+final protectedRoute = <String>['/', '/profile'];
 
 final guestRoute = <String>['/login', '/register'];
 
 final storage = FlutterSecureStorage();
 
 final GoRouter appRouter = GoRouter(
-  refreshListenable: AuthState(),
+  refreshListenable: AuthState.instance,
   redirect: (context, state) {
     final loggedIn = AuthState.instance.isLoggedIn;
 
