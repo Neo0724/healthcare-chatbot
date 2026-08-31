@@ -100,6 +100,7 @@ class _LoginState extends State<Login> {
         } else if (statusCode == 401) {
           setState(() {
             _errorMessage = "Invalid username or password";
+            _passwordController.text = "";
           });
         } else {
           setState(() {
