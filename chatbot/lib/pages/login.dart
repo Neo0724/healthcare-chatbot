@@ -291,6 +291,7 @@ class _LoginState extends State<Login> {
               borderRadius: BorderRadius.circular(8),
             ),
 
+            errorMaxLines: 3,
             errorText: _errorUsername.isNotEmpty ? _errorUsername : null,
             errorStyle: const TextStyle(color: Colors.redAccent),
           ),
@@ -358,6 +359,7 @@ class _LoginState extends State<Login> {
               borderRadius: BorderRadius.circular(8),
             ),
 
+            errorMaxLines: 3,
             errorText: _errorPassword.isNotEmpty ? _errorPassword : null,
             errorStyle: const TextStyle(color: Colors.redAccent),
           ),

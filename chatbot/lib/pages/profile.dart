@@ -61,6 +61,7 @@ class _ProfileState extends State<Profile> {
                     labelStyle: const TextStyle(color: Colors.white70),
                     filled: true,
                     fillColor: const Color(0xFF2C2C2C), //
+                    errorMaxLines: 3,
                     errorText: errorMessage.isNotEmpty ? errorMessage : null,
                     errorStyle: const TextStyle(color: Colors.redAccent),
                     enabledBorder: OutlineInputBorder(
@@ -233,6 +234,7 @@ class _ProfileState extends State<Profile> {
                           labelStyle: const TextStyle(color: Colors.white70),
                           filled: true,
                           fillColor: const Color(0xFF2C2C2C), //
+                          errorMaxLines: 3,
                           errorText: currentPasswordError.isNotEmpty
                               ? currentPasswordError
                               : null,
