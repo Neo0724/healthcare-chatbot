@@ -232,7 +232,11 @@ class _SideDrawerState extends State<SideDrawer> {
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: const Text('Deleted Successfully!'),
+                          content: const Text(
+                            'Deleted Successfully!',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          backgroundColor: Colors.white,
                           duration: const Duration(seconds: 2),
                           behavior: SnackBarBehavior.floating,
                           width: 300,
@@ -243,7 +247,11 @@ class _SideDrawerState extends State<SideDrawer> {
                             horizontal: 15.0,
                             vertical: 10.0,
                           ),
-                          action: SnackBarAction(label: 'OK', onPressed: () {}),
+                          action: SnackBarAction(
+                            label: 'OK',
+                            onPressed: () {},
+                            textColor: Colors.black,
+                          ),
                         ),
                       );
 
