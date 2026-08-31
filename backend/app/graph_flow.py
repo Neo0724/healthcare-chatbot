@@ -416,8 +416,8 @@ def process_follow_up_response_node(state: ChatbotState):
     negative_symptoms = list(extracted_entities.negative_symptoms)
 
     return {
-        "extracted_positive_symptoms": positive_symptoms + current_positives,
-        "extracted_negative_symptoms": negative_symptoms + current_negatives,
+        "extracted_positive_symptoms": list(set(positive_symptoms + current_positives)),
+        "extracted_negative_symptoms": list(set(negative_symptoms + current_negatives)),
     }
 
 
