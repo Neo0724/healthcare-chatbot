@@ -1,9 +1,11 @@
 import json
 import os
+import re
 from typing import Annotated, Literal
 
 from dotenv import load_dotenv
-from langchain_core.messages import SystemMessage
+from langchain_core.language_models import FakeMessagesListChatModel
+from langchain_core.messages import AIMessage, SystemMessage
 from langchain_core.runnables import RunnableConfig
 from langchain_openai import ChatOpenAI
 from langgraph.graph import END, START, StateGraph, add_messages
@@ -113,6 +115,80 @@ def welcome_route_choice_node(state: ChatbotState):
 
     # Return the routing choice to the state so the conditional edge can read it
     return {"routing_choice": choice.strip().lower()}
+
+
+def clarify_welcome_choice(state: ChatbotState):
+    fallback_text = (
+        "Sorry, I didn't quite catch that! Could you clarify which you'd like:\n"
+        "- Ask disease-related information (e.g., causes, symptoms, and treatments)\n"
+        "- Get a preliminary diagnosis"
+    )
+
+    fallback_llm = FakeMessagesListChatModel(
+        responses=[AIMessage(content=fallback_text)]
+    )
+
+    # Call this *inside your graph node*, not standalone:
+    response = fallback_llm.invoke(
+        [],  # input messages are ignored by the fake model
+        config={"tags": ["prefix_user_message"]},
+    )
+
+    return {"messages": [response]}
+
+
+def clarify_ask_more_disease_info(state: ChatbotState):
+    fallback_text = (
+        "Sorry, I didn't quite catch that!\n"
+        "Could you please answer in either **Yes** or **No** please?\n"
+    )
+
+    fallback_llm = FakeMessagesListChatModel(
+        responses=[AIMessage(content=fallback_text)]
+    )
+
+    response = fallback_llm.invoke(
+        [],  # input messages are ignored by the fake model
+        config={"tags": ["prefix_user_message"]},
+    )
+
+    return {"messages": [response]}
+
+
+def clarify_ask_follow_up(state: ChatbotState):
+    fallback_text = (
+        "Sorry, I didn't quite catch that!\n"
+        "Could you please answer in either **Yes** or **No** please?\n"
+    )
+
+    fallback_llm = FakeMessagesListChatModel(
+        responses=[AIMessage(content=fallback_text)]
+    )
+
+    response = fallback_llm.invoke(
+        [],  # input messages are ignored by the fake model
+        config={"tags": ["prefix_user_message"]},
+    )
+
+    return {"messages": [response]}
+
+
+def clarify_diagnosis_result_query(state: ChatbotState):
+    fallback_text = (
+        "Sorry, I didn't quite catch that!\n"
+        "Could you please answer in either **Yes** or **No** please?\n"
+    )
+
+    fallback_llm = FakeMessagesListChatModel(
+        responses=[AIMessage(content=fallback_text)]
+    )
+
+    response = fallback_llm.invoke(
+        [],  # input messages are ignored by the fake model
+        config={"tags": ["prefix_user_message"]},
+    )
+
+    return {"messages": [response]}
 
 
 # Disease lookup
@@ -527,26 +603,54 @@ def end_node(state: ChatbotState):
 # =====================================================================
 def route_after_welcome(
     state: ChatbotState,
-) -> Literal["request_disease_info", "request_symptoms"]:
-    if state.get("routing_choice", "").strip().lower() in ["info", "disease"]:
+) -> Literal["request_disease_info", "request_symptoms", "clarify_welcome_choice"]:
+    raw_choice = state.get("routing_choice", "").lower()
+
+    # Extract all cleaned words (removes punctuation, symbols, and digits)
+    words = set(re.findall(r"[a-z]+", raw_choice))
+
+    disease_keywords = {"info", "disease", "treatment", "symptom", "symptoms"}
+    diagnosis_keywords = {"diagnosis", "preliminary", "diagnose"}
+
+    # Check if any extracted word overlaps with the target keywords
+    if words & disease_keywords:
         return "request_disease_info"
-    return "request_symptoms"
+    elif words & diagnosis_keywords:
+        return "request_symptoms"
+    else:
+        return "clarify_welcome_choice"
 
 
 def route_after_asking_disease_info(
     state: ChatbotState,
-) -> Literal["request_disease_info", "end_node"]:
-    if "yes" in state.get("ask_more_disease_info_choice", "").strip().lower():
+) -> Literal["request_disease_info", "end_node", "clarify_ask_more_disease_info"]:
+    raw_choice = state.get("ask_more_disease_info_choice", "").strip().lower()
+
+    # Extract all cleaned words (removes punctuation, symbols, and digits)
+    words = set(re.findall(r"[a-z]+", raw_choice))
+
+    if words & {"yes", "yeah"}:
         return "request_disease_info"
-    return "end_node"
+    elif words & {"no", "nope", "nah"}:
+        return "end_node"
+    else:
+        return "clarify_ask_more_disease_info"
 
 
 def route_after_preliminary(
     state: ChatbotState,
-) -> Literal["ask_follow_up", "final_refined_diagnosis"]:
-    if "yes" in state.get("follow_up_agreement", "").strip().lower():
+) -> Literal["ask_follow_up", "final_refined_diagnosis", "clarify_ask_follow_up"]:
+    raw_choice = state.get("follow_up_agreement", "").strip().lower()
+
+    # Extract all cleaned words (removes punctuation, symbols, and digits)
+    words = set(re.findall(r"[a-z]+", raw_choice))
+
+    if words & {"yes", "yeah"}:
         return "ask_follow_up"
-    return "final_refined_diagnosis"
+    elif words & {"no", "nope", "nah"}:
+        return "final_refined_diagnosis"
+    else:
+        return "clarify_ask_follow_up"
 
 
 def route_follow_up_loop(
@@ -559,10 +663,18 @@ def route_follow_up_loop(
 
 def route_diagnosis_result_query_node(
     state: ChatbotState,
-) -> Literal["request_disease_info", "end_node"]:
-    if "yes" in state.get("diagnosis_result_query_choice", "").strip().lower():
+) -> Literal["request_disease_info", "end_node", "clarify_diagnosis_result_query"]:
+    raw_choice = state.get("diagnosis_result_query_choice", "").strip().lower()
+
+    # Extract all cleaned words (removes punctuation, symbols, and digits)
+    words = set(re.findall(r"[a-z]+", raw_choice))
+
+    if words & {"yes", "yeah"}:
         return "request_disease_info"
-    return "end_node"
+    elif words & {"no", "nope", "nah"}:
+        return "end_node"
+    else:
+        return "clarify_diagnosis_result_query"
 
 
 # =====================================================================
@@ -576,6 +688,10 @@ def build_graph():
         StateGraph(ChatbotState)
         .add_node("welcome", welcome_node)
         .add_node("welcome_route_choice", welcome_route_choice_node)
+        .add_node("clarify_welcome_choice", clarify_welcome_choice)
+        .add_node("clarify_ask_more_disease_info", clarify_ask_more_disease_info)
+        .add_node("clarify_ask_follow_up", clarify_ask_follow_up)
+        .add_node("clarify_diagnosis_result_query", clarify_diagnosis_result_query)
         # Disease info
         .add_node("request_disease_info", request_disease_info_node)
         .add_node("collect_disease_to_lookup", collect_disease_to_lookup_node)
@@ -613,8 +729,10 @@ def build_graph():
             {
                 "request_disease_info": "request_disease_info",
                 "request_symptoms": "request_symptoms",
+                "clarify_welcome_choice": "clarify_welcome_choice",
             },
         )
+        .add_edge("clarify_welcome_choice", "welcome_route_choice")
         .add_edge("request_disease_info", "collect_disease_to_lookup")
         .add_edge("collect_disease_to_lookup", "process_disease_info")
         .add_edge("process_disease_info", "request_ask_more_disease_info")
@@ -622,8 +740,13 @@ def build_graph():
         .add_conditional_edges(
             "collect_ask_more_disease_info",
             route_after_asking_disease_info,
-            {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+            {
+                "request_disease_info": "request_disease_info",
+                "end_node": "end_node",
+                "clarify_ask_more_disease_info": "clarify_ask_more_disease_info",
+            },
         )
+        .add_edge("clarify_ask_more_disease_info", "collect_ask_more_disease_info")
         .add_edge("request_symptoms", "collect_initial_symptoms")
         .add_edge("collect_initial_symptoms", "process_and_diagnose")
         .add_edge("process_and_diagnose", "request_agreement_on_follow_up_node")
@@ -636,8 +759,10 @@ def build_graph():
             {
                 "ask_follow_up": "ask_follow_up",
                 "final_refined_diagnosis": "final_refined_diagnosis",
+                "clarify_ask_follow_up": "clarify_ask_follow_up",
             },
         )
+        .add_edge("clarify_ask_follow_up", "collect_agreement_on_follow_up_node")
         .add_edge("ask_follow_up", "collect_follow_up_response")
         .add_edge("collect_follow_up_response", "process_follow_up_response")
         .add_conditional_edges(
@@ -655,7 +780,14 @@ def build_graph():
         .add_conditional_edges(
             "collect_diagnosis_result_query_node",
             route_diagnosis_result_query_node,
-            {"request_disease_info": "request_disease_info", "end_node": "end_node"},
+            {
+                "request_disease_info": "request_disease_info",
+                "end_node": "end_node",
+                "clarify_diagnosis_result_query": "clarify_diagnosis_result_query",
+            },
+        )
+        .add_edge(
+            "clarify_diagnosis_result_query", "collect_diagnosis_result_query_node"
         )
         .add_edge("end_node", END)
     )

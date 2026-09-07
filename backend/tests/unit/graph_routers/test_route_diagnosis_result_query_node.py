@@ -18,7 +18,7 @@ from app.graph_flow import route_diagnosis_result_query_node
         (" no", "end_node"),       # prefix space
         ("no ", "end_node"),       # postfix case
 
-        ("", "end_node"),       # empty case
+        ("", "clarify_diagnosis_result_query"),       # empty case
     ],
 )
 def test_route_diagnosis_result_query_node(user_input: str, expected: str):

@@ -69,6 +69,27 @@ async def run_graph_and_response(
             elif (
                 chunk["type"] == "messages"
                 and "tags" in chunk["data"][1]
+                and "prefix_user_message" in chunk["data"][1]["tags"]
+            ):
+                streamed_content = chunk["data"][0].content
+                currentMsgId = store_conversation_message(
+                    conversation_id=conversation_id,
+                    content=streamed_content,
+                    type="ai",
+                )
+                socket_io.emit(
+                    "message",
+                    {
+                        "content": streamed_content,
+                        "id": currentMsgId,
+                        "is_last": True,
+                    },
+                    room=conversation_id,
+                )
+
+            elif (
+                chunk["type"] == "messages"
+                and "tags" in chunk["data"][1]
                 and "user_message" in chunk["data"][1]["tags"]
             ):
                 streamed_content = chunk["data"][0].content
@@ -88,10 +109,9 @@ async def run_graph_and_response(
                     room=conversation_id,
                 )
 
-                if (
-                    chunk["data"][0].chunk_position
-                    and chunk["data"][0].chunk_position == "last"
-                ):
+                chunk_position = getattr(chunk["data"][0], "chunk_position", None)
+
+                if chunk_position and chunk_position == "last":
                     socket_io.emit(
                         "message",
                         {
