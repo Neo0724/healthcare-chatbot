@@ -11,7 +11,6 @@ STRICT INSTRUCTIONS:
 1. ORDER LIMITATION: You MUST output the exact question first, followed immediately by the explanation for why it is being asked.
 2. NO CONVERSATIONAL FILLER: Do NOT add greetings, introductory phrases, medical disclaimers, or empathy statements (e.g., skip "Hello," "I understand," or "Please let me know").
 3. NO HALLUCINATION: Do NOT invent, assume, or add any clinical information or extra questions. Stick strictly to the provided inputs.
-4. PATIENT-FRIENDLY TRANSLATION: The provided {reason} may contain medical jargon. Rephrase the reason into simple, clear, and reassuring everyday language so the patient understands why knowing this is important.
 
 DESIRED OUTPUT FORMAT:
 [The patient-friendly question]

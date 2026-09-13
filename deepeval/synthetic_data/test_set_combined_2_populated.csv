@@ -1,0 +1,2328 @@
+Unnamed: 0,input,expected_output,context,source_file,actual_output,retrieved_context
+30,"What are the initial antibiotic regimens for bacterial meningitis in adults and children, including alternatives when ceftriaxone is unavailable?","For adult bacterial meningitis, empirical treatment includes Ceftriaxone 2g IV every 12 hours. Alternatives are Chloramphenicol 1g IV every 6 hours or Benzylpenicillin 5MU IV every 6 hours if ceftriaxone is unavailable and culture/sensitivity confirms susceptibility. For children, the regimen is Ceftriaxone 100mg/kg IM/IV once daily for seven days; alternatives include Chloramphenicol 25mg/kg IV every eight hours plus Benzylpenicillin 100,000 IU/kg IV/IM every six hours.","## BACTERIAL MENINGITIS  
+- Before starting treatment make sure to take a CSF sample for Gram staining, CSF analysis, culture, and sensitivity. Adjust the antibiotic management based on the laboratory report.
+- In hospital, start an IV infusion for antibiotics using Dextrose 5% (not more than 50 mL/kg per day for an infant) and continue until oral medication can be tolerated
+- sometimes corticosteroids may be of help  
+- Give antibiotics for at least 14 days, if there is a good response in meningococcal disease stop at 7 days
+- Do a repeat CSF|### TREATMENT|### Adults (empirical treatment pending test results)  
+- Give Ceftriaxone 2g IV 12 hourly|### Alternatively  
+- Give Chloromphenical 1g IV 6 hourly
+- Give Benzyl penicillin 5MU IV 6 hourly  
+Use the alternative regime only when ceftriaxone is not available and evidence of culture and sensitivity of the invading organism to Chloramphenicol.|### Children  
+- Give Ceftriaxone 100mg/kg IM or IV 24 hourly for 7 days|### Alternatively  
+- Chloramphenicol 25mg /kg IV 8 hourly|### plus  
+- Benzylpenicillin 100,000 IU/kg 6 hourly IV/IM|### Meningitis in Neonates  
+- Usually caused by gram (-) organisms and requires treatment for 21 days.
+- Careful observation is essential while awaiting culture and sensitivity results.|### or if they are not available:  
+- Give Benzylpenicillin 100,000 units/kg q6h, initially slow IV or IM plus Gentamycin 2.5 mg/kg IM or IV q8h or Gentamycin 5mg/kg IM q24h if 1 week old neonate. Or Gentamycin 7.5 mg/kg q24h if over a week-old neonate.|### Alternatively  
+- Give Ampicillin 50 mg/kg 6 hourly initially IV then later IM as an alternative to Benzylpenicillin|### If still febrile after 48 hours:  
+- Add Cefotaxime",,"- Give Ceftriaxone 100mg/kg IM or IV 24 hourly for 7 days
+- Give Ceftriaxone 2g IV 12 hourly
+- Give Benzyl penicillin 5MU IV 6 hourly
+- Give Chloromphenical 1g IV 6 hourly
+- Give Ampicillin 50 mg/kg 6 hourly initially IV then later IM as an alternative to Benzylpenicillin","### Alternatively
+- Give Chloromphenical 1g IV 6 hourly
+- Give Benzyl penicillin 5MU IV 6 hourly  
+Use the alternative regime only when ceftriaxone is not available and evidence of culture and sensitivity of the invading organism to Chloramphenicol.
+[context_seperator]
+### 
+- Before starting treatment make sure to take a CSF sample for Gram staining, CSF analysis, culture, and sensitivity. Adjust the antibiotic management based on the laboratory report.
+- In hospital, start an IV infusion for antibiotics using Dextrose 5% (not more than 50 mL/kg  per day for an infant) and continue until oral medication can be tolerated
+- sometimes corticosteroids may be of help  
+- Give antibiotics for at least 14 days, if there is a good response in meningococcal disease stop at 7 days
+- Do a repeat CSF
+[context_seperator]
+### Children
+- Give Ceftriaxone 100mg/kg IM or IV 24 hourly for 7 days
+[context_seperator]
+### Adults (empirical treatment pending test results)
+- Give Ceftriaxone 2g IV 12 hourly
+[context_seperator]
+### or if they are not available:
+- Give Benzylpenicillin 100,000 units/kg q6h, initially slow IV or IM plus Gentamycin 2.5 mg/kg IM or IV q8h or Gentamycin 5mg/kg IM q24h if 1 week old neonate. Or Gentamycin 7.5 mg/kg q24h if over a week-old neonate.
+[context_seperator]
+### Alternatively
+- Give  Ampicillin  50  mg/kg  6  hourly  initially  IV  then  later  IM  as  an  alternative  to Benzylpenicillin
+[context_seperator]
+### If still febrile after 48 hours:
+- Add Cefotaxime
+[context_seperator]
+### Alternatively
+- Chloramphenicol 25mg /kg IV 8 hourly
+[context_seperator]
+### Meningitis in Neonates
+- Usually caused by gram (-) organisms and requires treatment for 21 days.
+- Careful observation is essential while awaiting culture and sensitivity results.
+[context_seperator]
+### plus
+- Benzylpenicillin 100,000 IU/kg 6 hourly IV/IM"
+31,"What is the clinical definition of neonatal tetanus, and what are its causes related to maternal immunization status and aseptic practices during umbilical stump management?",Neonatal tetanus occurs due to failure to use aseptic techniques in managing the umbilical stump in offspring of mothers who are poorly immunized.,"## NEONATAL TETANUS  
+### CLINICAL DESCRIPTION  
+Neonatal tetanus occurs as a result of the failure to use aseptic techniques in managing the umbilical stump in offspring of mothers who are poorly immunized.|### TREATMENT|### PHARMACOLOGICAL TREATMENT  
+Antibiotics  
+- Metronidazole 30 mg/kg/day (maximum, 4 g/day) divided into 4 doses PO or IV for 10 - 14 days|### Alternatively  
+- Benzyl penicillin 100,000 units/kg IV 6 hourly for 10 - 14 days|### Neutralization of unbound toxin  
+- Human tetanus immunoglobulin (TIG) 500 units IM or IV.|### Active immunization  
+- All patients should complete a series of immunizations with tetanus toxoid, beginning at presentation. See immunization protocol|### Sedation  
+Diazepam of 0.1-0.2 mg/kg 2-6 hourly , titrating upward as needed. If not controlling the spasms, discuss with a senior for Phenobarbital children: 5 mg/kg STAT, then 2.5 mg/kg 12 hourly .|### Neonates  
+- 10mg/kg STAT, then 2,5 mg/kg 12 hourly.|### Monitor for respiratory arrest.  
+Consider ventilatory support (Indications for intubation: apnoea, hypoxaemia, uncontrolled spasms).  
+Adequate analgesia)|### NON-PHARMACOLOGICAL TREATMENT  
+- Nurse in a quiet and dark room
+- Minimal handling
+- Avoid IM injections where possible
+- Maintain hydration
+- Maintain nutrition (use NGT feeds)|### Complications  
+- Respiratory failure
+- Rhabdomyolysis
+- Fractures|### TETANUS PREVENTION  
+- Promote Tetanus Diptheria Vaccination (Td) in pregnant women and all women of child bearing age (see Section 12.3 )
+- Ensure adequate surgical toilet plus passive (ATS 1,500 units IM )
+- and active (Td) immunization after wounds, bites and burns
+- Vaccinate all unvaccinated Childbearing age women in a locality with a confirmed case of Tetanus.|### TETANUS TOXOID VACCINATION (TTV)  
+Fully immunized but last booster &gt;10 years ago:  
+Give one booster dose of 0.5 mL IM  
+Fully immunized patients who have had a booster within the last 10 years do not need treatment with tetanus antitoxin (ATS) or tetanus toxoid vaccination (TTV)",,Neonatal tetanus occurs as a result of the failure to use aseptic techniques in managing the umbilical stump in offspring of mothers who are poorly immunized.,"### CLINICAL DESCRIPTION
+Neonatal tetanus occurs as a result of the failure to use aseptic techniques in managing the umbilical stump in offspring of mothers who are poorly immunized.
+[context_seperator]
+### TETANUS PREVENTION
+- Promote Tetanus Diptheria Vaccination (Td) in pregnant women and all women of child bearing age (see Section 12.3  )
+- Ensure adequate surgical toilet plus passive (ATS 1,500 units IM }
+- and active (Td} immunization after wounds, bites and burns
+- Vaccinate all unvaccinated Childbearing age women in a locality with a confirmed case of Tetanus.
+[context_seperator]
+### NON-PHARMACOLOGICAL TREATMENT
+- Nurse in a quiet and dark room
+- Minimal handling
+- Avoid IM injections where possible
+- Maintain hydration
+- Maintain nutrition (use NGT feeds)
+[context_seperator]
+### Active immunization
+- All  patients  should  complete  a  series  of  immunizations  with  tetanus  toxoid, beginning at presentation. See immunization protocol
+[context_seperator]
+### TETANUS TOXOID VACCINATION (TTV)
+Fully immunized but last booster &gt;10  years ago:  
+Give one booster dose of 0.5 mL IM  
+Fully  immunized  patients  who  have  had  a  booster  within  the  last  10  years  do  not  need treatment with tetanus antitoxin (ATS} or tetanus toxoid vaccination (TTV)
+[context_seperator]
+### Neutralization of unbound toxin
+- Human tetanus immunoglobulin (TIG) 500 units IM or IV.
+[context_seperator]
+### Monitor for respiratory arrest.
+Consider ventilatory support (Indications for intubation: apnoea, hypoxaemia, uncontrolled spasms).  
+Adequate analgesia)
+[context_seperator]
+### Neonates
+- 10mg/kg STAT, then 2,5 mg/kg 12 hourly.
+[context_seperator]
+### Sedation
+Diazepam of 0.1-0.2 mg/kg 2-6 hourly , titrating upward as needed. If not controlling the spasms, discuss with a senior for Phenobarbital children: 5 mg/kg STAT, then 2.5 mg/kg 12 hourly .
+[context_seperator]
+### Complications
+- Respiratory failure
+- Rhabdomyolysis
+- Fractures"
+32,"What are the characteristic signs and symptoms of tetanus, which caused by Clostridium tetani toxin?","The characteristic signs and symptoms of TETANUS include stiff neck, opisthotonus, risus sardonicus (sardonic smile), a board-like rigid abdomen, periods of apnea or upper airway obstruction due to muscle contractions, and dysphagia.","## TETANUS  
+### CLINICAL DESCRIPTION  
+Tetanus is a nervous system disorder characterized by muscle spasms. caused by the toxinproducing anaerobe Clostridium tetani. Immunization has significantly reduced occurrence of Tetanus cases and deaths.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Stiff neck
+- Opisthotonus
+- Risus sardonicus (sardonic smile)
+- A board-like rigid abdomen
+- Periods of apnea and/or upper airway obstruction due to vise-like contraction of the thoracic muscles and/or glottal or pharyngeal muscle contraction, respectively
+- Dysphagia|### TREATMENT|### Adult Tetanus  
+- Good nursing care of the heavily sedated patient is essential  
+- Give active immunization against tetanus after recovery|### General measures  
+- Nurse the patient in a dark quiet area
+- Maintain adequate hydration and nutrition
+- Prevent aspiration of fluid into the lungs
+- Clean and debride necrotic wounds thoroughly
+- Change from parenteral to oral medication as soon as possible
+- Avoid provoking spasms
+- Encourage active exercise after patient has recovered|### Treatment  
+- Medical rehabilitation plays an important role in prescribing appropriate exercises.
+- Give Diazepam 20 mg IM or IV Chlorpromazine 50mg IM or IV given alternately 3 hourly.|### Alternatively  
+Give Diazepam infusion 40 mg in one liter of IV dextrose or normal saline 6-8 hourly  
+- Take care: respiratory depression may occur
+- Dose sizes or frequencies of the above medicines can be increased if necessary to control spasms
+- Give Anti-tetanus serum 20,000 units IV STAT
+- Give this after a test dose of 1,500 units s/c
+- Benzyl penicillin 2 MU IV 6 hourly every for 7 days
+- Give Metronidazole 500 mg IV 8 hourly or 400 mg 8 hourly
+- for 7 days
+- Give Tetanus toxoid vaccination: give the full course",,"- Stiff neck
+- Opisthotonus
+- Risus sardonicus (sardonic smile)
+- A board-like rigid abdomen
+- Periods of apnea and/or upper airway obstruction due to vise-like contraction of the thoracic muscles and/or glottal or pharyngeal muscle contraction, respectively
+- Dysphagia","### CLINICAL DESCRIPTION
+Tetanus is a nervous system disorder characterized by muscle spasms. caused by the toxinproducing anaerobe Clostridium tetani. Immunization has significantly reduced occurrence of Tetanus cases and deaths.
+[context_seperator]
+### Alternatively
+Give Diazepam  infusion  40  mg  in  one  liter  of  IV dextrose or normal saline 6-8 hourly  
+- Take care: respiratory depression may occur
+- Dose sizes or frequencies of the above medicines can be increased if necessary to control spasms
+- Give Anti-tetanus serum 20,000 units IV  STAT
+- Give this after a test dose of 1,500 units s/c
+- Benzyl penicillin  2 MU IV 6 hourly every for 7 days
+- Give Metronidazole 500 mg IV 8 hourly or 400  mg 8 hourly
+- for 7 days
+- Give Tetanus toxoid vaccination: give the full course
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Stiff neck
+- Opisthotonus
+- Risus sardonicus (sardonic smile)
+- A board-like rigid abdomen
+- Periods of apnea and/or upper airway obstruction due to vise-like contraction of the thoracic muscles and/or glottal or pharyngeal muscle contraction, respectively
+- Dysphagia
+[context_seperator]
+### Adult Tetanus
+- Good nursing care of the heavily sedated patient is essential  
+- Give active immunization against tetanus after recovery
+[context_seperator]
+### General measures
+- Nurse the patient in a dark quiet  area
+- Maintain adequate hydration and  nutrition
+- Prevent aspiration of fluid into the  lungs
+- Clean and debride necrotic wounds thoroughly
+- Change from parenteral to oral medication as soon as possible
+- Avoid provoking spasms
+- Encourage active exercise after patient has recovered
+[context_seperator]
+### Treatment
+- Medical rehabilitation plays an important role in prescribing appropriate exercises.
+- Give Diazepam 20 mg IM or IV Chlorpromazine 50mg IM or IV given alternately 3 hourly."
+33,What is sepsis?,Sepsis is a life-threatening organ dysfunction triggered by infection.,"## SEPSIS  
+### CLINICAL DESCRIPTION  
+Bacteremia : the presence of bacteria in the bloodstream . Sepsis: a life-threatening organ dysfunction triggered by infection.|### CLINICAL FEATURES  
+The qSOFA (quick Sepsis Related Organ Failure Assessment) score may identify patients with suspected infection with poor outcome; the score ranges from 0-3 with 1 point is assigned for each of the following:  
+- Tachypnoea (respiratory rate ≥ 22 per minute)
+- Shock (systolic blood pressure ≤ 100 mmHg)
+- Altered mentation (Glasgow coma scale &lt; 15)  
+The presence of a qSOFA of 2 or more is associated with increased risk of death.  
+Organ dysfunction: defined as a SOFA score of 2 or more  
+Septic shock : sepsis + vasopressor requirement to maintain a mean arterial blood pressure of &gt; 65 mm Hg and a serum lactate &gt; 2 mmol / L in the absence of hypovolemia|### People at increased risk  
+- HIV+
+- The elderly
+- patients with comorbidities (e.g. malignancy, heart failure, chronic liver/renal failure)
+- pregnancy
+- patients receiving steroids or other immunosuppressive drugs
+- indwelling devices (IV cannulas or indwelling urinary catheters)|### Important causes of sepsis in Malawi  
+- Bacterial
+- non-typhoidal Salmonellae -Salmonella typhimurium, Salmonella enteritidis
+- Salmonella typhi
+- Streptococcus pneumoniae
+- o E. coli
+- o Klebsiella pneumoniae
+- Disseminated TB
+- Malaria|### Complications of Sepsis  
+- Septic shock
+- Acute kidney injury
+- Disseminated intravascular coagulation
+- Adrenal insufficiency
+- Acute respiratory distress syndrome
+- Ischaemic hepatitis
+- Multi-organ failure
+- a condition in which an infection (usually bacteria) causes a systemic inflammatory response resulting in severe illness.
+- identify cause and treat; accordingly, where possible blood culture should be done before starting treatment  
+- it is common in HIV infected patients and is mainly caused by Pneumococcus and non- typhoidal Salmonella|### I NVESTIGATIONS  
+- FBC, MRDT, blood culture (take sample before starting antibiotics), urea, electrolytes, and creatinine, random blood sugar, serum lactate, HIV test
+- Urine analysis/echocardiogram/chest X-ray/Urine TB LAM/ sputum for Gene Xpert/Focused Abdominal Sonography in HIV (FASH)/LP where indicated|### TREATMENT|### Treatment Objectives  
+- Early diagnosis and treatment of sepsis
+- Identify causative agent and treat accordingly
+- Prevent complications|### NON-PHARMACOLOGICAL  
+- ABCDE assessment|### PHARMACOLOGICAL  
+- Fluid resuscitation as necessary
+- if in shoc k, 30mls/kg bolus of Ringer's Lactate or Normal Saline
+- watch for signs of pulmonary oedema
+- Correct hypoxia and hypoglycaemia if appropriate
+- Transfuse if Hb &lt; 6 mg / dL
+- If persistent hypotension or respiratory failure manage on HDU / discuss with ICU
+- Antipyretic if high temperature (Paracetamol 1g 6 hourly orally)
+- Observe urine output and vital signs during treatment
+- Always refer to hospital for treatment. In severely ill patients, before referral give:|### At the health center|### Adults  
+- Give Chloramphenicol 1g IV or IM STAT plus
+- Gentamycin 240 mg slow IV or IM STAT plus
+- Quinine 1200mg IV in 5% dextrose over 4 hours- it is common in HIV infected patients and is mainly caused by Pneumococcus and non- typhoidal Salmonella|### I NVESTIGATIONS  
+- FBC, MRDT, blood culture (take sample before starting antibiotics), urea, electrolytes, and creatinine, random blood sugar, serum lactate, HIV test
+- Urine analysis/echocardiogram/chest X-ray/Urine TB LAM/ sputum for Gene Xpert/Focused Abdominal Sonography in HIV (FASH)/LP where indicated|### TREATMENT|### Treatment Objectives  
+- Early diagnosis and treatment of sepsis
+- Identify causative agent and treat accordingly
+- Prevent complications|### NON-PHARMACOLOGICAL  
+- ABCDE assessment|### PHARMACOLOGICAL  
+- Fluid resuscitation as necessary
+- if in shoc k, 30mls/kg bolus of Ringer's Lactate or Normal Saline
+- watch for signs of pulmonary oedema
+- Correct hypoxia and hypoglycaemia if appropriate
+- Transfuse if Hb &lt; 6 mg / dL
+- If persistent hypotension or respiratory failure manage on HDU / discuss with ICU
+- Antipyretic if high temperature (Paracetamol 1g 6 hourly orally)
+- Observe urine output and vital signs during treatment
+- Always refer to hospital for treatment. In severely ill patients, before referral give:|### At the health center|### Adults  
+- Give Chloramphenicol 1g IV or IM STAT plus
+- Gentamycin 240 mg slow IV or IM STAT plus
+- Quinine 1200mg IV in 5% dextrose over 4 hours|### Hospital treatment :|### Adults:  
+- Ceftriaxone 2g IV 24 hourly for 7 - 10 days|### Alternatively  
+- Ciprofloxacin 400 mg IV every 12 hoursly or 500 mg orally 12 hourly plus Benzylpenicillin 2MU IV 6 hourly
+- Switch to oral Ciprofloxacin 500 mg 12 hourly plus Amoxycillin 500 mg 8 hourly, or oral Co-amoxiclav 625 mg 8 hourly, when improved
+- Antibiotics should be given for a minimum of 5 days|### Note:  
+- Adjust treatment as per blood culture and sensitivity result.
+- If patient not improving, think of tuberculosis or resistant organisms eg Klebsiella pneumoniae, Pseudomonas aeruginosa, Escherichia coli and treat accordingly.
+- If intra-abdominal source suspected:
+- Add Metronidazole 500 mg IV or 400 mg orally 8 hourly. If still febrile after 72 hours reassess the patient",,Sepsis: a life-threatening organ dysfunction triggered by infection.,"### CLINICAL DESCRIPTION
+Bacteremia : the presence of bacteria in the bloodstream . Sepsis: a life-threatening organ dysfunction triggered by infection.
+[context_seperator]
+### Complications of Sepsis
+- Septic shock
+- Acute kidney injury
+- Disseminated intravascular coagulation
+- Adrenal insufficiency
+- Acute respiratory distress syndrome
+- Ischaemic hepatitis
+- Multi-organ failure
+- a  condition  in  which  an  infection  (usually  bacteria)  causes  a  systemic inflammatory response resulting in severe illness.
+- identify cause and treat; accordingly, where possible blood culture should be done before starting treatment  
+- it is common  in  HIV  infected  patients and  is mainly  caused  by Pneumococcus and non- typhoidal Salmonella
+[context_seperator]
+### CLINICAL FEATURES
+The qSOFA (quick Sepsis Related Organ Failure Assessment) score may identify patients with suspected infection with poor outcome; the score ranges from 0-3 with 1 point is assigned for each of the following:  
+- Tachypnoea (respiratory rate ≥ 22 per minute)
+- Shock (systolic blood pressure ≤ 100 mmHg)
+- Altered mentation (Glasgow coma scale &lt; 15)  
+The presence of a qSOFA of 2 or more is associated with increased risk of death.  
+Organ dysfunction: defined as a SOFA score of 2 or more  
+Septic shock : sepsis + vasopressor requirement to maintain a mean arterial blood pressure of &gt; 65 mm Hg and a serum lactate &gt; 2 mmol / L in the absence of hypovolemia
+[context_seperator]
+### Important causes of sepsis in Malawi
+- Bacterial
+- non-typhoidal Salmonellae -Salmonella typhimurium, Salmonella enteritidis
+- Salmonella typhi
+- Streptococcus pneumoniae
+- o E. coli
+- o Klebsiella pneumoniae
+- Disseminated TB
+- Malaria
+[context_seperator]
+### Treatment Objectives
+- Early diagnosis and treatment of sepsis
+- Identify causative agent and treat accordingly
+- Prevent complications
+[context_seperator]
+### Note:
+- Adjust treatment as per blood culture and sensitivity result.
+- If patient not improving, think of tuberculosis or resistant organisms eg Klebsiella pneumoniae, Pseudomonas aeruginosa, Escherichia coli and treat accordingly.
+- If intra-abdominal source suspected:
+- Add Metronidazole 500 mg IV or 400 mg orally 8 hourly. If  still  febrile after 72 hours reassess the patient
+[context_seperator]
+### Adults
+- Give Chloramphenicol 1g IV or IM STAT plus
+- Gentamycin 240 mg slow IV or IM STAT plus
+- Quinine 1200mg IV in 5% dextrose over 4 hours- it is common  in  HIV  infected  patients and  is mainly  caused  by Pneumococcus and non- typhoidal Salmonella
+[context_seperator]
+### PHARMACOLOGICAL
+- Fluid resuscitation as necessary
+- if in shoc k, 30mls/kg bolus of Ringer's Lactate or Normal Saline
+- watch for signs of pulmonary oedema
+- Correct hypoxia and hypoglycaemia if appropriate
+- Transfuse if Hb &lt; 6 mg / dL
+- If persistent hypotension or respiratory failure manage on HDU / discuss with ICU
+- Antipyretic if high temperature (Paracetamol 1g 6 hourly orally)
+- Observe urine output and vital signs during treatment
+- Always refer to hospital for treatment. In severely ill patients, before referral give:
+[context_seperator]
+### People at increased risk
+- HIV+
+- The elderly
+- patients  with  comorbidities  (e.g.  malignancy,  heart  failure,  chronic  liver/renal failure)
+- pregnancy
+- patients receiving steroids or other immunosuppressive drugs
+- indwelling devices (IV cannulas or indwelling urinary catheters)
+[context_seperator]
+### I NVESTIGATIONS
+- FBC, MRDT,  blood  culture (take sample  before starting antibiotics), urea, electrolytes, and creatinine, random blood sugar, serum lactate, HIV test
+- Urine  analysis/echocardiogram/chest  X-ray/Urine  TB  LAM/  sputum  for  Gene Xpert/Focused Abdominal Sonography in HIV (FASH)/LP where indicated"
+34,"What are the objectives of TB treatment, including curing patients, preventing death and transmission, and avoiding drug resistance development?","The goals of TB treatment include curing the patient, restoring their quality of life, preventing death from TB, reducing community transmission, and preventing the development and spread of drug-resistance.","## TUBERCULOSIS  
+### CLINICAL DESCRIPTION|### General principles  
+The goals of TB treatment are to cure the patient and restore their quality of life, to prevent death from TB, to reduce transmission of TB in the community and to prevent the development and spread of drug-resistance.|### Directly observed treatment (DOT)  
+The treatment supervisor watches the patient swallow the tablets throughout the whole course to treatment. DOT ensures that the TB patient takes the right drugs, in the right doses at the right times. Supervisors or 'treatment supporters,' can be health workers, volunteers, trained members of the community or guardians. A patient-centered approach with proper communication between the patient and treatment supporter promotes patient education, good adherence and early identification of challenges with treatment (including side-effects and clinical worsening). All treatment supporters should be chosen together with and should be acceptable to the patient. The need for good adherence and follow-up should always be reinforced. Patients should be reminded about the duration of treatment and common side effects.|### TREATMENT OF SUSCEPTIBLE TB  
+- Susceptible TB is treated with first-line drugs: Rifampicin (R), Isoniazid (H), Ethambutol (E), Pyrazinamide (Z). The four oral drugs (RHZE) come as an FDC tablet.
+- Patients should not be admitted in the ward or hospital for administration of TB drugs except where they are very sick or unable to walk.
+- TB drugs should be provided on ambulatory basis in all facilities.|### Dosages of FDC formulations of first line anti-TB drugs for adults  
+
+ Body weight 
+ Initiation phase (2 months)                  
+ Continuation phase (4 months)     
+
+
+ ----------- 
+ -------------------------------------------- 
+ --------------------------------- 
+
+
+             
+ RHZE] [R150/H75/Z400/E275] Number of tablets 
+ [RH] [R150/H75] Number of tablets 
+
+
+ 30-37       
+ 2                                            
+ 2                                 
+
+
+ 38-54       
+ 3                                            
+ 3                                 
+
+
+ 55-74       
+ 4                                            
+ 4                                 
+
+
+ 75 and over 
+ 5                                            
+ 5|### Dosages of FDC formulations of first line anti-TB drugs for children  
+
+ Body weight 
+ Intensive phase (2 months)      
+ Intensive phase (2 months)         
+ Continuation phase         
+
+
+ ----------- 
+ ------------------------------- 
+ ---------------------------------- 
+ -------------------------- 
+
+
+             
+ RHZ 75/50/150 number of tablets 
+ Ethambutol 100mg number of tablets 
+ RH 75/50 number of tablets 
+
+
+ 4-7kg       
+ 1                               
+ 1                                  
+ 1                          
+
+
+ 8-11kg      
+ 2                               
+ 2                                  
+ 2                          
+
+
+ 12-15kg     
+ 3                               
+ 3                                  
+ 3                          
+
+
+ 16-24kg     
+ 4                               
+ 4                                  
+ 4                          
+
+
+ 25 +kg      
+ Takes Adult Formulation|### TB PREVENTIVE THERAPY (TPT)  
+TB preventive Therapy (TPT) remains one of the main stay of TB prevention. The following group of patients are targeted for latent TB treatment using isoniazid or Rifapentine in combination with Isoniazid  
+Household contact## TREATMENT OF SUSCEPTIBLE TB  
+- Susceptible TB is treated with first-line drugs: Rifampicin (R), Isoniazid (H), Ethambutol (E), Pyrazinamide (Z). The four oral drugs (RHZE) come as an FDC tablet.
+- Patients should not be admitted in the ward or hospital for administration of TB drugs except where they are very sick or unable to walk.
+- TB drugs should be provided on ambulatory basis in all facilities.|### Dosages of FDC formulations of first line anti-TB drugs for adults  
+
+ Body weight 
+ Initiation phase (2 months)                  
+ Continuation phase (4 months)     
+
+
+ ----------- 
+ -------------------------------------------- 
+ --------------------------------- 
+
+
+             
+ RHZE] [R150/H75/Z400/E275] Number of tablets 
+ [RH] [R150/H75] Number of tablets 
+
+
+ 30-37       
+ 2                                            
+ 2                                 
+
+
+ 38-54       
+ 3                                            
+ 3                                 
+
+
+ 55-74       
+ 4                                            
+ 4                                 
+
+
+ 75 and over 
+ 5                                            
+ 5|### Dosages of FDC formulations of first line anti-TB drugs for children  
+
+ Body weight 
+ Intensive phase (2 months)      
+ Intensive phase (2 months)         
+ Continuation phase         
+
+
+ ----------- 
+ ------------------------------- 
+ ---------------------------------- 
+ -------------------------- 
+
+
+             
+ RHZ 75/50/150 number of tablets 
+ Ethambutol 100mg number of tablets 
+ RH 75/50 number of tablets 
+
+
+ 4-7kg       
+ 1                               
+ 1                                  
+ 1                          
+
+
+ 8-11kg      
+ 2                               
+ 2                                  
+ 2                          
+
+
+ 12-15kg     
+ 3                               
+ 3                                  
+ 3                          
+
+
+ 16-24kg     
+ 4                               
+ 4                                  
+ 4                          
+
+
+ 25 +kg      
+ Takes Adult Formulation|### TB PREVENTIVE THERAPY (TPT)  
+TB preventive Therapy (TPT) remains one of the main stay of TB prevention. The following group of patients are targeted for latent TB treatment using isoniazid or Rifapentine in combination with Isoniazid  
+Household contact  
+- Under-five children who are household contact of pulmonary TB cases and who are found not to have active TB on an appropriate clinical evaluation
+- HIV negative adult contacts of pulmonary TB cases|### PLHIV  
+- Children living with HIV who are &gt;12 months of age who screen negative for TB using the ICF tool.
+- Children living with HIV who are &lt;12 months of age, who have contact with a PTB and screen negative for TB using the ICF tool.
+- All adult PLHIV above who screen negative for TB using the ICF tool.|### Overview of the TPT Regimens  
+
+ Regimen                      
+ Description                                                         
+ Target population                
+ Frequency   
+ Duration of treatment 
+ Precautions/ Recommendations                                                                                                                                                                                                    
+
+
+ ---------------------------- 
+ ------------------------------------------------------------------- 
+ -------------------------------- 
+ ----------- 
+ --------------------- 
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+ Isoniazid preventive Therapy 
+ A single dose formulation of Isoniazid (INH)                        
+ Children of all ages             
+ Once daily  
+ 6 Months 180 doses    
+ Preferred Regimen for HIV-infected children taking lopinavir-ritonavir, nevirapine, or dolutegravir,                                                                                                                            
+
+
+ 3HP                          
+ A short- course TPT regimen that combines Isoniazid and Rifapentine 
+ Adults and children ≥2 years old 
+ Once weekly 
+ 12 weeks 12 doses     
+ Safe to give with dolutegravir-based ART in Adults Reduces lopinavir- ritonavir and nevirapine levels. Do not use or use with dose adjustment for HIV-infected children taking lopinavir-ritonavir, nevirapine, or dolutegravir 
+
+
+ 3RH                          
+ A short- course TPT regimen that combines                           
+ Children of all ages             
+ Once daily  
+ 12 Weeks 90 doses     
+ Reduces lopinavir- ritonavir and nevirapine levels. Do not use or use with dose                                                                                                                                                 
+  
+
+ Isoniazid (INH )and Rifampicin (R) 
+ adjustment for HIV-infected children taking lopinavir-ritonavir, nevirapine, or dolutegravir 
+
+
+ ---------------------------------- 
+ -------------------------------------------------------------------------------------------- 
+  
+It is important to note that RIF and RPT are potent inducers of the cytochrome P450 oxidase system. Their administration may affect the pharmacokinetics of other drugs including some antiretrovirals (ARVs). For people living with HIV/AIDS, both 3HP and 3RH are safe to give with efavirenz-based ART without any dosing adjustments. In adults, 3HP is safe to give with dolutegravir-based ART without any dosing adjustment. Both 3HP and 3RH reduce lopinavirritonavir and nevirapine levels. Thus, dosing adjustments are needed. So, neither can be used together with lopinavir-ritonavir or nevirapine. As a consequence, for HIV-infected children taking lopinavir-ritonavir, nevirapine, or dolutegravir, the preferred TPT regimen is represented by 6H (preferably with the dispersible formulation), which does not require dose adjustment.|### TB PREVENTIVE THERAPY AMONGST ADULTS 3HP Regimen  
+- The table below summarizes the weight banded dosing for 3HP amongst individuals above 14 years (classified as adults).  
+3HP dosage by weight band for Adults (&gt;14 years)|### Age &gt;14 years  
+
+ Medicine formulation                   
+ 30- 35kg 
+ 36- 45kg 
+ 46- 55kg 
+ 56- 70kg 
+ >70kg 
+
+
+ -------------------------------------- 
+ -------- 
+ -------- 
+ -------- 
+ -------- 
+ ----- 
+
+
+ FDC Rifapentine /Isoniazid (300/300mg) 
+ 3        
+ 3        
+ 3        
+ 3        
+ 3|### TB PREVENTIVE THERAPY AMONGST CHILDREN  
+- The section below summarizes weight banded dosing for TB Preventive Therapy regimens amongst children.  
+Isoniazid preventive Therapy dosage for children under 5  
+- For all under 5 children who are contacts of pulmonary TB patients, the recommended dosing of Isoniazid Preventive Therapy (IPT) is 10 mg/kg once daily for 6 months  
+3HP dosage by weight band for children (2-14 years)|### Age 2-14years  
+
+ Medicine formulation 
+ 10- 15kg 
+ 16-23kg 
+ 24- 30kg 
+ 31- 34kg 
+ >34kg 
+
+
+ -------------------- 
+ -------- 
+ ------- 
+ -------- 
+ -------- 
+ ----- 
+
+
+ Isoniazid 100mg      
+ 3        
+ 5       
+ 6        
+ 7        
+ 7     
+
+
+ Rifapentine 150mg    
+ 2        
+ 3       
+ 4        
+ 5        
+ 5     
+  
+3RH dosage by weight band for children (same with the dosages for treatment)  
+
+ Body weight 
+ RH 75/50 number of tablets 
+
+
+ ----------- 
+ -------------------------- 
+
+
+ 4-7kg       
+ 1                          
+
+
+ 8-11kg      
+ 2                          
+
+
+ 12-15kg     
+ 3                          
+
+
+ 16-24kg     
+ 4                          
+
+
+ 25 +kg|### DRUG RESISTANT TUBERCULOSIS  
+In 2018 WHO regrouped medicines into three categories (A, B and C) and ranked based on the latest evidence about the balance of effectiveness to safety. Injectables are no longer recommended for DR-TB treatment and have been phased out in Malawi  
+Group A: levofloxacin/moxifloxacin, bedaquiline and linezolid. These are medicines that must be prioritized for the standardized DR-TB regimen  
+Group B: clofazimine, cycloserine/terizidone. These are the medicines to be added next for the standardized DR-TB regimen  
+Group C: ethambutol, delamanid, pyrazinamide, imipenem-cilastatin, meropenem, amikacin (streptomycin), ethionamide/prothionamide, p-aminosalicylic acid. These are the medicines to be included to complete the regimens and when agents from Groups A and B cannot be used.  
+Imipenem-cilastatin and meropenem not recommended in Malawi due to cost and complexities of administration. p-aminosalicylic acid and amikacin (streptomycin) not recommended in Malawi due to relative ineffectiveness and risk of toxicity. Ethambutol, delamanid and pyrazinamide can be used under specified conditions (see below)|### For DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children  
+- All oral, longer treatment regimen (LTR) for 18-20 months, containing at least 4 active medications from Group A, B, and C
+- The regimen for Malawi comprises six months of Bedaquiline (Bdq), Levofloxacin (Lfx), Linezolid (Lzd), Clofazimine (Cfz) and Cycloserine (Cs) followed by 12-14 months of Levofloxacin, Linezolid, Clofazimine and Cycloserine
+- Standardized regimen for DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children: 6 Bdq-Lfx-Lzd-Cfz-Cs/12-14 Lfx-Lzd-Cfz-Cs . Delamanid to be used in place of Bedaquiline in children under six years.  
+For MDR/RR-TB patients with FQ resistance (Pre-XDR-TB) or resistance to second-line medications, the following regimen could be applied for both adults and children.  
+- This is an individualized regimen that must be designed based on the resistance pattern of the TB strain, tolerance to the available medicines and treatment history
+- Examples of medicines that can be considered include Bedaquiline (Bdq), Delamanid (Dlm), Ethionamide (Eto), Moxifloxacin (Mfx) and Prazinamide (Z)
+- The regimen must be for a total duration of 18-20 months long. If Bedaquiline is considered, it must be restricted to the first 6 months .|### DOSING GUIDELINES FOR ADULTS  
+<!-- image -->|### DOSING GUIDELINES FOR CHILDREN  
+
+ Medicine                                                                    
+ Recommended dosing                                                                                                                                                                                                                                                                                                     
+
+
+ --------------------------------------------------------------------------- 
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+ Levofloxacin 100mg scored, dispersible tablets                              
+ 15-20mg/kg/day                                                                                                                                                                                                                                                                                                         
+
+
+ Cycloserine 125mg capsules                                                  
+ 15-20mg/kg/day                                                                                                                                                                                                                                                                                                         
+
+
+ Clofazimine 50mg tablet                                                     
+ 2-5mg/kg/day                                                                                                                                                                                                                                                                                                           
+
+
+ Linezolid 150mg, scored, dispersible tablets                                
+ 10-12mg/kg once daily for children < 12 years who weigh 16kg or more; 15mg/kg once daily in children < 12 years who weigh less than 16kg; 10mg/kg once daily in children 12 years and above                                                                                                                            
+
+
+ \*Bedaquiline 20mg tablet (Children ages six and above)                     
+ For children who weigh more than 30kg, the standard adult dose of 400mg daily for 14 days followed by 200mg three times a week for an additional 22 weeks is given. For children who weigh 16-30kg, the recommended dosing is 200mg daily for 14 days followed by 100mg three times a week for an additional 22 weeks. 
+
+
+ \*\*Delamanid 25mg dispersible tablet (Children ages three years and above) 
+ For children who weigh more than 35kg, the standard adult dose of 100mg twice daily is given (for a total daily dose of 200mg). For children who weigh 24-34kg, the recommended dosing is 50mg twice daily (for a total daily dose of 100mg). A practical dosing table for children based on weight is below.          
+  
+- Bedaquiline is a drug that is recommended for children ages six years and above. Currently, there are not weight-based dosing recommendations for children being treated with bedaquiline. Rather, children who weigh more than 30kg, the standard adult dose of 400mg daily for 14 days followed by 200mg three times a week for an additional 22 weeks is given. For children who weigh 16-30kg, the recommended dosing is 200mg daily for 14 days followed by 100mg three times a week for an additional 22 weeks  
+\*\* Delamanid is a drug that is recommended by the World Health Organization for individuals with rifampicin-resistant tuberculosis (RR-TB), and for children ages three years and above. Currently, there are not weight-based dosing recommendations for children being treated with Delamanid. Rather, children who weigh more than 35kg, the standard adult dose of 100mg twice daily is given (for a total daily dose of 200mg). For children who weigh 24-34kg, the recommended dosing is 50mg twice daily (for a total daily dose of 100mg).|### Notes on DR-TB treatment regimens  
+- Scientific and programmatic evidence on the composition, effectiveness, safety, dosages and duration of treatment for DR-TB regimens is evolving. Please refer to the latest guidelines from the National TB and Leprosy Control Program during the course of implementation of these STGs
+- For DR-TB patients without Fluoroquinolone (FQ) resistance, an all oral, shorter treatment regimen for 9-12 months, containing at least 4 active medications from Group A, B, and C
+- can be used for both adults and children at programmatic level under Operational Research (OR) ground. Under this regimen, Linezolid is only used for the first two months.
+- The Standardized shorter regimen for DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children: 2 Bdq-Lfx-Lzd-Cfz-Cs/4 Bdq -Lfx-Cfz-Cs /36 Lfx-Cfz-Cs. Delamanid to be used in place of Bedaquiline in children under six years.",,"The goals of TB treatment are to cure the patient and restore their quality of life, to prevent death from TB, to reduce transmission of TB in the community and to prevent the development and spread of drug-resistance.","### General principles
+The goals of TB treatment are to cure the patient and restore their quality of life, to prevent death from TB, to reduce transmission of TB in the community and to prevent the development and spread of drug-resistance.
+[context_seperator]
+### TB PREVENTIVE THERAPY (TPT)
+TB preventive Therapy (TPT) remains one of the main stay of TB prevention. The following group of patients are targeted for latent TB treatment using isoniazid or Rifapentine in combination with Isoniazid  
+Household contact## TREATMENT OF SUSCEPTIBLE TB  
+- Susceptible  TB  is  treated  with  first-line  drugs:  Rifampicin  (R),  Isoniazid  (H), Ethambutol (E), Pyrazinamide (Z). The four oral drugs (RHZE) come as an FDC tablet.
+- Patients should not be admitted in the ward or hospital for administration of TB drugs except where they are very sick or unable to walk.
+- TB drugs should be provided on ambulatory basis in all facilities.
+[context_seperator]
+### TB PREVENTIVE THERAPY (TPT)
+TB preventive Therapy (TPT) remains one of the main stay of TB prevention. The following group of patients are targeted for latent TB treatment using isoniazid or Rifapentine in combination with Isoniazid  
+Household contact  
+- Under-five children who are household contact of pulmonary TB cases and who are found not to have active TB on an appropriate clinical evaluation
+- HIV negative adult contacts of pulmonary TB cases
+[context_seperator]
+### Directly observed treatment (DOT)
+The treatment supervisor watches the patient swallow the tablets throughout the whole course to treatment. DOT ensures that the TB patient takes the right drugs, in the right doses at the right times. Supervisors or 'treatment supporters,' can be health workers, volunteers, trained members of the community or guardians. A patient-centered approach with proper communication between the patient and treatment supporter promotes patient education, good adherence and early identification of challenges with treatment (including side-effects and clinical worsening). All treatment supporters should be chosen together with and should be acceptable to the patient. The need for good adherence and follow-up should always be reinforced. Patients should be reminded about the duration of treatment and common side effects.
+[context_seperator]
+### TREATMENT OF SUSCEPTIBLE TB
+- Susceptible  TB  is  treated  with  first-line  drugs:  Rifampicin  (R),  Isoniazid  (H), Ethambutol (E), Pyrazinamide (Z). The four oral drugs (RHZE) come as an FDC tablet.
+- Patients should not be admitted in the ward or hospital for administration of TB drugs except where they are very sick or unable to walk.
+- TB drugs should be provided on ambulatory basis in all facilities.
+[context_seperator]
+### For DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children
+- All  oral,  longer  treatment regimen (LTR) for 18-20 months, containing at least 4 active medications from Group A, B, and C
+- The regimen for Malawi comprises six months of Bedaquiline (Bdq), Levofloxacin (Lfx),  Linezolid  (Lzd),  Clofazimine  (Cfz)  and  Cycloserine  (Cs)  followed  by  12-14 months of Levofloxacin, Linezolid, Clofazimine and Cycloserine
+- Standardized regimen for DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children: 6 Bdq-Lfx-Lzd-Cfz-Cs/12-14 Lfx-Lzd-Cfz-Cs . Delamanid to be used in place of Bedaquiline in children under six years.  
+For  MDR/RR-TB  patients  with  FQ  resistance  (Pre-XDR-TB)  or  resistance  to  second-line medications, the following regimen could be applied for both adults and children.  
+- This is an individualized regimen that must be designed based on the resistance pattern of the TB strain, tolerance to the available medicines and treatment history
+- Examples  of medicines  that can be considered  include Bedaquiline (Bdq), Delamanid (Dlm), Ethionamide (Eto), Moxifloxacin (Mfx) and Prazinamide (Z)
+- The regimen must be for a total duration of 18-20 months long. If Bedaquiline is considered, it must be restricted to the first 6 months .
+[context_seperator]
+### Notes on DR-TB treatment regimens
+- Scientific  and  programmatic  evidence  on  the  composition,  effectiveness,  safety, dosages and duration of treatment for DR-TB regimens is evolving. Please refer to the latest guidelines from the National TB and Leprosy Control Program during the course of implementation of these STGs
+- For  DR-TB  patients  without  Fluoroquinolone  (FQ)  resistance,  an  all  oral,  shorter treatment regimen for 9-12 months, containing at least 4 active medications from Group A, B, and C
+- can be used for both adults and children at programmatic level under Operational Research (OR) ground. Under this regimen, Linezolid is only used for the first two months.
+- The Standardized shorter regimen for DR-TB patients without Fluoroquinolone (FQ) resistance for both adults and children: 2 Bdq-Lfx-Lzd-Cfz-Cs/4 Bdq -Lfx-Cfz-Cs /36 Lfx-Cfz-Cs. Delamanid to be used in place of Bedaquiline in children under six years.
+[context_seperator]
+### DRUG RESISTANT TUBERCULOSIS
+In 2018 WHO regrouped medicines into three categories (A, B and C) and ranked based on the latest evidence about the balance of effectiveness to safety. Injectables are no longer recommended for DR-TB treatment and have been phased out in Malawi  
+Group A: levofloxacin/moxifloxacin, bedaquiline and linezolid. These are medicines that must be prioritized for the standardized DR-TB regimen  
+Group B: clofazimine, cycloserine/terizidone. These are the medicines to be added next for the standardized DR-TB regimen  
+Group C: ethambutol, delamanid, pyrazinamide, imipenem-cilastatin, meropenem, amikacin (streptomycin), ethionamide/prothionamide, p-aminosalicylic acid. These are the medicines to be included to complete the regimens and when agents from Groups A and B cannot be used.  
+Imipenem-cilastatin  and  meropenem  not  recommended  in  Malawi  due  to  cost  and complexities  of  administration.  p-aminosalicylic  acid  and  amikacin  (streptomycin)  not recommended in Malawi due to relative  ineffectiveness  and  risk  of  toxicity.  Ethambutol, delamanid and pyrazinamide can be used under specified conditions (see below)
+[context_seperator]
+### DOSING GUIDELINES FOR CHILDREN
+
+ Medicine                                                                  
+ Recommended dosing                                                                                                                                                                                                                                                                                                     
+
+
+---------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ Levofloxacin 100mg scored, dispersible tablets                            
+ 15-20mg/kg/day                                                                                                                                                                                                                                                                                                         
+
+
+ Cycloserine 125mg capsules                                                
+ 15-20mg/kg/day                                                                                                                                                                                                                                                                                                         
+
+
+ Clofazimine 50mg tablet                                                   
+ 2-5mg/kg/day                                                                                                                                                                                                                                                                                                           
+
+
+ Linezolid 150mg, scored, dispersible tablets                              
+ 10-12mg/kg once daily for children < 12 years who weigh 16kg or more; 15mg/kg once daily in children < 12 years who weigh less than 16kg; 10mg/kg once daily in children 12 years and above                                                                                                                            
+
+
+ *Bedaquiline 20mg tablet (Children ages six and above)                    
+ For children who weigh more than 30kg, the standard adult dose of 400mg daily for 14 days followed by 200mg three times a week for an additional 22 weeks is given. For children who weigh 16-30kg, the recommended dosing is 200mg daily for 14 days followed by 100mg three times a week for an additional 22 weeks. 
+
+
+ **Delamanid 25mg dispersible tablet (Children ages three years and above) 
+ For children who weigh more than 35kg, the standard adult dose of 100mg twice daily is given (for a total daily dose of 200mg). For children who weigh 24-34kg, the recommended dosing is 50mg twice daily (for a total daily dose of 100mg). A practical dosing table for children based on weight is below.          
+  
+* Bedaquiline is a drug that is recommended for children ages six years and above. Currently, there  are  not  weight-based  dosing  recommendations  for  children  being  treated  with bedaquiline. Rather, children who weigh more than 30kg, the standard adult dose of 400mg daily for 14 days followed by 200mg three times a week for an additional 22 weeks is given. For children who weigh 16-30kg, the recommended dosing is 200mg daily for 14 days followed by 100mg three times a week for an additional 22 weeks  
+** Delamanid is a drug that is recommended by the World Health Organization for individuals with rifampicin-resistant tuberculosis (RR-TB), and for children ages three years and above. Currently,  there  are  not  weight-based  dosing  recommendations for children being treated with Delamanid. Rather, children who weigh more than 35kg, the standard adult dose of 100mg twice daily is given (for a total daily dose of 200mg). For children who weigh 24-34kg, the recommended dosing is 50mg twice daily (for a total daily dose of 100mg).
+[context_seperator]
+### TB PREVENTIVE THERAPY AMONGST CHILDREN
+- The section below summarizes weight banded dosing for TB Preventive Therapy regimens amongst children.  
+Isoniazid preventive Therapy dosage for children under 5  
+- For  all  under  5  children  who  are  contacts  of  pulmonary  TB  patients,  the recommended dosing of Isoniazid Preventive Therapy (IPT) is 10 mg/kg once daily for 6 months  
+3HP dosage by weight band for children (2-14 years)"
+35,What are the signs and symptoms of Mastoiditis?,"The signs and symptoms of Mastoiditis include swelling behind or above the ear, fever, pinna pushed forward and tenderness, and ear discharge.","# EAR, NOSE AND THROAT CONDITIONS  
+## MASTOIDITIS  
+### CLINICAL DESCRIPTION  
+It is a result of an infection that extends to the air cells of the skull behind the ear. Specifically, it is an inflammation of the mucosal lining of the mastoid antrum and mastoid air cell system inside the mastoid processor. The mastoid is the portion of the temporal bone of the skull that is behind the ear. It is usually caused by untreated acute otitis media and used to be a leading cause of child mortality.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Swelling behind or above the ear.
+- Fever, Pinna pushed forward, tender
+- Ear discharge|### I NVESTIGATION  
+- Physical Examination, Blood Test, X-Ray, CT-Scan, MRI, Spinal Tap|### TREATMENT:|### NON-PHARMACOLOGICAL  
+- Eat food rich in vitamins like fruits and vegetables and avoid spicy food.
+- Seek medical attention should you experience any of the signs and symptoms|### PHARMACOLOGICAL|### Adults:  
+- Give Ceftriaxone , IV, 2g 12 hourly for 5 -day plus
+- Give Analgesics as necessary|### Children :  
+- Give Ceftriaxone 50 mg per kg daily for 5 days|### Refer:  
+- Brain involvement (meningitis or brain abscess).
+- For surgical drainage may be necessary (If  fluctuant)
+- Refer patient to hospital (if no response to drugs)",,"- Swelling behind or above the ear.
+- Fever, Pinna pushed forward, tender
+- Ear discharge","### SIGNS AND SYMPTOMS
+- Swelling behind or above the ear.
+- Fever, Pinna pushed forward, tender
+- Ear discharge
+[context_seperator]
+### CLINICAL DESCRIPTION
+It is a result of an infection that extends to the air cells of the skull behind the ear. Specifically, it is an inflammation of the mucosal lining of the mastoid antrum and mastoid air cell system inside the mastoid processor. The mastoid is the portion of the temporal bone of the skull that is behind the ear. It is usually caused by untreated acute otitis media and used to be a leading cause of child mortality.
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Eat food rich in vitamins like fruits and vegetables and avoid spicy food.
+- Seek medical attention should you experience any of the signs and symptoms
+[context_seperator]
+### I NVESTIGATION
+- Physical Examination, Blood Test, X-Ray, CT-Scan, MRI, Spinal Tap
+[context_seperator]
+### Refer:
+- Brain involvement (meningitis or brain abscess).
+- For surgical drainage may be necessary (If  fluctuant)
+- Refer patient to hospital (if no response to drugs)
+[context_seperator]
+### Adults:
+- Give Ceftriaxone , IV, 2g 12 hourly for 5 -day plus
+- Give Analgesics as necessary
+[context_seperator]
+### Children :
+- Give Ceftriaxone 50 mg per kg daily for 5 days"
+36,"What are the symptoms and signs of otitis externa, including associated hearing loss?","The symptoms and signs of Otits Externa include ear pain, itchiness, and mild hearing loss.","## OTITIS EXTERNA  
+### CLINICAL DESCRIPTION:  
+This is an inflammation of the skin lining the external auditory canal. May be a furuncle or diffuse.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Ear pain
+- Itchiness
+- Mild Hearing loss|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL|### PHARMACOLOGICAL|### A. Furuncle  
+- Give Amoxicillin 50 mg/kg in 3 divided doses for 5 days.
+- Give Analgesia|### Alternatively:  
+- Give Flucloxacillin 500mg 6 hourly for 5 days  
+- Make  a  wick  of  ribbon  gauze  impregnated  with  Hydrocortisone  or Betamethasone cream and gently insert in the ear for 2 to 3 days.|### B. DIFFUSE OTITIS EXTERNA  
+- Dry Mop Ear
+- Give Analgesia when necessary
+- Give Ciprofloxacin ear drops 6 hourly for 5  days",,"- Ear pain
+- Itchiness
+- Mild Hearing loss","### SYMPTOMS AND SIGNS:
+- Ear pain
+- Itchiness
+- Mild Hearing loss
+[context_seperator]
+### B. DIFFUSE OTITIS EXTERNA
+- Dry Mop Ear
+- Give Analgesia when necessary
+- Give Ciprofloxacin ear drops 6 hourly for 5  days
+[context_seperator]
+### CLINICAL DESCRIPTION:
+This is an inflammation of the skin lining the external auditory canal. May be a furuncle or diffuse.
+[context_seperator]
+### Alternatively:
+- Give Flucloxacillin 500mg 6 hourly for 5 days  
+- Make  a  wick  of  ribbon  gauze  impregnated  with  Hydrocortisone  or Betamethasone cream and gently insert in the ear for 2 to 3 days.
+[context_seperator]
+### I NVESTIGATION
+- Ear swab for culture and sensitivity
+[context_seperator]
+### A. Furuncle
+- Give Amoxicillin 50 mg/kg in 3 divided doses for 5 days.
+- Give Analgesia"
+37,"What are the symptoms and signs of acute otitis media, including fever prevalence and ear pain characteristics?",The symptoms include fever in about 50% of patients with sudden persistent ear pain or pus discharge for <2 weeks. The signs are red eardrum and occasionally inflamed throat.,"## ACUTE OTITIS MEDIA  
+### CLINICAL DESCRIPTION:  
+This is an infection of the middle ear, which communicates with the throat. It is important in a febrile child to look for it and treat it. If persists for more than 72 hours, then start antibiotics. If it does not resolve for a further 72 hours, then, refer. Tropical medicine treatment is ineffective and should be  avoided.  
+Acute otitis media is often viral in origin and needs only a simple analgesic for pain|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks
+- Red eardrum
+- Occasionally inflamed throat
+- Perforated eardrum|### I NVESTIGATION  
+- FBC
+- Ear swab for culture and sensitivity|### TREATMENT|### PHARMACOLOGICAL  
+- Give Amoxicillin 15 mg/kg every 8 hourly for 5 days|### Alternatively:  
+- Give Erythromycin 6.25 mg/kg every 8 hourly or Azithromycin 10mg/kg stat then 5mg/kg q24h for total maximum 5 days for patients with penicillin  allergy
+- Give Analgesia as required",,"- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks
+- Red eardrum
+- Occasionally inflamed throat
+- Perforated eardrum","### SYMPTOMS AND SIGNS:
+- Fever in about 50% of patients, sudden persistent ear pain or pus discharge for &lt; 2 weeks
+- Red eardrum
+- Occasionally inflamed throat
+- Perforated eardrum
+[context_seperator]
+### CLINICAL DESCRIPTION:
+This is an infection of the middle ear, which communicates with the throat. It is important in a febrile child to look for it and treat it. If persists for more than 72 hours, then start antibiotics. If it does not resolve for a further 72 hours, then, refer. Tropical medicine treatment is ineffective and should be  avoided.  
+Acute otitis media is often viral in origin and needs only a simple analgesic for pain
+[context_seperator]
+### I NVESTIGATION
+- FBC
+- Ear swab for culture and sensitivity
+[context_seperator]
+### PHARMACOLOGICAL
+- Give Amoxicillin 15 mg/kg every 8 hourly for 5 days
+[context_seperator]
+### Alternatively:
+- Give Erythromycin 6.25 mg/kg every 8 hourly or Azithromycin 10mg/kg stat then 5mg/kg q24h for total maximum 5 days for patients with penicillin  allergy
+- Give Analgesia as required"
+38,What are the clinical features of Chronic superlative otitis media characterized by tympanic membrane perforation and persistent pus discharge lasting over two weeks?,"Chronic superlative otitis media presents with a perforated tympanic membrane, persistent pus discharge from the ear for more than 2 weeks, hearing loss, and is common in immunosuppressed patients.","## Chronic superlative otitis media  
+### CLINICAL DESCRIPTION  
+This is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.  
+### CLINICAL DESCRIPTION|### SYMPTOMS AND SIGNS:  
+- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Ensure ear is always dry by dry wicking with cotton wool.  
+A chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  
+- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days
+- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)
+- Refer for further assessment if no improvement after 3-4 weeks' therapy|### Dry the ear by  wicking.  
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.## 4.1.2.3 Chronic superlative otitis media|### CLINICAL DESCRIPTION  
+This is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.  
+### CLINICAL DESCRIPTION|### SYMPTOMS AND SIGNS:  
+- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.|### I NVESTIGATION  
+- Ear swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Ensure ear is always dry by dry wicking with cotton wool.  
+A chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  
+- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days
+- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)
+- Refer for further assessment if no improvement after 3-4 weeks' therapy|### Dry the ear by  wicking.  
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.  
+5. The patient/guardian should dry the ear by wicking at home at least four times daily until the wick stays dry.
+6. If bleeding occurs, temporarily stop drying the ear.
+7. Do not leave anything in the ear between treatments
+8. Commercially made ear buds should be avoided in cleaning the ear.
+9. The patient should avoid swimming or otherwise getting the inside of the ear wet.
+10. Re-assess weekly to ensure that the patient/guardian is drying the ear correctly.
+11. Check for mastoiditis.  
+Note: TB is an important cause of a chronically discharging ear in Malawi, condition is common in HIV infected  children.",,"- Persistent pus discharge, hearing loss
+- If the eardrum has been ruptured for over 2 weeks, secondary infection with multiple organisms usually occurs.","### CLINICAL DESCRIPTION
+This is a chronic infection of the middle ear with perforation of the tympanic membrane and pus discharging from the ear for more than 2 weeks.
+[context_seperator]
+### SYMPTOMS AND SIGNS:
+- Persistent pus discharge, hearing  loss
+- If  the  eardrum  has  been  ruptured  for  over  2  weeks,  secondary  infection  with multiple organisms usually  occurs.
+- Common in immunosuppressed patients
+- This makes oral antibiotic therapy much less effective.
+[context_seperator]
+### Dry the ear by  wicking.
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.## 4.1.2.3 Chronic superlative otitis media
+[context_seperator]
+### Dry the ear by  wicking.
+1. Roll a piece of clean absorbent cloth or cotton wool into a wick and insert carefully into the patient's ear.
+2. Leave for one minute
+3. Remove and replace with a clean wick
+4. Watch the patient/guardian repeat this until the wick is dry when removed.  
+5. The patient/guardian should dry the ear by wicking at home at least four times daily until the wick stays dry.
+6. If bleeding occurs, temporarily stop drying the ear.
+7. Do not leave anything in the ear between treatments
+8. Commercially made ear buds should be avoided in cleaning the ear.
+9. The patient should avoid swimming or otherwise getting the inside of the ear wet.
+10. Re-assess weekly to ensure that the patient/guardian is drying the ear correctly.
+11. Check for mastoiditis.  
+Note: TB is an important cause of a chronically discharging ear in Malawi, condition is common in HIV infected  children.
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Ensure ear is always dry by dry wicking with cotton wool.  
+A chronically draining ear can only heal if it is dry . Drying the ear is time consuming for both the health worker and the mother, but it is the only effective measure.  
+- The mainstay of treatment is topical therapy with Ciprofloxacin ear drops 6 hourly for 5 days
+- Demonstrate/explain carefully to the patient (or guardian in the case of a child) how to dry the ear by wicking (see below)
+- Refer for further assessment if no improvement after 3-4 weeks' therapy
+[context_seperator]
+### I NVESTIGATION
+- Ear swab for culture and sensitivity"
+39,"What are the signs and symptoms of acute vertigo, including sudden onset, intermittent episodes triggered by head movement, associated vertigo, vomiting, nystagmus?","The signs and symptoms of ACUTE VERTIGO include sudden onset and intermittent episodes triggered by head movement, with associated vertigo, vomiting, and nystagmus.","## ACUTE VERTIGO  
+### CLINICAL DESCRIPTION  
+An acute syndrome, consisting of vertigo, nystagmus, nausea, vomiting and postural instability.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus|### I NVESTIGATIONS  
+- Positive Dix-Hall pike test
+- Need for neuro imaging to find cause and treat appropriately|### TREATMENT  
+Treatment will depend on the cause|### REFERRAL :  
+- Suspected intracranial mass lesions or cerebellar stroke.
+- Suspected vestibular neuritis.
+- Patients not responding to therapy for exclusion of alternative etiology.",,#NAME?,"### SIGNS AND SYMPTOMS
+- Sudden  onset  and  intermittent  symptoms,  vertigo  following  head  movement, vomiting and nystagmus
+[context_seperator]
+### CLINICAL DESCRIPTION
+An acute syndrome, consisting of vertigo, nystagmus, nausea, vomiting and postural instability.
+[context_seperator]
+### I NVESTIGATIONS
+- Positive Dix-Hall pike test
+- Need for neuro imaging to find cause and treat appropriately
+[context_seperator]
+### TREATMENT
+Treatment will depend on the cause
+[context_seperator]
+### REFERRAL :
+- Suspected intracranial mass lesions or cerebellar stroke.
+- Suspected vestibular neuritis.
+- Patients not responding to therapy for exclusion of alternative etiology."
+40,"What are the signs and symptoms associated with epistaxis, including its presentation as unilateral or bilateral nosebleeds?",The sign and symptom associated with Epistaxsis is Nose Bleeding. It can be presented as unilateral or bilateral.,"## EPISTAXIS  
+### CLINICAL DESCRIPTION  
+Epistaxis also called nosebleed is a common medical emergency, which requires prompt management to avoid morbidity and mortality. Bleeding can be bilateral or unilateral, or posterior and anterior. Causes include trauma, repeated nose pickings, infections such as rhino sinusitis, systemic causes such as hypertension, bleeding disorders, anaemia and leukemia etc.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Nose Bleeding|### I NVESTIGATIONS  
+- FBC,  sickling  test,  coagulation  screen,  liver  function  test,  retroviral  screen,  if indicated|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Pinch the nose 5-10 minutes let the patient lean forward and breathe through the mouth|### Alternative:  
+- Apply cold pack or ice block to the forehead, using ribbon gauze impregnated with Petroleum Jelly or liquid paraffin.|### PHARMACOLOGICAL  
+- Cauterization of bleeding point by touching the bleeding point with sliver nitrate",,#NAME?,"### CLINICAL DESCRIPTION
+Epistaxis also called nosebleed is a common medical emergency, which requires prompt management to avoid morbidity and mortality. Bleeding can be bilateral or unilateral, or posterior and anterior. Causes include trauma, repeated nose pickings, infections such as rhino sinusitis, systemic causes such as hypertension, bleeding disorders, anaemia and leukemia etc.
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Nose Bleeding
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Pinch the nose 5-10 minutes let the patient lean forward and breathe through the mouth
+[context_seperator]
+### I NVESTIGATIONS
+- FBC,  sickling  test,  coagulation  screen,  liver  function  test,  retroviral  screen,  if indicated
+[context_seperator]
+### Alternative:
+- Apply cold pack or ice block to the forehead, using ribbon gauze impregnated with Petroleum Jelly or liquid paraffin.
+[context_seperator]
+### PHARMACOLOGICAL
+- Cauterization of bleeding point by touching the bleeding point with sliver nitrate"
+41,What are the signs and symptoms of Nasal Vestibulitis?,"The signs and symptoms of Nasal Vestibulitis include swelling, pain, mucous drainage bump at the opening of the nostril.","## NASAL VESTIBULITIS CLINICAL DESCRIPTION  
+An inflammation of the skin within the nasal vestibule is referred to as nasal Vestibulitis. Diffuse infection of the skin of the anterior nares and may occur due to frequent trauma such as occurs in constant nose picking. Persistent nasal discharge leads to excoriation and infection of the skin of the nasal vestibule|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Swelling
+- Pain
+- Mucous Drainage Bump at the opening of the nostril|### TREATMENT:|### PHARMACOLOGICAL  
+- Give Analgesia
+- Give Amoxicillin 500mg 8 hourly for 5 days
+- Give Liquid Paraffin 2 drops each nose 3 times a day",,"- Swelling
+- Pain
+- Mucous Drainage Bump at the opening of the nostril","### 
+An inflammation of the skin within the nasal vestibule is referred to as nasal Vestibulitis. Diffuse infection of the skin of the anterior nares and may occur due to frequent trauma such as occurs in constant nose picking. Persistent nasal discharge leads to excoriation and infection of the skin of the nasal vestibule
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Swelling
+- Pain
+- Mucous Drainage Bump at the opening of the nostril
+[context_seperator]
+### PHARMACOLOGICAL
+- Give Analgesia
+- Give Amoxicillin 500mg 8 hourly for 5 days
+- Give Liquid Paraffin 2 drops each nose 3 times a day"
+42,What are the characteristic symptoms and signs associated with bacterial sinusitis?,"The characteristic symptoms and signs of BACTERIAL SINUSITIS include purulent nasal discharge (persistent or intermittent), pain and tenderness over one or more sinuses, nasal obstruction, postnasal discharge, and occasional fever.","## BACTERIAL SINUSITIS  
+### CLINICAL DESCRIPTION  
+This is an acute infection of the para-nasal sinuses. It may lead to complications with attendant morbidity and mortality. Early recognition of this clinical condition is mandatory. Swimming in dirty waters, dental infection or dental extraction, fractures involving the sinuses, nasal obstruction from polyps and allergic rhinitis are predisposing factors to developing acute sinusitis.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Purulent nasal discharge, persistent or intermittent, pain and  tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.|### I NVESTIGATIONS  
+- FBC
+- X-ray of paranasal sinuses  
+1.  Sinusitis is uncommon in children under five years as sinuses are not fully developed
+2.  Unilateral foul-smelling nasal discharge is a foreign body until proven otherwise|### TREATMENT:|### NON-PHARMACOLOGICAL  
+- Adequate hydration
+- Steam inhalation|### PHARMACOLOGICAL|### Adults:  
+- Give Oxymetazoline 0.05% 2 drops twice a day for not more than one week
+- Give Cetirizine 10mg daily for 3-5  days
+- Give Amoxycillin 500mg 8 hourly for  5 days
+- Steam inhalations using Menthol are advised|### Children:  
+- Give Oxymetazoline 0.025% 2 drops twice a day for not more than one week
+- Give Amoxicillin 25  mg/kg/dose  in  exacerbations  of  chronic  sinusitis  and  HIV positive children who are on Cotrimoxazole prophylaxis.|### Alternatively: penicillin hypersensitivity:  
+- Give Erythromycin 12.5 mg/kg/dose 6 hourly or Azithromycin 10mg/kg STAT then 5mg /kg daily for 7  day|### If pain or fever:  
+- Give Analgesic/Antipyretic treatment as required|### Referral criteria  
+- No symptomatic relief after 48-72 hours of antibiotics
+- CNS complications of sinusitis",,#NAME?,"### SYMPTOMS AND SIGNS:
+- Purulent nasal discharge, persistent or intermittent, pain and  tenderness over one or more sinuses, nasal obstruction, postnasal discharge, occasional fever.
+[context_seperator]
+### CLINICAL DESCRIPTION
+This is an acute infection of the para-nasal sinuses. It may lead to complications with attendant morbidity and mortality. Early recognition of this clinical condition is mandatory. Swimming in dirty waters, dental infection or dental extraction, fractures involving the sinuses, nasal obstruction from polyps and allergic rhinitis are predisposing factors to developing acute sinusitis.
+[context_seperator]
+### I NVESTIGATIONS
+- FBC
+- X-ray of paranasal sinuses  
+1.  Sinusitis is uncommon in children under five years as sinuses are not fully developed
+2.  Unilateral foul-smelling nasal discharge is a foreign body until proven otherwise
+[context_seperator]
+### Referral criteria
+- No symptomatic relief after 48-72 hours of antibiotics
+- CNS complications of sinusitis
+[context_seperator]
+### If pain or fever:
+- Give Analgesic/Antipyretic treatment as required
+[context_seperator]
+### Children:
+- Give Oxymetazoline 0.025% 2 drops twice a day for not more than one week
+- Give Amoxicillin 25  mg/kg/dose  in  exacerbations  of  chronic  sinusitis  and  HIV positive children who are on Cotrimoxazole prophylaxis.
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Adequate hydration
+- Steam inhalation
+[context_seperator]
+### Adults:
+- Give Oxymetazoline 0.05% 2 drops twice a day for not more than one week
+- Give Cetirizine 10mg daily for 3-5  days
+- Give Amoxycillin 500mg 8 hourly for  5 days
+- Steam inhalations using Menthol are advised
+[context_seperator]
+### Alternatively: penicillin hypersensitivity:
+- Give Erythromycin 12.5 mg/kg/dose 6 hourly or Azithromycin 10mg/kg STAT then 5mg /kg daily for 7  day"
+43,What are the characteristic symptoms and signs associated with Allergic Rhinitis?,"The characteristic symptoms of Allergic Rhinitis include blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation. Other signs may involve conjunctival itching and watering along with edematous pale grey nasal mucosa.","## ALLERGIC RHINITIS  
+### CLINICAL DESCRIPTION  
+Recurrent inflammation of the nasal mucosa due to hypersensitivity to inhaled allergens e.g., pollen, house dust, grasses and animal  proteins.|### CLINICAL FEATURES|### SYMPTOMS/SIGNS:  
+- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.
+- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Avoid known triggers/allergens, such as dust (dust mite) where possible
+- Avoid smoking
+- Provide education on the correct technique of administering topical medicines and monitor from time to time. Incorrect technique is a common cause of treatment failure.
+- Allergen avoidance|### PHARMACOLOGICAL  
+- Give corticosteroid nasal sprays e.g., Beclomethasone nasal s p r a y s  1 spray of 50 mcg in each nostril 12 hourly.
+- Give Cetirizine 10mg daily for 3-5 days
+- If  predominant  symptom  is  blocked  nose,  then  add  Oxymetazoline  0.05%, intranasal, administered 8 hourly for a maximum of 5 days.
+- If symptoms persist ADD Prednisone, oral, 30 mg daily for 5 days whilst continuing the topical steroid.",,"- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.
+- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.","### SYMPTOMS/SIGNS:
+- Blocked stuffy nose, watery nasal discharge, frequent sneezing often accompanied by nasal itching and irritation, conjunctival itching and watering, edematous pale grey nasal mucosa, mouth breathing, snoring at night.
+- Exclude other causes such as infections, vasomotor rhinitis, overuse of decongestants drops, side effects of antihypertensive and antidepressants.
+[context_seperator]
+### CLINICAL DESCRIPTION
+Recurrent inflammation of the nasal mucosa due to hypersensitivity to inhaled allergens e.g., pollen, house dust, grasses and animal  proteins.
+[context_seperator]
+### PHARMACOLOGICAL
+- Give corticosteroid nasal sprays e.g., Beclomethasone nasal s p r a y s  1 spray of 50 mcg in each nostril 12 hourly.
+- Give Cetirizine 10mg daily for 3-5 days
+- If  predominant  symptom  is  blocked  nose,  then  add  Oxymetazoline  0.05%, intranasal, administered 8 hourly for a maximum of 5 days.
+- If symptoms persist ADD Prednisone, oral, 30 mg daily for 5 days whilst continuing the topical steroid.
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Avoid known triggers/allergens, such as dust (dust mite) where possible
+- Avoid smoking
+- Provide education on the correct technique of administering topical medicines and monitor from time to time. Incorrect technique is a common cause of treatment failure.
+- Allergen avoidance"
+44,"What are the key signs and symptoms associated with acute tonsillitis, and any other notable clinical indicators?",The key signs and symptoms include sore throat with pain and difficulty swallowing; inflamed tonsils with multiple white spots on the surface; sudden onset of fever. These are characteristic features of TONSILLITIS.,"## TONSILLITIS  
+### CLINICAL DESCRIPTION  
+Acute inflammation of the tonsils. The main organism implicated in the causation is betahemolytic streptococcal.|### CLINICAL FEATURES|### SYMPTOMS AND SIGNS:  
+- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.|### I NVESTIGATION  
+- FBC
+- Throat swab for culture and sensitivity|### TREATMENT|### NON-PHARMACOLOGICAL  
+- Warm salt gargles|### PHARMACOLOGICAL  
+- Give Amoxicillin 500mg 8 hourly fAnalgesiaor 7  days
+- In severe infection, Amoxicillin 250/500mg + Clavulanic acid 125mg 8 hourly for 57 days|### Alternatively:  
+- Give Erythromycin 500mg, every 8 hours in Penicillin allergy
+- Give Analgesia see Section 24.1 on pain relief|### Refer if  
+- Peritonsillar abscess
+- If symptoms persist or recurring episodes of 4-5 attacks per year",,#NAME?,"### SYMPTOMS AND SIGNS:
+- Sore throat,  difficulty  and  pain  on  swallowing,  inflamed  tonsils,  multiple  white spots on the tonsillar surface, and sudden onset of  fever.
+[context_seperator]
+### CLINICAL DESCRIPTION
+Acute inflammation of the tonsils. The main organism implicated in the causation is betahemolytic streptococcal.
+[context_seperator]
+### Refer if
+- Peritonsillar abscess
+- If symptoms persist or recurring episodes of 4-5 attacks per year
+[context_seperator]
+### PHARMACOLOGICAL
+- Give Amoxicillin 500mg 8 hourly for 7  days
+- In severe infection, Amoxicillin 250/500mg + Clavulanic acid 125mg 8 hourly for 57 days
+[context_seperator]
+### I NVESTIGATION
+- FBC
+- Throat swab for culture and sensitivity
+[context_seperator]
+### Alternatively:
+- Give Erythromycin 500mg, every 8 hours in Penicillin allergy
+- Give Analgesia see Section 24.1 on pain relief
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Warm salt gargles"
+45,What are the distinguishing signs and symptoms of non-specific inflammatory arthritis compared to rheumatoid arthritis?,"Non-specific inflammatory arthritis presents with pain and swelling in joints, fever (especially in children), while rheumatoid arthritis includes chronic pain, joint swelling, deformity.","# MUSCULOSKELETAL DISORDERS  
+## NON-SPECIFIC INFLAMMATORY ARTHRITIS AND RHEUMATOID ARTHRITIS  
+### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain and swelling in joint
+- Fever (especially in children)
+- For rheumatoid arthritis key symptoms are: Chronic pain, joint swelling, and deformity (see RA section below)|### I NVESTIGATIONS  
+- FBC
+- X-ray joint
+- ESR|### TREATMENT|### Treatment Adults:|### NSAIDS  
+- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food|### Alternatively:  
+- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  
+or  
+- o Give Diclofenac Sodium 25-50mg 8 hourly after food or SR 75mg bd for another 7 days  
+Consider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  
+- Intra-articular steroid injection with Depo Medrol or Triamcinolone
+- Disease Modifying anti-rheumatic agents (see RA section below)|### Children:  
+- Always refer to hospital
+- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly",,"- Pain and swelling in joint
+- Fever (especially in children)
+- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)","### SIGNS AND SYMPTOMS
+- Pain and swelling in joint
+- Fever (especially in children)
+- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)
+[context_seperator]
+### Alternatively:
+- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  
+or  
+- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  
+Consider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  
+- Intra-articular steroid injection with Depo Medrol or Triamcinolone
+- Disease Modifying anti-rheumatic agents (see RA section below)
+[context_seperator]
+### I NVESTIGATIONS
+- FBC
+- X-ray joint
+- ESR
+[context_seperator]
+### NSAIDS
+- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food
+[context_seperator]
+### Children:
+- Always refer to hospital
+- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly"
+46,What are the NSAID treatment protocols for non-specific inflammatory arthritis?,"For adults with non-specific inflammatory arthritis, initial NSAID treatment includes Ibuprofen (1.2-1.8g daily in 8-hourly doses after food) or Aspirin (300-900 mg after food every 4 hours up to 4g/day). If not effective within 7 days, alternatives like Indomethacin (25-50mg 8 hourly) or Diclofenac Sodium (25-50mg 8 hourly or SR 75mg bd) are used. Intra-articular steroid injections and referral to a specialist may be considered if NSAIDs fail.","# MUSCULOSKELETAL DISORDERS  
+## NON-SPECIFIC INFLAMMATORY ARTHRITIS AND RHEUMATOID ARTHRITIS  
+### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain and swelling in joint
+- Fever (especially in children)
+- For rheumatoid arthritis key symptoms are: Chronic pain, joint swelling, and deformity (see RA section below)|### I NVESTIGATIONS  
+- FBC
+- X-ray joint
+- ESR|### TREATMENT|### Treatment Adults:|### NSAIDS  
+- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food|### Alternatively:  
+- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  
+or  
+- o Give Diclofenac Sodium 25-50mg 8 hourly after food or SR 75mg bd for another 7 days  
+Consider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  
+- Intra-articular steroid injection with Depo Medrol or Triamcinolone
+- Disease Modifying anti-rheumatic agents (see RA section below)|### Children:  
+- Always refer to hospital
+- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly",,"- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days
+or
+- o Give Diclofenac Sodium 25-50mg 8 hourly after food or SR 75mg bd for another 7 days","### Alternatively:
+- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  
+or  
+- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  
+Consider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  
+- Intra-articular steroid injection with Depo Medrol or Triamcinolone
+- Disease Modifying anti-rheumatic agents (see RA section below)
+[context_seperator]
+### NSAIDS
+- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food
+[context_seperator]
+### Children:
+- Always refer to hospital
+- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Pain and swelling in joint
+- Fever (especially in children)
+- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)
+[context_seperator]
+### I NVESTIGATIONS
+- FBC
+- X-ray joint
+- ESR"
+47,"What antibiotic regimens, including alternatives for penicillin allergy, are recommended for treating septic arthritis?","For septic arthritis in adults without a penicillin allergy: Flucloxacillin 1g IV every 6 hours plus Ciprofloxacin or Doxycycline. For those with an allergy, Clindamycin is preferred; if unavailable, use Ceftriaxone followed by Erythromycin and Ciprofloxacin.","## ARTHRITIS (SEPTIC)  
+### CLINICAL FEATURES|### SYMPTOMS AND SIGNS  
+- Fever
+- Swollen, painful, warm joint
+- Severe local tenderness
+- Pain on joint motion|### I NVESTIGATIONS  
+- Joint aspiration for diagnostic and therapeutic purposes
+- ↑↑ WCC (e.g. &gt;50,0 00/mm3): mostly PMN
+- ↑ESR/CRP, ↑WCC, Blood cultures
+- X-ray
+- FBC,
+- VDRL|### TREATMENT|### PHARMACOLOGICAL|### Treatment Adults:  
+- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.
+- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin ) may be required|### Alternatively, if penicillin allergic:  
+- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for 2 weeks followed by oral Erythromycin 500mg 6 hourly and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks  
+Note : If Pus present, always refer early for anthrotomy|### Children:  
+- Give Ceftriaxone  
+50mg/kg daily for 14 days|### Or alternatively when staphylococcal infection is suspected:  
+- Give Flucloxacillin 25 mg/kg IV q6h for 14 days|### Or if above drugs not available  
+- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course|### NON-PHARMACOLOGICAL  
+- Consider joint washout under GA
+- Splint joint
+- Physiotherapy after infection resolved|### Complications  
+- Osteomyelitis
+- Arthritis
+- Ankylosis: fusion|### Note: Surgical drainage may be indicated  
+TB septic arthritis is treated as for other forms of extra-pulmonary TB  
+When to refer a septic arthritis patient  
+- If pus present, always refer early for arthrotomy.
+- Suspicion of joint destruction
+- No response to the available antibiotics  
+RED FLAG: Always refer early to hospital for systemic treatment and arthrotomy",,"- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for  2  weeks  followed  by  oral Erythromycin 500mg  6  hourly  and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks
+- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.
+- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin )  may be required
+- Or alternatively when staphylococcal infection is suspected:
+- Give Flucloxacillin 25 mg/kg IV q6h for 14 days
+- Or if above drugs not available
+- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there  is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course","### Alternatively, if penicillin allergic:
+- Give Clindamycin 450mg 12 hourly or, if not available use Ceftriaxone 2g IV daily for  2  weeks  followed  by  oral Erythromycin 500mg  6  hourly  and Ciprofloxacin 500mg 12 hourly for a duration of 2-4 weeks  
+Note : If Pus present, always refer early for anthrotomy
+[context_seperator]
+### Note: Surgical drainage may be indicated
+TB septic arthritis is treated as for other forms of extra-pulmonary TB  
+When to refer a septic arthritis patient  
+- If pus present, always refer early for arthrotomy.
+- Suspicion of joint destruction
+- No response to the available antibiotics  
+RED FLAG: Always refer early to hospital for systemic treatment and arthrotomy
+[context_seperator]
+### Treatment Adults:
+- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus Ciprofloxacin 500mg 12 hourly PO or Doxycycline 100mg 12 hourly PO.
+- A further 2-4 weeks of oral antibiotics ( Flucloxacillin and Ciprofloxacin )  may be required
+[context_seperator]
+### Or alternatively when staphylococcal infection is suspected:
+- Give Flucloxacillin 25 mg/kg IV q6h for 14 days
+[context_seperator]
+### I NVESTIGATIONS
+- Joint aspiration for diagnostic and therapeutic purposes
+- ↑↑ WCC (e.g. &gt;50,0 00/mm3): mostly PMN
+- ↑ESR/CRP, ↑WCC, Blood cultures
+- X-ray
+- FBC,
+- VDRL
+[context_seperator]
+### SYMPTOMS AND SIGNS
+- Fever
+- Swollen, painful, warm joint
+- Severe local tenderness
+- Pain on joint motion
+[context_seperator]
+### Or if above drugs not available
+- Give Chloramphenicol 12.5 mg/kg every 6hrs for at least 14 days, or 4 weeks if there  is associated osteomyelitis, clinically evident by bone swelling or proven by X-rays after the initial 14 day course
+[context_seperator]
+### Children:
+- Give Ceftriaxone  
+50mg/kg daily for 14 days
+[context_seperator]
+### Complications
+- Osteomyelitis
+- Arthritis
+- Ankylosis: fusion
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Consider joint washout under GA
+- Splint joint
+- Physiotherapy after infection resolved"
+48,How is gout defined as an inflammatory arthritis condition caused by uric acid crystal formation due to elevated levels resulting from decreased renal excretion or increased production?,"GOUT is the most common form of inflammatory arthritis, characterized by intermittent painful joint attacks caused by crystals formed from excessive uric acid levels due to decreased renal excretion or increased production.","## GOUT  
+### CLINICAL DESCRIPTION  
+Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.|### Risk Factors  
+- Age, male gender, menopausal status in females, impairment of renal function, hypertension
+- Diets high in red meat or seafood
+- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks
+- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin
+- Secondary hyperuricemia can also result from increased cell turnover and destruction",,Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.,"### CLINICAL DESCRIPTION
+Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.
+[context_seperator]
+### Risk Factors
+- Age, male gender, menopausal status in females, impairment of renal function, hypertension
+- Diets high in red meat or seafood
+- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks
+- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin
+- Secondary  hyperuricemia  can  also  result  from  increased  cell  turnover  and destruction"
+49,"How do age, male gender in menopausal females, renal impairment, hypertension, diets high in red meat or seafood consumption of beer spirits fructose sweetened drinks and drugs like thiazides furosemide pyrazinamide low dose aspirin contribute to gout risk factors?",These are all recognized risk factors for GOUT as they can lead to increased uric acid levels through either decreased renal excretion or increased production of uric acid.,"## GOUT  
+### CLINICAL DESCRIPTION  
+Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid.|### Risk Factors  
+- Age, male gender, menopausal status in females, impairment of renal function, hypertension
+- Diets high in red meat or seafood
+- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks
+- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin
+- Secondary hyperuricemia can also result from increased cell turnover and destruction",,"- Age, male gender, menopausal status in females, impairment of renal function, hypertension
+- Diets high in red meat or seafood
+- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks
+- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin","### Risk Factors
+- Age, male gender, menopausal status in females, impairment of renal function, hypertension
+- Diets high in red meat or seafood
+- Increased consumption of beer, spirits and fructose or sugar sweetened soft drinks
+- Drugs: thiazides, furosemide, pyrazinamide, low dose aspirin
+- Secondary  hyperuricemia  can  also  result  from  increased  cell  turnover  and destruction
+[context_seperator]
+### CLINICAL DESCRIPTION
+Most common form of inflammatory arthritis. Characterized by intermittent painful inflammatory joint attacks in response to crystals formed because of excessive levels of uric acid occurring mostly in a context of decreased renal excretion of uric acid or increased production of uric acid."
+50,What are the signs and symptoms of musculoskeletal pain and trauma?,"The signs and symptoms of MUSCULOSKELETAL PAIN AND TRAUMA include presents as pain, swelling, deformity and pseudo paralysis.","## MUSCULOSKELETAL PAIN AND TRAUMA  
+### CLINICAL DESCRIPTION  
+- A break in the continuity of a bone.
+- Bleeding in open fracture|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Presents as pain, swelling, deformity and pseudo paralysis|### I NVESTIGATIONS  
+- Examination: ATLS protocol and treat life threatening injuries first, examine the limbs and adjacent joints|### TREATMENT|### General Management  
+- Recognize; examination, 2 orthogonal radiographs showing joints above and below
+- Reduce under sedation  
+- Relieve pain with appropriate analgesia and immobilization.
+- Retain by splinting/casting, surgical fixation
+- Rehabilitation
+- Follow up-Period of immobilization
+- Complications: Compartment syndrome, Neurovascular injury, Malunion, Nonunion, Infections, stiffness and Contractures
+- Referral criteria: Open fractures, Intraarticular fractures, Multiple fractures, polytrauma, Segmental fractures, Special fractures e.g. scaphoid, neck of femur, talus; Displaced and comminuted diaphyseal fractures, Complications above|### OPEN FRACTURE MANAGEMENT|### Malawi Orthopedic Association Guidelines  
+- Primary (A,B,C assessment) and secondary survey, according to ATLS/PTC, should precede the treatment of open fractures.
+- IV prophylactic antibiotics should be administered as soon as possible and at least within 1 hour of presentation to the health facility:
+- IV Ceftriaxone (at appropriate doses for age and weight)
+- Alternatively, oral Doxycline &amp; IV Gentamicin (if no Ceftriaxone is available)
+- For grossly contaminated wounds, in addition, administer IV Metronidazole
+- If non available, give the most appropriate available antibiotics
+- The examination of the injured limb should include assessment and documentation of the vascular and neurological status. This should be repeated systematically, particularly after reduction manoeuvres and/or the application of splints or casts.
+- Grade III C fractures with an ischaemic limb should be discussed immediately with the central hospital by telephone with a view to immediate referral when appropriate.
+- The limb must be re-aligned and splinted or casted before transfer to the ward or another health facility
+- Prior to formal debridement the wound should be exposed only to remove gross contamination and to allow photography, then dressed with a sterile saline-soaked gauze.
+- Washouts outside the operating theatre environment are not indicated and patients should be prepared for debridement under spinal or general anaesthetic.
+- Debridement should be performed, under general or spinal anaesthetic, using fasciotomy lines for wound extension where possible:
+- Immediately for highly contaminated wounds (agricultural, aquatic, sewage) or when there is an associated vascular compromise (compartment syndrome or arterial disruption producing ischaemia).
+- Within 12 hours of presentation to hospital for grade II &amp; III fractures.  
+- Within 24 hours of presentation to hospital for grade I fractures.
+- Immediately for highly contaminated wounds (agricultural, aquatic, sewage) or when there is an associated vascular compromise (compartment syndrome or arterial disruption producing ischaemia).
+- Within 12 hours of presentation to hospital for grade II &amp; III fractures.
+- Within 24 hours of presentation to hospital for grade I fractures.
+- Once debridement is complete any further procedures (e.g. external fixation) carried out at that same sitting should be regarded as clean surgery; i.e. there should be fresh instruments and a re-prep and draping of the limb before proceeding.
+- Clean grade I fractures should be closed primarily
+- Grade II fractures should be left open and closed within 72 hours
+- Grade III A &amp; B fractures should be left open and referred to the nearest central hospital within 24 hours to enable wound closure or flap within 72 hours. This should include a letter and before &amp; after debridement photographs to the receiving surgeon
+- Long bone Grade III A &amp; B fractures should be stabilized with an external fixator at the time of debridement. In some cases, an orthopedic surgeon may use internal fixation.
+- Definitive internal stabilization should only be carried out when it can be immediately followed with definitive soft tissue cover. Approximation sutures over exposed bone should not be done.
+- Long bone Grade III A &amp; B fractures should be stabilised with an external fixator at the time of debridement. In some cases, an orthopaedic surgeon may use internal fixation.
+- Definitive internal stabilization should only be carried out when it can be immediately followed with definitive soft tissue cover. Approximation sutures over exposed bone should not be done.",,"- Pain and swelling in joint
+- Fever (especially in children)
+- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)","### SIGNS AND SYMPTOMS
+- Pain and swelling in joint
+- Fever (especially in children)
+- For  rheumatoid  arthritis  key  symptoms  are:  Chronic  pain,  joint  swelling,  and deformity (see RA section below)
+[context_seperator]
+### Alternatively:
+- Give Aspirin 300-900 mg after food every 4 hours. Maximum of 4g daily in divided doses in acute conditions  
+- Review after 7 days
+- If not responding change to an alternative non-steroidal antiinflammatory drug (NSAID):
+- o Give Indomethacin 25 - 50mg 8 hourly after food for another 7 days  
+or  
+- o Give Diclofenac  Sodium 25-50mg  8  hourly  after  food  or SR 75mg bd for another 7 days  
+Consider referral for specialist opinion in patients with arthritis not responding to NSAIDs for further investigations and treatment  
+- Intra-articular steroid injection with Depo Medrol or Triamcinolone
+- Disease Modifying anti-rheumatic agents (see RA section below)
+[context_seperator]
+### I NVESTIGATIONS
+- FBC
+- X-ray joint
+- ESR
+[context_seperator]
+### Children:
+- Always refer to hospital
+- Prior to referral, give Aspirin 20 mg/kg after food 6 hourly or Paracetamol 15mg/kg 8 hourly
+[context_seperator]
+### NSAIDS
+- Give Ibuprofen 1.2-1.8g daily in 8 hourly after food"
+51,"What are the key clinical features, diagnostic criteria, causes, and treatment options for compartment syndrome involving elevated osseo-fascial pressure leading to impaired limb perfusion?","Compartment Syndrome is characterized by severe progressive pain that worsens with passive motion. It may be caused by high energy trauma, burns, tight casts or dressings, IV extravasation, post-ischemic swelling and bleeding disorders. Treatment options include observation and elevation of the limb as well as bivalving the cast and loosening circumferential dressings for non-operative management; emergent fasciotomy is required for operative treatment.","## COMPARTMENT SYNDROME  
+### CLINICAL DESCRIPTION  
+Condition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  
+passive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.|### Causes  
+- High energy trauma, burns
+- Tight casts, dressings, or external wrappings  
+- Extravasation of IV infusion
+- Post-ischemic swelling
+- Bleeding disorders and arterial injury|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain out of proportion to the clinical situation is usually the first symptom|### I NVESTIGATIONS|### On Physical examination  
+- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis\*
+- palpable swelling\*
+- peripheral pulses absent\*|### Late signs  
+- Clinical diagnosis but imaging required to rule out fracture|### TREATMENT|### Non operative  
+- Obervation and limb elevation
+- bivalving the cast and loosening circumferential dressings|### Operative  
+- Emergent fasciotomy of all limb compartments",,"- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis*
+- palpable swelling*
+- peripheral pulses absent*","### CLINICAL DESCRIPTION
+Condition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  
+passive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.
+[context_seperator]
+### On Physical examination
+- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis*
+- palpable swelling*
+- peripheral pulses absent*
+[context_seperator]
+### Non operative
+- Obervation and limb elevation
+- bivalving the cast and loosening circumferential dressings
+[context_seperator]
+### Causes
+- High energy trauma, burns
+- Tight casts, dressings, or external wrappings  
+- Extravasation of IV infusion
+- Post-ischemic swelling
+- Bleeding disorders and arterial injury
+[context_seperator]
+### Operative
+- Emergent fasciotomy of all limb compartments
+[context_seperator]
+### Late signs
+- Clinical diagnosis but imaging required to rule out fracture
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Pain out of proportion to the clinical situation is usually the first symptom"
+52,What are the key signs and symptoms associated with compartment syndrome?,"The key signs of COMPARTMENT SYNDROME include pain on passive stretch of the compartment (out of proportion to clinical situation), paresthesia/hypoesthesia/paralysis/palpable swelling, and absent peripheral pulses.","## COMPARTMENT SYNDROME  
+### CLINICAL DESCRIPTION  
+Condition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  
+passive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.|### Causes  
+- High energy trauma, burns
+- Tight casts, dressings, or external wrappings  
+- Extravasation of IV infusion
+- Post-ischemic swelling
+- Bleeding disorders and arterial injury|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain out of proportion to the clinical situation is usually the first symptom|### I NVESTIGATIONS|### On Physical examination  
+- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis\*
+- palpable swelling\*
+- peripheral pulses absent\*|### Late signs  
+- Clinical diagnosis but imaging required to rule out fracture|### TREATMENT|### Non operative  
+- Obervation and limb elevation
+- bivalving the cast and loosening circumferential dressings|### Operative  
+- Emergent fasciotomy of all limb compartments",,"- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis*
+- palpable swelling*
+- peripheral pulses absent*
+
+- Pain out of proportion to the clinical situation is usually the first symptom","### On Physical examination
+- pain on passive stretch of the compartment
+- paresthesia and hypoesthesia
+- paralysis*
+- palpable swelling*
+- peripheral pulses absent*
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Pain out of proportion to the clinical situation is usually the first symptom
+[context_seperator]
+### CLINICAL DESCRIPTION
+Condition where the Osseo fascial compartment pressure rises to a level that decreases perfusion to the limb and may lead to irreversible muscle and neurovascular damage. Diagnosis is made with the presence of severe and progressive limb pain that worsens with  
+passive motion. Compartment syndrome may occur anywhere that skeletal muscle is surrounded by fascia.
+[context_seperator]
+### Causes
+- High energy trauma, burns
+- Tight casts, dressings, or external wrappings  
+- Extravasation of IV infusion
+- Post-ischemic swelling
+- Bleeding disorders and arterial injury
+[context_seperator]
+### Operative
+- Emergent fasciotomy of all limb compartments
+[context_seperator]
+### Late signs
+- Clinical diagnosis but imaging required to rule out fracture
+[context_seperator]
+### Non operative
+- Obervation and limb elevation
+- bivalving the cast and loosening circumferential dressings"
+53,What are the primary symptoms and physical signs associated with acute osteomyelitis?,"The major presenting symptom of ACUTE OSTEOMYELITIS is progressive severe pain. Accompanying features include fever and toxicity; physical signs are swelling, localized tenderness and pseudoparalysis.","## ACUTE OSTEOMYELITIS  
+### CLINICAL DESCRIPTION  
+Hematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis  
+- A high index of suspicion and proper history is important|### I NVESTIGATIONS  
+- FBC: A leucocytosis will be demonstrated.
+- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).
+- Blood cultures and sensitivity, ESR, CRP|### Adults and Children:  
+- Refer to the hospital
+- Admit to hospital for rest
+- Splint the affected limb as required
+- Give analgesics- refer to acute pain management|### If pain is severe:  
+- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity testing
+- Do not await culture results before starting antibiotic treatment|### Children Over 2 years :  
+- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has settled|### Alternatively:  
+- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally from 48 hours after fever has settled
+- Clindamycin 15-40mgs/kg (4 divided doses)|### Children Under 2 years:  
+- Give Ceftriaxone 50mg/kg once a day or (Especially if staphylococcal infection is very likely)
+- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  
+Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.",,"- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis
+- A high index of suspicion and proper history is important","### SIGNS AND SYMPTOMS
+- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis  
+- A high index of suspicion and proper history is important
+[context_seperator]
+### Adults and Children:
+- Refer to the hospital
+- Admit to hospital for rest
+- Splint the affected limb as required
+- Give analgesics- refer to acute pain management
+[context_seperator]
+### If pain is severe:
+- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity  testing
+- Do not await culture results before starting antibiotic treatment
+[context_seperator]
+### CLINICAL DESCRIPTION
+Hematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.
+[context_seperator]
+### I NVESTIGATIONS
+- FBC: A leucocytosis will be demonstrated.
+- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).
+- Blood cultures and sensitivity, ESR, CRP
+[context_seperator]
+### Children Under 2 years:
+- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)
+- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  
+Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.
+[context_seperator]
+### Alternatively:
+- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled
+- Clindamycin 15-40mgs/kg (4 divided doses)
+[context_seperator]
+### Children Over 2 years :
+- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled"
+54,"What are the recommended antibiotic regimens and management strategies for acute osteomyelitis in children over two years, including initial IV to oral transition and duration of therapy?","For children over 2 years with ACUTE OSTEOMYELITIS, Flucloxacillin 50 mg/kg up to a maximum of 500 mg every 6 hours is recommended initially IV, then orally from 48 hours after fever has settled. Alternatively, Cloxacillin or Clindamycin may be used for the same duration. Therapy should continue for at least four weeks under hospital supervision.","## ACUTE OSTEOMYELITIS  
+### CLINICAL DESCRIPTION  
+Hematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis  
+- A high index of suspicion and proper history is important|### I NVESTIGATIONS  
+- FBC: A leucocytosis will be demonstrated.
+- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).
+- Blood cultures and sensitivity, ESR, CRP|### Adults and Children:  
+- Refer to the hospital
+- Admit to hospital for rest
+- Splint the affected limb as required
+- Give analgesics- refer to acute pain management|### If pain is severe:  
+- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity testing
+- Do not await culture results before starting antibiotic treatment|### Children Over 2 years :  
+- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has settled|### Alternatively:  
+- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally from 48 hours after fever has settled
+- Clindamycin 15-40mgs/kg (4 divided doses)|### Children Under 2 years:  
+- Give Ceftriaxone 50mg/kg once a day or (Especially if staphylococcal infection is very likely)
+- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  
+Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.",,"- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has settled
+- Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.","### Children Over 2 years :
+- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled
+[context_seperator]
+### Children Under 2 years:
+- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)
+- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  
+Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.
+[context_seperator]
+### Alternatively:
+- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled
+- Clindamycin 15-40mgs/kg (4 divided doses)
+[context_seperator]
+### If pain is severe:
+- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity  testing
+- Do not await culture results before starting antibiotic treatment
+[context_seperator]
+### Adults and Children:
+- Refer to the hospital
+- Admit to hospital for rest
+- Splint the affected limb as required
+- Give analgesics- refer to acute pain management
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis  
+- A high index of suspicion and proper history is important
+[context_seperator]
+### CLINICAL DESCRIPTION
+Hematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.
+[context_seperator]
+### I NVESTIGATIONS
+- FBC: A leucocytosis will be demonstrated.
+- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).
+- Blood cultures and sensitivity, ESR, CRP"
+55,What are the surgical and antibiotic treatment options for chronic osteomyelitis in adults?,"Surgical treatment involves sequestrectomy when an adequate involucrum has formed. Antibiotic treatments include flucloxacillin 500 mg IV every 6 hours for 2-4 weeks, ciprofloxacin 400 mg IV every 8-12 hours for 14 days, clindamycin 300 mg IV every six hours for seven days, or augmentin (increased to 1.2 g eight hourly in severe infections) with antibiotic impregnated cement spacer indicated.","## CHRONIC OSTEOMYELITIS  
+### CLINICAL DESCRIPTION  
+These are usually from inadequately treated acute episodes, which include acute osteomyelitis and acute-on-chronic osteomyelitis. Some may arise from the onset as a chronic infection due to mycobacteria or fungi. The patient is usually not ill-looking unless there is an acute exacerbation.|### Causes  
+- Acute bacterial infections of bone and joints
+- Mycobacterium tuberculosis and fungal infections
+- Infected orthopedic implants
+- Iatrogenic|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Infection may remain quiescent, with acute or sub-acute exacerbations which manifest as discharging sinuses.
+- X-ray features: periosteal reaction, new bone formation(involucrum), dead bone (sequestrum), bone abscesses, rarefaction of bone.|### I NVESTIGATIONS  
+- As per acute osteomyelitis|### TREATMENT  
+- Surgical treatment by sequestrectomy when an adequate involucrum has formed
+- Antibiotic treatment for febrile flare-ups of infection as for acute osteomyelitis.|### PHARMACOLOGICAL TREATMENT Adults  
+- Flucloxacillin 500 mg 6 hourly IV for 2-4 weeks|### Children  
+- Flucloxacillin
+- 5-12 years; 250 mg 6 hourly for 2-4 weeks
+- 1-5 years; 125 mg 6 hourly for 2-4 weeks|### And|### Adults  
+- Ciprofloxacin 400 mg IV 8-12 hourly for 14 days (to be infused over 60 minutes)|### Children  
+- Ciprofloxacin 10 mg/kg 12 hourly for 14 days (to be infused over 60 minutes)|### In patients with penicillin sensitivity|### Adults  
+- Clindamycin 300 mg 6 hourly for 7 days IV|### Children  
+- Clindamycin 3-6 mg/kg 6 hourly for 7 days|### Or|### Adults  
+- Ciprofloxacin 400 mg 8-12 IV hourly for 14 days (to be infused over 60 minutes)|### Children  
+- Ciprofloxacin 10 mg/kg 12 hourly for 14 days (to be infused over 60 minutes)|### Or|### Adults  
+- Augmentin 1.2 g 12 hourly IV (Increased to 1.2 g 8 hourly for 7 days in severe infections)|### Children  
+- Augmentin
+- 12-18 years; 600 mg to 1.2 g 12 hourly (Increased to 1.2 g 8 hourly for 7 days in severe infections )
+- 3 months-12 years; 30 mg/kg 12 hourly (Increased to 30 mg/kg 8 hourly for 7 days in severe infections)
+- 7 days-3 months; 30 mg/kg 8 hourly for 7 days
+- Preterm and &lt; 7 days; 30 mg/kg 12 hourly for 7 days
+- &lt; 1 year; 62.5 mg 6 hourly for 2-4 weeks|### And|### Adults  
+- Ciprofloxacin 400 mg 8-12 IV hourly for 14 days (to be infused over 60 minutes)|### Children  
+- Ciprofloxacin 10 mg/kg 12 hourly for 14 days (to be infused over 60 minutes)
+- Antibiotic cover for surgery as appropriate after culture and sensitivity testing
+- Antibiotic impregnated cement spacer indicated for local control of infection
+- Give Ibuprofen 400mg 8 hourly after food|### Alternatively:  
+- Give Aspirin 10mg/kg every 8hrs, preferably after food, up to an adult maximum of 600 mg per dose
+- For children, give Paracetamol instead of Aspirin",,"- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity testing
+- Do not await culture results before starting antibiotic treatment","### If pain is severe:
+- Give Pethidine 1mg/kg IM (Refer to acute pain management)
+- Repeat every 6 hours for a maximum 4 doses
+- Drain pus surgically from the bone and send for culture and sensitivity  testing
+- Do not await culture results before starting antibiotic treatment
+[context_seperator]
+### Adults and Children:
+- Refer to the hospital
+- Admit to hospital for rest
+- Splint the affected limb as required
+- Give analgesics- refer to acute pain management
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Pain is the major presenting symptom with progressive severity with time.
+- Commonly accompanying fever, and the patient becomes toxic.
+- Main physical signs are swelling, localized tenderness and pseudoparalysis  
+- A high index of suspicion and proper history is important
+[context_seperator]
+### Alternatively:
+- Give Cloxacillin 50-100mg/kg 6 hourly X 6weeks, initially IV, then orally  from  48 hours  after fever  has  settled
+- Clindamycin 15-40mgs/kg (4 divided doses)
+[context_seperator]
+### Children Under 2 years:
+- Give Ceftriaxone 50mg/kg once a day  or (Especially if staphylococcal infection is very likely)
+- Give Flucloxacillin 50 mg/kg every 6hrs, initially IV, then orally from 48 hours after fever has settled  
+Note: Antibiotic treatment should be continued for 4 weeks under hospital supervision.
+[context_seperator]
+### CLINICAL DESCRIPTION
+Hematogenous spread of bacteria from a primary source. The commonest causative agent is staphylococcus aureus. Other organisms, which may be responsible, include streptococcus, pneumococcus, Haemophilus and sometimes salmonella in sickle cell disease. Commonly involved bones are proximal tibia, distal femur and distal humerus.
+[context_seperator]
+### Children Over 2 years :
+- Give Flucloxacillin 50 mg/kg up to a maximum of 500 mg 6 hourly, initially IV, then orally from 48 hours after fever has  settled
+[context_seperator]
+### I NVESTIGATIONS
+- FBC: A leucocytosis will be demonstrated.
+- X-ray of affected limb may not show any changes in the early stages - periosteal elevation is a late feature (2-3 weeks).
+- Blood cultures and sensitivity, ESR, CRP"
+56,What is the clinical definition and key diagnostic criteria for rheumatoid arthritis?,"Rheumatoid Arthritis (RA) is a chronic systemic inflammatory disease characterized by symmetrical, deforming peripheral polyarthritis. Diagnosis requires at least four of the following: nodules, morning stiffness >1 hour lasting over 6 weeks, arthritis in ≥3 joints, hand joint involvement, symmetry, rheumatoid nodules, positive RF or anti-CCP antibodies with radiographic changes.","## RHEUMATOID ARTHRITIS  
+### CLINICAL DESCRIPTION  
+Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Arthritis: Symmetrical, polyarthritis of MCPs, PIPs of hands and feet → pain, swelling, deformity, Swan neck, Boutonniere, Z-thumb, Ulnar deviation of the fingers, Dorsal subluxation of ulnar styloid
+- Morning stiffness &gt;1hour
+- Improves with exercise
+- Larger joints may become involved
+- Commonly elbows also fingers, feet, heal
+- Firm, non-tender, mobile or fixed  
+Diagnosed when any 4 out of the following findings are present  
+- Nodules  
+- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis ≥3 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes|### I NVESTIGATIONS  
+- Anti-CCP: 98% specific (Ag derived from collagen)
+- Rheumatoid Factor +ve in 70%
+- ANA: +ve in 30%
+- FBC (anaemia, ↓PMN, ↑platelet),
+- ↑ESR
+- ↑CRP
+- Radiography|### TREATMENT|### Treatment objectives  
+- relief symptoms
+- modulate immunity with DMARDs as soon as possible|### NON-PHARMACOLOGICAL  
+- Regular exercise
+- Physiotherapy
+- Occupational therapy: aids, splints
+- Surgical: ulna stylectomy, joint prosthesis|### PHARMACOLOGICAL|### Principles:  
+- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early
+- Steroids: IM, PO or intra-articular for exacerbations
+- Prednisolone 0.5-1 mg/kg body weight 24hourly
+- Take corticosteroids with food and Omeprazole 20mg 12hourly to prevent gastric ulcers
+- NSAIDs: good for symptom relief
+- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required
+- Ibuprofen 400mg 12 hourly
+- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  
+Consider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  
+- Prevent osteoporosis and gastric ulcers|### DMARDs  
+- 1st line for treating RA
+- Early DMARD use associated with better long-term outcome
+- All DMARDs can → myelosuppression → pancytopenia  
+Main agents (discuss with a specialist before initiating these drugs)  
+- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely
+- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)
+- Give it together with Folic acid 5 to 15mg daily
+- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses
+- (SE: hepatotoxic, SJS, ↓ sperm count)
+- Preferred agent in pregnancy
+- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day
+- (SE: retinopathy, seizures)
+- Regular eye checkup needed  
+Combination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  
+Other Agents (discuss with a specialist before initiating these drugs)  
+- Leflunomide (SE: ↑ risk of infection and malignancy)
+- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)
+- Penicillamine (SE: drug-induced lupus, taste change)
+- Biologicals
+- AntiTNF (SE: ↑ infection (sepsis, TB), ↑ AI disease, ↑ Ca)
+- Severe RA not responding to DMARDs
+- Screen and treat for TB first|### Complications  
+- De Quervain's Tenosynovitis
+- Atlanto-axial subluxation
+- Immune
+- AIHA
+- Vasculitis
+- Amyloid
+- Lymphadenopathy
+- Cardiac: pericarditis and pericardial effusion
+- Carpal Tunnel Syndrome  
+- Pulmonary
+- Fibrosing alveolitis (lower zones)
+- Pleural effusions (exudates)
+- Ophthalmic
+- Epi-/scleritis
+- Raynaud's
+- Felty's Syndrome (RA + splenomegaly + neutropenia)  
+When to refer a rheumatoid arthritis patient  
+- Presence or suspicion of complications listed above
+- No response to DMARDs
+- Suspicion of life-threatening drug side effects",,"Clinical Description
+Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.
+Diagnosed when any 4 out of the following findings are present
+- Nodules  
+- Morning stiffness >1h (lasting >6wks), Arthritis ≥3 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes","### Complications
+- De Quervain's Tenosynovitis
+- Atlanto-axial subluxation
+- Immune
+- AIHA
+- Vasculitis
+- Amyloid
+- Lymphadenopathy
+- Cardiac: pericarditis and pericardial effusion
+- Carpal Tunnel Syndrome  
+- Pulmonary
+- Fibrosing alveolitis (lower zones)
+- Pleural effusions (exudates)
+- Ophthalmic
+- Epi-/scleritis
+- Raynaud's
+- Felty's Syndrome (RA + splenomegaly + neutropenia)  
+When to refer a rheumatoid arthritis patient  
+- Presence or suspicion of complications listed above
+- No response to DMARDs
+- Suspicion of life-threatening drug side effects
+[context_seperator]
+### SIGNS AND SYMPTOMS
+- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  →  pain, swelling,  deformity,  Swan  neck,  Boutonniere,  Z-thumb,  Ulnar  deviation  of  the fingers, Dorsal subluxation of ulnar styloid
+- Morning stiffness &gt;1hour
+- Improves with exercise
+- Larger joints may become involved
+- Commonly elbows also fingers, feet, heal
+- Firm, non-tender, mobile or fixed  
+Diagnosed when any 4 out of the following findings are present  
+- Nodules  
+- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis ≥3 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes
+[context_seperator]
+### I NVESTIGATIONS
+- Anti-CCP: 98% specific (Ag derived from collagen)
+- Rheumatoid Factor +ve in 70%
+- ANA: +ve in 30%
+- FBC (anaemia, ↓PMN, ↑platelet),
+- ↑ESR
+- ↑CRP
+- Radiography
+[context_seperator]
+### DMARDs
+- 1st line for treating RA
+- Early DMARD use associated with better long-term outcome
+- All DMARDs can → myelosuppression → pancytopenia  
+Main agents (discuss with a specialist before initiating these drugs)  
+- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely
+- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)
+- Give it together with Folic acid 5 to 15mg daily
+- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses
+- (SE: hepatotoxic, SJS, ↓ sperm count)
+- Preferred agent in pregnancy
+- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day
+- (SE: retinopathy, seizures)
+- Regular eye checkup needed  
+Combination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  
+Other Agents (discuss with a specialist before initiating these drugs)  
+- Leflunomide (SE: ↑ risk of infection and malignancy)
+- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)
+- Penicillamine (SE: drug-induced lupus, taste change)
+- Biologicals
+- AntiTNF (SE: ↑ infection (sepsis, TB), ↑ AI disease, ↑ Ca)
+- Severe RA not responding to DMARDs
+- Screen and treat for TB first
+[context_seperator]
+### CLINICAL DESCRIPTION
+Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.
+[context_seperator]
+### Treatment objectives
+- relief symptoms
+- modulate immunity with DMARDs as soon as possible
+[context_seperator]
+### Principles:
+- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early
+- Steroids: IM, PO or intra-articular for exacerbations
+- Prednisolone 0.5-1 mg/kg body weight 24hourly
+- Take  corticosteroids  with  food  and Omeprazole 20mg  12hourly  to prevent gastric ulcers
+- NSAIDs: good for symptom relief
+- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required
+- Ibuprofen 400mg 12 hourly
+- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  
+Consider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  
+- Prevent osteoporosis and gastric ulcers
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Regular exercise
+- Physiotherapy
+- Occupational therapy: aids, splints
+- Surgical: ulna stylectomy, joint prosthesis"
+57,"What are the key signs and symptoms, including joint involvement patterns and morning stiffness duration, associated with rheumatoid arthritis?","Rheumatoid Arthritis presents with symmetrical polyarthritis affecting MCPs, PIPs of hands and feet leading to pain, swelling, deformity (Swan neck, Boutonniere, Z-thumb), ulnar deviation of fingers, and dorsal subluxation of the ulnar styloid. Morning stiffness lasts more than 1 hour.","## RHEUMATOID ARTHRITIS  
+### CLINICAL DESCRIPTION  
+Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.|### CLINICAL FEATURES|### SIGNS AND SYMPTOMS  
+- Arthritis: Symmetrical, polyarthritis of MCPs, PIPs of hands and feet → pain, swelling, deformity, Swan neck, Boutonniere, Z-thumb, Ulnar deviation of the fingers, Dorsal subluxation of ulnar styloid
+- Morning stiffness &gt;1hour
+- Improves with exercise
+- Larger joints may become involved
+- Commonly elbows also fingers, feet, heal
+- Firm, non-tender, mobile or fixed  
+Diagnosed when any 4 out of the following findings are present  
+- Nodules  
+- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis ≥3 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes|### I NVESTIGATIONS  
+- Anti-CCP: 98% specific (Ag derived from collagen)
+- Rheumatoid Factor +ve in 70%
+- ANA: +ve in 30%
+- FBC (anaemia, ↓PMN, ↑platelet),
+- ↑ESR
+- ↑CRP
+- Radiography|### TREATMENT|### Treatment objectives  
+- relief symptoms
+- modulate immunity with DMARDs as soon as possible|### NON-PHARMACOLOGICAL  
+- Regular exercise
+- Physiotherapy
+- Occupational therapy: aids, splints
+- Surgical: ulna stylectomy, joint prosthesis|### PHARMACOLOGICAL|### Principles:  
+- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early
+- Steroids: IM, PO or intra-articular for exacerbations
+- Prednisolone 0.5-1 mg/kg body weight 24hourly
+- Take corticosteroids with food and Omeprazole 20mg 12hourly to prevent gastric ulcers
+- NSAIDs: good for symptom relief
+- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required
+- Ibuprofen 400mg 12 hourly
+- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  
+Consider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  
+- Prevent osteoporosis and gastric ulcers|### DMARDs  
+- 1st line for treating RA
+- Early DMARD use associated with better long-term outcome
+- All DMARDs can → myelosuppression → pancytopenia  
+Main agents (discuss with a specialist before initiating these drugs)  
+- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely
+- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)
+- Give it together with Folic acid 5 to 15mg daily
+- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses
+- (SE: hepatotoxic, SJS, ↓ sperm count)
+- Preferred agent in pregnancy
+- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day
+- (SE: retinopathy, seizures)
+- Regular eye checkup needed  
+Combination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  
+Other Agents (discuss with a specialist before initiating these drugs)  
+- Leflunomide (SE: ↑ risk of infection and malignancy)
+- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)
+- Penicillamine (SE: drug-induced lupus, taste change)
+- Biologicals
+- AntiTNF (SE: ↑ infection (sepsis, TB), ↑ AI disease, ↑ Ca)
+- Severe RA not responding to DMARDs
+- Screen and treat for TB first|### Complications  
+- De Quervain's Tenosynovitis
+- Atlanto-axial subluxation
+- Immune
+- AIHA
+- Vasculitis
+- Amyloid
+- Lymphadenopathy
+- Cardiac: pericarditis and pericardial effusion
+- Carpal Tunnel Syndrome  
+- Pulmonary
+- Fibrosing alveolitis (lower zones)
+- Pleural effusions (exudates)
+- Ophthalmic
+- Epi-/scleritis
+- Raynaud's
+- Felty's Syndrome (RA + splenomegaly + neutropenia)  
+When to refer a rheumatoid arthritis patient  
+- Presence or suspicion of complications listed above
+- No response to DMARDs
+- Suspicion of life-threatening drug side effects",,"- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  →  pain, swelling, deformity, Swan neck, Boutonniere, Z-thumb, Ulnar deviation of the fingers,
+- Morning stiffness >1hour
+- Improves with exercise
+- Larger joints may become involved
+- Commonly elbows also fingers, feet,","### SIGNS AND SYMPTOMS
+- Arthritis:  Symmetrical,  polyarthritis  of  MCPs,  PIPs  of  hands  and  feet  →  pain, swelling,  deformity,  Swan  neck,  Boutonniere,  Z-thumb,  Ulnar  deviation  of  the fingers, Dorsal subluxation of ulnar styloid
+- Morning stiffness &gt;1hour
+- Improves with exercise
+- Larger joints may become involved
+- Commonly elbows also fingers, feet, heal
+- Firm, non-tender, mobile or fixed  
+Diagnosed when any 4 out of the following findings are present  
+- Nodules  
+- Morning stiffness &gt;1h (lasting &gt;6wks), Arthritis ≥3 joints, Arthritis of hand joints, Symmetrical, Rheumatoid nodules, +ve RF, Radiographic changes
+[context_seperator]
+### Complications
+- De Quervain's Tenosynovitis
+- Atlanto-axial subluxation
+- Immune
+- AIHA
+- Vasculitis
+- Amyloid
+- Lymphadenopathy
+- Cardiac: pericarditis and pericardial effusion
+- Carpal Tunnel Syndrome  
+- Pulmonary
+- Fibrosing alveolitis (lower zones)
+- Pleural effusions (exudates)
+- Ophthalmic
+- Epi-/scleritis
+- Raynaud's
+- Felty's Syndrome (RA + splenomegaly + neutropenia)  
+When to refer a rheumatoid arthritis patient  
+- Presence or suspicion of complications listed above
+- No response to DMARDs
+- Suspicion of life-threatening drug side effects
+[context_seperator]
+### DMARDs
+- 1st line for treating RA
+- Early DMARD use associated with better long-term outcome
+- All DMARDs can → myelosuppression → pancytopenia  
+Main agents (discuss with a specialist before initiating these drugs)  
+- Methotrexate 7.5 to 25 mg PO weekly : It is generally continued indefinitely
+- (SE: hepatotoxic, pulmonary fibrosis, anaemia and leucopenia)
+- Give it together with Folic acid 5 to 15mg daily
+- Sulfasalazine 500 mg daily, increased by 500 mg every week to 2-3 grams daily in divided doses
+- (SE: hepatotoxic, SJS, ↓ sperm count)
+- Preferred agent in pregnancy
+- Hydroxychloroquine 200 -400 mg daily. Maximum dose of 6.5 mg/kg per day
+- (SE: retinopathy, seizures)
+- Regular eye checkup needed  
+Combination triple therapy (methotrexate plus sulfasalazine plus hydroxychloroquine).  
+Other Agents (discuss with a specialist before initiating these drugs)  
+- Leflunomide (SE: ↑ risk of infection and malignancy)
+- Gold (Gold sodium thiomalate 10mg/ml )(SE: nephrotic syndrome)
+- Penicillamine (SE: drug-induced lupus, taste change)
+- Biologicals
+- AntiTNF (SE: ↑ infection (sepsis, TB), ↑ AI disease, ↑ Ca)
+- Severe RA not responding to DMARDs
+- Screen and treat for TB first
+[context_seperator]
+### Principles:
+- Disease Modifying Anti-Rheumatoid Drugs (DMARDs): use early
+- Steroids: IM, PO or intra-articular for exacerbations
+- Prednisolone 0.5-1 mg/kg body weight 24hourly
+- Take  corticosteroids  with  food  and Omeprazole 20mg  12hourly  to prevent gastric ulcers
+- NSAIDs: good for symptom relief
+- Diclofenac 50 mg 8 hourly PO or 100 mg 12 hourly as required
+- Ibuprofen 400mg 12 hourly
+- Add Omeprazole 20mg 12hourly to the steroids to prevent gastric ulcers  
+Consider addition of Paracetamol 1g 6 hourly or Tramadol 50 to 100 mg 12 hourly to help relieve acute pain  
+- Prevent osteoporosis and gastric ulcers
+[context_seperator]
+### I NVESTIGATIONS
+- Anti-CCP: 98% specific (Ag derived from collagen)
+- Rheumatoid Factor +ve in 70%
+- ANA: +ve in 30%
+- FBC (anaemia, ↓PMN, ↑platelet),
+- ↑ESR
+- ↑CRP
+- Radiography
+[context_seperator]
+### CLINICAL DESCRIPTION
+Chronic systemic inflammatory disease characterized by a symmetrical, deforming, peripheral polyarthritis.
+[context_seperator]
+### Treatment objectives
+- relief symptoms
+- modulate immunity with DMARDs as soon as possible
+[context_seperator]
+### NON-PHARMACOLOGICAL
+- Regular exercise
+- Physiotherapy
+- Occupational therapy: aids, splints
+- Surgical: ulna stylectomy, joint prosthesis"
+58,"What are the clinical manifestations of rheumatic fever involving heart, joints, skin and brain?","Rheumatic fever involves inflammation in the heart, joints, skin and brain.","## RHEUMATIC FEVER  
+### CLINICAL DESCRIPTION  
+Rheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.|### ACUTE ATTACK|### Treatment  
+- Give Benzathine Penicillin 1.2MU IM single dose
+- Children &lt;30 kg: Benzathine Penicillin 600,000 units|### Alternatively, if compliance can be ensured:  
+- Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days
+- Children: Phenoxymethylpenicillin 12.5 mg/kg/dose|### Alternatively, if penicillin allergy:  
+- Erythromycin 500mg every 8hrs for 10 days|### ACUTE CARDITIS  
+- Strict bed rest until carditis has resolved|### Adults and children:|### Treatment  
+- Give Aspirin 25mg/kg, preferably after food, 6 hourly
+- Reduce dose if tinnitus or other toxic symptoms develop
+- Continue treatment with this until fever and joint inflammation are controlled
+- Then reduce dose gradually over a 2week period|### If symptoms recur:  
+- Restart full dose|### In severe carditis with heart failure and not responding to aspirin:  
+- Add Prednisolone 2 mg/kg OD
+- Reduce dose gradually after 3-4 weeks
+- Treat heart failure|### CHOREA|### Treatment|### Adults and Children :  
+- Give Haloperidol 25 micrograms/kg every 8hrs|### PROPHYLAXIS OF RHEUMATIC FEVER|### Prevention of further attacks  
+- Continue treatment until at least age 25|### Treatment  
+- Give Benzathine Penicillin 1.2 MU IM monthly. Children &lt; 30 kg: 600,000 units/dose|### Alternative if compliance can be ensured:  
+- Give Phenoxymethylpenicillin 250mg bd|### Alternative if penicillin allergy:  
+- Give Erythromycin 500 mg daily
+- Children &lt;30 kg: 250mg|### PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other cause.|### Before Dental Extraction|### Prophylaxis in Adults and Children &gt; 30 kg:  
+- Give Amoxycillin 3g oral taken 1 hour before the dental procedure|### Alternatively, if penicillin allergy:  
+- Give Erythromycin 1.5g taken 1 hour before the procedure and 500 mg 6 hours later|### Prophylaxis in Children &gt; 30 kg:  
+- Give Amoxycillin 50 mg/kg taken 1 hour before dental procedure, and repeated 6 hours later|### Alternatively, if penicillin allergy:  
+- Give Clindamycin 600mg, orally, taken 1 hour before the procedure and 300mg 6 hours later|### Prophylaxis in Children &gt; 30kg:  
+- Give Clindamycin 600mg IM/IV 30min prior to the procedure followed by 300mg 6 hourly.|### {20mg/kg for children) OR  
+- Give Ceftriaxone|### For high-risk patients add:  
+Gentamicin  
+1.6mg/kg prior to the procedure OR  
+Vancomycin  
+1g IV (20mg/kg/IV for children &lt;l0 years old) prior to the procedure.|### PROPHYLAXIS BEFORE OTHER PROCEDURES|### For genito-urinary surgery or instrumentation:  
+- Give Amoxycillin 1g IV or IM plus
+- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then
+- Give Amoxycillin 500mg taken 6 hours later  
+1g IV prior to the procedure or 50mg/kg## PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other cause.|### Before Dental Extraction|### Prophylaxis in Adults and Children &gt; 30 kg:  
+- Give Amoxycillin 3g oral taken 1 hour before the dental procedure|### Alternatively, if penicillin allergy:  
+- Give Erythromycin 1.5g taken 1 hour before the procedure and 500 mg 6 hours later|### Prophylaxis in Children &gt; 30 kg:  
+- Give Amoxycillin 50 mg/kg taken 1 hour before dental procedure, and repeated 6 hours later|### Alternatively, if penicillin allergy:  
+- Give Clindamycin 600mg, orally, taken 1 hour before the procedure and 300mg 6 hours later|### Prophylaxis in Children &gt; 30kg:  
+- Give Clindamycin 600mg IM/IV 30min prior to the procedure followed by 300mg 6 hourly.|### {20mg/kg for children) OR  
+- Give Ceftriaxone|### For high-risk patients add:  
+Gentamicin  
+1.6mg/kg prior to the procedure OR  
+Vancomycin  
+1g IV (20mg/kg/IV for children &lt;l0 years old) prior to the procedure.|### PROPHYLAXIS BEFORE OTHER PROCEDURES|### For genito-urinary surgery or instrumentation:  
+- Give Amoxycillin 1g IV or IM plus
+- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then
+- Give Amoxycillin 500mg taken 6 hours later  
+1g IV prior to the procedure or 50mg/kg|### Alternative if penicillin allergy:  
+- Give Erythromycin 500mg every 12hrs for 48 hours, instead of Amoxicillin
+- For obstetric and gynecological procedures
+- Not required except for those with prosthetic heart valves who should receive prophylaxis as for dental procedures|### CELLULITIS AND TROPICAL PYOMYOSITIS  
+- Treatment for cellulitis is both medical and surgical
+- Medical treatment may prevent abscess formation at the start of infection, when the muscle is swollen, hot and painful
+- Immobilize and give:|### Treatment|### Adult and children:  
+- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus,
+- Give Ciprofloxacin 500mg orally 12 hourly for 5-7 days|### If penicillin allergic:  
+- Give Ceftriaxone 2g IV daily for 2 weeks  
+Note: For Pyomyositis, perform surgical treatment (abscess drainage) when the swelling becomes fluctuant, alongside antibiotics",,"Rheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.","### CLINICAL DESCRIPTION
+Rheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.
+[context_seperator]
+### Treatment
+- Give Aspirin 25mg/kg, preferably after food, 6 hourly
+- Reduce  dose  if  tinnitus  or  other  toxic  symptoms develop
+- Continue treatment with this until fever and joint inflammation are controlled
+- Then reduce dose gradually over a 2week period
+[context_seperator]
+### PROPHYLAXIS OF BACTERIAL ENDOCARDITIS
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other  cause.
+[context_seperator]
+### For genito-urinary surgery or instrumentation:
+- Give Amoxycillin 1g IV or IM plus
+- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then
+- Give Amoxycillin 500mg taken 6 hours later  
+1g IV prior to the procedure or 50mg/kg## PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other  cause.
+[context_seperator]
+### Prevention of further attacks
+- Continue treatment until at least age  25
+[context_seperator]
+### ACUTE CARDITIS
+- Strict bed rest until carditis has  resolved
+[context_seperator]
+### CELLULITIS AND TROPICAL PYOMYOSITIS
+- Treatment for cellulitis is both medical and surgical
+- Medical treatment may prevent abscess formation at the start of infection, when the muscle is swollen, hot and painful
+- Immobilize and give:
+[context_seperator]
+### If penicillin allergic:
+- Give Ceftriaxone 2g IV daily for 2  weeks  
+Note: For Pyomyositis, perform surgical treatment (abscess drainage) when the swelling becomes fluctuant, alongside antibiotics
+[context_seperator]
+### Adult and children:
+- Give Flucloxacillin 1g IV  6 hourly  for at least 14 days plus,
+- Give Ciprofloxacin 500mg orally 12 hourly for 5-7 days
+[context_seperator]
+### Treatment
+- Give Benzathine Penicillin 1.2MU IM single dose
+- Children &lt;30 kg: Benzathine  Penicillin 600,000 units"
+59,What are the recommended antibiotic regimens and dosages for treating acute rheumatic fever in adults and children?,"For acute rheumatic fever, treat with Benzathine Penicillin 1.2MU IM single dose or Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days if compliance can be ensured; alternatively, Erythromycin 500mg every 8hrs for 10 days in case of penicillin allergy.","## RHEUMATIC FEVER  
+### CLINICAL DESCRIPTION  
+Rheumatic fever is an inflammatory disease that can involve the heart, joints, skin and brain.|### ACUTE ATTACK|### Treatment  
+- Give Benzathine Penicillin 1.2MU IM single dose
+- Children &lt;30 kg: Benzathine Penicillin 600,000 units|### Alternatively, if compliance can be ensured:  
+- Phenoxymethylpenicillin 250 mg every 6 hourly for 10 days
+- Children: Phenoxymethylpenicillin 12.5 mg/kg/dose|### Alternatively, if penicillin allergy:  
+- Erythromycin 500mg every 8hrs for 10 days|### ACUTE CARDITIS  
+- Strict bed rest until carditis has resolved|### Adults and children:|### Treatment  
+- Give Aspirin 25mg/kg, preferably after food, 6 hourly
+- Reduce dose if tinnitus or other toxic symptoms develop
+- Continue treatment with this until fever and joint inflammation are controlled
+- Then reduce dose gradually over a 2week period|### If symptoms recur:  
+- Restart full dose|### In severe carditis with heart failure and not responding to aspirin:  
+- Add Prednisolone 2 mg/kg OD
+- Reduce dose gradually after 3-4 weeks
+- Treat heart failure|### CHOREA|### Treatment|### Adults and Children :  
+- Give Haloperidol 25 micrograms/kg every 8hrs|### PROPHYLAXIS OF RHEUMATIC FEVER|### Prevention of further attacks  
+- Continue treatment until at least age 25|### Treatment  
+- Give Benzathine Penicillin 1.2 MU IM monthly. Children &lt; 30 kg: 600,000 units/dose|### Alternative if compliance can be ensured:  
+- Give Phenoxymethylpenicillin 250mg bd|### Alternative if penicillin allergy:  
+- Give Erythromycin 500 mg daily
+- Children &lt;30 kg: 250mg|### PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other cause.|### Before Dental Extraction|### Prophylaxis in Adults and Children &gt; 30 kg:  
+- Give Amoxycillin 3g oral taken 1 hour before the dental procedure|### Alternatively, if penicillin allergy:  
+- Give Erythromycin 1.5g taken 1 hour before the procedure and 500 mg 6 hours later|### Prophylaxis in Children &gt; 30 kg:  
+- Give Amoxycillin 50 mg/kg taken 1 hour before dental procedure, and repeated 6 hours later|### Alternatively, if penicillin allergy:  
+- Give Clindamycin 600mg, orally, taken 1 hour before the procedure and 300mg 6 hours later|### Prophylaxis in Children &gt; 30kg:  
+- Give Clindamycin 600mg IM/IV 30min prior to the procedure followed by 300mg 6 hourly.|### {20mg/kg for children) OR  
+- Give Ceftriaxone|### For high-risk patients add:  
+Gentamicin  
+1.6mg/kg prior to the procedure OR  
+Vancomycin  
+1g IV (20mg/kg/IV for children &lt;l0 years old) prior to the procedure.|### PROPHYLAXIS BEFORE OTHER PROCEDURES|### For genito-urinary surgery or instrumentation:  
+- Give Amoxycillin 1g IV or IM plus
+- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then
+- Give Amoxycillin 500mg taken 6 hours later  
+1g IV prior to the procedure or 50mg/kg## PROPHYLAXIS OF BACTERIAL ENDOCARDITIS  
+- Needed to prevent bacterial endocarditis in those with previous rheumatic fever or any heart valve abnormalities of other cause.|### Before Dental Extraction|### Prophylaxis in Adults and Children &gt; 30 kg:  
+- Give Amoxycillin 3g oral taken 1 hour before the dental procedure|### Alternatively, if penicillin allergy:  
+- Give Erythromycin 1.5g taken 1 hour before the procedure and 500 mg 6 hours later|### Prophylaxis in Children &gt; 30 kg:  
+- Give Amoxycillin 50 mg/kg taken 1 hour before dental procedure, and repeated 6 hours later|### Alternatively, if penicillin allergy:  
+- Give Clindamycin 600mg, orally, taken 1 hour before the procedure and 300mg 6 hours later|### Prophylaxis in Children &gt; 30kg:  
+- Give Clindamycin 600mg IM/IV 30min prior to the procedure followed by 300mg 6 hourly.|### {20mg/kg for children) OR  
+- Give Ceftriaxone|### For high-risk patients add:  
+Gentamicin  
+1.6mg/kg prior to the procedure OR  
+Vancomycin  
+1g IV (20mg/kg/IV for children &lt;l0 years old) prior to the procedure.|### PROPHYLAXIS BEFORE OTHER PROCEDURES|### For genito-urinary surgery or instrumentation:  
+- Give Amoxycillin 1g IV or IM plus
+- Give Gentamycin 2mg/kg IV or IM 30 minutes before the procedure, then
+- Give Amoxycillin 500mg taken 6 hours later  
+1g IV prior to the procedure or 50mg/kg|### Alternative if penicillin allergy:  
+- Give Erythromycin 500mg every 12hrs for 48 hours, instead of Amoxicillin
+- For obstetric and gynecological procedures
+- Not required except for those with prosthetic heart valves who should receive prophylaxis as for dental procedures|### CELLULITIS AND TROPICAL PYOMYOSITIS  
+- Treatment for cellulitis is both medical and surgical
+- Medical treatment may prevent abscess formation at the start of infection, when the muscle is swollen, hot and painful
+- Immobilize and give:|### Treatment|### Adult and children:  
+- Give Flucloxacillin 1g IV 6 hourly for at least 14 days plus,
+- Give Ciprofloxacin 500mg orally 12 hourly for 5-7 days|### If penicillin allergic:  
+- Give Ceftriaxone 2g IV daily for 2 weeks  
+Note: For Pyomyositis, perform surgical treatment (abscess drainage) when the swelling becomes fluctuant, alongside antibiotics",,"- Penicillin V Potassium &lt;5years 250mg PO 6 hourly &gt;5years 500mg BD for 10days
+- Aspirin 25mg/kg 6 hourly for at least 14 days","### Referral
+- Children with complications of acute rheumatic fever
+- Children with Persistent symptoms
+[context_seperator]
+### Acute management
+- Penicillin V Potassium &lt;5years 250mg PO 6 hourly &gt;5years 500mg BD for 10days
+- Aspirin 25mg/kg 6 hourly for at least 14 days
+[context_seperator]
+### If persistent fevers, joint pains consider steroids
+- Bedrest for 14 days
+- Chorea: Haloperidol 25 micrograms/kg daily
+- If  not  responding,  sodium  valproate  20mg/kg  twice  daily,  titrate  according  to response
+- or Phenobarbital 5mg/kg once daily
+[context_seperator]
+### Long term
+- Antibiotic prophylaxis, Benzathine Penicillin 0.6MU IM &lt; 30kg, 1.2MU &gt; 30kg IM STAT monthly
+- Follow up in pediatric clinic
+[context_seperator]
+### SIGNS AND SYMPTOMS
+New revised Jones criteria  
+1. Evidence of preceding Group A strep throat infection
+2. Major criteria
+- a. Carditis
+- b. Polyarthritis/polyarthralgia
+- c. Subcutaneous nodules
+- d. Erythema marginatum
+- e. Sydenham's chorea
+3. Minor criteria
+- a. Fever &gt;38°C
+- b. Raised acute phase reactants, ESR&gt;30mm/hr., CRP&gt;3
+- c. Prolonged PR interval
+- d. Monoarthralgia  
+To make diagnosis you need one major and 2 minor or 2 major or 3 minor criteria
+[context_seperator]
+### Complications
+- Rheumatic heart disease
+- Valvular damage
+[context_seperator]
+### I NVESTIGATIONS
+- FBC, ESR, CRP, Anti-Streptolysin O titer, Throat swab, ECG, Echocardiograph
+[context_seperator]
+### CLINICAL DESCRIPTION
+Multisystem condition resulting from immune response to group B streptococcus throat infection"

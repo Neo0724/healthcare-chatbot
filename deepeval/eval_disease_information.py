@@ -1,16 +1,17 @@
 import os
-from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+
 import pandas as pd
 from deepeval import evaluate
 from deepeval.evaluate import AsyncConfig, DisplayConfig
-from deepeval.test_case import LLMTestCase
 from deepeval.metrics import (
-    FaithfulnessMetric,
     AnswerRelevancyMetric,
-    ContextualRecallMetric,
     ContextualPrecisionMetric,
+    ContextualRecallMetric,
+    FaithfulnessMetric,
 )
+from deepeval.test_case import LLMTestCase
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
 
 from llm.custom_llm import CustomLLM
 
@@ -19,13 +20,13 @@ load_dotenv()
 os.environ["TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL"] = "1"
 os.environ["DEEPEVAL_PER_TASK_TIMEOUT_SECONDS_OVERRIDE"] = "600"
 
-TEST_SET_FILE = "./synthetic_data/test_set_combined_2_v2_populated.csv"
+TEST_SET_FILE = "./synthetic_data/test_set_combined_2_populated_modified.csv"
 
 custom_llm = CustomLLM(
     model=ChatOpenAI(
         base_url=os.getenv("LLM_URL"),
         model=os.getenv("LLM_MODEL"),
-        api_key="lm-studio",
+        api_key=os.getenv("API_KEY"),
         temperature=0.2,
         frequency_penalty=1.0,
         presence_penalty=0.6,
@@ -37,8 +38,9 @@ custom_llm = CustomLLM(
             "min_p": 0.05,
         },
     ),
-    model_name="qwen3-14b",
+    model_name=os.getenv("LLM_MODEL"),
 )
+
 
 # 2. Load your synthetic CSV dataset
 df = pd.read_csv(TEST_SET_FILE)
@@ -83,8 +85,8 @@ print("🚀 Starting local Evaluation using your local model...")
 # Run the evaluation sequentially to protect your local GPU constraints
 evaluate(
     test_cases=test_cases,
-    # metrics=[faithfulness, relevancy],
-    metrics=[contextual_precision],
+    # metrics=[faithfulness],
+    metrics=[contextual_precision, contextual_recall],
     async_config=AsyncConfig(run_async=False, max_concurrent=1, throttle_value=5),
     display_config=DisplayConfig(results_folder="./results/", verbose_mode=False),
 )
