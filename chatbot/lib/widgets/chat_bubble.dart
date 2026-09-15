@@ -26,7 +26,12 @@ class ChatBubble extends StatelessWidget {
         ),
         child: isUser
             // user messages are plain, skip markdown parsing entirely
-            ? Text(content, style: const TextStyle(color: Colors.white))
+            ? SelectionArea(
+                child: Text(
+                  content,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              )
             : SelectionArea(
                 child: GptMarkdown(
                   content,
