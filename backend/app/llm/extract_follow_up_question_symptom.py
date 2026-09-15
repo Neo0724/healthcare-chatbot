@@ -1,6 +1,6 @@
 import os
+
 from dotenv import load_dotenv
-from typing import List
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
@@ -9,11 +9,11 @@ load_dotenv()
 
 
 class SymptomClassifierSchema(BaseModel):
-    positive_symptoms: List[str] = Field(
+    positive_symptoms: list[str] = Field(
         description="All the positive symptoms described by patient"
     )
 
-    negative_symptoms: List[str] = Field(
+    negative_symptoms: list[str] = Field(
         description="All the negative symptoms described by patient"
     )
 
@@ -183,7 +183,7 @@ prompt = PromptTemplate(
 classifier_chain = prompt | structured_llm
 
 
-def extract_follow_up_question_symptom(input, question):
+def extract_follow_up_question_symptom(input, question) -> SymptomClassifierSchema:
     return classifier_chain.invoke(
         {
             "input": input,

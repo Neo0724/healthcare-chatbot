@@ -69,7 +69,6 @@ def narrow_down(
     driver: Driver,
     positive_embedding: list[float],
     negative_embedding: list[float],
-    initial_ids: list[str],
 ) -> list[Record]:
     records, _, _ = driver.execute_query(
         """
@@ -108,8 +107,6 @@ def narrow_down(
 
         MATCH (post_nodes)-[:HAS_RESOURCE]->(sym:Symptoms)
 
-        // WHERE post_nodes.id in $initial_ids
-
         RETURN DISTINCT 
             post_nodes.FSN as disease_name, 
             post_nodes.id as disease_id, 
@@ -130,7 +127,6 @@ def narrow_down(
         database_="neo4j",
         positive_embedding=positive_embedding,
         negative_embedding=negative_embedding,
-        initial_ids=initial_ids,
     )
 
     return records
@@ -176,34 +172,40 @@ def get_diseases_information(
         UNWIND matched_diseases as matched_disease
 
         OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(def:Definition)
+        WITH matched_disease, score,
+            collect(DISTINCT CASE WHEN def IS NOT NULL THEN {
+                content: def.content,
+                resource_title: def.resource_title,
+                resource_author: def.resource_author,
+                resource_published_year: def.resource_published_year,
+                resource_url: def.resource_url
+            } END) AS definition_node
+
         OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(sym:Symptoms)
+        WITH matched_disease, score, definition_node,
+            collect(DISTINCT CASE WHEN sym IS NOT NULL THEN {
+                content: sym.content,
+                resource_title: sym.resource_title,
+                resource_author: sym.resource_author,
+                resource_published_year: sym.resource_published_year,
+                resource_url: sym.resource_url
+            } END) AS symptom_node
+
         OPTIONAL MATCH (matched_disease)-[:HAS_RESOURCE]->(treat:Treatment)
+        WITH matched_disease, score, definition_node, symptom_node,
+            collect(DISTINCT CASE WHEN treat IS NOT NULL THEN {
+                content: treat.content,
+                resource_title: treat.resource_title,
+                resource_author: treat.resource_author,
+                resource_published_year: treat.resource_published_year,
+                resource_url: treat.resource_url
+            } END) AS treatment_node
 
-        RETURN matched_disease.FSN AS disease_name, 
+        RETURN matched_disease.FSN AS disease_name,
             score,
-            collect({
-              content: def.content,
-              resource_title: def.resource_title,    
-              resource_author: def.resource_author,    
-              resource_published_year: def.resource_published_year,    
-              resource_url: def.resource_url    
-            }) AS definition_node,
-
-            collect({
-              content: sym.content,
-              resource_title: sym.resource_title,    
-              resource_author: sym.resource_author,    
-              resource_published_year: sym.resource_published_year,    
-              resource_url: sym.resource_url    
-            }) AS symptom_node,
-
-            collect({
-              content: treat.content,
-              resource_title: treat.resource_title,    
-              resource_author: treat.resource_author,    
-              resource_published_year: treat.resource_published_year,    
-              resource_url: treat.resource_url    
-            }) AS treatment_node        
+            [x IN definition_node WHERE x IS NOT NULL] AS definition_node,
+            [x IN symptom_node WHERE x IS NOT NULL] AS symptom_node,
+            [x IN treatment_node WHERE x IS NOT NULL] AS treatment_node    
         """,
         database_="neo4j",
         diseases=diseases,

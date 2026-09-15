@@ -52,7 +52,6 @@ class ChatbotState(TypedDict):
     extracted_positive_symptoms: list[str]
     extracted_negative_symptoms: list[str]
     asked_questions: list[str]  # Track exact text of previous questions
-    initial_disease_ids: list[str]
 
     retrieved_disease_summary: list[str]
     asked_questions_count: int
@@ -266,7 +265,7 @@ def process_disease_info_node(state: ChatbotState, config: RunnableConfig):
         [
             SystemMessage(
                 content=explain_disease_prompt.explain_disease_prompt_template.format(
-                    user_message=user_query,
+                    user_message=user_query.content,
                     user_disease=extracted_disease_names,
                     retrieved_information=reranked_context,
                 )
@@ -335,7 +334,6 @@ def collect_initial_symptoms_node(state: ChatbotState):
 
 
 def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
-    """Processes initial response, extracts primary symptoms, and records them."""
     # 1. Grab the last message the user sent describing their symptoms
     user_initial_text = state["user_messages"][-1].content
 
@@ -370,8 +368,6 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
         for r in db_results
     ]
 
-    initial_disease_ids = [r.get("disease_id", "") for r in db_results]
-
     # Format the prompt with the complete JSON structure so it has access to scores and summaries
     formatted_prompt = (
         preliminary_diagnosis_prompt.preliminary_diagnosis_prompt_template.format(
@@ -392,7 +388,6 @@ def process_and_diagnose_node(state: ChatbotState, config: RunnableConfig):
         "extracted_negative_symptoms": negative_symptoms,
         "retrieved_disease_summary": retrieved_disease_summary,
         "asked_questions_count": 0,
-        "initial_disease_ids": initial_disease_ids,
     }
 
 
@@ -427,7 +422,6 @@ def collect_agreement_on_follow_up_node(state: ChatbotState):
 
 
 def ask_follow_up_question_node(state: ChatbotState):
-    """Uses tracked symptoms and previous questions to generate the next question."""
     current_count = state.get("asked_questions_count", 0) + 1
 
     print(f"Current count: {current_count}")
@@ -477,7 +471,7 @@ def collect_follow_up_response_node(state: ChatbotState):
     }
 
 
-def process_follow_up_response_node(state: ChatbotState):
+def process_follow_up_response_node(state: ChatbotState, config: RunnableConfig):
     asked_question = state["messages"][-1].content
     user_answer = state["user_messages"][-1].content
 
@@ -491,9 +485,37 @@ def process_follow_up_response_node(state: ChatbotState):
     positive_symptoms = list(extracted_entities.positive_symptoms)
     negative_symptoms = list(extracted_entities.negative_symptoms)
 
+    updated_positive_symptoms = list(set(positive_symptoms + current_positives))
+    updated_negative_symptoms = list(set(negative_symptoms + current_negatives))
+
+    embedding_model = get_embedding_model()
+
+    positive_embedding = embedding_model.embed_query(
+        ",".join(updated_positive_symptoms)
+    )
+    negative_embedding = embedding_model.embed_query(",".join([]))
+
+    driver: Driver = config["configurable"].get("neo4j_driver")
+
+    db_results = get_possible_diseases(driver, positive_embedding, negative_embedding)
+
+    retrieved_disease_summary = [
+        {
+            "disease_name": r.get("disease_name", ""),
+            "match_score": round(float(r.get("post_score", 0)), 2),
+            "disease_symptom_details": r.get("symptom_node", []),
+        }
+        for r in db_results
+    ]
+
+    print(
+        f"Possible Diseases:\n{[d.get('disease_name') for d in retrieved_disease_summary]}"
+    )
+
     return {
-        "extracted_positive_symptoms": list(set(positive_symptoms + current_positives)),
-        "extracted_negative_symptoms": list(set(negative_symptoms + current_negatives)),
+        "extracted_positive_symptoms": updated_positive_symptoms,
+        "extracted_negative_symptoms": updated_negative_symptoms,
+        "retrieved_disease_summary": retrieved_disease_summary,
     }
 
 
@@ -503,7 +525,6 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
     current_positives = state.get("extracted_positive_symptoms", "")
     # current_negatives = state.get("extracted_negative_symptoms", "")
     current_negatives = []
-    initial_disease_ids = state.get("initial_disease_ids")
 
     embedding_model = get_embedding_model()
 
@@ -513,9 +534,7 @@ def final_refined_diagnosis_node(state: ChatbotState, config: RunnableConfig):
 
     driver: Driver = config["configurable"].get("neo4j_driver")
 
-    records = narrow_down(
-        driver, positive_embedding, negative_embedding, initial_disease_ids
-    )
+    records = narrow_down(driver, positive_embedding, negative_embedding)
 
     # for index, record in enumerate(records):
     #     print(
@@ -804,7 +823,6 @@ def run_graph(graph, driver: Driver):
         "extracted_positive_symptoms": [],
         "extracted_negative_symptoms": [],
         "asked_questions": [],  # Track exact text of previous questions
-        "initial_disease_ids": [],
         "retrieved_disease_summary": [],
         "asked_questions_count": 0,
         "follow_up_agreement": "",
@@ -829,10 +847,10 @@ def run_graph(graph, driver: Driver):
                             print(f"Updated message: {message.content}")
 
                     if state and "extracted_positive_symptoms" in state:
-                        print(state["extracted_positive_symptoms"])
+                        print(f"Positive: {state['extracted_positive_symptoms']}")
 
                     if state and "extracted_negative_symptoms" in state:
-                        print(state["extracted_negative_symptoms"])
+                        print(f"Negative: {state['extracted_negative_symptoms']}")
 
                 if "__interrupt__" in chunk["data"]:
                     interrupt_value = chunk["data"]["__interrupt__"][0].value
