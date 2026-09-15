@@ -1,4 +1,7 @@
+import 'dart:math' as math;
+
 import 'package:chatbot/utils/socket_service.dart';
+import 'package:chatbot/widgets/scroll_bottom_fab_location.dart';
 import 'package:chatbot/widgets/chat_bubble.dart';
 import 'package:chatbot/widgets/message_loading_bubble.dart';
 import 'package:chatbot/widgets/side_drawer.dart';
@@ -24,6 +27,7 @@ class _ConversationState extends State<Conversation> {
   List<MessageHistoryModel> _newMessages = [];
   bool redirectFromNew = false;
   bool _isLoading = false;
+  bool _scrollToTopVisible = false;
 
   final SocketService socketService = SocketService();
   late final ScrollController _scrollController;
@@ -144,6 +148,19 @@ class _ConversationState extends State<Conversation> {
     _messageController.text = "";
   }
 
+  void _scrollListener() {
+    final position = _scrollController.position;
+    final currentPosition = position.pixels;
+    final maxPosition = position.maxScrollExtent;
+    final distanceFromBottom = maxPosition - currentPosition;
+
+    if (!_scrollToTopVisible && distanceFromBottom > 150) {
+      setState(() => _scrollToTopVisible = true);
+    } else if (_scrollToTopVisible && distanceFromBottom < 50) {
+      setState(() => _scrollToTopVisible = false);
+    }
+  }
+
   @override
   void didUpdateWidget(covariant Conversation oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -167,12 +184,14 @@ class _ConversationState extends State<Conversation> {
     socketService.connect(widget.conversationId, _handleReceiveMessage);
     _getMessageAndResumeGraph();
     _scrollController = ScrollController();
+    _scrollController.addListener(_scrollListener);
   }
 
   @override
   void dispose() {
     super.dispose();
     socketService.disconnect();
+    _scrollController.removeListener(_scrollListener);
   }
 
   @override
@@ -189,6 +208,24 @@ class _ConversationState extends State<Conversation> {
         foregroundColor: Colors.white,
       ),
       drawer: SideDrawer(conversationId: widget.conversationId),
+      floatingActionButtonLocation: ScrollBottomFabLocation(),
+      floatingActionButton: Visibility(
+        visible: _scrollToTopVisible,
+        child: FloatingActionButton(
+          onPressed: () {
+            _scrollController.jumpTo(
+              _scrollController.position.maxScrollExtent,
+            );
+          },
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          shape: CircleBorder(),
+          child: Transform.rotate(
+            angle: math.pi,
+            child: const Icon(Icons.navigation),
+          ),
+        ),
+      ),
       body: Column(
         children: [
           _displayMessage([..._messageHistoryModel, ..._newMessages]),
