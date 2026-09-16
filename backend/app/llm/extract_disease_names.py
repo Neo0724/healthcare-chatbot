@@ -1,5 +1,5 @@
 import os
-from typing import List
+
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -9,7 +9,7 @@ load_dotenv()
 
 
 class DiseaseNameClassifierSchema(BaseModel):
-    extracted_disease_name: List[str] = Field(description="The extracted disease name")
+    extracted_disease_name: list[str] = Field(description="The extracted disease name")
 
 
 llm = ChatOpenAI(
@@ -33,7 +33,7 @@ Rules:
 - Do NOT return multiple diseases.
 - PRESERVE SPECIFICITY: If the question names a specific subtype, severity level, complication, or variant of a condition (e.g. "hypertensive emergency", "hypertensive urgency", "gestational hypertension", "type 2 diabetes"), you MUST extract that exact specific name. NEVER collapse it into the broader parent condition (e.g. "hypertensive emergency" must NOT become "hypertension"; "type 2 diabetes" must NOT become "diabetes"). The specific term is a DIFFERENT, more precise clinical entity than its parent — treat them as different diseases.
 - NORMALIZE ONLY COLLOQUIAL PHRASING, NOT SPECIFICITY: Normalization means converting informal/lay language into its standard medical name for the SAME condition (e.g. "high blood pressure" → "hypertension", "heart attack" → "myocardial infarction"). It does NOT mean simplifying a specific named subtype down to a general category. If the input already uses a specific medical term, output that term unchanged.
-- If no clear disease is present, return "None".
+- If no clear disease is present, return "".
 - Only output string NOT list
 
 Output format:
@@ -97,7 +97,7 @@ prompt = PromptTemplate(
 classifier_chain = prompt | structured_llm
 
 
-def extract_disease_names(input) -> List[str]:
+def extract_disease_names(input) -> list[str]:
     print("Extracting disease name ...")
     result = classifier_chain.invoke({"input": input}).extracted_disease_name
     print(f"Extracted disease name: **{result}**")
