@@ -1,23 +1,23 @@
 import os
+from typing import Literal
+
 from dotenv import load_dotenv
-from typing import List, Literal
 from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import GraphDatabase
-
 
 load_dotenv()
 
 URI = os.getenv("NEO4J_URL")
-AUTH = (os.getenv("NEO4J_USERNAME"),os.getenv("NEO4J_PASSWORD"))
+AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 
 os.environ["HF_HOME"] = "D:/hf_cache"
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 embeddings_model = HuggingFaceEmbeddings(model_name="abhinand/MedEmbed-base-v0.1")
 
 
 def get_diseases_information(
-    extracted_disease_name, scopes: List[Literal["Definition", "Treatment", "Symptoms"]]
+    extracted_disease_name, scopes: list[Literal["Definition", "Treatment", "Symptoms"]]
 ):
     with GraphDatabase.driver(URI, auth=AUTH) as driver:
         print("Generating disease name embedding ...")

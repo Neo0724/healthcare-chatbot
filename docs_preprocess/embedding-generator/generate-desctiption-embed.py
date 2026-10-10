@@ -8,7 +8,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from neo4j import GraphDatabase
 
 os.environ["HF_HOME"] = "D:/hf_cache"
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 load_dotenv()
 

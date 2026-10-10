@@ -1,10 +1,12 @@
-import os
-from dotenv import load_dotenv
-from datetime import datetime
 import json
+import os
+from datetime import datetime
+
+import pandas as pd
+from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
-import pandas as pd
+
 from db.get_possible_diseases import get_possible_diseases
 from llm.custom_llm import CustomLLM
 from llm.extract_symptoms import extract_symptoms
@@ -12,7 +14,7 @@ from llm.extract_symptoms import extract_symptoms
 load_dotenv()
 
 os.environ["HF_HOME"] = "D:/hf_cache"
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 embeddings_model = HuggingFaceEmbeddings(model_name="abhinand/MedEmbed-base-v0.1")
 

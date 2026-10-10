@@ -37,7 +37,7 @@ load_dotenv()
 
 os.environ["TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL"] = "1"
 os.environ["HF_HOME"] = "C:/hf_cache"
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 
 # =====================================================================

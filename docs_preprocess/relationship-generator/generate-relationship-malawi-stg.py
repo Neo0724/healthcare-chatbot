@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 os.environ["HF_HOME"] = "D:/hf_cache"
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 load_dotenv()
 
