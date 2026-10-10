@@ -1,17 +1,20 @@
+import json
+import logging
 import os
-from typing import List
-from neo4j import GraphDatabase
+import subprocess
+import time
+
+from dotenv import load_dotenv
+from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import PydanticOutputParser
+from neo4j import GraphDatabase
 from pydantic import BaseModel, Field
-import logging
-import time
-import subprocess
-import json
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+load_dotenv()
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 
 logging.basicConfig(
     filename="definition-summary.log",
@@ -83,15 +86,18 @@ structured_llm = llm.with_structured_output(DefinitionSummarySchema)
 
 classifier_chain = prompt | structured_llm
 
+
 def shutdown():
     subprocess.run(
         ["powershell", "-ExecutionPolicy", "Bypass", "-File", r".\shutdown-neo4j.ps1"],
         check=True,
     )
 
+
 def restart_llm_model():
     subprocess.run(["lms", "unload", "qwen3.5-4b"])
     subprocess.run(["lms", "load", "qwen3.5-4b"])
+
 
 def count_total_definition_nodes(driver):
     records, _, _ = driver.execute_query(
@@ -123,9 +129,7 @@ def generate_symptom_definition(metadatas):
 
         summary = parsed_result.summary
 
-        logging.info(
-            f"Summary generated successfully | summary='{summary}'"
-        )
+        logging.info(f"Summary generated successfully | summary='{summary}'")
 
         return {"summary": summary}
 
@@ -177,7 +181,8 @@ def batch_process_definition_summary(driver, total_nodes):
             {
                 "id": id,
                 "summary": s.get("summary", ""),
-            } for id, s in zip(definition_ids, summarized_definition)
+            }
+            for id, s in zip(definition_ids, summarized_definition)
         ]
 
         # Batch write
@@ -189,7 +194,7 @@ def batch_process_definition_summary(driver, total_nodes):
             SET mr.summary = row.summary
             """,
             database="neo4j",
-            batch=paired_summary
+            batch=paired_summary,
         )
 
         print(f"Batch done: {counter + BATCH_SIZE}")

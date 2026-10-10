@@ -1,15 +1,19 @@
-from langchain_huggingface import HuggingFaceEmbeddings
-import os
-from neo4j import GraphDatabase
 import logging
-import time
+import os
 import subprocess
+import time
+
+from dotenv import load_dotenv
+from langchain_huggingface import HuggingFaceEmbeddings
+from neo4j import GraphDatabase
 
 os.environ["HF_HOME"] = "D:/hf_cache"
 os.environ["HF_TOKEN"] = "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"
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+load_dotenv()
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 
 # Create embedding model
 embeddings_model = HuggingFaceEmbeddings(model_name="abhinand/MedEmbed-base-v0.1")
@@ -18,7 +22,7 @@ logging.basicConfig(
     filename="logs/embed.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",  
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
 
 
@@ -39,6 +43,7 @@ def shutdown():
         ["powershell", "-ExecutionPolicy", "Bypass", "-File", r".\shutdown-neo4j.ps1"],
         check=True,
     )
+
 
 def batch_process_embedding(driver, total_nodes):
     # Process 250 descriptions at once

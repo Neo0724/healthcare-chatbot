@@ -1,16 +1,18 @@
-from langchain_text_splitters import MarkdownHeaderTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import PydanticOutputParser
-from pydantic import BaseModel, Field
-from neo4j import GraphDatabase
-from typing import Literal
 import json
-import time
-import subprocess
 import logging
 import os
+import subprocess
+import time
+from typing import Literal
+
+from dotenv import load_dotenv
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.prompts import PromptTemplate
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_text_splitters import MarkdownHeaderTextSplitter
+from neo4j import GraphDatabase
+from pydantic import BaseModel, Field
 
 logging.basicConfig(
     filename="logs/relationship-malawi-stg.log",
@@ -22,8 +24,10 @@ logging.basicConfig(
 os.environ["HF_HOME"] = "D:/hf_cache"
 os.environ["HF_TOKEN"] = "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"
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+load_dotenv()
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 MARKDOWN_FILE_NAME = "markdowns/malawi-stg-cleaned.md"
 
 # Create embedding model
@@ -82,11 +86,10 @@ def restart_llm_model():
 
 
 def shutdown():
-    subprocess.run([
-        "powershell",
-        "-ExecutionPolicy", "Bypass",
-        "-File", r".\shutdown-neo4j.ps1"
-    ], check=True)
+    subprocess.run(
+        ["powershell", "-ExecutionPolicy", "Bypass", "-File", r".\shutdown-neo4j.ps1"],
+        check=True,
+    )
 
 
 def classify_chunks(chunk):
@@ -133,7 +136,6 @@ def match_disease_from_db(driver, disease_name):
         )
 
         logging.info(f"Exact match results count = {len(records)}")
-    
 
         if len(records) == 1:
             disease_concept_id = records[0]["o.id"]
@@ -164,7 +166,9 @@ def match_disease_from_db(driver, disease_name):
             logging.info(f"Vector search returned {len(records)} candidates")
 
             if len(records) == 0:
-                logging.warning("Vector search return empty result | Disease Name='{disease_name}'")
+                logging.warning(
+                    "Vector search return empty result | Disease Name='{disease_name}'"
+                )
 
             else:
                 top_score_concept = records[0]
@@ -184,7 +188,6 @@ def match_disease_from_db(driver, disease_name):
     except Exception as e:
         logging.error(f"Error when matching disease from database | Error={e}")
         return None
-
 
 
 def create_relationship(driver, disease_concept_id, chunk, node_title):
@@ -223,9 +226,9 @@ def create_relationship(driver, disease_concept_id, chunk, node_title):
             database="neo4j",
             disease_concept_id=disease_concept_id,
             content=chunk.page_content,
-            disease_category = chunk.metadata.get("Disease Category", ""),
-            disease_name = chunk.metadata.get("Disease Name", ""),
-            disease_subsection = chunk.metadata.get("Subsection", ""),
+            disease_category=chunk.metadata.get("Disease Category", ""),
+            disease_name=chunk.metadata.get("Disease Name", ""),
+            disease_subsection=chunk.metadata.get("Subsection", ""),
             resource_title=chunk.metadata.get("resource_title", ""),
             resource_author=chunk.metadata.get("resource_author", ""),
             resource_published_year=chunk.metadata.get("resource_published_year", ""),
@@ -240,13 +243,16 @@ def create_relationship(driver, disease_concept_id, chunk, node_title):
     except Exception as e:
         logging.error(f"Error when creating relationship | Error={e}")
 
+
 def run_pipeline():
 
     with GraphDatabase.driver(URI, auth=AUTH) as driver:
         driver.verify_connectivity()
         start_time = time.perf_counter()
 
-        logging.info("Starting to create relationship between medical chunk and SNOMED-CT concept node")
+        logging.info(
+            "Starting to create relationship between medical chunk and SNOMED-CT concept node"
+        )
 
         # 1. Load and Split
         try:
@@ -283,20 +289,28 @@ def run_pipeline():
                 if disease_concept_id:
                     node_title = classify_chunks(doc)
 
-                    doc.metadata["resource_title"] = "Malawi Standard Treatment Guidelines, sixth Edition."
+                    doc.metadata["resource_title"] = (
+                        "Malawi Standard Treatment Guidelines, sixth Edition."
+                    )
                     doc.metadata["resource_author"] = "Malawi Ministry of Health"
                     doc.metadata["resource_published_year"] = 2023
-                    doc.metadata["resource_url"] = "https://digrep.mchs.mw/items/a78a9b82-667e-4e50-8005-a11f3308d676"
+                    doc.metadata["resource_url"] = (
+                        "https://digrep.mchs.mw/items/a78a9b82-667e-4e50-8005-a11f3308d676"
+                    )
 
                     create_relationship(driver, disease_concept_id, doc, node_title)
-                
+
                 else:
-                    logging.warning(f"Disease concept id is not found | Disease name={doc.metadata.get("Disease Name", "")}")
+                    logging.warning(
+                        f"Disease concept id is not found | Disease name={doc.metadata.get('Disease Name', '')}"
+                    )
 
             end_time = time.perf_counter()
 
             execution_time = end_time - start_time
-            logging.info("Finished creating relationship chunk of Malawi Standard Treatment Guidelines, sixth Edition.!")
+            logging.info(
+                "Finished creating relationship chunk of Malawi Standard Treatment Guidelines, sixth Edition.!"
+            )
             logging.info(f"Execution time: {execution_time:.6f} seconds")
             # logging.info("Shutting down Neo4j instance and PC......")
             # shutdown()

@@ -1,17 +1,20 @@
+import json
+import logging
 import os
-from typing import List
-from neo4j import GraphDatabase
+import subprocess
+import time
+
+from dotenv import load_dotenv
+from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import PydanticOutputParser
+from neo4j import GraphDatabase
 from pydantic import BaseModel, Field
-import logging
-import time
-import subprocess
-import json
 
-URI = "neo4j://127.0.0.1:7687"
-AUTH = ("neo4j", "neoben007")
+load_dotenv()
+
+URI = os.getenv("NEO4J_URL")
+AUTH = (os.getenv("NEO4J_USERNAME"), os.getenv("NEO4J_PASSWORD"))
 
 logging.basicConfig(
     filename="logs/symptom-summary.log",
@@ -26,19 +29,13 @@ class SymptomSummarySchema(BaseModel):
         description="One-sentence concise medical summary of the symptom"
     )
 
-    core_symptoms: List[str] = Field(
-        description="Core symptoms"
-    )
+    core_symptoms: list[str] = Field(description="Core symptoms")
 
-    secondary_symptoms: List[str] = Field(
-        description="Core symptoms"
-    )
+    secondary_symptoms: list[str] = Field(description="Core symptoms")
 
-    severe_symptoms: List[str] = Field(
-        description="Core symptoms"
-    )
+    severe_symptoms: list[str] = Field(description="Core symptoms")
 
-    tags: List[str] = Field(
+    tags: list[str] = Field(
         description="List of key medical keywords or concepts related to the symptom (e.g., 'urination', 'endocrine', 'diabetes')"
     )
 
@@ -127,9 +124,11 @@ def shutdown():
         check=True,
     )
 
+
 def restart_llm_model():
     subprocess.run(["lms", "unload", "qwen3.5-4b"])
     subprocess.run(["lms", "load", "qwen3.5-4b"])
+
 
 def count_total_symptom_nodes(driver):
     records, _, _ = driver.execute_query(
@@ -170,11 +169,23 @@ def generate_symptom_summary(metadatas):
             f"Summary generated successfully | summary='{summary}' | core_symptoms={core_symptoms} | secondary_symptoms={secondary_symptoms} | severe_symptoms={severe_symptoms} | tags={tags}"
         )
 
-        return {"summary": summary, "tags": tags, "core_symptoms": core_symptoms, "secondary_symptoms":secondary_symptoms, "severe_symptoms":severe_symptoms}
+        return {
+            "summary": summary,
+            "tags": tags,
+            "core_symptoms": core_symptoms,
+            "secondary_symptoms": secondary_symptoms,
+            "severe_symptoms": severe_symptoms,
+        }
 
     except Exception as e:
         logging.error(f"Error generating symptom summary: {e}")
-        return {"summary": "", "tags": [], "core_symptoms": [], "secondary_symptoms": [], "severe_symptoms": []}
+        return {
+            "summary": "",
+            "tags": [],
+            "core_symptoms": [],
+            "secondary_symptoms": [],
+            "severe_symptoms": [],
+        }
 
 
 def batch_process_symptom_summary(driver, total_nodes):
@@ -223,8 +234,9 @@ def batch_process_symptom_summary(driver, total_nodes):
                 "secondary_symptoms": s.get("secondary_symptoms", []),
                 "severe_symptoms": s.get("severe_symptoms", []),
                 "summary": s.get("summary", ""),
-                "tags": s.get("tags", [])
-            } for id, s in zip(symptom_ids, summarized_symptom)
+                "tags": s.get("tags", []),
+            }
+            for id, s in zip(symptom_ids, summarized_symptom)
         ]
 
         # Batch write
@@ -236,7 +248,7 @@ def batch_process_symptom_summary(driver, total_nodes):
             SET mr.summary = row.summary, mr.tags = row.tags, mr.core_symptoms = row.core_symptoms, mr.secondary_symptoms = row.secondary_symptoms, mr.severe_symptoms = row.severe_symptoms
             """,
             database="neo4j",
-            batch=paired_summary
+            batch=paired_summary,
         )
 
         counter += BATCH_SIZE

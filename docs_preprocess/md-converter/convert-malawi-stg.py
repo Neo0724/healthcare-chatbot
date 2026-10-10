@@ -1,13 +1,11 @@
-from pathlib import Path
-
 import fitz
 from docling.datamodel.accelerator_options import AcceleratorDevice, AcceleratorOptions
-from docling.datamodel.base_models import ConversionStatus, InputFormat
+from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import (
-    ThreadedPdfPipelineOptions,
     PictureDescriptionVlmEngineOptions,
+    TableFormerMode,
     TableStructureOptions,
-    TableFormerMode
+    ThreadedPdfPipelineOptions,
 )
 from docling.datamodel.vlm_engine_options import ApiVlmEngineOptions, VlmEngineType
 from docling.document_converter import DocumentConverter, PdfFormatOption
