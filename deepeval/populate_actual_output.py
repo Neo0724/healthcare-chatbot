@@ -1,19 +1,17 @@
 import os
+
+import pandas as pd
 from dotenv import load_dotenv
-from typing import List
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from neo4j import Record
-import pandas as pd
 from pydantic import BaseModel, Field
 from sentence_transformers import CrossEncoder
 
-from llm.extract_disease_name import extract_disease_name
-from llm.extract_question_scope import extract_question_scope
-from output_prompt_template.prompt_template_faithfulness import prompt_template
 from db.get_disease_information import get_diseases_information
-
 from llm.custom_llm import CustomLLM
+from llm.extract_disease_name import extract_disease_name
+from output_prompt_template.prompt_template_faithfulness import prompt_template
 from utils.context_cleaner import clean_context_chunk
 
 load_dotenv()
@@ -59,7 +57,7 @@ custom_llm = CustomLLM(
 reranker = CrossEncoder("BAAI/bge-reranker-v2-m3")
 
 
-def generate_response(user_query: str, retrieved_information: List[str]) -> str:
+def generate_response(user_query: str, retrieved_information: list[str]) -> str:
     # 2. Define the RAG prompt template with strict patient-facing instructions
     class OutputSchema(BaseModel):
         response: str = Field(description="Generated response")
@@ -162,7 +160,6 @@ for index, row in df.iterrows():
     user_query = row["input"]
 
     extracted_disease_name = extract_disease_name(user_query)
-    # scopes = extract_question_scope(user_query)
     records = get_diseases_information(
         extracted_disease_name, ["Definition", "Symptoms", "Treatment"]
     )

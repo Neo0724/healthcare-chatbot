@@ -1,6 +1,6 @@
 import os
+
 from dotenv import load_dotenv
-from typing import List
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
@@ -10,11 +10,11 @@ load_dotenv()
 
 
 class SymptomClassifierSchema(BaseModel):
-    positive_symptoms: List[str] = Field(
+    positive_symptoms: list[str] = Field(
         description="All the positive symptoms described by patient"
     )
 
-    negative_symptoms: List[str] = Field(
+    negative_symptoms: list[str] = Field(
         description="All the negative symptoms described by patient"
     )
 
