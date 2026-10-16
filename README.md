@@ -26,6 +26,11 @@ An intelligent clinical inquiry and preliminary diagnosis assistant designed to 
 - **Responsive RESTful Backend:** Powered by **Flask** server routing queries between graph traversal pipelines and LLM inference endpoints.
 - **Real-Time Token Streaming:** Delivers live, progressive response rendering via WebSocket streaming
 
+### 3. Main Conversation Features
+
+- **Query Disease Information:** Enables users to retrieve structured medical insights—including disease definition, symptoms, and recommended treatments by querying the knowledeg graph
+- **Preliminary Diagnosis:** Analyzes user-reported symptoms to generate probabilistic condition assessments
+
 ---
 
 ## 🏗️ System Architecture
@@ -61,6 +66,8 @@ An intelligent clinical inquiry and preliminary diagnosis assistant designed to 
 
 ---
 
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** Flutter
@@ -70,6 +77,131 @@ An intelligent clinical inquiry and preliminary diagnosis assistant designed to 
 - **Medical Terminology:** SNOMED-CT
 - **Information Retrieval:** GraphRAG and Cosine Similarity
 - **Evaluation Frameworks:** DeepEval
+
+---
+
+## 🖼️ Screenshots
+
+### Preliminary Diagnosis
+
+<table>
+  <tr>
+    <th colspan="4">Providing Preliminary Diagnosis</th>
+  </tr>
+  <tr>
+    <td align="center" width="25%">
+      <img src="./screenshots/diagnosis-1.png" alt="Provide Symptoms" width="100%" />
+      <br />
+      <b>Describe Symptoms</b>
+    </td>
+    <td align="center" width="25%">
+      <img src="./screenshots/diagnosis-2.png" alt="Diagnosis Overview" width="100%" />
+      <br />
+      <b>Initial Assessment - 1</b>
+    </td>
+    <td align="center" width="25%">
+      <img src="./screenshots/diagnosis-3.png" alt="Condition Details" width="100%" />
+      <br />
+      <b>Initial Assessment - 2</b>
+    </td>
+    <td align="center" width="25%">
+      <img src="./screenshots/diagnosis-4.png" alt="Recommendations" width="100%" />
+      <br />
+      <b>Initial Assessment - 3</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center">
+      <p>Users describe the symptoms they are experiencing in natural language, prompting the chatbot to return an initial preliminary diagnosis.</p>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="3">Refining Diagnosis Results</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./screenshots/diagnosis-ask-follow-up.png" alt="Follow-up Prompt" width="100%" />
+      <br />
+      <b>Clarification Prompt</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/diagnosis-answer-follow-up-1.png" alt="Follow-up Answer 1" width="100%" />
+      <br />
+      <b>Intake Question 1</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/diagnosis-answer-follow-up-2.png" alt="Follow-up Answer 2" width="100%" />
+      <br />
+      <b>Intake Question 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <p>To narrow down possibilities, users can complete a five-question interactive follow-up assessment tailored to their initial inputs.</p>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="3">Refined Diagnosis Result</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./screenshots/refined-diagnosis-1.png" alt="Refined Assessment" width="100%" />
+      <br />
+      <b>Updated Ranking - 1</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/refined-diagnosis-2.png" alt="Condition Comparison" width="100%" />
+      <br />
+      <b>Updated Ranking - 2</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/refined-diagnosis-3.png" alt="Final Recommendations" width="100%" />
+      <br />
+      <b>Updated Ranking - 3</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <p>Once all follow-up questions are completed, the system recalculates the probability by matching user described symptoms against diseases symptoms.</p>
+    </td>
+  </tr>
+</table>
+
+### Query Disease Information
+
+<table>
+  <tr>
+    <th colspan="3">Querying Disease Information</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="./screenshots/query-disease-info.png" alt="User Query" width="100%" />
+      <br />
+      <b>Disease Inquiry</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/query-disease-info-ans-1.png" alt="Clinical Overview" width="100%" />
+      <br />
+      <b>Clinical Overview - 1</b>
+    </td>
+    <td align="center" width="33%">
+      <img src="./screenshots/query-disease-info-ans-2.png" alt="Treatment Details" width="100%" />
+      <br />
+      <b>Clinical Overview - 2</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <p>Users can query detailed clinical information directly after diagnosis, retrieving descriptions, common causes, and treatment guidelines.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
